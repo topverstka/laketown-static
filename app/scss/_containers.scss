@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+  max-width: 100%;
+  margin-left: 100px;
+  margin-right: 100px;
+  @media screen and (max-width: $desktop-l - 1) {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  @media screen and (max-width: $desktop-s - 1) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: $tablet-s - 1) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

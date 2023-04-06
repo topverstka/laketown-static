@@ -1,0 +1,38 @@
+// colors
+$colorBgr:#F6F5F1;
+
+$orangeMain: #D69153;
+$orangeDark: #DF893C;
+$orangeLight: #F4D39A;
+
+$mainBlue: #005E9B;
+
+$mainDark: #383838;
+$mainDarkExt: #747474;
+
+$borderGray: #D9D9D9;
+
+// medias
+$phone: 360px;
+$phone-l: 576px;
+$tablet-s: 768px;
+$tablet-m: 992px;
+$tablet-l: 1200px;
+$desktop-s: 1440px;
+$desktop-m: 1600px;
+$desktop-l: 1920px;
+
+// containers
+$phone-tablet-container: 100%;
+$desktop-s-container: 1192px;
+$desktop-m-container: 1380px;
+$desktop-l-container: 1550px;
+$desktop-xl-container: 1590px;
+
+
+
+
+:root {
+  --font-main: "OpenSans", sans-serif;
+  --font-alimini: "Alimini", sans-serif;
+}

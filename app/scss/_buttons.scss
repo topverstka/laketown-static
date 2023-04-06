@@ -1,0 +1,89 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border: 1px solid;
+  @include transition(all, .5s);
+  span {
+    font-size: 18px !important;
+    font-family: var(--font-main);
+  }
+  cursor: pointer;
+  &.btn-link {
+
+  }
+  &.btn-icon {
+    width: 107px;
+  }
+  &.btn-main {
+    border-color: $mainDark;
+    color: $mainDark;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+    .icon {
+      svg {
+        path {
+          @include transition(all, .5s);
+          fill: $mainDark;
+        }
+      }
+    }
+    &:hover, &.btn-active {
+      border-color: $orangeMain;
+      background: $orangeMain;
+      color: white;
+      .icon {
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+  &.btn-orange {
+    border-color: $orangeMain;
+    background: $orangeMain;
+    color: white;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+
+    &:hover, &.btn-active {
+      border-color: $orangeDark;
+      background: $orangeDark;
+      color: white;
+    }
+
+  }
+  &.btn-text {
+    padding-left: 48px;
+    padding-right: 48px;
+    max-width: fit-content;
+  }
+  &.btn-round-big {
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+  &.btn-round-small {
+    width: 160px;
+    height: 160px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}

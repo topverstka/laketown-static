@@ -1,0 +1,166 @@
+@import "_variables";
+
+@import "_mixins";
+@import "_fonts";
+@import "_containers";
+@import "_typography";
+@import "_buttons";
+
+
+* {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+body {
+  background: $colorBgr;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+// header
+header {
+  .header-wrap {
+    position: relative;
+    .nadpis {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .header-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .btn-map {
+        .btn {
+          height: 80px;
+          padding: 0 26px;
+          .icon {
+            margin-right: 14px;
+            svg {
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+      .btn-block {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .btn {
+          margin-right: 40px;
+        }
+        .add-text {
+          span {
+            opacity: 0;
+            height: 0;
+            @include transition(all, .5s);
+            &.active {
+              opacity: 1;
+              height: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 35px;
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .phone {
+    margin-left: auto;
+    margin-right: 42px;
+    a {
+      font-family: var(--font-main);
+      font-weight: 400;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      color: $mainDark;
+      @include transition(all, .5s);
+      &:hover {
+        color: $orangeDark;
+      }
+    }
+
+  }
+}
+
+
+// ui
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  .btn {
+    margin-right: 30px;
+  }
+}
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 20px;
+  .color-item {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    .item-value {
+      border: 1px solid transparent;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      &.color-bgr {
+        background: $colorBgr;
+      }
+      &.color-orange-main {
+        background: $orangeMain;
+      }
+      &.color-orange-dark {
+        background: $orangeDark;
+      }
+      &.color-orange-light {
+        background: $orangeLight;
+      }
+      &.color-main-blue {
+        background: $mainBlue;
+      }
+      &.color-main-dark {
+        background: $mainDark;
+      }
+      &.color-main-dark-ext {
+        background: $mainDarkExt;
+      }
+      &.color-border {
+        background: $borderGray;
+      }
+    }
+  }
+}

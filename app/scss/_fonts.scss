@@ -1,0 +1,27 @@
+/*
+  Шрифты
+ */
+@include font(
+    "Alimini",
+    normal,
+    400,
+    "../fonts/Alimini/AlumniSans-Regular"
+);
+@include font(
+    "Alimini",
+    normal,
+    700,
+    "../fonts/Alimini/AlumniSans-Bold"
+);
+@include font(
+    "OpenSans",
+    normal,
+    400,
+    "../fonts/OpenSans/OpenSans-Regular"
+);
+@include font(
+    "OpenSans",
+    normal,
+    700,
+    "../fonts/OpenSans/OpenSans-Bold"
+);
