@@ -46,4 +46,19 @@ h6 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 80px;
+  text-transform: uppercase;
+  &-filter {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    &__item {
+      display: flex;
+      flex-direction: row;
+      .btn {
+        margin-right: 32px;
+      }
+
+    }
+  }
 }

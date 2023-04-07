@@ -290,6 +290,17 @@ section#news {
   }
 }
 
+section#buildingStage {
+  .callendar {
+    border-bottom: 1px solid $mainDark;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+
 // footer
 footer {
   padding-top: 200px;

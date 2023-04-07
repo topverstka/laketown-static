@@ -73,13 +73,13 @@ exports.images = images;
 exports.cleanimg = cleanimg;
 
 function cleanimg() {
-  return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем папку "app/images/dest/"
+  return src('app/img/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем папку "app/images/dest/"
 }
 
 async function images() {
   imagecomp(
-    "app/images/src/**/*", // Берём все изображения из папки источника
-    "app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
+    "app/img/**/*", // Берём все изображения из папки источника
+    "app/img/dest/", // Выгружаем оптимизированные изображения в папку назначения
     { compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
     { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
     { png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
@@ -97,7 +97,7 @@ function buildcopy() {
   return src([ // Выбираем нужные файлы
     'app/css/**/*.min.css',
     'app/js/**/*.min.js',
-    'app/images/dest/**/*',
+    'app/img/**/*',
     'app/**/*.html',
   ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
@@ -119,7 +119,7 @@ function startwatch() {
   // Мониторим файлы HTML на изменения
   watch('app/**/*.html').on('change', browserSync.reload);
   // Мониторим папку-источник изображений и выполняем images(), если есть изменения
-  watch('app/images/src/**/*', images);
+  watch('app/img/**/*', images);
 
 }
 
