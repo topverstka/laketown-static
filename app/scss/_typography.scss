@@ -39,3 +39,11 @@ h6 {
 .text-bold {
   font-weight: 700;
 }
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
