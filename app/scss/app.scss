@@ -90,6 +90,7 @@ body {
 
 // header
 header {
+  background: $colorBgr;
   .header-wrap {
     position: relative;
     .header-line {
@@ -170,27 +171,54 @@ header {
 }
 
 //banner
-.banner {
+.hero-wrapper {
   position: relative;
-  width: 100%;
-  min-height: 400px;
-  background: transparent;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  video {
-    width: inherit;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -9999;
+
   }
 }
+.hero-wrapper figure {
+  margin: 0;
+  position: relative;
+}
+.hero-wrapper figure h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-right: 3px solid #fff;
+  padding: 5px 10px 5px 5px;
+}
+.hero-wrapper video {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+
 
 section#advantages {
   position: relative;
+  background: $colorBgr;
   .companyName {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: -100px;
+    top: 0;
     transform: translateY(-100%);
     span {
       color: #ffffffb5;
@@ -206,12 +234,14 @@ section#advantages {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 80px;
+    padding-top: 80px;
   }
 }
 
 section#news {
   margin-bottom: 200px;
+  background: $colorBgr;
+
   .section-pills {
     display: flex;
     flex-direction: row;
@@ -291,6 +321,8 @@ section#news {
 }
 
 section#buildingStage {
+  background: $colorBgr;
+
   .callendar {
     border-bottom: 1px solid $mainDark;
     display: flex;
@@ -303,6 +335,8 @@ section#buildingStage {
 
 // footer
 footer {
+  background: $colorBgr;
+
   padding-top: 200px;
 
   .footer-menu {
@@ -380,10 +414,6 @@ footer {
   }
 }
 
-.testblock {
-  height: 900px;
-  background: $orangeDark;
-}
 
 // ui
 .buttons {
