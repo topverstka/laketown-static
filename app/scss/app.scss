@@ -410,6 +410,17 @@ section#advantages {
 section#buildingPosition {
   padding-top: 200px;
   position: relative;
+  .section-title {
+    align-items: flex-start;
+    justify-content: space-between;
+    &__text {
+      width: 50%;
+      margin-top: 0;
+    }
+    &__ext {
+      width: 30%;
+    }
+  }
 }
 
 section#mapBlock {
