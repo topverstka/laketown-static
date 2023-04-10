@@ -14,3 +14,44 @@
   -o-transition: $obj $val;
   transition: $obj $val;
 }
+@mixin borderRadius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  -ms-border-radius: $val;
+  -o-border-radius: $val;
+  border-radius: $val;
+}
+
+@mixin centerAll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transform($type, $val) {
+  -webkit-transform: #{$type}(#{$val});
+  -moz-transform: #{$type}(#{$val});
+  -ms-transform: #{$type}(#{$val});
+  -o-transform: #{$type}(#{$val});
+  transform: #{$type}(#{$val});
+}
+
+@mixin btnColors($nBorder, $nBgr, $nColor, $hBorder, $hBgr, $hColor) {
+  border-color: $nBorder;
+  background: $nBgr;
+  color: $nColor;
+  svg path, span {
+    fill: $nColor;
+  }
+  &:hover {
+    border-color: $hBorder;
+    background: $hBgr;
+    color: $hColor;
+    svg path, span {
+      fill: $hColor;
+    }
+
+  }
+}
+

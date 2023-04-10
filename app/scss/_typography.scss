@@ -39,6 +39,13 @@ h6 {
 .text-bold {
   font-weight: 700;
 }
+.text-undetline {
+  text-decoration: underline;
+}
+
+.d-none {
+  display: none !important;
+}
 
 .section-title {
   display: flex;

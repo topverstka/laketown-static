@@ -1,16 +1,74 @@
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  @include centerAll;
+  height: 80px;
   border: 1px solid;
   @include transition(all, .5s);
+
   span {
     font-size: 18px !important;
     font-family: var(--font-main);
   }
   cursor: pointer;
+
+  //btn forms
+  &-square {
+    @include borderRadius(60px);
+    @each $name, $size in (xs: 107px, s: 253px, m: 295px, 100: 100%, 3: 36%) {
+      &-#{$name} {
+        min-width: $size;
+        width: $size;
+      }
+    }
+    @each $name, $size in (fm: 54px, fl: 24px) {
+      &-#{$name} {
+        min-width: $size;
+      }
+    }
+
+  }
+
+  &-rond {
+    @include borderRadius(50%);
+    @each $name, $size in (s: 80px, m: 100px, l: 160px, xl: 200px) {
+      &-#{$name} {
+        height: $size;
+        width: $size;
+      }
+    }
+  }
+
+  //colors
+  &-orange {
+    @include btnColors($orangeMain, $orangeMain, $colorBgr, $orangeDark, $orangeDark, $colorBgr);
+  }
+  &-black-border {
+    @include btnColors($mainDark, transparent, $mainDark, $orangeDark, $orangeDark, $colorBgr);
+  }
+  &-orange-border {
+    @include btnColors($orangeMain, transparent, $orangeMain, $orangeDark, $orangeDark, $colorBgr);
+  }
+
+  &-orange-border-black {
+    @include btnColors($orangeMain, transparent, $mainDark, $orangeDark, $orangeDark, $colorBgr);
+  }
+
+  // link btns
+
+  &-link {
+    height: fit-content;
+    color: $mainDark;
+    &:hover {
+      color: $orangeMain;
+    }
+  }
+
+
+
+
+
+
+  // old code
+
   &.btn-link {
     padding: 0;
     border: 0;

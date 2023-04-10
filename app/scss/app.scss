@@ -5,6 +5,7 @@
 @import "_containers";
 @import "_typography";
 @import "_buttons";
+@import "_slider";
 
 
 * {
@@ -121,24 +122,14 @@ header {
       margin-bottom: 100px;
       .btn-map {
         .btn {
-          height: 80px;
-          padding: 0 26px;
-          .icon {
-            margin-right: 14px;
-            svg {
-              path {
-                fill: white;
-              }
-            }
-          }
         }
       }
       .btn-block {
-        flex-grow: 1;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        flex: 1 1 100%;
         .btn {
           margin-right: 40px;
         }
@@ -173,7 +164,7 @@ header {
 //banner
 .hero-wrapper {
   position: relative;
-  bottom: 0;
+  bottom: 40px;
   right: 0;
   height: auto;
   width: auto;
@@ -236,10 +227,177 @@ section#advantages {
     justify-content: space-between;
     padding-top: 80px;
   }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    .adv-slider-text {
+      width: 50%;
+      position: relative;
+      -webkit-flex: 1 1 40%;
+      -moz-flex: 1 1 40%;
+      -ms-flex: 1 1 40%;
+      flex: 0 0 40%;
+      height: 800px;
+
+      .slider {
+        position: relative;
+        display: block;
+        height: 100%;
+
+        &-item {
+          opacity: 0;
+          z-index: -1;
+          height: 0;
+          position: absolute;
+          top: 0;
+          @include transition(left, 1s);
+          &.current {
+            left: 0;
+            opacity: 1;
+            z-index: 2;
+            height: fit-content;
+            position: relative;
+            margin-bottom: auto;
+
+
+          }
+        }
+      }
+
+      .adv-slider-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        z-index: 5;
+        .nextBtn {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+          @extend .ml-15;
+        }
+        .sliderQty {
+          @extend .ml-20;
+
+          span {
+            font-family: var(--font-alimini);
+            font-size: 48px;
+            color: $borderGray;
+            &.curSlider {
+              color: $orangeMain;
+            }
+          }
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+      #advText {
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      h3 {
+        margin-top: 0;
+      }
+      .item-text {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      .item-icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &-item {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          &__icon {
+            margin-right: 10px;
+          }
+          &__desc {
+            font-family: var(--font-alimini);
+            font-size: 24px;
+            text-transform: uppercase;
+            color: $mainBlue;
+            margin-right: 20px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .slider-images {
+      position: relative;
+      overflow: hidden;
+      width: 50%;
+      height: 800px;
+      .slider-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: absolute;
+        .slider-item {
+          opacity: 0;
+          z-index: -1;
+          width: 0;
+          @include transform(translateX, calc(100% + 40px));
+
+          &.current, &.active {
+            opacity: 1;
+            width: calc(100% - 80px);
+            @include borderRadius(60px);
+            position: relative;
+            overflow: hidden;
+
+          }
+          &.current {
+            z-index: 2;
+            @include transition(all, 1s);
+            @include transform(translateX, 0);
+
+          }
+          &.active {
+            z-index: 3;
+            position: absolute;
+            @include transform(translateX, calc(100% + 40px));
+            @include transition(all, 1s);
+            //left: calc(100% - 40px);
+
+          }
+          &.prev {
+            opacity: 1;
+            z-index: 2;
+            position: absolute;
+            @include transform(translateX, 0);
+            width: calc(100% - 80px);
+            overflow: hidden;
+            @include borderRadius(60px);
+            @include transition(all, 1s);
+
+
+          }
+        }
+      }
+    }
+
+
+  }
 }
 
 section#news {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
   background: $colorBgr;
 
   .section-pills {

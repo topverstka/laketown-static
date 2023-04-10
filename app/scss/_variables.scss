@@ -36,3 +36,36 @@ $desktop-xl-container: 1590px;
   --font-main: "OpenSans", sans-serif;
   --font-alimini: "Alimini", sans-serif;
 }
+
+// paddings && margins
+$vals: (5, 10, 15, 20, 25, 30, 35, 40, 80, 100, 200);
+$moves: (l: left, r:right, t:top, b:bottom, all:'');
+
+@each $padding in $vals {
+  @each $mKey, $mVal in $moves {
+    @if($mKey != all) {
+      .p#{$mKey}-#{$padding} {
+        padding-#{$mVal}:#{$padding}px;
+      }
+    } @else {
+      .p#{$mKey}-#{$padding} {
+        padding:#{$padding}px;
+      }
+    }
+  }
+}
+
+@each $margin in $vals {
+  @each $mKey, $mVal in $moves {
+    @if($mKey != all) {
+      .m#{$mKey}-#{$margin} {
+        margin-#{$mVal}:#{$margin}px;
+      }
+    } @else {
+      .p#{$mKey}-#{$margin} {
+        margin:#{$margin}px;
+      }
+    }
+  }
+}
+

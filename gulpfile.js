@@ -79,7 +79,7 @@ function cleanimg() {
 async function images() {
   imagecomp(
     "app/img/**/*", // Берём все изображения из папки источника
-    "app/img/dest/", // Выгружаем оптимизированные изображения в папку назначения
+    "dest/img/", // Выгружаем оптимизированные изображения в папку назначения
     { compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
     { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
     { png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
