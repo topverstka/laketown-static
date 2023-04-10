@@ -1,18 +1,25 @@
 .input-select {
   position: relative;
   &__input {
+    position: relative;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid $lightGrayText;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+
     input {
       width: 100%;
       background: transparent;
-      height: 60px;
-      border-radius: 30px;
-      padding: 0 17px;
-      border: 1px solid $lightGrayText;
+      border: none;
       outline: none;
+      margin-right: 40px;
+      cursor: pointer;
     }
     .arrow {
       position: absolute;
-      right: 0;
+      right: 17px;
       top: 50%;
       transform: translateY(-50%);
       border: 1px solid #D9D9D9;
