@@ -6,6 +6,7 @@
 @import "_typography";
 @import "_buttons";
 @import "_slider";
+@import "_forms";
 
 
 * {
@@ -94,6 +95,12 @@ body {
   top: 0;
   left: 10%;
   height: 100%;
+}
+
+.nadpis3 {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 
@@ -261,7 +268,7 @@ section#advantages {
           height: 0;
           position: absolute;
           top: 0;
-          @include transition(left, 1s);
+          @include transition(all, 1s);
           &.current {
             left: 0;
             opacity: 1;
@@ -281,6 +288,28 @@ section#advantages {
         align-items: flex-end;
         position: relative;
         z-index: 5;
+        .navBtn {
+          svg path {
+            fill:none;
+            stroke: $mainDark;
+          }
+          &:hover {
+            svg path {
+              fill:none;
+              stroke: $colorBgr;
+            }
+
+          }
+          &.disabled {
+            border-color: $borderGray;
+            background: $borderGray;
+            svg path {
+              fill:none;
+              stroke: $colorBgr;
+            }
+
+          }
+        }
         .nextBtn {
           -webkit-transform: rotate(180deg);
           -moz-transform: rotate(180deg);
@@ -459,12 +488,98 @@ section#mapBlock {
       cursor: pointer;
       @include transition(all, .5s);
       svg path, span {
-        fill: $colorBgr;
+        fill: none;
+        stroke: $colorBgr;
         color: $colorBgr;
+      }
+      svg.fill path {
+        fill: $colorBgr;
       }
       &:hover, &.active {
         background: $orangeDark;
       }
+    }
+  }
+
+}
+
+section#chooseAppt {
+  position: relative;
+  padding-top: 200px;
+
+  .section-title {
+    padding-bottom: 80px;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      span {
+        color: $lightGrayText;
+      }
+    }
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    .appt-list {
+      -webkit-flex: 0 0 50%;
+      -moz-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 30px 0;
+        border-top: 1px solid $lightGrayText;
+        cursor: pointer;
+        @include transition(all, .5s);
+        &:last-child {
+          border-bottom: 1px solid $lightGrayText;
+
+        }
+        &:hover {
+          background: $orangeLight;
+        }
+        .item-image {
+          width: 150px;
+          height: 110px;
+          position: relative;
+          overflow: hidden;
+          margin-right: 40px;
+          margin-left: 40px;
+          img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            @include transform(translateY, -50%);
+            top: 50%;
+
+          }
+        }
+        .item-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-around;
+          &__caption {
+            font-family: var(--font-main);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+    .appt-filter {
+      -webkit-flex: 1 0 auto;
+      -moz-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      margin-left: 110px;
     }
   }
 
@@ -556,19 +671,31 @@ section#buildingStage {
   background: $colorBgr;
 
   .callendar {
-    border-bottom: 1px solid $mainDark;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px;
+    &-item {
+      border-bottom: 1px solid $mainDark;
+      padding-bottom: 20px;
+      flex: 1 1 auto;
+      text-align: center;
+      @include transition(all, .5s);
+      cursor: pointer;
+      &.active, &:hover {
+        color: $orangeMain;
+        border-bottom: 1px solid $orangeMain;
+        padding-bottom: 20px;
+
+      }
+    }
   }
 }
 
 // footer
 footer {
   background: $colorBgr;
-
+  padding-bottom: 40px;
   padding-top: 200px;
 
   .footer-menu {
