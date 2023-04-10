@@ -89,6 +89,14 @@ body {
 }
 
 
+.nadpis2 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  height: 100%;
+}
+
+
 // header
 header {
   background: $colorBgr;
@@ -352,10 +360,12 @@ section#advantages {
           opacity: 0;
           z-index: -1;
           width: 0;
-          @include transform(translateX, calc(100% + 40px));
+          left: 100%;
+          @include transform(translateX, calc(200% - 80px));
 
           &.current, &.active {
-            opacity: 1;
+            left: 0;
+           opacity: 1;
             width: calc(100% - 80px);
             @include borderRadius(60px);
             position: relative;
@@ -378,8 +388,9 @@ section#advantages {
           }
           &.prev {
             opacity: 1;
-            z-index: 2;
+            z-index: -1;
             position: absolute;
+            left: 0;
             @include transform(translateX, 0);
             width: calc(100% - 80px);
             overflow: hidden;
@@ -394,6 +405,47 @@ section#advantages {
 
 
   }
+}
+
+section#buildingPosition {
+  padding-top: 200px;
+  position: relative;
+}
+
+section#mapBlock {
+  width: 100%;
+  #map {
+    width: 100%;
+    height:600px;
+  }
+  .map-filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: $orangeMain;
+    &__item {
+      -webkit-flex: 1 1 auto;
+      -moz-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include transition(all, .5s);
+      svg path, span {
+        fill: $colorBgr;
+        color: $colorBgr;
+      }
+      &:hover, &.active {
+        background: $orangeDark;
+      }
+    }
+  }
+
 }
 
 section#news {

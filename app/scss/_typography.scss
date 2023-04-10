@@ -47,6 +47,10 @@ h6 {
   display: none !important;
 }
 
+
+section {
+  background: $colorBgr;
+}
 .section-title {
   display: flex;
   flex-direction: row;
