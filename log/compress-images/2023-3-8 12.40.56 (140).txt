@@ -1,0 +1,8 @@
+File from: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png]
+
+File to: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/decode/projects/LakeTownHTML/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png
+  error: failed writing image to app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png (16)

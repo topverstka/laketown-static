@@ -1,0 +1,13 @@
+File from: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png.tmp]
+
+File to: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/5.png.tmp]
+
+Compression algorithm: [-]
+
+Description: File does not exist!File from: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/4.png.tmp]
+
+File to: [app/img/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/dest/advantages/4.png.tmp]
+
+Compression algorithm: [-]
+
+Description: File does not exist!

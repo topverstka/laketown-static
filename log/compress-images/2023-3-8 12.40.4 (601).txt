@@ -1,0 +1,16 @@
+File from: [app/img/advantages/4.png]
+
+File to: [app/img/dest/advantages/4.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/decode/projects/LakeTownHTML/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/img/dest/advantages/4.png app/img/advantages/4.png
+  error: failed writing image to app/img/dest/advantages/4.png (16)
+File from: [app/img/advantages/4.png]
+
+File to: [app/img/dest/advantages/4.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/decode/projects/LakeTownHTML/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/img/dest/advantages/4.png app/img/advantages/4.png
+  error: failed writing image to app/img/dest/advantages/4.png (16)

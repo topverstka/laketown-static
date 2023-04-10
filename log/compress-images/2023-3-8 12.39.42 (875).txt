@@ -1,0 +1,7 @@
+File from: [app/img/dest/dest/dest/dest/advantages/1.png.tmp]
+
+File to: [app/img/dest/dest/dest/dest/dest/advantages/1.png.tmp]
+
+Compression algorithm: [-]
+
+Description: File does not exist!
