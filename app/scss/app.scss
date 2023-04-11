@@ -573,6 +573,9 @@ section#chooseAppt {
           }
         }
       }
+      btn {
+        margin-top: 60px;
+      }
     }
     .appt-filter {
       -webkit-flex: 1 0 auto;
@@ -583,6 +586,128 @@ section#chooseAppt {
     }
   }
 
+}
+
+section#parking {
+  padding-top: 200px;
+  .section-title {
+    align-items: flex-start;
+    margin-bottom: 80px;
+    &-wrapper {
+      -webkit-flex: 0 0 60%;
+      -moz-flex: 0 0 60%;
+      -ms-flex: 0 0 60%;
+      flex: 0 0 60%;
+      position: relative;
+      margin-right: 50px;
+      .arrow-title {
+        position: absolute;
+        top: 86px;
+        right: 0;
+      }
+      .btns {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &-desc {
+      .desc-title {
+        h3 {
+          margin-top: 0;
+          margin-bottom: 80px;
+        }
+      }
+      .desc-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .item {
+          -webkit-flex: 1 1 50%;
+          -moz-flex: 1 1 50%;
+          -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            font-family: var(--font-alimini);
+            font-size: 24px;
+            color: $mainBlue;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    &__text {
+      margin-top: 0;
+      width: 60%;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+      span {
+        font-family: var(--font-alimini);
+        font-size: 80px;
+        display: inline;
+        background-color: $colorBgr;
+        box-shadow: -10px 0 0 $colorBgr, 10px 0 0 $colorBgr;
+        padding-right: 20px;
+      }
+    }
+
+  }
+  .section-content {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+section#byingServices {
+  .section-title {
+    &__btns {
+      display: flex;
+      .navBtn {
+        svg path {
+          fill:none;
+          stroke: $mainDark;
+        }
+        &:hover {
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+        &.disabled {
+          border-color: $borderGray;
+          background: $borderGray;
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+      }
+      .nextBtn {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        @extend .ml-15;
+      }
+      .btn {
+
+        &:last-child {
+          margin-left: 20px;
+
+        }
+      }
+    }
+  }
 }
 
 section#news {

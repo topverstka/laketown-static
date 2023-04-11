@@ -149,4 +149,38 @@ $(document).ready(function() {
     });
   }
 
+
+  $(document).on('click', '#apptMore', function() {
+    // временно добавляем блок - потом через аякс
+
+
+  });
+
+  // select
+  jQuery(function($){
+    $(document).mouseup( function(e){ // событие клика по веб-документу
+      var div = $( ".input-select.active" ); // тут указываем ID элемента
+      if ( !div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+        div.removeClass('active'); // скрываем его
+      }
+    });
+  });
+
+
+  $(document).on('click', '.input-select__input', function() {
+    $(this).parent().toggleClass('active');
+  });
+
+  $(document).on('click', '.input-select.active .dropdown-item', function() {
+    var block = $(this).parent().parent(),
+      title = $(this).text(),
+      val = $(this).data('val');
+
+    block.find('[data-id="inputTitle"]').val(title);
+    block.find('[data-id="inputValue"]').val(val);
+
+    block.toggleClass('active');
+  });
+
 });

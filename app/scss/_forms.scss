@@ -29,7 +29,66 @@
       @include centerAll;
       background: #D9D9D9;
       cursor: pointer;
+      @include transition(all, .5s);
+      svg {
+        @include transition(all, .5s);
+      }
     }
   }
+  &__dropdown {
+    max-height: 0;
+    z-index: 3;
+    width: inherit;
+    position: absolute;
+    background: $colorBgr;
+    @include transition(all, .5s);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow:hidden;
+    right: 0;
+    left: 0;
 
+    .dropdown-item {
+      height: 0;
+      border-bottom: 1px solid $lightGrayText;
+      padding: 0 17px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include transition(all, .5s);
+
+      &:hover {
+        background: $orangeMain;
+        color: $colorBgr;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+  }
+  &.active {
+    .input-select__input {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: $orangeMain;
+      .arrow {
+        background: $orangeMain;
+        svg {
+          transform: rotate(180deg);
+          path {
+            fill: $colorBgr;
+          }
+        }
+      }
+    }
+    .input-select__dropdown {
+      border: 1px solid $borderGray;
+      max-height: fit-content;
+      .dropdown-item {
+        height: 60px;
+      }
+    }
+  }
 }
