@@ -665,7 +665,7 @@ section#parking {
   }
 }
 
-section#byingServices {
+section#buyingServices {
   .section-title {
     &__btns {
       display: flex;
@@ -704,6 +704,37 @@ section#byingServices {
         &:last-child {
           margin-left: 20px;
 
+        }
+      }
+    }
+  }
+  .section-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    #sliderServices {
+      display: flex;
+      flex-direction: row;
+      padding-left: 80px;
+      @include transition(all, .5s);
+
+      .slider-item {
+        width: 30%;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        &__image {
+          position: relative;
+          overflow: hidden;
+          @include borderRadius(60px);
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+        &__text {
+          font-family: var(--font-alimini);
+          font-size: 48px;
         }
       }
     }
