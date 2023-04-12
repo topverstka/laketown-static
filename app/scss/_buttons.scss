@@ -29,7 +29,7 @@
 
   &-rond {
     @include borderRadius(50%);
-    @each $name, $size in (s: 80px, m: 100px, l: 160px, xl: 200px) {
+    @each $name, $size in (s: 80px, m: 100px, ml: 120px, l: 160px, xl: 200px) {
       &-#{$name} {
         height: $size;
         width: $size;

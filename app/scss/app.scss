@@ -7,6 +7,7 @@
 @import "_buttons";
 @import "_slider";
 @import "_forms";
+@import "_modal";
 
 
 * {
@@ -24,6 +25,11 @@ body {
   left: 0;
   padding: 0;
   margin: 0;
+  @include transition(all, .5s);
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 .top-menu {
@@ -187,7 +193,6 @@ header {
   min-width: 100%;
   &.fixed {
     position: fixed;
-    bottom: 0;
     right: 0;
     height: auto;
     width: auto;
@@ -196,24 +201,22 @@ header {
     z-index: -9999;
 
   }
+  figure {
+    margin: 0;
+    position: relative;
+    h1 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-right: 3px solid #fff;
+      padding: 5px 10px 5px 5px;
+    }
+  }
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
 }
-.hero-wrapper figure {
-  margin: 0;
-  position: relative;
-}
-.hero-wrapper figure h1 {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  border-right: 3px solid #fff;
-  padding: 5px 10px 5px 5px;
-}
-.hero-wrapper video {
-  width: 100%;
-  max-width: 100%;
-}
-
-
 
 
 
@@ -534,11 +537,11 @@ section#chooseAppt {
         align-items: center;
         justify-content: flex-start;
         padding: 30px 0;
-        border-top: 1px solid $lightGrayText;
+        border-bottom: 1px solid $lightGrayText;
         cursor: pointer;
         @include transition(all, .5s);
-        &:last-child {
-          border-bottom: 1px solid $lightGrayText;
+        &:first-child {
+          border-top: 1px solid $lightGrayText;
 
         }
         &:hover {
@@ -573,7 +576,7 @@ section#chooseAppt {
           }
         }
       }
-      btn {
+      .btn {
         margin-top: 60px;
       }
     }
@@ -666,6 +669,8 @@ section#parking {
 }
 
 section#buyingServices {
+  padding-top: 200px;
+
   .section-title {
     &__btns {
       display: flex;
@@ -742,6 +747,7 @@ section#buyingServices {
 }
 
 section#news {
+  padding-top: 200px;
   padding-bottom: 200px;
   background: $colorBgr;
 
@@ -825,7 +831,7 @@ section#news {
 
 section#buildingStage {
   background: $colorBgr;
-
+  padding-top: 200px;
   .callendar {
     display: flex;
     flex-direction: row;
@@ -845,6 +851,110 @@ section#buildingStage {
 
       }
     }
+  }
+
+
+  .section-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 60px;
+    .slider-btns {
+      position: absolute;
+      z-index: 5;
+      width: 70%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      top: 50%;
+      transform: translateY(-50%);
+      .prevBtn {
+        left: 15px;
+        position: relative;
+      }
+      .navBtn {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        svg path {
+          fill:none;
+          stroke: $colorBgr;
+        }
+        &:hover {
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+        &.disabled {
+          border-color: $borderGray;
+          background: $borderGray;
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+      }
+      .nextBtn {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        position: relative;
+        left: 30px;
+      }
+
+    }
+    #sliderStages {
+      display: flex;
+      flex-direction: row;
+      padding-left: 80px;
+      @include transition(all, .5s);
+
+      .slider-item {
+        width: 70%;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        &__image {
+          position: relative;
+          overflow: hidden;
+          @include borderRadius(60px);
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+section#formCallback {
+  position: relative;
+  .nadpisFormLeft {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+  }
+  .nadpisFormRight {
+    position: absolute;
+    right: 0;
+    top: 15%;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  .section-content {
+    position: relative;
   }
 }
 

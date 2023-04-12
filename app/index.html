@@ -7,7 +7,53 @@
   <link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightslider.css" />
 </head>
 <body>
+<div class="modal">
+  <div class="modal-wrapper">
+    <div class="container">
+      <div class="btn btn-black-border btn-square btn-square-xs" id="closeModal">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.99998 7.11465L15.6 0.514648L17.4853 2.39998L10.8853 8.99998L17.4853 15.6L15.6 17.4853L8.99998 10.8853L2.39998 17.4853L0.514648 15.6L7.11465 8.99998L0.514648 2.39998L2.39998 0.514648L8.99998 7.11465Z" fill="#383838"/>
+        </svg>
+      </div>
 
+      <section id="modalCallback">
+
+        <div class="container-fixed">
+          <div class="section-title">
+            <h2 class="section-title__text">ПЕРЕЗВОНИТЕ МНЕ</h2>
+          </div>
+          <div class="section-content">
+            <div class="input-text">
+              <label>Ваше имя</label>
+              <input type="text" name="callback_name">
+            </div>
+            <div class="input-text">
+              <label>E-mail</label>
+              <input type="email" name="callback_email">
+            </div>
+            <div class="input-text">
+              <label>Телефон</label>
+              <input type="text" name="callback_phone">
+            </div>
+            <div class="input-textarea">
+              <label>Комментарий к заявке</label>
+              <textarea name="callback_comment"></textarea>
+            </div>
+            <div class="input-checkbox">
+              <input type="checkbox" name="callback_success" id="modalCallbackSuccess">
+              <label for="modalCallbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
+            </div>
+            <div class="btn btn-square btn-square-100 btn-orange">
+              <span>Отправить заявку</span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+</div>
 
 <div class="top-menu">
   <div class="modal-wrapper">
@@ -704,6 +750,48 @@
     </div>
 
   </div>
+
+  <div class="section-content">
+    <div class="slider-btns" data-slider="sliderStages">
+      <div class="navBtn prevBtn btn btn-rond btn-rond-ml btn-orange disabled">
+        <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="navBtn nextBtn btn btn-rond btn-rond-ml btn-orange">
+        <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+    </div>
+
+    <div id="sliderStages" data-items="1">
+      <div class="slider-item active" data-id="1">
+        <div class="slider-item__image">
+          <img src="img/stages/1.png">
+        </div>
+      </div>
+      <div class="slider-item" data-id="2">
+        <div class="slider-item__image">
+          <img src="img/stages/2.png">
+        </div>
+      </div>
+      <div class="slider-item" data-id="3">
+        <div class="slider-item__image">
+          <img src="img/stages/1.png">
+        </div>
+      </div>
+      <div class="slider-item" data-id="4">
+        <div class="slider-item__image">
+          <img src="img/stages/2.png">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <section id="news">
@@ -745,6 +833,49 @@
       </div>
     </div>
   </div>
+</section>
+
+<section id="formCallback">
+  <div class="nadpisFormLeft">
+    <img src="img/svg/formBgrLeft.svg">
+  </div>
+
+  <div class="nadpisFormRight">
+    <img src="img/svg/formBgrRight.svg">
+  </div>
+
+  <div class="container-fixed">
+    <div class="section-title">
+      <h2 class="section-title__text">ПЕРЕЗВОНИТЕ МНЕ</h2>
+    </div>
+    <div class="section-content">
+      <div class="input-text">
+        <label>Ваше имя</label>
+        <input type="text" name="callback_name">
+      </div>
+      <div class="input-text">
+        <label>E-mail</label>
+        <input type="email" name="callback_email">
+      </div>
+      <div class="input-text">
+        <label>Телефон</label>
+        <input type="text" name="callback_phone">
+      </div>
+      <div class="input-textarea">
+        <label>Комментарий к заявке</label>
+        <textarea name="callback_comment"></textarea>
+      </div>
+      <div class="input-checkbox">
+        <input type="checkbox" name="callback_success" id="callbackSuccess">
+        <label for="callbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
+      </div>
+      <div class="btn btn-square btn-square-100 btn-orange">
+        <span>Отправить заявку</span>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <footer>

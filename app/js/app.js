@@ -167,8 +167,51 @@ $(document).ready(function() {
       sliderBlock.find('.slider-item.active').removeClass('active');
       sliderBlock.find('.slider-item[data-id="' + qtyCurrent + '"]').addClass('active');
       navBlock.find('.navBtn').removeClass('disabled');
+      if (qtyCurrent == 1) {
+        currentBtn.addClass('disabled');
 
-      if (1 < parseInt(qtyCurrent + slideMove)) {
+      }
+
+    }
+
+  });
+
+  //slider buying
+  $(document).find('#buildingStage').on('click', '.navBtn:not(".disabled")', function() {
+    var currentBtn = $(this),
+      navBlock = currentBtn.parent();
+      sliderBlock = $(document).find('#'+navBlock.data('slider')),
+      qtySliders = sliderBlock.find('.slider-item').length,
+      qtyCurrent = sliderBlock.find('.slider-item.active').data('id'),
+      newSlide = 1,
+      nextSlide = 1,
+      slideMove = parseInt(sliderBlock.data('items'));
+
+      var blockWidth = sliderBlock.width(),
+        itemWidth = sliderBlock.find('.slider-item').width() + parseInt( sliderBlock.find('.slider-item').css('padding-right') );
+    if (currentBtn.hasClass('nextBtn') ) {
+      var last = qtySliders-parseInt(sliderBlock.data('items'));
+
+      sliderBlock.css('transform', 'translateX(-' + (parseFloat(qtyCurrent)*parseFloat(itemWidth)) + 'px)');
+      qtyCurrent++;
+      sliderBlock.find('.slider-item.active').removeClass('active');
+      sliderBlock.find('.slider-item[data-id="' + qtyCurrent + '"]').addClass('active');
+      navBlock.find('.navBtn').removeClass('disabled');
+      if (qtySliders < parseInt(qtyCurrent + slideMove)) {
+        currentBtn.addClass('disabled');
+
+      }
+
+    } else if (currentBtn.hasClass('prevBtn')) {
+
+
+      var last = qtySliders-parseInt(sliderBlock.data('items'));
+      qtyCurrent--;
+      sliderBlock.css('transform', 'translateX(-' + (parseFloat(qtyCurrent - 1)*parseFloat(itemWidth)) + 'px)');
+      sliderBlock.find('.slider-item.active').removeClass('active');
+      sliderBlock.find('.slider-item[data-id="' + qtyCurrent + '"]').addClass('active');
+      navBlock.find('.navBtn').removeClass('disabled');
+      if (qtyCurrent == 1) {
         currentBtn.addClass('disabled');
 
       }
@@ -178,7 +221,15 @@ $(document).ready(function() {
   });
 
 
+  $(document).on('click', '.recall', function() {
+    $(document).find('body').addClass('modal-open');
+    $(document).find('.modal').addClass('active');
+  });
 
+  $(document).on('click', '#closeModal', function() {
+    $(document).find('body').removeClass('modal-open');
+    $(document).find('.modal').removeClass('active');
+  });
 
 // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.

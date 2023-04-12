@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  z-index: -100;
+  @include transition(all, .5s);
+  &.active {
+    position: fixed;
+    background: #f6f5f1;
+    width: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 35px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .btn {
+    margin-left: auto;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  section {
+    margin-bottom: 150px;
+  }
+}
