@@ -55,6 +55,20 @@
   }
 }
 
+@mixin paddingSlider($type, $direction) {
+  #{$type}-#{$direction}: 100px;
+  @media screen and (max-width: $desktop-s - 1) {
+    #{$type}-#{$direction}: 80px;
+  }
+  @media screen and (max-width: $tablet-s - 1) {
+    #{$type}-#{$direction}: 20px;
+  }
+  @media screen and (max-width: $tablet-s - 1) {
+    #{$type}-#{$direction}: 15px;
+  }
+}
+
+
 @function calcFont($width, $font) {
 
 }

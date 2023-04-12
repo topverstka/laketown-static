@@ -219,6 +219,7 @@ header {
   width: auto;
   min-height: 100%;
   min-width: 100%;
+  max-width: 100%;
   &.fixed {
     position: fixed;
     right: 0;
@@ -226,6 +227,7 @@ header {
     width: auto;
     min-height: 100%;
     min-width: 100%;
+    max-width: 100%;
     z-index: -9999;
 
   }
@@ -282,6 +284,8 @@ section#advantages {
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
+    margin-bottom: -1px;
+
     .adv-slider-text {
       width: 50%;
       position: relative;
@@ -426,7 +430,10 @@ section#advantages {
           width: 0;
           left: 100%;
           @include transform(translateX, calc(200% - 80px));
-
+          img {
+            width: 100%;
+            height: auto;
+          }
           &.current, &.active {
             left: 0;
             opacity: 1;
@@ -639,6 +646,7 @@ section#parking {
         position: absolute;
         top: 86px;
         right: 0;
+        left: 0;
       }
       .btns {
         display: flex;
@@ -677,7 +685,7 @@ section#parking {
     }
     &__text {
       margin-top: 0;
-      width: 60%;
+      width: 70%;
       position: relative;
       z-index: 2;
       margin-bottom: 40px;
@@ -749,10 +757,11 @@ section#buyingServices {
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-bottom: -1px;
     #sliderServices {
       display: flex;
       flex-direction: row;
-      padding-left: 80px;
+      @include paddingSlider(padding, left);
       @include transition(all, .5s);
 
       .slider-item {
@@ -903,7 +912,7 @@ section#buildingStage {
       top: 50%;
       transform: translateY(-50%);
       .prevBtn {
-        left: 15px;
+        left: -61px;
         position: relative;
       }
       .navBtn {
@@ -940,14 +949,14 @@ section#buildingStage {
         -o-transform: rotate(180deg);
         transform: rotate(180deg);
         position: relative;
-        left: 30px;
+        right: -61px;
       }
 
     }
     #sliderStages {
       display: flex;
       flex-direction: row;
-      padding-left: 80px;
+      @include paddingSlider(padding, left);
       @include transition(all, .5s);
 
       .slider-item {

@@ -76,6 +76,15 @@ $(document).ready(function() {
 
   $(document).find('#advantages .slider-item').css('width', sliderWidth);
 
+  var sliderBlockWidthWork = $(document).find('#buildingStage #sliderStages').width(),
+    borderWidthWork = parseInt($(document).find('.container').css('margin-left')),
+    sliderMarginWork = parseInt($(document).find('#buildingStage .slider-item').css('padding-right')),
+    sliderWidthWork = (sliderBlockWidthWork - borderWidthWork+sliderMarginWork) * 0.7;
+
+  $(document).find('#buildingStage #sliderStages').css({'padding-left': borderWidthWork});
+  $(document).find('#buildingStage .slider-item').css({'width': sliderWidthWork});
+  $(document).find('#buildingStage .slider-btns').css({'width': sliderWidthWork, 'margin-left': borderWidthWork});
+
   $(document).find('.adv-slider-nav').on('click', '.navBtn:not(".disabled")', function() {
     var currentBtn = $(this),
       navBlock = currentBtn.parent();
@@ -142,7 +151,7 @@ $(document).ready(function() {
   //slider buying
   $(document).find('#buyingServices').on('click', '.navBtn:not(".disabled")', function() {
     var currentBtn = $(this),
-      navBlock = currentBtn.parent();
+      navBlock = currentBtn.parent(),
       sliderBlock = $(document).find('#'+navBlock.data('slider')),
       qtySliders = sliderBlock.find('.slider-item').length,
       qtyCurrent = sliderBlock.find('.slider-item.active').data('id'),
