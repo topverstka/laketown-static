@@ -150,6 +150,25 @@ header {
       .slogan {
         width: 66%;
       }
+      .btn {
+        position: relative;
+        .arrow {
+          position: absolute;
+          left: -9px;
+          transform: rotate(45deg);
+          bottom: -9px;
+          path {
+            fill: $orangeMain;
+            @include transition(all, .5s);
+          }
+        }
+        &:hover {
+          .arrow path {
+            fill: $orangeDark
+          }
+        }
+      }
+
       .btn-map {
         .btn {
         }

@@ -22,6 +22,8 @@ $desktop-s: 1440px;
 $desktop-m: 1600px;
 $desktop-l: 1920px;
 
+$stopPoints : $desktop-l, $desktop-s, $tablet-s, $phone;
+
 // containers
 $phone-tablet-container: 100%;
 $desktop-s-container: 1192px;
