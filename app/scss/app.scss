@@ -99,8 +99,14 @@ body {
 .nadpis2 {
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 20%;
   height: 100%;
+  .container {
+    height: inherit;
+    svg {
+      height: 100%;
+    }
+  }
 }
 
 .nadpis3 {
@@ -141,6 +147,9 @@ header {
       align-items: center;
       flex-wrap: wrap;
       margin-bottom: 100px;
+      .slogan {
+        width: 66%;
+      }
       .btn-map {
         .btn {
         }
@@ -243,7 +252,10 @@ section#advantages {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 80px;
+    padding-top: 200px;
+    h2 {
+      margin: 0;
+    }
   }
   .section-content {
     display: flex;
@@ -389,6 +401,7 @@ section#advantages {
         flex-wrap: nowrap;
         position: absolute;
         .slider-item {
+          margin-right: 40px;
           opacity: 0;
           z-index: -1;
           width: 0;
@@ -397,8 +410,8 @@ section#advantages {
 
           &.current, &.active {
             left: 0;
-           opacity: 1;
-            width: calc(100% - 80px);
+            opacity: 1;
+            //width: calc(100% - 80px);
             @include borderRadius(60px);
             position: relative;
             overflow: hidden;
@@ -424,7 +437,7 @@ section#advantages {
             position: absolute;
             left: 0;
             @include transform(translateX, 0);
-            width: calc(100% - 80px);
+            //width: calc(100% - 80px);
             overflow: hidden;
             @include borderRadius(60px);
             @include transition(all, 1s);
@@ -440,14 +453,14 @@ section#advantages {
 }
 
 section#buildingPosition {
-  padding-top: 266px;
+  padding-top: 200px;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
   .section-title {
     align-items: flex-start;
     justify-content: space-between;
     &__text {
-      width: 50%;
+      max-width: 710px;
       margin-top: 0;
     }
     &__ext {

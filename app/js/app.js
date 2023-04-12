@@ -69,6 +69,13 @@ $(document).ready(function() {
 */
 
   //slider
+  var sliderBlockWidth = $(document).find('#advantages .slider-images').width(),
+    borderWidth = parseInt($(document).find('.container').css('margin-right')),
+    sliderMargin = parseInt($(document).find('#advantages .slider-item').css('margin-right')),
+    sliderWidth = sliderBlockWidth - borderWidth+sliderMargin;
+
+  $(document).find('#advantages .slider-item').css('width', sliderWidth);
+
   $(document).find('.adv-slider-nav').on('click', '.navBtn:not(".disabled")', function() {
     var currentBtn = $(this),
       navBlock = currentBtn.parent();
