@@ -69,7 +69,63 @@
 }
 
 
-@function calcFont($width, $font) {
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return calc($number / ($number * 0 + 1px));
+  }
+
+  @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+
+  $k: calc(($f-max - $f-min) / ($w-max - $w-min));
+  $b: $f-min - $k * $w-min;
+
+  $b: $b + $units;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false, $max-size: false) {
+
+  font-size: $f-min;
+
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+  }
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
+}
+
+
+
+@mixin getSizes($f-min, $f-max, $w-min, $w-max, $min-size: false, $max-size: false) {
+  @if ($min-size) {
+    @media screen and (max-width: $w-max) {
+      font-size: $f-max;
+    }
+  } @else if ($max-size) {
+    @media screen and (min-width: $w-min) {
+      font-size: $f-min;
+    }
+  } @else {
+    @media screen and (min-width: $w-min+1)  and (max-width: $w-max) {
+      font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+    }
+  }
+
 
 }
+
+
 

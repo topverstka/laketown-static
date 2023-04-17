@@ -25,3 +25,54 @@
     700,
     "../fonts/OpenSans/OpenSans-Bold"
 );
+
+
+// sizes
+h1 {
+  @include getSizes(120px, false, 1920px, false, false, true);
+  @include getSizes(80px, 120px, 1440px, 1920px, false, false);
+  @include getSizes(70px, 80px, 768px, 1440px, false, false);
+  @include getSizes(45px, 70px, 360px, 768px, false, false);
+  @include getSizes(false, 45px, false, 360px, true, false);
+}
+
+h2 {
+  @include getSizes(80px, false, 1920px, false, false, true);
+  @include getSizes(70px, 80px, 1440px, 1920px, false, false);
+  @include getSizes(60px, 70px, 768px, 1440px, false, false);
+  @include getSizes(40px, 60px, 360px, 768px, false, false);
+  @include getSizes(false, 40px, false, 360px, true, false);
+}
+
+h3 {
+  @include getSizes(48px, false, 1920px, false, false, true);
+  @include getSizes(48px, 48px, 1440px, 1920px, false, false);
+  @include getSizes(48px, 48px, 768px, 1440px, false, false);
+  @include getSizes(32px, 48px, 360px, 768px, false, false);
+  @include getSizes(false, 32px, false, 360px, true, false);
+}
+
+h4 {
+  @include getSizes(48px, false, 1920px, false, false, true);
+  @include getSizes(48px, 48px, 1440px, 1920px, false, false);
+  @include getSizes(32px, 48px, 768px, 1440px, false, false);
+  @include getSizes(24px, 32px, 360px, 768px, false, false);
+  @include getSizes(false, 24px, false, 360px, true, false);
+}
+
+.t-1 {
+  @include getSizes(24px, false, 1920px, false, false, true);
+  @include getSizes(24px, 24px, 1440px, 1920px, false, false);
+  @include getSizes(18px, 24px, 768px, 1440px, false, false);
+  @include getSizes(18px, 18px, 360px, 768px, false, false);
+  @include getSizes(false, 18px, false, 360px, true, false);
+}
+
+.t-2 {
+  @include getSizes(18px, false, 1920px, false, false, true);
+  @include getSizes(18px, 18px, 1440px, 1920px, false, false);
+  @include getSizes(16px, 18px, 768px, 1440px, false, false);
+  @include getSizes(16px, 16px, 360px, 768px, false, false);
+  @include getSizes(false, 16px, false, 360px, true, false);
+}
+

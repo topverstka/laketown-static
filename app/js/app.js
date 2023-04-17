@@ -26,55 +26,68 @@ $(document).ready(function() {
     step();
   }($('header #slogans').children()));
 
+
+
   // parralax
+
+  /*
+  let banner = document.getElementById('video');
+  var coord = banner.getBoundingClientRect();
+
   var headerHeight = $(document).find('header').outerHeight(),
-    bannerHeight = $(document).find('.hero-wrapper').height(),
+    bannerHeight = $(document).find('#video').outerHeight(),
     compHeight = $(document).find('#advantages .companyName').outerHeight();
+  console.log('header height = ' + coord.height);
+  console.log('banner top = ' + coord.top);
+  console.log(headerHeight + bannerHeight);
   $(window).on("scroll", function() {
-    if ($(window).scrollTop() > bannerHeight+240) {
-      $(document).find('.hero-wrapper').addClass('fixed');
-      $(document).find('#advantages').css('margin-top', bannerHeight+compHeight+80);
+
+    console.log('banner height = ' + coord.y);
+
+    if ($(window).scrollTop() > coord.y + bannerHeight) {
+      $(document).find('#video').addClass('fixed');
+      //$(document).find('#advantages').css('margin-top', bannerHeight+compHeight);
     }
     else {
-      $(document).find('.hero-wrapper').removeClass('fixed');
-      $(document).find('#advantages').css('margin-top', 0);
+      $(document).find('#video').removeClass('fixed');
+     // $(document).find('#advantages').css('margin-top', 0);
 
     }
   });
 
-
-  //sliders
-/*  $('#advText').lightSlider({
-    adaptiveHeight:false,
-    autoWidth: true,
-    mode: 'fade',
-    item:1,
-    slideMargin:0,
-    loop:false,
-    controls: false,
-    pager:false,
-    enableTouch: false,
-    enableDrag: false
-  });
-  $('#advImgs').lightSlider({
-    adaptiveHeight:false,
-    item:2,
-    slideMargin:20,
-    loop:false,
-    controls: false,
-    pager:false,
-    enableTouch: false,
-    enableDrag: false
-  });
 */
+
+  // filter appt
+
+  filterShow.onclick = function() {
+    apptFilter.classList.add('active');
+    filterShow.classList.add('d-none');
+    filterHide.classList.remove('d-none');
+  }
+
+  filterApply.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+
+
+  filterClear.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+
+
 
   //slider
   var sliderBlockWidth = $(document).find('#advantages .slider-images').width(),
     borderWidth = parseInt($(document).find('.container').css('margin-right')),
-    sliderMargin = parseInt($(document).find('#advantages .slider-item').css('margin-right')),
-    sliderWidth = sliderBlockWidth - borderWidth+sliderMargin;
+    sliderMargin = parseInt($(document).find('#advantages #advImages .slider-item').css('margin-right')),
+    sliderWidth = sliderBlockWidth - borderWidth;
 
-  $(document).find('#advantages .slider-item').css('width', sliderWidth);
+
+  $(document).find('#advantages #advImages .slider-item').css('width', sliderWidth);
 
   var sliderBlockWidthWork = $(document).find('#buildingStage #sliderStages').width(),
     borderWidthWork = parseInt($(document).find('.container').css('margin-left')),

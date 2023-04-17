@@ -10,6 +10,11 @@
   }
   cursor: pointer;
 
+  &-filter {
+    @include borderRadius(40px);
+    min-width: 80px;
+  }
+
   //btn forms
   &-square {
     @include borderRadius(60px);
@@ -57,6 +62,9 @@
   &-link {
     height: fit-content;
     color: $mainDark;
+    padding: 0;
+    border: 0;
+    text-decoration: underline;
     &:hover {
       color: $orangeMain;
     }
@@ -69,14 +77,6 @@
 
   // old code
 
-  &.btn-link {
-    padding: 0;
-    border: 0;
-    text-decoration: underline;
-    &:hover {
-      color: $orangeMain;
-    }
-  }
   &.btn-icon {
     width: 107px;
   }
@@ -109,7 +109,8 @@
       }
     }
   }
-  &.btn-orange {
+
+/*  &.btn-orange {
     border-color: $orangeMain;
     background: $orangeMain;
     color: white;
@@ -126,6 +127,7 @@
     }
 
   }
+  */
   &.btn-text {
     padding-left: 48px;
     padding-right: 48px;
