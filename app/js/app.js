@@ -8,6 +8,10 @@ $(document).ready(function() {
     $('.top-menu').removeClass('active');
   });
 
+  // menu click anchor
+  $('.top-menu .menu-item.anchor').on('click', function() {
+    $('.top-menu').removeClass('active');
+  });
 
   (function(elements) {
     var i = -1;

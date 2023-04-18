@@ -71,17 +71,15 @@ body {
         -o-transition: all .5s;
         transition: all .5s;
         cursor: pointer;
-        a {
-          color: $mainDark !important;
-          text-decoration: none !important;
-        }
+        color: $mainDark !important;
+        text-decoration: none !important;
+
         &:hover {
           color: $orangeDark;
           padding-left: 30px;
-          a {
-            color: $orangeMain !important;
-            text-decoration: none !important;
-          }
+          color: $orangeMain !important;
+          text-decoration: none !important;
+
 
         }
 
@@ -945,6 +943,8 @@ section#chooseAppt {
         padding: 30px 0;
         border-bottom: 1px solid $lightGrayText;
         cursor: pointer;
+        color: $mainDark;
+        text-decoration: none;
         @include transition(all, .5s);
         &:first-child {
           border-top: 1px solid $lightGrayText;
