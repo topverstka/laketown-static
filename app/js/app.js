@@ -27,35 +27,8 @@ $(document).ready(function() {
   }($('header #slogans').children()));
 
 
-
+  $('.parallax-window').parallax({imageSrc: 'img/Comp_1_5.gif'});
   // parralax
-
-  /*
-  let banner = document.getElementById('video');
-  var coord = banner.getBoundingClientRect();
-
-  var headerHeight = $(document).find('header').outerHeight(),
-    bannerHeight = $(document).find('#video').outerHeight(),
-    compHeight = $(document).find('#advantages .companyName').outerHeight();
-  console.log('header height = ' + coord.height);
-  console.log('banner top = ' + coord.top);
-  console.log(headerHeight + bannerHeight);
-  $(window).on("scroll", function() {
-
-    console.log('banner height = ' + coord.y);
-
-    if ($(window).scrollTop() > coord.y + bannerHeight) {
-      $(document).find('#video').addClass('fixed');
-      //$(document).find('#advantages').css('margin-top', bannerHeight+compHeight);
-    }
-    else {
-      $(document).find('#video').removeClass('fixed');
-     // $(document).find('#advantages').css('margin-top', 0);
-
-    }
-  });
-
-*/
 
   // filter appt
 
@@ -86,6 +59,10 @@ $(document).ready(function() {
     sliderMargin = parseInt($(document).find('#advantages #advImages .slider-item').css('margin-right')),
     sliderWidth = sliderBlockWidth - borderWidth;
 
+  if (window.innerWidth < 1440) {
+    sliderWidth = window.innerWidth;
+  }
+
 
   $(document).find('#advantages #advImages .slider-item').css('width', sliderWidth);
 
@@ -111,8 +88,6 @@ $(document).ready(function() {
       nextSlide = 1;
 
 
-    console.log(sliderAddBlock);
-
     if (currentBtn.hasClass('nextBtn') ) {
       newSlide = currentSlide+1;
       nextSlide = currentSlide+2;
@@ -132,13 +107,19 @@ $(document).ready(function() {
 
       }
 
+      if (window.innerWidth < 1440) {
+
+        var itemWidth = sliderAddBlock.find('.slider-item').width();
+        sliderAddBlock.find('.slider-wrapper').css('transform', 'translateX(-' + (parseFloat(currentSlide) * parseFloat(itemWidth)) + 'px)');
+
+      }
+
 
     } else if (currentBtn.hasClass('prevBtn')) {
       newSlide = currentSlide-1;
       prevSlide = currentSlide-2;
       nextSlide = currentSlide+1;
 
-      console.log(newSlide);
 
       sliderBlock.find('[data-id="'+currentSlide+'"]').removeClass('current').delay( 800 );
       sliderBlock.find('[data-id="'+newSlide+'"]').addClass('current');
@@ -150,14 +131,21 @@ $(document).ready(function() {
       sliderAddBlock.find('[data-id="'+prevSlide+'"]').removeClass('prev');
       sliderAddBlock.find('[data-id="'+nextSlide+'"]').removeClass('active');
 
-
       navBlock.find('.navBtn').removeClass('disabled');
 
       if (newSlide === 1) {
         currentBtn.addClass('disabled');
       }
+      if (window.innerWidth < 1440) {
+        var itemWidth = sliderAddBlock.find('.slider-item').width();
+        sliderAddBlock.find('.slider-wrapper').css('transform', 'translateX(-' + ((parseFloat(qtyCurrent.text()) - 1) * parseFloat(itemWidth)) + 'px)');
+      }
 
     }
+
+
+
+
 
   });
 

@@ -142,6 +142,7 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        cursor: pointer;
       }
     }
 
@@ -150,6 +151,9 @@ header {
       top: 0;
       right: 0;
       height: 100%;
+      .container {
+        height: 100%;
+      }
       img {
         height: 100%;
       }
@@ -280,6 +284,53 @@ header {
         -ms-flex: 1 1 100% !important;
         flex: 1 1 100% !important;
         height: 550px !important;
+        .slider-wrapper {
+          @include transition(all, .5s);
+        }
+        .slider-item {
+          position: relative;
+          border-radius: 0 !important;
+          overflow-y: hidden;
+          height: 100%;
+          margin-right: 0;
+
+          img {
+            width: 100% !important;
+            height: auto !important;
+            top: 50%;
+            transform: translateY(-50%);
+            position: relative;
+          }
+          &.prev, &.current, &.active {
+            margin-right: 0;
+            position: relative;
+            left: unset;
+            -webkit-transform: unset;
+            -moz-transform: unset;
+            -ms-transform: unset;
+            -o-transform: unset;
+            transform: unset;
+          }
+          
+          
+        }
+      }
+      .nav-wrapper {
+        bottom: 250px;
+        max-width: 100%;
+        right: 0;
+        left: 0;
+        .adv-slider-nav {
+          justify-content: space-between;
+          max-width: 100%;
+          bottom: 220px;
+          .btn {
+            @include btnColors($orangeMain, $orangeMain, $colorBgr, $orangeDark, $orangeDark, $colorBgr);
+          }
+          .sliderQty {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -312,6 +363,11 @@ header {
         margin-bottom: 40px;
         .btn {
           height: 60px !important;
+        }
+      }
+      #filterResult {
+        span {
+          color: #000;
         }
       }
       .appt-list {
@@ -516,38 +572,55 @@ header {
   }
 }
 
-section#video {
+#video {
   position: relative;
-  left: 0;
-  right: 0;
-  overflow: hidden;
+  min-height: 100%;
+  height: 100%;
+  background: 0 0;
   width: 100%;
+  background: transparent;
+  img {
+    opacity: 0;
+    left: 0;
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 section#advantages {
   position: relative;
-  background: $colorBgr;
+  background: transparent;
+
   .companyName {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: -20px;
-    transform: translateY(-100%);
-    span {
-      color: #ffffffb5;
-      margin-bottom: 18px;
-    }
-    img {
-      width: 216px;
-      height: auto;
+    position: relative;
+    top: -200px;
+    background: transparent;
+    z-index: 2;
+    .container {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: #ffffffb5;
+        margin-bottom: 18px;
+      }
+      img {
+        width: 216px;
+        height: auto;
+      }
+
     }
   }
+  .mainBlock {
+    background: $colorBgr;
+  }
   .section-title {
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 200px;
     h2 {
       margin: 0;
     }
@@ -1110,6 +1183,21 @@ section#news {
   padding-bottom: 200px;
   background: $colorBgr;
 
+  &.pageSection {
+    padding-top: 100px;
+    padding-bottom: 0;
+    .section-pills {
+      flex-wrap: wrap;
+    }
+    .btnBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+
   .section-pills {
     display: flex;
     flex-direction: row;
@@ -1347,6 +1435,7 @@ section#pageBuyingServices {
     justify-content: space-between;
     align-items: flex-start;
     .section-title {
+      padding-right: 20%;
       flex-direction: column;
       align-items: flex-start;
       -webkit-flex: 1 1 50%;
@@ -1388,15 +1477,17 @@ section#pageBuyingServices {
       width: 50%;
       position: relative;
       @media screen and (min-width: $desktop-s) and (max-width: $desktop-m - 1) {
+        height: 500px;
+
       }
       @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
         height: 320px;
       }
-      @media screen and (max-width: $tablet-s - 1) {
+      @media (max-width: $tablet-s - 1) {
         height: 233px;
       }
       .image-wrapper {
-        max-width: 80%;
+        max-width: 100%;
         margin-left: auto;
         position: relative;
         height: 100%;
@@ -1405,9 +1496,241 @@ section#pageBuyingServices {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
       }
     }
   }
+}
+
+section#pageNews {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: $colorBgr;
+
+  &.pageSection {
+    padding-top: 100px;
+    padding-bottom: 0;
+    .section-pills {
+      flex-wrap: wrap;
+      &__item {
+        margin-bottom: 40px;
+        &:nth-child(3) {
+          .pill {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .btnBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section-pills {
+    margin: 0 -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__item {
+      flex: 0 0 33.3%;
+      height: 600px;
+      width: 33%;
+      margin-bottom: 80px;
+      @media screen and (min-width: $desktop-s) and (max-width: $desktop-m - 1) {
+        height: 500px;
+
+      }
+      @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+        height: 500px;
+        flex: 0 0 50%;
+        width: 50%;
+      }
+      @media (max-width: $tablet-s - 1) {
+        height: 300px;
+        flex: 0 0 100%;
+        width: 100%;
+
+      }
+
+      .pill {
+        border: 1px solid $orangeMain;
+        position: relative;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+        height: inherit;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0 20px ;
+
+        img {
+          height: 100%;
+          min-width: 100%;
+          width: auto;
+        }
+        &-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: inherit;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background: transparent;
+          @include transition(all, .8s);
+          &:hover {
+            background: $orangeMain;
+          }
+          &__title, &__date {
+            padding: 80px 30px;
+            font-family: var(--font-alimini);
+            font-size: 48px;
+            color: white;
+            @include transition(all, .8s);
+
+          }
+        }
+      }
+      &.w-image {
+        .pill {
+          &-content {
+            &__title, &__date {
+              color: $mainDark;
+              @include transition(all, .5s);
+            }
+            &:hover {
+              .pill-content__title, .pill-content__date {
+                color: white !important;
+              }
+
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+}
+
+section#pageServices {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: $colorBgr;
+
+  &.pageSection {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  .section-pills {
+    margin: 0 -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 0 0 33.3%;
+      height: 600px;
+      width: 33%;
+      margin-bottom: 80px;
+      .pill {
+        border: 1px solid $orangeMain;
+        position: relative;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+        height: inherit;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0 20px;
+
+        img {
+          height: 100%;
+          min-width: 100%;
+          width: auto;
+        }
+        &-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: inherit;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background: transparent;
+          @include transition(all, .8s);
+          &:hover {
+            background: $orangeMain;
+          }
+          &__title, &__date {
+            padding: 80px 30px;
+            font-family: var(--font-alimini);
+            font-size: 48px;
+            color: white;
+            @include transition(all, .8s);
+
+          }
+        }
+      }
+      &.w-image {
+        .pill {
+          &-content {
+            &__title, &__date {
+              color: $mainDark;
+              @include transition(all, .5s);
+            }
+            &:hover {
+              .pill-content__title, .pill-content__date {
+                color: white !important;
+              }
+
+            }
+
+          }
+
+        }
+      }
+
+      @media screen and (min-width: $desktop-s) and (max-width: $desktop-m - 1) {
+        height: 500px;
+
+      }
+      @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+        height: 500px;
+        flex: 0 0 50%;
+        width: 50%;
+      }
+      @media (max-width: $tablet-s - 1) {
+        height: 300px;
+        flex: 0 0 100%;
+        width: 100%;
+
+      }
+
+    }
+  }
+
+
+
 }
 
 @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {

@@ -69,9 +69,9 @@
         <a class="menu-item">расположение</a>
         <a class="menu-item">ВЫБРАТЬ КВАРТИРУ</a>
         <a class="menu-item">ПАРКИНГ</a>
-        <a class="menu-item">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
+        <a href="services.html" class="menu-item">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
         <a class="menu-item">Ход строительства</a>
-        <a class="menu-item">Новости</a>
+        <a href="news.html" class="menu-item">Новости</a>
         <a class="menu-item">Контакты</a>
       </div>
     </div>
@@ -93,9 +93,9 @@
         </svg>
       </div>
 
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img src="img/Logo.svg">
-      </div>
+      </a>
       <div class="phone d-none-t d-none-m">
         <a href="tel:78412515151">+7 8412 51 51 51</a>
       </div>
@@ -142,17 +142,22 @@
   </div>
 </header>
 
-<section id="video">
+<div  class="parallax-window" data-parallax="scroll" data-speed="0" data-over-scroll-fix="true"
+      data-image-src="img/Comp_1_5.gif"
+      id="video">
   <img src="img/Comp_1_5.gif">
-</section>
+</div>
 
 <section id="advantages">
-  <div class="container">
-    <div class="companyName">
+  <div class="companyName">
+    <div class="container">
       <span>Строительная группа “Рисан”</span>
       <span>Надежный застройщик России с 2018 по 2022 год</span>
       <img src="img/svg/Awards.svg">
     </div>
+  </div>
+
+  <div class="container mainBlock">
     <div class="section-title">
       <h2>Lounge-квартал Lake Town – там,<br>
         где каждый день для вас отдых и расслабление.</h2>
@@ -483,7 +488,6 @@
     <div class="section-title">
       <h2 class="section-title__text">ВЫБРАТЬ КВАРТИРУ
       <span>Осталось 10</span></h2>
-
     </div>
 
     <div class="section-content">
@@ -501,9 +505,25 @@
           <svg class="mr-15" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#383838"/>
           </svg>
-
           <span>Закрыть фильтр</span>
         </div>
+      </div>
+      <div id="filterResult" class="mb-20 d-desktop-hidden">
+        <div id="filter-building" class="mb-20">
+          <span class="title">Номер дома: </span>
+          <span class="val">1</span>
+        </div>
+
+        <div id="filter-rooms" class="mb-20">
+          <span class="title">Количество комнат: </span>
+          <span class="val">2</span>
+        </div>
+
+        <div id="filter-square" class="mb-20">
+          <span class="title">Площадь: </span>
+          <span class="val">50</span>
+        </div>
+
       </div>
       <div class="appt-list">
         <div class="appt-list-item">
@@ -841,7 +861,7 @@
     <div class="section-title">
       <h2 class="section-title__text">НОВОСТИ</h2>
       <div class="section-title__btn">
-        <div class="btn btn-square btn-square-s btn-black-border">Все новости</div>
+        <a href="news.html" class="btn btn-square btn-square-s btn-black-border">Все новости</a>
       </div>
     </div>
 
@@ -992,6 +1012,6 @@
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
-<script src="js/lightSlider/js/lightslider.js"></script>
+<script src="js/parallax.min.js"></script>
 
 </html>
