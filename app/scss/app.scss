@@ -1783,6 +1783,38 @@ section#pageBuyingServices {
   }
 }
 
+@media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+  #pageNewsItem {
+    .article-section-content {
+      max-width: 75% !important;
+      blockquote {
+        height: 157px !important;
+        background: no-repeat left center/25% url("/img/quote.png") !important;
+        padding-left: 80px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: $tablet-s - 1px) {
+  #pageNewsItem {
+    .article-section-content {
+      max-width: 75% !important;
+      blockquote {
+        height: 140px !important;
+        background: no-repeat left/25% center url("/img/quote.png") !important;
+        padding-left: 80px;
+      }
+
+    }
+  }
+
+}
+
+
+
+
 #pageServices {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -1904,6 +1936,73 @@ section#pageBuyingServices {
 
 
 
+}
+
+#pageAppt {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  h1 {
+    margin: 0;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    .plan {
+      -webkit-flex: 0 0 50%;
+      -moz-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      position: relative;
+
+    }
+    .appt-desc {
+      min-width: 40%;
+      position: relative;
+      margin-left: auto;
+      h3 {
+        margin-top: 0;
+      }
+      &__props {
+        display: flex;
+        flex-direction: column;
+        .prop {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 40px;
+          color: $mainDark;
+        }
+      }
+      .btns {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+  .section-pos {
+    h2 {
+      margin-top: 200px;
+      margin-bottom: 80px;
+    }
+    .img-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      @include borderRadius(60px);
+      img {
+        height: 100%;
+        width: auto;
+
+      }
+    }
+  }
 }
 
 
