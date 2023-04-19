@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6debaafb-49b3-4960-882b-5b02891f0612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/img/icons/phone_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/advantages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/banner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/building-position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/map.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/parking.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/app.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="272">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -146,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/parts/building-position.scss">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/scss/parts/choose-appt.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="347">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -243,15 +224,15 @@
         <option value="$PROJECT_DIR$/app/scss/parts/banner.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/advantages.scss" />
         <option value="$PROJECT_DIR$/app/parts/buildingPosition/template.html" />
-        <option value="$PROJECT_DIR$/app/scss/parts/building-position.scss" />
         <option value="$PROJECT_DIR$/app/parts/map/template.html" />
         <option value="$PROJECT_DIR$/app/scss/parts/map.scss" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/parts/chooseAppt/template.html" />
-        <option value="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" />
         <option value="$PROJECT_DIR$/app/scss/app.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/parking.scss" />
         <option value="$PROJECT_DIR$/app/html/index.html" />
+        <option value="$PROJECT_DIR$/app/scss/parts/building-position.scss" />
+        <option value="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" />
       </list>
     </option>
   </component>
@@ -282,20 +263,7 @@
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
               <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="parts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="parking" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
@@ -365,7 +333,7 @@
       <workItem from="1681147022558" duration="18385000" />
       <workItem from="1681216119669" duration="37920000" />
       <workItem from="1681535512211" duration="11054000" />
-      <workItem from="1681650872083" duration="62050000" />
+      <workItem from="1681650872083" duration="62594000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1680847608137</created>
@@ -584,17 +552,31 @@
       <option name="project" value="LOCAL" />
       <updated>1681819072472</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="changes">
+      <created>1681899546960</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681899546960</updated>
+    </task>
+    <task id="LOCAL-00033" summary="changes">
+      <created>1681899921835</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681899921835</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196936000" />
+    <option name="totallyTimeSpent" value="197480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1792" height="1021" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -608,7 +590,7 @@
       <window_info anchor="bottom" id="GitHub Pull Requests" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32936078" />
@@ -1027,23 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/parts/map/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#2;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/parts/building-position.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/parts/map.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -1081,16 +1046,6 @@
           <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/parts/choose-appt.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#19#1892#0" />
           </folding>
         </state>
       </provider>
@@ -1143,8 +1098,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="272">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/parts/building-position.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/parts/map/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#2;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/parts/choose-appt.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
