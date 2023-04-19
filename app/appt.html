@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Lake Town</title>
   <link rel="stylesheet" href="css/app.min.css">
-  <link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightslider.css" />
 </head>
 <body>
 <div class="modal">
@@ -65,14 +64,14 @@
       </div>
 
       <div class="menu-items">
-        <a href="/#advantages" class="menu-item anchor">о проекте</a>
-        <a href="/#buildingPosition" class="menu-item">расположение</a>
-        <a href="/#chooseAppt" class="menu-item anchor">ВЫБРАТЬ КВАРТИРУ</a>
-        <a href="/#parking" class="menu-item anchor">ПАРКИНГ</a>
-        <a href="services.html" class="menu-item">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
-        <a href="/#buildingStage" class="menu-item anchor">Ход строительства</a>
-        <a href="news.html" class="menu-item">Новости</a>
-        <a href="/#map" class="menu-item anchor">Контакты</a>
+        <a href="#advantages" class="menu-item topmenu-font anchor">о проекте</a>
+        <a href="#buildingPosition" class="menu-item topmenu-font anchor">расположение</a>
+        <a href="#chooseAppt" class="menu-item topmenu-font anchor">ВЫБРАТЬ КВАРТИРУ</a>
+        <a href="#parking" class="menu-item topmenu-font anchor">ПАРКИНГ</a>
+        <a href="services.html" class="menu-item topmenu-font">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
+        <a href="#buildingStage" class="menu-item topmenu-font anchor">Ход строительства</a>
+        <a href="news.html" class="menu-item topmenu-font">Новости</a>
+        <a href="#map" class="menu-item topmenu-font anchor">Контакты</a>
       </div>
     </div>
   </div>
@@ -80,7 +79,6 @@
 
 <header id="header">
   <div class="header-wrap">
-
     <div class="container header-line">
       <div class="btn btn-black-border btn-square btn-square-xs" id="menuOpen">
         <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,6 +150,8 @@
   </div>
 </section>
 
+
+
 <footer>
   <div class="container">
 
@@ -176,7 +176,7 @@
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23.8571 23.8571C20.7143 27.1 20.4857 31.1429 20.2143 40C28.4714 40 34.1714 39.9714 37.1143 37.1143C39.9714 34.1714 40 28.2 40 20.2143C31.1429 20.5 27.1 20.7143 23.8571 23.8571ZM0 20.2143C0 28.2 0.0285714 34.1714 2.88571 37.1143C5.82857 39.9714 11.5286 40 19.7857 40C19.5 31.1429 19.2857 27.1 16.1429 23.8571C12.9 20.7143 8.85714 20.4857 0 20.2143ZM19.7857 0C11.5429 0 5.82857 0.0285714 2.88571 2.88571C0.0285714 5.82857 0 11.8 0 19.7857C8.85714 19.5 12.9 19.2857 16.1429 16.1429C19.2857 12.9 19.5143 8.85714 19.7857 0ZM23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0C28.4714 0 34.1714 0.0285714 37.1143 2.88571C39.9714 5.82857 40 11.8 40 19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429Z" fill="#383838"/>
               <path class="transparent"
-                d="M40 20.2143V19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0H19.7857C19.5 8.85714 19.2857 12.9 16.1429 16.1429C12.9 19.2857 8.85714 19.5143 0 19.7857V20.2143C8.85714 20.5 12.9 20.7143 16.1429 23.8571C19.2857 27.1 19.5143 31.1429 19.7857 40H20.2143C20.5 31.1429 20.7143 27.1 23.8571 23.8571C27.1 20.7143 31.1429 20.4857 40 20.2143Z" fill="white"/>
+                    d="M40 20.2143V19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0H19.7857C19.5 8.85714 19.2857 12.9 16.1429 16.1429C12.9 19.2857 8.85714 19.5143 0 19.7857V20.2143C8.85714 20.5 12.9 20.7143 16.1429 23.8571C19.2857 27.1 19.5143 31.1429 19.7857 40H20.2143C20.5 31.1429 20.7143 27.1 23.8571 23.8571C27.1 20.7143 31.1429 20.4857 40 20.2143Z" fill="white"/>
             </svg>
           </div>
         </a>
@@ -188,7 +188,7 @@
           </div>
         </a>
       </div>
-      <div class="phone d-desktop-only">
+      <div class="phone">
         <a href="tel:78412515151">+7 8412 51 51 51</a>
       </div>
       <div class="recall">
@@ -221,10 +221,11 @@
     </div>
   </div>
 </footer>
+
 </body>
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
-<script src="js/lightSlider/js/lightslider.js"></script>
+<script src="js/parallax.min.js"></script>
 
 </html>

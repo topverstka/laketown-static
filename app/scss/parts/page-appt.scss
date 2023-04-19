@@ -1,0 +1,74 @@
+#pageAppt {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  h1 {
+    margin: 0;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    .plan {
+      -webkit-flex: 0 0 50%;
+      -moz-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      position: relative;
+      .image-wrapper {
+        max-width: 80%;
+        position: relative;
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+    .appt-desc {
+      min-width: 35%;
+      position: relative;
+      margin-right: auto;
+      h3 {
+        margin-top: 0;
+      }
+      &__props {
+        display: flex;
+        flex-direction: column;
+        .prop {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 40px;
+          color: $mainDark;
+        }
+      }
+      .btns {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .section-pos {
+    h2 {
+      margin-top: 200px;
+      margin-bottom: 80px;
+    }
+    .img-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      @include borderRadius(60px);
+      img {
+        height: 100%;
+        width: auto;
+
+      }
+    }
+  }
+}
