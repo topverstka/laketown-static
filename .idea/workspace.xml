@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6debaafb-49b3-4960-882b-5b02891f0612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/parts/page_buying_services/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scss/parts/page-services.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/parts/page_news_item/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/scss/parts/page_news_item.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/buying-services.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/buying-services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/app.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/buying-services.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/buying-services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/news-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/news-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/news-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/parts/page_news/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/parts/page_news/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,36 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="361">
+              <caret line="542" selection-start-line="542" selection-end-line="542" />
               <folding>
-                <element signature="e#1862#1909#0" />
-                <element signature="e#1921#2035#0" />
-                <element signature="e#2047#2133#0" />
-                <element signature="e#7614#7754#0" />
-                <element signature="e#7773#8863#0" />
-                <element signature="e#9598#10162#0" />
-                <element signature="e#20167#21678#0" />
-                <element signature="e#20209#20994#0" />
-                <element signature="e#23491#26127#0" />
-                <element signature="e#26150#26432#0" />
-                <element signature="e#27601#29059#0" />
-                <element signature="e#33962#37001#0" />
-                <element signature="e#34379#34393#0" />
-                <element signature="e#35751#35769#0" />
-                <element signature="e#29269#29279#0" />
-                <element signature="e#30042#30707#0" />
-                <element signature="e#28310#29281#0" />
+                <element signature="e#1288#1428#0" />
+                <element signature="e#1447#2537#0" />
+                <element signature="e#2568#3132#0" />
+                <element signature="e#3163#5500#0" />
+                <element signature="e#5525#8161#0" />
+                <element signature="e#8184#8466#0" />
+                <element signature="e#8496#10254#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scss/parts/page-services.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="61" column="31" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -70,10 +55,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/parts/page-news.scss">
+        <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="28" selection-start-line="26" selection-end-line="28" />
+            <state relative-caret-position="3630">
+              <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/scss/parts/page_news_item.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <folding>
+                <element signature="e#240#792#0" />
+                <element signature="e#819#1678#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/html/news-item.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/parts/page_news_item/template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/parts/page_news/template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#4;n#div#1;n#div#0;n#section#0;n#!!top" />
+                <element signature="n#div#5;n#div#1;n#div#0;n#section#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,51 +133,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/parts/buyingServices/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="62" selection-start-line="21" selection-end-line="62" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="349">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/parts/page_buying_services/template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/html/services.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/html/appt.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/_modal.scss">
+        <entry file="file://$PROJECT_DIR$/app/parts/news/template.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <caret line="10" selection-start-line="10" selection-end-line="40" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#section#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,9 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/appt.html" />
-        <option value="$PROJECT_DIR$/app/buying-services.html" />
-        <option value="$PROJECT_DIR$/app/family-credit.html" />
         <option value="$PROJECT_DIR$/app/news.html" />
         <option value="$PROJECT_DIR$/app/news-item.html" />
         <option value="$PROJECT_DIR$/app/services.html" />
@@ -189,7 +207,6 @@
         <option value="$PROJECT_DIR$/app/parts/banner/banner.html" />
         <option value="$PROJECT_DIR$/app/parts/advantages/advantages.html" />
         <option value="$PROJECT_DIR$/app/parts/parking/template.html" />
-        <option value="$PROJECT_DIR$/app/parts/buyingServices/template.html" />
         <option value="$PROJECT_DIR$/app/parts/buildingStage/template.html" />
         <option value="$PROJECT_DIR$/app/parts/callBack/template.html" />
         <option value="$PROJECT_DIR$/app/parts/header/template.html" />
@@ -212,8 +229,6 @@
         <option value="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" />
         <option value="$PROJECT_DIR$/app/parts/page_appt/template.html" />
         <option value="$PROJECT_DIR$/app/html/appt.html" />
-        <option value="$PROJECT_DIR$/app/html/index.html" />
-        <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/parts/banner/template.html" />
         <option value="$PROJECT_DIR$/app/scss/_modal.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/page-appt.scss" />
@@ -222,12 +237,18 @@
         <option value="$PROJECT_DIR$/app/html/news.html" />
         <option value="$PROJECT_DIR$/app/scss/parts/news.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/page-news.scss" />
-        <option value="$PROJECT_DIR$/app/parts/page_news/template.html" />
         <option value="$PROJECT_DIR$/app/html/buying-services.html" />
         <option value="$PROJECT_DIR$/app/html/services.html" />
-        <option value="$PROJECT_DIR$/app/scss/app.scss" />
         <option value="$PROJECT_DIR$/app/parts/page_buying_services/template.html" />
         <option value="$PROJECT_DIR$/app/scss/parts/page-services.scss" />
+        <option value="$PROJECT_DIR$/app/parts/buyingServices/template.html" />
+        <option value="$PROJECT_DIR$/app/parts/page_news/template.html" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/html/index.html" />
+        <option value="$PROJECT_DIR$/app/scss/app.scss" />
+        <option value="$PROJECT_DIR$/app/html/news-item.html" />
+        <option value="$PROJECT_DIR$/app/parts/page_news_item/template.html" />
+        <option value="$PROJECT_DIR$/app/scss/parts/page_news_item.scss" />
       </list>
     </option>
   </component>
@@ -264,14 +285,13 @@
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
               <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
               <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="banner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
@@ -285,7 +305,21 @@
               <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="page_buying_services" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="page_news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LakeTownHTML" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="page_news_item" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LakeTownHTML" type="b2602c69:ProjectViewProjectNode" />
@@ -355,7 +389,7 @@
       <workItem from="1681147022558" duration="18385000" />
       <workItem from="1681216119669" duration="37920000" />
       <workItem from="1681535512211" duration="11054000" />
-      <workItem from="1681650872083" duration="73055000" />
+      <workItem from="1681650872083" duration="77298000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1680847608137</created>
@@ -672,11 +706,25 @@
       <option name="project" value="LOCAL" />
       <updated>1681909730474</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="changes services">
+      <created>1681914072186</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1681914072186</updated>
+    </task>
+    <task id="LOCAL-00047" summary="changes services main">
+      <created>1681914248091</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681914248091</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207941000" />
+    <option name="totallyTimeSpent" value="212184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1792" height="1021" extended-state="0" />
@@ -736,8 +784,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="buildingPosition fix" />
-    <MESSAGE value="buildingPosition fix style" />
     <MESSAGE value="map filter fix1" />
     <MESSAGE value="udl images" />
     <MESSAGE value="services and parking" />
@@ -761,35 +807,11 @@
     <MESSAGE value="changes6" />
     <MESSAGE value="changes7" />
     <MESSAGE value="changes news_main and page news_list" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes news_main and page news_list" />
+    <MESSAGE value="changes services" />
+    <MESSAGE value="changes services main" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes services main" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/app.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#17238#17425#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/appt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#a#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/buying-services.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1096,20 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/parts/banner/template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1148,75 +1156,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/parts/page_news/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="52" selection-start-line="44" selection-end-line="52" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#5;n#div#1;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#0;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/parts/news/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="40" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/html/buying-services.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/parts/buyingServices/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="62" selection-start-line="21" selection-end-line="62" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#1862#1909#0" />
-            <element signature="e#1921#2035#0" />
-            <element signature="e#2047#2133#0" />
-            <element signature="e#7614#7754#0" />
-            <element signature="e#7773#8863#0" />
-            <element signature="e#9598#10162#0" />
-            <element signature="e#20167#21678#0" />
-            <element signature="e#20209#20994#0" />
-            <element signature="e#23491#26127#0" />
-            <element signature="e#26150#26432#0" />
-            <element signature="e#27601#29059#0" />
-            <element signature="e#33962#37001#0" />
-            <element signature="e#34379#34393#0" />
-            <element signature="e#35751#35769#0" />
-            <element signature="e#29269#29279#0" />
-            <element signature="e#30042#30707#0" />
-            <element signature="e#28310#29281#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,20 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/html/services.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/html/appt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/parts/page_buying_services/template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -1262,6 +1191,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="61" column="31" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/html/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/html/appt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="8" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/parts/news/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="40" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/parts/buyingServices/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/parts/page_news/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#4;n#div#1;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#5;n#div#1;n#div#0;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="542" selection-start-line="542" selection-end-line="542" />
+          <folding>
+            <element signature="e#1288#1428#0" />
+            <element signature="e#1447#2537#0" />
+            <element signature="e#2568#3132#0" />
+            <element signature="e#3163#5500#0" />
+            <element signature="e#5525#8161#0" />
+            <element signature="e#8184#8466#0" />
+            <element signature="e#8496#10254#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3630">
+          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/html/news-item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/parts/page_news_item/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/parts/page_news_item.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="e#240#792#0" />
+            <element signature="e#819#1678#0" />
+          </folding>
         </state>
       </provider>
     </entry>

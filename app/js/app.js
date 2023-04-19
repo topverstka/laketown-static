@@ -31,28 +31,11 @@ $(document).ready(function() {
   }($('header #slogans').children()));
 
 
-  $('.parallax-window').parallax({imageSrc: 'img/Comp_1_5.gif'});
+//  $('.parallax-window').parallax({imageSrc: 'img/Comp_1_5.gif'});
   // parralax
 
-  // filter appt
-   filterShow.onclick = function() {
-    apptFilter.classList.add('active');
-    filterShow.classList.add('d-none');
-    filterHide.classList.remove('d-none');
-  }
-
-  filterApply.onclick = function() {
-    apptFilter.classList.remove('active');
-    filterShow.classList.remove('d-none');
-    filterHide.classList.add('d-none');
-  }
 
 
-  filterClear.onclick = function() {
-    apptFilter.classList.remove('active');
-    filterShow.classList.remove('d-none');
-    filterHide.classList.add('d-none');
-  }
 
 
   $('#mapBlock #filterBtn').on('click', function() {
@@ -257,22 +240,6 @@ $(document).ready(function() {
     $(document).find('.modal').removeClass('active');
   });
 
-// Функция ymaps.ready() будет вызвана, когда
-  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  ymaps.ready(init);
-  function init(){
-    // Создание карты.
-    var myMap = new ymaps.Map("map", {
-      // Координаты центра карты.
-      // Порядок по умолчанию: «широта, долгота».
-      // Чтобы не определять координаты центра карты вручную,
-      // воспользуйтесь инструментом Определение координат.
-      center: [55.76, 37.64],
-      // Уровень масштабирования. Допустимые значения:
-      // от 0 (весь мир) до 19.
-      zoom: 7
-    });
-  }
 
 
   $(document).on('click', '#apptMore', function() {
