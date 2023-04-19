@@ -2,10 +2,14 @@
   position: fixed;
   opacity: 0;
   width: 100%;
-  z-index: 100;
+  z-index: -1;
+
+  background: #f6f5f1;
 
   @include transition(all, .5s);
   &.active {
+    z-index: 20;
+
     position: fixed;
     background: #f6f5f1;
     opacity: 1;
