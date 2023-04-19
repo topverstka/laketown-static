@@ -1,0 +1,104 @@
+#pageNews {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: $colorBgr;
+
+  &.pageSection {
+    padding-top: 100px;
+    padding-bottom: 0;
+    .section-pills {
+      flex-wrap: wrap;
+      &__item {
+        margin-bottom: 40px;
+      }
+    }
+    .btnBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section-pills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-right: -20px;
+    position: relative;
+
+    &__item {
+      height: 600px;
+      width: calc(33.3% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .pill {
+        border: 1px solid transparent;
+        position: relative;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+        height: inherit;
+        overflow: hidden;
+        cursor: pointer;
+
+
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+        &-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: inherit;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background: transparent;
+          @include transition(all, .8s);
+          &:hover {
+            background: $orangeMain;
+          }
+          &__title, &__date {
+            padding: 80px 30px;
+            font-family: var(--font-alimini);
+            font-size: 48px;
+            color: white;
+            @include transition(all, .8s);
+
+          }
+        }
+      }
+      &.w-image {
+        .pill {
+          border: 1px solid $orangeMain;
+
+          &-content {
+            &__title, &__date {
+              color: $mainDark;
+              @include transition(all, .5s);
+            }
+            &:hover {
+              .pill-content__title, .pill-content__date {
+                color: white !important;
+              }
+
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+}
