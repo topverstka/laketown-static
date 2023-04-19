@@ -35,20 +35,20 @@ $(document).ready(function() {
   // parralax
 
   // filter appt
-   let fs = filterShow.onclick = function() {
+   filterShow.onclick = function() {
     apptFilter.classList.add('active');
     filterShow.classList.add('d-none');
     filterHide.classList.remove('d-none');
   }
 
-  let fa = filterApply.onclick = function() {
+  filterApply.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
     filterHide.classList.add('d-none');
   }
 
 
-  let fc = filterClear.onclick = function() {
+  filterClear.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
     filterHide.classList.add('d-none');
