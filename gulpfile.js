@@ -7,6 +7,7 @@ const { src, dest, parallel, series, watch } = require('gulp');
 // Подключаем Browsersync
 const browserSync = require('browser-sync').create();
 
+
 function browsersync() {
   browserSync.init({ // Инициализация Browsersync
     server: { baseDir: 'app/' }, // Указываем папку сервера
@@ -93,6 +94,28 @@ async function images() {
   )
 }
 
+const fileinclude = require('gulp-file-include');
+
+function joinHtml() {
+  return  src([
+    'app/html/*.html',
+
+  ])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('app/'))
+    .pipe(browserSync.stream())
+}
+
+exports.joinHtml = joinHtml;
+
+
+
+
+
+
 function buildcopy() {
   return src([ // Выбираем нужные файлы
     'app/css/**/*.min.css',
@@ -104,7 +127,7 @@ function buildcopy() {
 }
 
 // Создаем новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleandist, styles, scripts, images, buildcopy);
+exports.build = series(cleandist, styles, scripts, images, joinHtml, buildcopy);
 
 function cleandist() {
   return src('dist', {allowEmpty: true}).pipe(clean()) // Удаляем папку "dist/"
@@ -117,6 +140,7 @@ function startwatch() {
   // Мониторим файлы препроцессора на изменения
   watch('app/**/' + preprocessor + '/**/*', styles);
   // Мониторим файлы HTML на изменения
+  watch('app/parts/*.html').on('change', joinHtml);
   watch('app/**/*.html').on('change', browserSync.reload);
   // Мониторим папку-источник изображений и выполняем images(), если есть изменения
   watch('app/img/**/*', images);
@@ -124,5 +148,7 @@ function startwatch() {
 }
 
 
+
+
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(styles, scripts, browsersync, startwatch);
+exports.default = parallel(styles, scripts, joinHtml, browsersync, startwatch);

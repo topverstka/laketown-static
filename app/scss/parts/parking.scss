@@ -1,0 +1,126 @@
+section#parking {
+  padding-top: 200px;
+  .section-title {
+    align-items: flex-start;
+    margin-bottom: 80px;
+    &-wrapper {
+      -webkit-flex: 0 0 60%;
+      -moz-flex: 0 0 60%;
+      -ms-flex: 0 0 60%;
+      flex: 0 0 60%;
+      position: relative;
+      margin-right: 50px;
+      .arrow-title {
+        position: absolute;
+        top: 86px;
+        right: 0;
+        left: 0;
+      }
+      .btns {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &-desc {
+      .desc-title {
+        h3 {
+          margin-top: 0;
+          margin-bottom: 80px;
+        }
+      }
+      .desc-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .item {
+          -webkit-flex: 1 1 50%;
+          -moz-flex: 1 1 50%;
+          -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            font-family: var(--font-alimini);
+            font-size: 24px;
+            color: $mainBlue;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    &__text {
+      margin-top: 0;
+      width: 70%;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+      span {
+        font-family: var(--font-alimini);
+        font-size: 80px;
+        display: inline;
+        background-color: $colorBgr;
+        box-shadow: -10px 0 0 $colorBgr, 10px 0 0 $colorBgr;
+        padding-right: 20px;
+      }
+    }
+
+  }
+  .section-content {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+@media (max-width: $desktop-s) {
+  #parking {
+    .section-title {
+      flex-wrap: wrap;
+      padding-bottom: 0 !important;
+      &-wrapper {
+        -webkit-flex: 0 0 100% !important;
+        -moz-flex: 0 0 100% !important;
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        display: flex;
+        flex-direction: column;
+      }
+      &__text {
+        width: 100% !important;
+        order: 1;
+      }
+      &-desc {
+        order: 2;
+        .desc-title {
+          h3 {
+            margin-bottom: 40px !important;
+          }
+        }
+        .desc-text {
+          margin-bottom: 40px !important;
+        }
+      }
+      .btns {
+        order: 3;
+        flex-wrap: wrap;
+        .btn {
+          -webkit-flex: 0 0 100%;
+          -moz-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          margin: 0;
+          &:last-child {
+            margin-top: 30px;
+          }
+        }
+
+      }
+    }
+  }
+
+}

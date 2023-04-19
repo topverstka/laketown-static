@@ -35,7 +35,6 @@ $(document).ready(function() {
   // parralax
 
   // filter appt
-
   filterShow.onclick = function() {
     apptFilter.classList.add('active');
     filterShow.classList.add('d-none');
@@ -56,6 +55,12 @@ $(document).ready(function() {
   }
 
 
+  $('#mapBlock #filterBtn').on('click', function() {
+    $(this).toggleClass('show');
+    $('#mapBlock').find('.map-filter').toggleClass('active');
+  });
+
+
 
   //slider
   var sliderBlockWidth = $(document).find('#advantages .slider-images').width(),
@@ -63,7 +68,7 @@ $(document).ready(function() {
     sliderMargin = parseInt($(document).find('#advantages #advImages .slider-item').css('margin-right')),
     sliderWidth = sliderBlockWidth - borderWidth;
 
-  if (window.innerWidth < 1440) {
+  if (window.innerWidth < 1200) {
     sliderWidth = window.innerWidth;
   }
 
@@ -100,7 +105,6 @@ $(document).ready(function() {
       sliderBlock.find('[data-id="'+newSlide+'"]').addClass('current');
       qtyBlock.data('active', newSlide);
       qtyCurrent.text(newSlide);
-
       sliderAddBlock.find('[data-id="'+newSlide+'"]').addClass('current').removeClass('active').delay( 1000 );
       sliderAddBlock.find('[data-id="'+currentSlide+'"]').removeClass('current').addClass('prev').delay( 1000 );
       sliderAddBlock.find('[data-id="'+nextSlide+'"]').addClass('active');
@@ -111,7 +115,7 @@ $(document).ready(function() {
 
       }
 
-      if (window.innerWidth < 1440) {
+      if (window.innerWidth < 1200) {
 
         var itemWidth = sliderAddBlock.find('.slider-item').width();
         sliderAddBlock.find('.slider-wrapper').css('transform', 'translateX(-' + (parseFloat(currentSlide) * parseFloat(itemWidth)) + 'px)');
@@ -129,10 +133,11 @@ $(document).ready(function() {
       sliderBlock.find('[data-id="'+newSlide+'"]').addClass('current');
       qtyBlock.data('active', newSlide);
       qtyCurrent.text(newSlide);
+      console.log(currentSlide);
 
       sliderAddBlock.find('[data-id="'+newSlide+'"]').addClass('current').removeClass('prev');
       sliderAddBlock.find('[data-id="'+currentSlide+'"]').removeClass('current').addClass('active').delay( 1000 );
-      sliderAddBlock.find('[data-id="'+prevSlide+'"]').removeClass('prev');
+ //     sliderAddBlock.find('[data-id="'+prevSlide+'"]').removeClass('prev');
       sliderAddBlock.find('[data-id="'+nextSlide+'"]').removeClass('active');
 
       navBlock.find('.navBtn').removeClass('disabled');
@@ -140,7 +145,7 @@ $(document).ready(function() {
       if (newSlide === 1) {
         currentBtn.addClass('disabled');
       }
-      if (window.innerWidth < 1440) {
+      if (window.innerWidth < 1200) {
         var itemWidth = sliderAddBlock.find('.slider-item').width();
         sliderAddBlock.find('.slider-wrapper').css('transform', 'translateX(-' + ((parseFloat(qtyCurrent.text()) - 1) * parseFloat(itemWidth)) + 'px)');
       }

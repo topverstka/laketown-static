@@ -1,0 +1,282 @@
+body.modal-open {
+  overflow: hidden;
+
+}
+
+.topmenu-font {
+  @include getSizes(80px, 80px, 1920px, 1920px, false, true);
+  @include getSizes(48px, 80px, 1440px, 1920px, false, false);
+  @include getSizes(60px, 48px, 768px, 1440px, false, false);
+  @include getSizes(32px, 60px, 360px, 768px, false, false);
+  @include getSizes(32px, 32px, 360px, 360px, true, false);
+}
+
+
+@mixin addText {
+  @include getSizes(18px, 18px, 1920px, 1920px, false, true);
+  @include getSizes(18px, 18px, 1440px, 1920px, false, false);
+  @include getSizes(16px, 18px, 768px, 1440px, false, false);
+  @include getSizes(16px, 16px, 360px, 768px, false, false);
+  @include getSizes(16px, 16px, 360px, 360px, true, false);
+}
+
+
+
+.top-menu {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  opacity: 0;
+  width: 0;
+  background: #000000a8;
+  @include  transition(all, .4s);
+  &.active {
+    width: 100%;
+    opacity: 1;
+    z-index: 20;
+
+  }
+  .modal-wrapper {
+    width: 60%;
+    height: 100%;
+    display: block;
+    background: white;
+    padding-top: 35px;
+    @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+      width: 100%;
+    }
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      position: relative;
+      .menu-item {
+        font-family: var(--font-alimini);
+        line-height: 105%;
+        text-transform: uppercase;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        cursor: pointer;
+        color: $mainDark !important;
+        text-decoration: none !important;
+
+        &:hover {
+          color: $orangeDark;
+          padding-left: 30px;
+          color: $orangeMain !important;
+          text-decoration: none !important;
+
+
+        }
+
+      }
+    }
+  }
+}
+
+.phone {
+  margin-left: auto;
+  margin-right: 42px;
+  a {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    color: $mainDark;
+    @include transition(all, .5s);
+    &:hover {
+      color: $orangeDark;
+    }
+  }
+
+}
+
+header {
+  background: $colorBgr;
+  .header-wrap {
+    position: relative;
+    .header-line {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding-top: 35px;
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+      }
+    }
+
+    .nadpis {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      .container {
+        height: 100%;
+      }
+      img {
+        height: 100%;
+      }
+    }
+    .header-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .btn {
+        position: relative;
+        .arrow {
+          position: absolute;
+          left: -9px;
+          transform: rotate(45deg);
+          bottom: -9px;
+          path {
+            fill: $orangeMain;
+            @include transition(all, .5s);
+          }
+        }
+        &:hover {
+          .arrow path {
+            fill: $orangeDark
+          }
+        }
+      }
+
+      .btn-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 1 100%;
+        padding-bottom: 100px;
+        @media screen and (max-width: $tablet-s - 1) {
+          flex-direction: column !important;
+        }
+        .btn {
+          margin-right: 40px;
+          @media screen and (max-width: $tablet-s - 1) {
+            margin-right: 0 !important;
+            width: 100%;
+          }
+
+        }
+        .add-text {
+          display: flex;
+          @media screen and (max-width: $tablet-s - 1) {
+            justify-content: center;
+            margin-top: 28px;
+          }
+
+          span {
+            opacity: 0;
+            position: absolute;
+
+            @include transform(translateY, -50%);
+            @include addText;
+            font-family: var(--font-main);
+            text-decoration: underline;
+            @include transition(all, 1s);
+            &.active {
+              opacity: 1;
+
+            }
+            &:hover {
+              color: $orangeDark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-l + 1) {
+  header {
+    .nadpis, .btn-map {
+      display: flex;
+    }
+
+    .slogan {
+      width: 66%;
+    }
+  }
+}
+@media (max-width: $tablet-l) {
+  header {
+    .nadpis, .phone, .btn-map {
+      display: none;
+    }
+    .slogan {
+      width: 100%;
+    }
+
+  }
+}
+@media (min-width: $tablet-s + 1) {
+  .recall {
+    .icon {
+      display: none;
+    }
+  }
+
+}
+@media (max-width: $tablet-s) {
+  .header-line {
+    padding-top: 20px;
+    .btn {
+      border: 0;
+      width: fit-content;
+      min-width: unset;
+      height: fit-content;
+    }
+    .recall {
+      span {
+        display: none;
+      }
+      .icon {
+        display: block !important;
+      }
+    }
+    .logo {
+      width: 40px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  header h1 {
+    font-size: 40px;
+  }
+  .header-block {
+    .btn {
+      height: 60px;
+    }
+    .btn-block {
+      .btn {
+        max-width: 100%;
+        padding: unset;
+        margin: unset;
+        min-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
