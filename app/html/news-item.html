@@ -26,10 +26,31 @@
   var block_show = null;
 
   function scrollTracking(){
+
+
     var wt = $(window).scrollTop(),
       wh = $(window).height(),
-      et = $('#header').offset().top
-    eh = $('#header').outerHeight() + 99;
+      et = $('#header').offset().top,
+      eh = $('#header').outerHeight() + 79,
+      fb = $('footer').offset().top,
+      ft = $('footer').outerHeight(),
+      st = $('.article-section-side').offset().top,
+      sh = $('.article-section-side').outerHeight(),
+      dh = $(document).height();
+
+
+    if (fb + (wh - ft) + 101 + (wh-sh) < wt + wh) {
+      var move = (wt + wh) - (fb + (wh - ft) +101 + (wh-sh));
+
+      $(document).find('.article-section-side').css('top', 20 - parseFloat((wt + wh) -
+        (fb + (wh - ft) + 101 + (wh-sh))));
+
+    }
+
+    if (fb + (wh - ft) + 221 < wt + wh) {
+      console.log('YES');
+
+    }
 
     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
       if (block_show == null || block_show == false) {
