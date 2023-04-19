@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6debaafb-49b3-4960-882b-5b02891f0612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/app.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/app.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parts/banner/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/parts/banner/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/parts/map.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/parts/map.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_modal.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,20 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/parts/map.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-318">
+            <state relative-caret-position="252">
               <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scss/_modal.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -232,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/scss/parts/parking.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/building-position.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/choose-appt.scss" />
-        <option value="$PROJECT_DIR$/app/scss/_modal.scss" />
         <option value="$PROJECT_DIR$/app/parts/page_appt/template.html" />
         <option value="$PROJECT_DIR$/app/html/appt.html" />
         <option value="$PROJECT_DIR$/app/scss/app.scss" />
@@ -241,6 +235,7 @@
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/parts/banner/template.html" />
         <option value="$PROJECT_DIR$/app/scss/parts/map.scss" />
+        <option value="$PROJECT_DIR$/app/scss/_modal.scss" />
       </list>
     </option>
   </component>
@@ -368,7 +363,7 @@
       <workItem from="1681147022558" duration="18385000" />
       <workItem from="1681216119669" duration="37920000" />
       <workItem from="1681535512211" duration="11054000" />
-      <workItem from="1681650872083" duration="65665000" />
+      <workItem from="1681650872083" duration="65992000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1680847608137</created>
@@ -622,14 +617,29 @@
       <option name="project" value="LOCAL" />
       <updated>1681903880106</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="changes4">
+      <created>1681904922038</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1681904922038</updated>
+    </task>
+    <task id="LOCAL-00038" summary="changes4">
+      <created>1681905082404</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681905082404</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200551000" />
+    <option name="totallyTimeSpent" value="200878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1792" height="1021" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -685,7 +695,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main page build" />
     <MESSAGE value="main page build2" />
     <MESSAGE value="main page build3" />
     <MESSAGE value="build 4" />
@@ -710,7 +719,8 @@
     <MESSAGE value="changes" />
     <MESSAGE value="changes2" />
     <MESSAGE value="changes3" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes3" />
+    <MESSAGE value="changes4" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes4" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/img/svg/filter.svg">
@@ -1098,13 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_modal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/html/appt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1186,8 +1189,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/parts/map.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318">
+        <state relative-caret-position="252">
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_modal.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
