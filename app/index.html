@@ -1071,6 +1071,12 @@
     filterHide.classList.remove('d-none');
   }
 
+  filterHide.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+
   filterApply.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
