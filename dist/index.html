@@ -2,11 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lake Town</title>
   <link rel="stylesheet" href="css/app.min.css">
   <link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightslider.css" />
 </head>
 <body>
+
 <div class="modal">
   <div class="modal-wrapper">
     <div class="container">
@@ -65,14 +67,14 @@
       </div>
 
       <div class="menu-items">
-        <a class="menu-item">о проекте</a>
-        <a class="menu-item">расположение</a>
-        <a class="menu-item">ВЫБРАТЬ КВАРТИРУ</a>
-        <a class="menu-item">ПАРКИНГ</a>
-        <a href="services.html" class="menu-item">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
-        <a class="menu-item">Ход строительства</a>
-        <a href="news.html" class="menu-item">Новости</a>
-        <a class="menu-item">Контакты</a>
+        <a href="#advantages" class="menu-item topmenu-font anchor">о проекте</a>
+        <a href="#buildingPosition" class="menu-item topmenu-font anchor">расположение</a>
+        <a href="#chooseAppt" class="menu-item topmenu-font anchor">ВЫБРАТЬ КВАРТИРУ</a>
+        <a href="#parking" class="menu-item topmenu-font anchor">ПАРКИНГ</a>
+        <a href="services.html" class="menu-item topmenu-font">СЕРВИСЫ ДЛЯ ПОКУПКИ</a>
+        <a href="#buildingStage" class="menu-item topmenu-font anchor">Ход строительства</a>
+        <a href="news.html" class="menu-item topmenu-font">Новости</a>
+        <a href="#map" class="menu-item topmenu-font anchor">Контакты</a>
       </div>
     </div>
   </div>
@@ -80,7 +82,7 @@
 
 <header id="header">
   <div class="header-wrap">
-    <div class="nadpis d-none-t d-none-m">
+    <div class="nadpis">
       <div class="container">
         <img src="img/svg/nadpis1.svg">
       </div>
@@ -96,42 +98,40 @@
       <a href="index.html" class="logo">
         <img src="img/Logo.svg">
       </a>
-      <div class="phone d-none-t d-none-m">
+
+      <div class="phone">
         <a href="tel:78412515151">+7 8412 51 51 51</a>
       </div>
+
       <div class="recall btn btn-black-border btn-square btn-square-s">
         <span>Перезвоните мне</span>
+        <div class="icon">
+          <img src="./img/icons/phone_icon.svg">
+        </div>
       </div>
+
     </div>
     <div class="container header-block">
       <div class="slogan">
         <h1 class="h-1">Легко почувствовать<br> новый класс жилья от Рисан</h1>
       </div>
-      <div class=" btn btn-orange btn-square btn-square-m  d-none-t d-none-m">
-        <svg class="mr-15" width="37" height="45" viewBox="0 0 37 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.4934 31.5413L18.5003 44.5345L5.50709 31.5413C2.93732 28.9715 1.18729 25.6974 0.478306 22.133C-0.230679 18.5686 0.133221 14.8741 1.52399 11.5165C2.91475 8.1589 5.26992 5.28913 8.29167 3.27007C11.3134 1.25101 14.866 0.17334 18.5003 0.17334C22.1345 0.17334 25.6871 1.25101 28.7088 3.27007C31.7306 5.28913 34.0858 8.1589 35.4765 11.5165C36.8673 14.8741 37.2312 18.5686 36.5222 22.133C35.8132 25.6974 34.0632 28.9715 31.4934 31.5413ZM18.5003 26.7148C20.6662 26.7148 22.7434 25.8544 24.275 24.3229C25.8065 22.7913 26.6669 20.7141 26.6669 18.5482C26.6669 16.3822 25.8065 14.305 24.275 12.7735C22.7434 11.2419 20.6662 10.3815 18.5003 10.3815C16.3343 10.3815 14.2571 11.2419 12.7255 12.7735C11.194 14.305 10.3336 16.3822 10.3336 18.5482C10.3336 20.7141 11.194 22.7913 12.7255 24.3229C14.2571 25.8544 16.3343 26.7148 18.5003 26.7148ZM18.5003 22.6315C17.4173 22.6315 16.3787 22.2013 15.6129 21.4355C14.8471 20.6698 14.4169 19.6311 14.4169 18.5482C14.4169 17.4652 14.8471 16.4266 15.6129 15.6608C16.3787 14.8951 17.4173 14.4648 18.5003 14.4648C19.5832 14.4648 20.6218 14.8951 21.3876 15.6608C22.1534 16.4266 22.5836 17.4652 22.5836 18.5482C22.5836 19.6311 22.1534 20.6698 21.3876 21.4355C20.6218 22.2013 19.5832 22.6315 18.5003 22.6315Z" fill="white"/>
-        </svg>
-        <svg class="arrow" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.9079 28.7016C13.56 29.5051 12.4205 29.5051 12.0726 28.7016L0.604923 2.21816C0.319012 1.55788 0.803059 0.820803 1.52259 0.820803L24.4579 0.820801C25.1774 0.820801 25.6614 1.55788 25.3755 2.21816L13.9079 28.7016Z" fill="#D69153"/>
-        </svg>
 
-        <span>Посмотреть на карте</span>
-      </div>
+      <a href="#map" class="btn btn-orange btn-square btn-square-m btn-map">
+          <svg class="mr-15" width="37" height="45" viewBox="0 0 37 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.4934 31.5413L18.5003 44.5345L5.50709 31.5413C2.93732 28.9715 1.18729 25.6974 0.478306 22.133C-0.230679 18.5686 0.133221 14.8741 1.52399 11.5165C2.91475 8.1589 5.26992 5.28913 8.29167 3.27007C11.3134 1.25101 14.866 0.17334 18.5003 0.17334C22.1345 0.17334 25.6871 1.25101 28.7088 3.27007C31.7306 5.28913 34.0858 8.1589 35.4765 11.5165C36.8673 14.8741 37.2312 18.5686 36.5222 22.133C35.8132 25.6974 34.0632 28.9715 31.4934 31.5413ZM18.5003 26.7148C20.6662 26.7148 22.7434 25.8544 24.275 24.3229C25.8065 22.7913 26.6669 20.7141 26.6669 18.5482C26.6669 16.3822 25.8065 14.305 24.275 12.7735C22.7434 11.2419 20.6662 10.3815 18.5003 10.3815C16.3343 10.3815 14.2571 11.2419 12.7255 12.7735C11.194 14.305 10.3336 16.3822 10.3336 18.5482C10.3336 20.7141 11.194 22.7913 12.7255 24.3229C14.2571 25.8544 16.3343 26.7148 18.5003 26.7148ZM18.5003 22.6315C17.4173 22.6315 16.3787 22.2013 15.6129 21.4355C14.8471 20.6698 14.4169 19.6311 14.4169 18.5482C14.4169 17.4652 14.8471 16.4266 15.6129 15.6608C16.3787 14.8951 17.4173 14.4648 18.5003 14.4648C19.5832 14.4648 20.6218 14.8951 21.3876 15.6608C22.1534 16.4266 22.5836 17.4652 22.5836 18.5482C22.5836 19.6311 22.1534 20.6698 21.3876 21.4355C20.6218 22.2013 19.5832 22.6315 18.5003 22.6315Z" fill="white"/>
+          </svg>
+          <svg class="arrow" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.9079 28.7016C13.56 29.5051 12.4205 29.5051 12.0726 28.7016L0.604923 2.21816C0.319012 1.55788 0.803059 0.820803 1.52259 0.820803L24.4579 0.820801C25.1774 0.820801 25.6614 1.55788 25.3755 2.21816L13.9079 28.7016Z" fill="#D69153"/>
+          </svg>
+
+          <span>Посмотреть на карте</span>
+      </a>
 
 
-      <div class="btn-map d-none">
-        <div class="btn btn-orange btn-main">
-          <div class="icon">
-            <svg width="37" height="45" viewBox="0 0 37 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M31.4934 31.5413L18.5003 44.5345L5.50709 31.5413C2.93732 28.9715 1.18729 25.6974 0.478306 22.133C-0.230679 18.5686 0.133221 14.8741 1.52399 11.5165C2.91475 8.1589 5.26992 5.28913 8.29167 3.27007C11.3134 1.25101 14.866 0.17334 18.5003 0.17334C22.1345 0.17334 25.6871 1.25101 28.7088 3.27007C31.7306 5.28913 34.0858 8.1589 35.4765 11.5165C36.8673 14.8741 37.2312 18.5686 36.5222 22.133C35.8132 25.6974 34.0632 28.9715 31.4934 31.5413ZM18.5003 26.7148C20.6662 26.7148 22.7434 25.8544 24.275 24.3229C25.8065 22.7913 26.6669 20.7141 26.6669 18.5482C26.6669 16.3822 25.8065 14.305 24.275 12.7735C22.7434 11.2419 20.6662 10.3815 18.5003 10.3815C16.3343 10.3815 14.2571 11.2419 12.7255 12.7735C11.194 14.305 10.3336 16.3822 10.3336 18.5482C10.3336 20.7141 11.194 22.7913 12.7255 24.3229C14.2571 25.8544 16.3343 26.7148 18.5003 26.7148ZM18.5003 22.6315C17.4173 22.6315 16.3787 22.2013 15.6129 21.4355C14.8471 20.6698 14.4169 19.6311 14.4169 18.5482C14.4169 17.4652 14.8471 16.4266 15.6129 15.6608C16.3787 14.8951 17.4173 14.4648 18.5003 14.4648C19.5832 14.4648 20.6218 14.8951 21.3876 15.6608C22.1534 16.4266 22.5836 17.4652 22.5836 18.5482C22.5836 19.6311 22.1534 20.6698 21.3876 21.4355C20.6218 22.2013 19.5832 22.6315 18.5003 22.6315Z" fill="white"/>
-            </svg>
-          </div>
-        </div>
-      </div>
       <div class="btn-block">
-        <div class="btn btn-orange btn-square btn-square-s">
+        <a href="#chooseAppt" class="btn btn-orange btn-square btn-square-s">
           <span>Выбрать квартиру</span>
-        </div>
+        </a>
 
         <div class="add-text" id="slogans">
           <span class="active">Предложение месяца - ипотека от 4%</span>
@@ -142,11 +142,25 @@
   </div>
 </header>
 
-<div  class="parallax-window" data-parallax="scroll" data-speed="0" data-over-scroll-fix="true"
-      data-image-src="img/Comp_1_5.gif"
-      id="video">
+
+
+<div class="banner">
+  <div class="banner-wrapper">
+    <img src="img/Comp_1_5.gif">
+  </div>
+</div>
+<!--
+<div
+  class="parallax-window banner"
+   data-parallax="scroll"
+   data-bleed="20"
+   data-speed="0"
+   data-over-scroll-fix="true"
+   data-image-src="img/Comp_1_5.gif"
+   id="video">
   <img src="img/Comp_1_5.gif">
 </div>
+-->
 
 <section id="advantages">
   <div class="companyName">
@@ -166,7 +180,7 @@
       </div>
     </div>
   </div>
-  <div class="section-content">
+  <div class="section-content" id="advSlider">
     <div class="adv-slider-text">
       <div class="container">
 
@@ -375,6 +389,19 @@
         </div>
       </div>
     </div>
+
+    <div class="nav-points">
+      <div class="container">
+        <div class="nav-points__items">
+          <div class="nav-item active" data-slide="1"></div>
+          <div class="nav-item" data-slide="2"></div>
+          <div class="nav-item" data-slide="3"></div>
+          <div class="nav-item" data-slide="4"></div>
+          <div class="nav-item" data-slide="5"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="container nav-wrapper">
       <div class="adv-slider-nav" data-slider="advText" data-slider-second="advImages">
         <div class="navBtn prevBtn btn btn-rond btn-rond-m btn-orange-border-black disabled">
@@ -401,7 +428,7 @@
 </section>
 
 <section id="buildingPosition">
-  <div class="nadpis2 d-none-t d-none-m">
+  <div class="nadpis2">
     <div class="container">
       <img src="img/svg/nadpis2.svg">
     </div>
@@ -429,7 +456,8 @@
       <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0.332031H24V2.9987H0V0.332031ZM0 9.66537H24V12.332H0V9.66537ZM0 18.9987H24V21.6654H0V18.9987Z" fill="#383838"/>
       </svg>
-      <span>Что рядом</span>
+      <span class="show-filter">Что рядом</span>
+      <span class="hide-filter">Скрыть фильтры</span>
     </div>
   </div>
 
@@ -477,6 +505,7 @@
   </div>
 </section>
 
+
 <section id="chooseAppt">
   <div class="nadpis3 d-none-t d-none-m">
     <div class="container">
@@ -487,11 +516,11 @@
   <div class="container">
     <div class="section-title">
       <h2 class="section-title__text">ВЫБРАТЬ КВАРТИРУ
-      <span>Осталось 10</span></h2>
+        <span>Осталось 10</span></h2>
     </div>
 
     <div class="section-content">
-      <div id="filterShow" class="filter-show d-desktop-hidden">
+      <div id="filterShow" class="filter-show">
         <div class="btn btn-square btn-square-100 btn-black-border">
           <svg class="mr-15" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.17071 16C4.58254 14.8348 5.69378 14 7 14C8.3062 14 9.4175 14.8348 9.8293 16H20V18H9.8293C9.4175 19.1652 8.3062 20 7 20C5.69378 20 4.58254 19.1652 4.17071 18H0V16H4.17071ZM10.1707 9C10.5825 7.83481 11.6938 7 13 7C14.3062 7 15.4175 7.83481 15.8293 9H20V11H15.8293C15.4175 12.1652 14.3062 13 13 13C11.6938 13 10.5825 12.1652 10.1707 11H0V9H10.1707ZM4.17071 2C4.58254 0.83481 5.69378 0 7 0C8.3062 0 9.4175 0.83481 9.8293 2H20V4H9.8293C9.4175 5.16519 8.3062 6 7 6C5.69378 6 4.58254 5.16519 4.17071 4H0V2H4.17071ZM7 4C7.55228 4 8 3.55228 8 3C8 2.44772 7.55228 2 7 2C6.44772 2 6 2.44772 6 3C6 3.55228 6.44772 4 7 4ZM13 11C13.5523 11 14 10.5523 14 10C14 9.4477 13.5523 9 13 9C12.4477 9 12 9.4477 12 10C12 10.5523 12.4477 11 13 11ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z" fill="#383838"/>
@@ -500,7 +529,7 @@
           <span>Фильтр</span>
         </div>
       </div>
-      <div id="filterHide" class="filter-hide d-desktop-hidden d-none">
+      <div id="filterHide" class="filter-hide d-none">
         <div class="btn btn-square btn-square-100 btn-black-border">
           <svg class="mr-15" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#383838"/>
@@ -508,65 +537,6 @@
           <span>Закрыть фильтр</span>
         </div>
       </div>
-      <div id="filterResult" class="mb-20 d-desktop-hidden">
-        <div id="filter-building" class="mb-20">
-          <span class="title">Номер дома: </span>
-          <span class="val">1</span>
-        </div>
-
-        <div id="filter-rooms" class="mb-20">
-          <span class="title">Количество комнат: </span>
-          <span class="val">2</span>
-        </div>
-
-        <div id="filter-square" class="mb-20">
-          <span class="title">Площадь: </span>
-          <span class="val">50</span>
-        </div>
-
-      </div>
-      <div class="appt-list">
-        <div class="appt-list-item">
-          <div class="item-image">
-            <img src="img/appts/1.png">
-          </div>
-          <div class="item-text">
-            <div class="item-text__caption">1-спальная, 22м²</div>
-            <div class="item-text__building">Номер дома: 1</div>
-          </div>
-        </div>
-        <div class="appt-list-item">
-          <div class="item-image">
-            <img src="img/appts/1.png">
-          </div>
-          <div class="item-text">
-            <div class="item-text__caption">1-спальная, 22м²</div>
-            <div class="item-text__building">Номер дома: 1</div>
-          </div>
-        </div>
-        <div class="appt-list-item">
-          <div class="item-image">
-            <img src="img/appts/1.png">
-          </div>
-          <div class="item-text">
-            <div class="item-text__caption">1-спальная, 22м²</div>
-            <div class="item-text__building">Номер дома: 1</div>
-          </div>
-        </div>
-        <div class="appt-list-item">
-          <div class="item-image">
-            <img src="img/appts/1.png">
-          </div>
-          <div class="item-text">
-            <div class="item-text__caption">1-спальная, 22м²</div>
-            <div class="item-text__building">Номер дома: 1</div>
-          </div>
-        </div>
-        <div class="btn btn-square-100 btn-square btn-black-border" id="apptMore">
-          <span>Показать больше</span>
-        </div>
-      </div>
-
       <div id="apptFilter"  class="appt-filter">
         <div class="appt-filter__wrapper"></div>
         <div class="input-select mb-30" data-name="building">
@@ -638,6 +608,68 @@
           <span>Мне нужна помощь менеджера в выборе</span>
         </div>
       </div>
+
+      <div id="filterResult" class="mb-20">
+        <div id="filter-building" class="mb-20">
+          <span class="title">Номер дома: </span>
+          <span class="val">1</span>
+        </div>
+
+        <div id="filter-rooms" class="mb-20">
+          <span class="title">Количество комнат: </span>
+          <span class="val">2</span>
+        </div>
+
+        <div id="filter-square" class="mb-20">
+          <span class="title">Площадь: </span>
+          <span class="val">50</span>
+        </div>
+
+      </div>
+
+
+      <div class="appt-list">
+        <a href="appt.html" class="appt-list-item">
+          <div class="item-image">
+            <img src="img/appts/1.png">
+          </div>
+          <div class="item-text">
+            <div class="item-text__caption">1-спальная, 22м²</div>
+            <div class="item-text__building">Номер дома: 1</div>
+          </div>
+        </a>
+        <div class="appt-list-item">
+          <div class="item-image">
+            <img src="img/appts/1.png">
+          </div>
+          <div class="item-text">
+            <div class="item-text__caption">1-спальная, 22м²</div>
+            <div class="item-text__building">Номер дома: 1</div>
+          </div>
+        </div>
+        <div class="appt-list-item">
+          <div class="item-image">
+            <img src="img/appts/1.png">
+          </div>
+          <div class="item-text">
+            <div class="item-text__caption">1-спальная, 22м²</div>
+            <div class="item-text__building">Номер дома: 1</div>
+          </div>
+        </div>
+        <div class="appt-list-item">
+          <div class="item-image">
+            <img src="img/appts/1.png">
+          </div>
+          <div class="item-text">
+            <div class="item-text__caption">1-спальная, 22м²</div>
+            <div class="item-text__building">Номер дома: 1</div>
+          </div>
+        </div>
+        <div class="btn btn-square-100 btn-square btn-black-border" id="apptMore">
+          <span>Показать больше</span>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -693,6 +725,7 @@
 
 </section>
 
+
 <section id="buyingServices">
   <div class="container">
     <div class="section-title">
@@ -718,38 +751,38 @@
         <div class="slider-item active" data-id="1">
           <div class="slider-item__image">
             <img src="img/services/1.png">
+            <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           </div>
-          <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
         </div>
         <div class="slider-item" data-id="2">
           <div class="slider-item__image">
             <img src="img/services/2.png">
+            <a href="for-it.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           </div>
-          <a href="for-it.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           <h3 class="slider-item__text mt-40">ДЛЯ IT-СПЕЦИАЛИСТОВ</h3>
         </div>
         <div class="slider-item" data-id="3">
           <div class="slider-item__image">
             <img src="img/services/3.png">
+            <a href="gos-poddergka.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           </div>
-          <a href="gos-poddergka.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
 
           <h3 class="slider-item__text mt-40">ГОСУДАРСТВЕННАЯ ПОДДЕРЖКА</h3>
         </div>
         <div class="slider-item" data-id="4">
           <div class="slider-item__image">
             <img src="img/services/4.png">
+            <a href="trade-in.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           </div>
-          <a href="trade-in.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
 
           <h3 class="slider-item__text mt-40">КВАРТИРА В TRADE‑IN</h3>
         </div>
         <div class="slider-item" data-id="5">
           <div class="slider-item__image">
             <img src="img/services/1.png">
+            <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
           </div>
-          <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
 
           <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
         </div>
@@ -759,6 +792,7 @@
   </div>
 
 </section>
+
 
 <section id="buildingStage">
   <div class="container">
@@ -866,7 +900,26 @@
     </div>
 
     <div class="section-pills">
-      <div class="section-pills__item">
+      <a href="news-item.html" class="section-pills__item">
+        <div class="pill">
+          <div class="image">
+            <img src="img/news_image.png">
+          </div>
+          <div class="pill-content">
+            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
+            <div class="pill-content__date">01 июня 2023</div>
+          </div>
+        </div>
+      </a>
+      <a href="news-item.html" class="section-pills__item w-image">
+        <div class="pill">
+          <div class="pill-content">
+            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
+            <div class="pill-content__date">01 июня 2023</div>
+          </div>
+        </div>
+      </a>
+      <a href="news-item.html" class="section-pills__item">
         <div class="pill">
           <img src="img/news_image.png">
           <div class="pill-content">
@@ -874,27 +927,16 @@
             <div class="pill-content__date">01 июня 2023</div>
           </div>
         </div>
-      </div>
-      <div class="section-pills__item w-image">
-        <div class="pill">
-          <div class="pill-content">
-            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
-            <div class="pill-content__date">01 июня 2023</div>
-          </div>
-        </div>
-      </div>
-      <div class="section-pills__item">
-        <div class="pill">
-          <img src="img/news_image.png">
-          <div class="pill-content">
-            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
-            <div class="pill-content__date">01 июня 2023</div>
-          </div>
-        </div>
-      </div>
+      </a>
     </div>
+    <div class="all-btn">
+      <a href="news.html" class="btn btn-square btn-square-100 btn-orange">Все новости</a>
+    </div>
+
   </div>
 </section>
+
+<!--
 
 <section id="formCallback">
   <div class="nadpisFormLeft d-desktop-only">
@@ -939,6 +981,9 @@
 
 </section>
 
+
+-->
+
 <footer>
   <div class="container">
 
@@ -963,7 +1008,7 @@
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23.8571 23.8571C20.7143 27.1 20.4857 31.1429 20.2143 40C28.4714 40 34.1714 39.9714 37.1143 37.1143C39.9714 34.1714 40 28.2 40 20.2143C31.1429 20.5 27.1 20.7143 23.8571 23.8571ZM0 20.2143C0 28.2 0.0285714 34.1714 2.88571 37.1143C5.82857 39.9714 11.5286 40 19.7857 40C19.5 31.1429 19.2857 27.1 16.1429 23.8571C12.9 20.7143 8.85714 20.4857 0 20.2143ZM19.7857 0C11.5429 0 5.82857 0.0285714 2.88571 2.88571C0.0285714 5.82857 0 11.8 0 19.7857C8.85714 19.5 12.9 19.2857 16.1429 16.1429C19.2857 12.9 19.5143 8.85714 19.7857 0ZM23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0C28.4714 0 34.1714 0.0285714 37.1143 2.88571C39.9714 5.82857 40 11.8 40 19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429Z" fill="#383838"/>
               <path class="transparent"
-                d="M40 20.2143V19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0H19.7857C19.5 8.85714 19.2857 12.9 16.1429 16.1429C12.9 19.2857 8.85714 19.5143 0 19.7857V20.2143C8.85714 20.5 12.9 20.7143 16.1429 23.8571C19.2857 27.1 19.5143 31.1429 19.7857 40H20.2143C20.5 31.1429 20.7143 27.1 23.8571 23.8571C27.1 20.7143 31.1429 20.4857 40 20.2143Z" fill="white"/>
+                    d="M40 20.2143V19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0H19.7857C19.5 8.85714 19.2857 12.9 16.1429 16.1429C12.9 19.2857 8.85714 19.5143 0 19.7857V20.2143C8.85714 20.5 12.9 20.7143 16.1429 23.8571C19.2857 27.1 19.5143 31.1429 19.7857 40H20.2143C20.5 31.1429 20.7143 27.1 23.8571 23.8571C27.1 20.7143 31.1429 20.4857 40 20.2143Z" fill="white"/>
             </svg>
           </div>
         </a>
@@ -975,7 +1020,7 @@
           </div>
         </a>
       </div>
-      <div class="phone d-desktop-only">
+      <div class="phone">
         <a href="tel:78412515151">+7 8412 51 51 51</a>
       </div>
       <div class="recall">
@@ -1008,10 +1053,93 @@
     </div>
   </div>
 </footer>
+
+
+
+
+
+
 </body>
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
-<script src="js/parallax.min.js"></script>
+<script type="text/javascript">
+  // filter appt
+  filterShow.onclick = function() {
+    apptFilter.classList.add('active');
+    filterShow.classList.add('d-none');
+    filterHide.classList.remove('d-none');
+  }
 
+  filterHide.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+
+  filterApply.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+
+
+  filterClear.onclick = function() {
+    apptFilter.classList.remove('active');
+    filterShow.classList.remove('d-none');
+    filterHide.classList.add('d-none');
+  }
+  // Функция ymaps.ready() будет вызвана, когда
+  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+  ymaps.ready(init);
+  function init(){
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [55.76, 37.64],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 7
+    });
+  }
+
+
+  advSlider.onmousedown = function(event) {
+    console.log(event.pageX);
+
+
+
+
+    moveAt(event.pageX, event.pageY);
+
+    // передвинуть мяч под координаты курсора
+    // и сдвинуть на половину ширины/высоты для центрирования
+    function moveAt(pageX, pageY) {
+      var imageSlider = advSlider.querySelector('.slider-item.current');
+//      console.log(imageSlider);
+//      ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
+//      ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
+    }
+
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+
+    // (3) перемещать по экрану
+    document.addEventListener('mousemove', onMouseMove);
+
+    // (4) положить мяч, удалить более ненужные обработчики событий
+    ball.onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      advSlider.onmouseup = null;
+    };
+
+
+  };
+
+
+</script>
 </html>

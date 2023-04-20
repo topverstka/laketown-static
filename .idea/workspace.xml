@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="6debaafb-49b3-4960-882b-5b02891f0612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/appt.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/appt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/app.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/news-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parts/header_main/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/parts/header_main/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/parts/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/parts/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/parts/page_news_item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/parts/page_news_item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/appt.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/appt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/buying-services.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/buying-services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/app.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/family-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/family-credit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/advantages/icons/curve_lines.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/advantages/icons/curve_lines.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/advantages/icons/spart_park.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/advantages/icons/spart_park.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/svg/burger.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/burger.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/app.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/news-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/app/html/services.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -93,11 +98,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/parts/page_news_item.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
               <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scss/parts/banner.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -191,17 +214,17 @@
         <option value="$PROJECT_DIR$/app/parts/advantages/template.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/scss/parts/page-news.scss" />
-        <option value="$PROJECT_DIR$/app/html/index.html" />
         <option value="$PROJECT_DIR$/app/html/news.html" />
         <option value="$PROJECT_DIR$/app/html/family-credit.html" />
         <option value="$PROJECT_DIR$/app/parts/header/template.html" />
         <option value="$PROJECT_DIR$/app/parts/page_news/template.html" />
-        <option value="$PROJECT_DIR$/app/scss/parts/banner.scss" />
         <option value="$PROJECT_DIR$/app/html/news-item.html" />
         <option value="$PROJECT_DIR$/app/html/appt.html" />
         <option value="$PROJECT_DIR$/app/parts/header_main/template.html" />
         <option value="$PROJECT_DIR$/app/scss/parts/header.scss" />
         <option value="$PROJECT_DIR$/app/scss/parts/page_news_item.scss" />
+        <option value="$PROJECT_DIR$/app/scss/parts/banner.scss" />
+        <option value="$PROJECT_DIR$/app/html/index.html" />
       </list>
     </option>
   </component>
@@ -356,21 +379,7 @@
       <workItem from="1681147022558" duration="18385000" />
       <workItem from="1681216119669" duration="37920000" />
       <workItem from="1681535512211" duration="11054000" />
-      <workItem from="1681650872083" duration="106398000" />
-    </task>
-    <task id="LOCAL-00008" summary="buildingPosition fix">
-      <created>1681117045076</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1681117045076</updated>
-    </task>
-    <task id="LOCAL-00009" summary="buildingPosition fix style">
-      <created>1681117235145</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1681117235145</updated>
+      <workItem from="1681650872083" duration="106709000" />
     </task>
     <task id="LOCAL-00010" summary="buildingPosition fix style">
       <created>1681117301623</created>
@@ -701,11 +710,25 @@
       <option name="project" value="LOCAL" />
       <updated>1681990776865</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="changes 20 - 1">
+      <created>1681991407452</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1681991407452</updated>
+    </task>
+    <task id="LOCAL-00058" summary="changes 20 - 1">
+      <created>1681991583436</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1681991583436</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241284000" />
+    <option name="totallyTimeSpent" value="241595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1792" height="1021" extended-state="0" />
@@ -1083,16 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
-          <folding>
-            <element signature="e#2443#3283#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/parts/advantages/template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1126,13 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/parts/banner.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1183,7 @@
     <entry file="file://$PROJECT_DIR$/app/html/services.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1251,6 +1257,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/parts/banner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
