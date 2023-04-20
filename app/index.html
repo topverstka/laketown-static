@@ -385,19 +385,29 @@
         <div class="swiper advantages-gallery-carousel">
           <div class="swiper-wrapper">
             <div class="swiper-slide advantages-gallery-slide">
-              <img src="img/advantages/1.png">
+              <div class="advantages-gallery-slide__media">
+                <img src="img/advantages/1.png">
+              </div>
             </div>
             <div class="swiper-slide advantages-gallery-slide">
-              <img src="img/advantages/2.png">
+              <div class="advantages-gallery-slide__media">
+                <img src="img/advantages/2.png">
+              </div>
             </div>
             <div class="swiper-slide advantages-gallery-slide">
-              <img src="img/advantages/3.png">
+              <div class="advantages-gallery-slide__media">
+                <img src="img/advantages/3.png">
+              </div>
             </div>
             <div class="swiper-slide advantages-gallery-slide">
-              <img src="img/advantages/4.png">
+              <div class="advantages-gallery-slide__media">
+                <img src="img/advantages/4.png">
+              </div>
             </div>
             <div class="swiper-slide advantages-gallery-slide">
-              <img src="img/advantages/5.png">
+              <div class="advantages-gallery-slide__media">
+                <img src="img/advantages/5.png">
+              </div>
             </div>
           </div>
           <div class="swiper-buttons advantages-gallery-buttons">
@@ -1264,6 +1274,18 @@
       //   fadeEffect: {
       //   crossFade: true
       // },
+      grabCursor: true,
+      effect: "creative",
+       creativeEffect: {
+        prev: {
+          shadow: false,
+          translate: ["-20%", 0, -1],
+          opacity: 0.3,
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
       navigation: {
         nextEl: ".advantages-desc-carousel-button-next",
         prevEl: ".advantages-desc-carousel-button-prev",
@@ -1277,10 +1299,17 @@
         el: ".advantages-gallery-carousel-pagination",
         clickable: true,
       },
-      // effect: 'fade',
-      //   fadeEffect: {
-      //   crossFade: true
-      // },
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: false,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
       navigation: {
         nextEl: ".advantages-gallery-carousel-button-next",
         prevEl: ".advantages-gallery-carousel-button-prev",

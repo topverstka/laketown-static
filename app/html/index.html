@@ -173,6 +173,18 @@
       //   fadeEffect: {
       //   crossFade: true
       // },
+      grabCursor: true,
+      effect: "creative",
+       creativeEffect: {
+        prev: {
+          shadow: false,
+          translate: ["-20%", 0, -1],
+          opacity: 0.3,
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
       navigation: {
         nextEl: ".advantages-desc-carousel-button-next",
         prevEl: ".advantages-desc-carousel-button-prev",
@@ -186,10 +198,17 @@
         el: ".advantages-gallery-carousel-pagination",
         clickable: true,
       },
-      // effect: 'fade',
-      //   fadeEffect: {
-      //   crossFade: true
-      // },
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: false,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
       navigation: {
         nextEl: ".advantages-gallery-carousel-button-next",
         prevEl: ".advantages-gallery-carousel-button-prev",
