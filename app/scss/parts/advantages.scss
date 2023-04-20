@@ -105,9 +105,6 @@ section#advantages {
       -ms-flex: 1 1 40%;
       flex: 0 0 40%;
       height: 800px;
-      .container {
-        margin-right: 0 !important;
-      }
       .slider {
         position: relative;
         display: block;
@@ -242,7 +239,16 @@ section#advantages {
 }
 
 
-@media (max-width: $tablet-l) {
+@media (min-width: $tablet-l) {
+  #advantages {
+    .nav-points {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: $tablet-l - 1) {
   #advantages {
     .section-content {
       flex-wrap: wrap;
@@ -274,8 +280,9 @@ section#advantages {
           margin-right: 0;
 
           img {
-            width: 100% !important;
-            height: auto !important;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            height: auto;
             top: 50%;
             transform: translateY(-50%);
             position: relative;
@@ -299,6 +306,7 @@ section#advantages {
         max-width: 100% !important;
         right: 0;
         left: 0;
+        display: none !important;
         .adv-slider-nav {
           justify-content: space-between;
           max-width: 100%;
@@ -311,6 +319,34 @@ section#advantages {
           }
         }
       }
+      .nav-points {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        &__items {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .nav-item {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border: 1px solid transparent;
+            @include borderRadius(50%);
+            background: $orangeLight;
+            @include transition(all, .5s);
+            margin-right: 8px;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:hover, &.active {
+              background: $orangeDark;
+            }
+          }
+        }
+      }
+
     }
   }
 

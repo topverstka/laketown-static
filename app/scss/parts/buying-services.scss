@@ -1,0 +1,162 @@
+section#buyingServices {
+  padding-top: 200px;
+
+  .section-title {
+    &__btns {
+      display: flex;
+      .navBtn {
+        svg path {
+          fill:none;
+          stroke: $mainDark;
+        }
+        &:hover {
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+        &.disabled {
+          border-color: $borderGray;
+          background: $borderGray;
+          svg path {
+            fill:none;
+            stroke: $colorBgr;
+          }
+
+        }
+      }
+      .nextBtn {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        @extend .ml-15;
+      }
+      .btn {
+
+        &:last-child {
+          margin-left: 20px;
+
+        }
+      }
+    }
+  }
+
+  .section-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -1px;
+    #sliderServices {
+      display: flex;
+      flex-direction: row;
+      @include paddingSlider(padding, left);
+      @include transition(all, .5s);
+
+      .slider-item {
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &__image {
+          position: relative;
+          overflow: hidden;
+          @include borderRadius(60px);
+          img {
+            @include transition(all, .5s);
+            height: 100%;
+            width: auto;
+          }
+        }
+        &__text {
+          font-family: var(--font-alimini);
+        }
+        a {
+          opacity: 0;
+          z-index: -1;
+          @include transition(all, .5s);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-decoration: none;
+          span {
+            max-width: 60%;
+            text-align: center;
+            text-decoration: none;
+          }
+
+        }
+        &:hover {
+          img {
+            @include transform(scale, 1.2);
+          }
+          a {
+            opacity: 1;
+            z-index: 5;
+
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+
+@media (min-width: $desktop-s) {
+  #buyingServices {
+    .section-content {
+      #sliderServices {
+        .slider-item {
+          width: 30%;
+          &__image {
+            height: 700px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $desktop-s - 1) {
+  #buyingServices {
+    padding-top: 150px !important;
+    .section-content {
+      #sliderServices {
+        padding-left: 20px !important;
+        .slider-item {
+          width: 45%;
+          &__image {
+            height: 600px;
+          }
+        }
+
+      }
+    }
+  }
+
+}@media (max-width: $tablet-m - 1) {
+  #buyingServices {
+    padding-top: 150px !important;
+    .section-content {
+      #sliderServices {
+        padding-left: 20px !important;
+        .slider-item {
+          width: 44%;
+          &__image {
+            height: 400px;
+          }
+        }
+
+      }
+    }
+  }
+
+}

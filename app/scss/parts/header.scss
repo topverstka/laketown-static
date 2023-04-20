@@ -157,7 +157,6 @@ header {
         justify-content: flex-start;
         align-items: center;
         flex: 1 1 100%;
-        padding-bottom: 100px;
         @media screen and (max-width: $tablet-s - 1) {
           flex-direction: column !important;
         }
@@ -208,6 +207,7 @@ header {
     .slogan {
       width: 66%;
     }
+
   }
 }
 @media (max-width: $tablet-l) {
@@ -225,6 +225,11 @@ header {
   .recall {
     .icon {
       display: none;
+    }
+  }
+  .header-block {
+    .btn-block {
+      padding-bottom: 100px;
     }
   }
 
@@ -252,6 +257,11 @@ header {
         width: 100%;
         height: auto;
       }
+    }
+  }
+  .header-block {
+    .btn-block {
+      padding-bottom: 70px;
     }
   }
 }

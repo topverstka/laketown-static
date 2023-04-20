@@ -51,9 +51,11 @@ $(document).ready(function() {
     sliderMargin = parseInt($(document).find('#advantages #advImages .slider-item').css('margin-right')),
     sliderWidth = sliderBlockWidth - borderWidth;
 
+  console.log(window.innerWidth);
   if (window.innerWidth < 1200) {
     sliderWidth = window.innerWidth;
   }
+  console.log(sliderWidth);
 
 
   $(document).find('#advantages #advImages .slider-item').css('width', sliderWidth);
@@ -116,7 +118,6 @@ $(document).ready(function() {
       sliderBlock.find('[data-id="'+newSlide+'"]').addClass('current');
       qtyBlock.data('active', newSlide);
       qtyCurrent.text(newSlide);
-      console.log(currentSlide);
 
       sliderAddBlock.find('[data-id="'+newSlide+'"]').addClass('current').removeClass('prev');
       sliderAddBlock.find('[data-id="'+currentSlide+'"]').removeClass('current').addClass('active').delay( 1000 );

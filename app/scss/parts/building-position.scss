@@ -11,7 +11,6 @@ section#buildingPosition {
       img {
         bottom: 0;
         position: absolute;
-        left: 20%;
       }
     }
   }
@@ -31,12 +30,36 @@ section#buildingPosition {
     }
   }
 }
-@media (max-width: $desktop-s) {
+@media (min-width: $desktop-l) {
   #buildingPosition {
     .nadpis2 {
       .container {
         img {
-          left: 12% !important;
+          left: 30%;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: $desktop-l - 1) {
+  #buildingPosition {
+    .nadpis2 {
+      .container {
+        img {
+          left: 22%;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: $desktop-s - 1) {
+  #buildingPosition {
+    .nadpis2 {
+      .container {
+        img {
+          left: 18%;
         }
       }
     }

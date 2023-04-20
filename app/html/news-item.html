@@ -39,15 +39,15 @@
       dh = $(document).height();
 
 
-    if (fb + (wh - ft) + 101 + (wh-sh) < wt + wh) {
+    if (fb + (wh - ft) + 221 + (wh-sh) < wt + wh) {
       var move = (wt + wh) - (fb + (wh - ft) +101 + (wh-sh));
 
       $(document).find('.article-section-side').css('top', 20 - parseFloat((wt + wh) -
-        (fb + (wh - ft) + 101 + (wh-sh))));
+        (fb + (wh - ft) + 1 + (wh-sh))));
 
     }
 
-    if (fb + (wh - ft) + 221 < wt + wh) {
+    if (fb + (wh - ft) + 1 < wt + wh) {
       console.log('YES');
 
     }

@@ -8,25 +8,34 @@ section#mapBlock {
   .filter-btn {
     #filterBtn {
       position: absolute;
-      right: 80px;
-      top: 60%;
+      @include transition(bottom, .5s);
       svg {
         margin-right: 20px;
       }
-      &.show {
-        .hide-filter {
-          display: block;
-        }
-        .show-filter {
-          display: none;
-        }
 
-      }
+    }
 
+  }
+
+}
+
+@media (min-width: $tablet-m) {
+  #filterBtn {
+    right: 80px;
+    bottom: 40px;
+    &.show {
+      bottom: 200px;
       .hide-filter {
+        display: block;
+      }
+      .show-filter {
         display: none;
       }
 
+    }
+
+    .hide-filter {
+      display: none;
     }
 
   }
@@ -81,9 +90,98 @@ section#mapBlock {
   }
 
 }
+@media (max-width: $tablet-m - 1) {
+  #filterBtn {
+    left: 50%;
+    bottom: -100px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50%;
+    &.show {
+      .hide-filter {
+        display: block;
+      }
+      .show-filter {
+        display: none;
+      }
 
-@media (max-width: $tablet-m) {
-  .filter-btn, .map-filter {
-    display: none;
+    }
+
+    .hide-filter {
+      display: none;
+    }
+
+  }
+  .map-filter {
+    &.active {
+      padding-top: 30px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      opacity: 1;
+      height: fit-content;
+      background: $colorBgr;
+      z-index: 10;
+      @include transition(all, .8s);
+
+      .map-filter__item {
+        height: 80px;
+      }
+    }
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $orangeMain;
+    @include transition(all, .8s);
+    &__item {
+      height: 0;
+      width: 100%;
+      -webkit-flex: 1 1 auto;
+      -moz-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include transition(all, .5s);
+      svg path, span {
+        fill: none;
+        stroke: $mainDark;
+        color: $mainDark;
+      }
+      svg.fill path {
+        fill: $mainDark;
+      }
+      &:hover, &.active {
+        background: $orangeDark;
+        svg path, span {
+          fill: none;
+          stroke: $colorBgr;
+          color: $colorBgr;
+        }
+        svg.fill path {
+          fill: $colorBgr;
+        }
+
+      }
+    }
+  }
+
+}
+@media (max-width: $tablet-s - 1) {
+  #filterBtn {
+    width: calc(100% - 40px);
   }
 }

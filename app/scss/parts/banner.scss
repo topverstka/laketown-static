@@ -11,14 +11,38 @@
     width: 100%;
     overflow: hidden;
     z-index: -1;
-    img {
-      height: auto;
-      width: 100%;
-    }
   }
 
 }
 
+@media (min-width: $tablet-l) {
+  .banner {
+    height: 1000px;
+    &-wrapper {
+      img {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+
+    }
+  }
+
+}
+@media (max-width: $tablet-l - 1) {
+  .banner {
+    height: 900px;
+    &-wrapper {
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+    }
+  }
+
+}
 @media (max-width: $tablet-l) {
   .banner {
     height: 900px;
@@ -27,7 +51,7 @@
 }
 @media (max-width: $tablet-s) {
   .banner {
-    height: 600px;
+    height: 800px;
   }
 
 }

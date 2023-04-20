@@ -80,6 +80,29 @@ section#parking {
 @media (max-width: $desktop-s) {
   #parking {
     .section-title {
+      &-wrapper {
+        -webkit-flex: 0 0 50% !important;
+        -moz-flex: 0 0 50% !important;
+        -ms-flex: 0 0 50% !important;
+        flex: 0 0 50% !important;
+
+      }
+      &__text {
+        width: 100% !important;
+      }
+      &__desc {
+        .desc-title {
+          h3 {
+            margin-bottom: 40px !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $tablet-m) {
+  #parking {
+    .section-title {
       flex-wrap: wrap;
       padding-bottom: 0 !important;
       &-wrapper {
@@ -96,6 +119,7 @@ section#parking {
       }
       &-desc {
         order: 2;
+        margin-top: 40px;
         .desc-title {
           h3 {
             margin-bottom: 40px !important;
