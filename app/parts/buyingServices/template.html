@@ -2,64 +2,148 @@
   <div class="container">
     <div class="section-title">
       <h2 class="section-title__text">СЕРВИСЫ ДЛЯ ПОКУПКИ</h2>
+
+      <!-- buttons for Slider #SERVICES# - START -->
       <div class="section-title__btns" data-slider="sliderServices">
-        <div class="navBtn prevBtn btn btn-rond btn-rond-s btn-orange-border-black disabled">
+
+        <div class="navBtn services-btn-prev prevBtn btn btn-rond btn-rond-s btn-orange-border-black disabled">
           <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
           </svg>
         </div>
-        <div class="navBtn nextBtn btn btn-rond btn-rond-s btn-orange-border-black">
+
+        <div class="navBtn services-btn-next nextBtn btn btn-rond btn-rond-s btn-orange-border-black">
           <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
           </svg>
         </div>
 
       </div>
+      <!-- buttons for Slider #SERVICES# - END -->
+
+
     </div>
   </div>
+
   <div class="section-content">
     <div class="section-content__wrapper">
+
+      <!-- Slider main container -->
+      <div  class="swiper" >
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="family-credit.html" class="slider-item active" data-id="1" title="СЕМЕЙНАЯ ИПОТЕКА">
+              <div class="slider-item__image">
+                <img src="img/services/1.png" alt="СЕМЕЙНАЯ ИПОТЕКА">
+                <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+              </div>
+              <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
+            </a>
+
+          </div>
+          <div class="swiper-slide">
+            <a href="for-it.html" class="slider-item" data-id="2" title="ДЛЯ IT-СПЕЦИАЛИСТОВ">
+              <div class="slider-item__image">
+                <img src="img/services/2.png" alt="ДЛЯ IT-СПЕЦИАЛИСТОВ">
+                <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+              </div>
+              <h3 class="slider-item__text mt-40">ДЛЯ IT-СПЕЦИАЛИСТОВ</h3>
+            </a>
+
+          </div>
+          <div class="swiper-slide">
+            <a href="gos-poddergka.html" class="slider-item" data-id="3" title="ДЛЯ IT-СПЕЦИАЛИСТОВ">
+              <div class="slider-item__image">
+                <img src="img/services/3.png" alt="ГОСУДАРСТВЕННАЯ ПОДДЕРЖКА">
+                <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+              </div>
+              <h3 class="slider-item__text mt-40">ГОСУДАРСТВЕННАЯ ПОДДЕРЖКА</h3>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="family-credit.html" class="slider-item" data-id="4" title="КВАРТИРА В TRADE‑IN">
+              <div class="slider-item__image">
+                <img src="img/services/4.png" alt="КВАРТИРА В TRADE‑IN">
+                <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+              </div>
+              <h3 class="slider-item__text mt-40">КВАРТИРА В TRADE‑IN</h3>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="family-credit.html" class="slider-item" data-id="5" title="СЕМЕЙНАЯ ИПОТЕКА">
+              <div class="slider-item__image">
+                <img src="img/services/1.png" alt="КВАРТИРА В TRADE‑IN">
+                <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+              </div>
+              <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
+            </a>
+          </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+
+
+      <!--  Slider #SERVICES# - START -->
+
       <div id="sliderServices" data-items="3">
-        <div class="slider-item active" data-id="1">
+
+        <a href="family-credit.html" class="slider-item active" data-id="1" title="СЕМЕЙНАЯ ИПОТЕКА">
           <div class="slider-item__image">
-            <img src="img/services/1.png">
-            <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
+            <img src="img/services/1.png" alt="СЕМЕЙНАЯ ИПОТЕКА">
+            <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
           </div>
           <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
-        </div>
-        <div class="slider-item" data-id="2">
+        </a>
+
+        <a href="for-it.html" class="slider-item" data-id="2" title="ДЛЯ IT-СПЕЦИАЛИСТОВ">
           <div class="slider-item__image">
-            <img src="img/services/2.png">
-            <a href="for-it.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
+            <img src="img/services/2.png" alt="ДЛЯ IT-СПЕЦИАЛИСТОВ">
+            <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
           </div>
           <h3 class="slider-item__text mt-40">ДЛЯ IT-СПЕЦИАЛИСТОВ</h3>
-        </div>
-        <div class="slider-item" data-id="3">
-          <div class="slider-item__image">
-            <img src="img/services/3.png">
-            <a href="gos-poddergka.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
-          </div>
+        </a>
 
+        <a href="gos-poddergka.html" class="slider-item" data-id="3" title="ДЛЯ IT-СПЕЦИАЛИСТОВ">
+          <div class="slider-item__image">
+            <img src="img/services/3.png" alt="ГОСУДАРСТВЕННАЯ ПОДДЕРЖКА">
+            <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+          </div>
           <h3 class="slider-item__text mt-40">ГОСУДАРСТВЕННАЯ ПОДДЕРЖКА</h3>
-        </div>
-        <div class="slider-item" data-id="4">
-          <div class="slider-item__image">
-            <img src="img/services/4.png">
-            <a href="trade-in.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
-          </div>
+        </a>
 
+        <a href="family-credit.html" class="slider-item" data-id="4" title="КВАРТИРА В TRADE‑IN">
+          <div class="slider-item__image">
+            <img src="img/services/4.png" alt="КВАРТИРА В TRADE‑IN">
+            <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+          </div>
           <h3 class="slider-item__text mt-40">КВАРТИРА В TRADE‑IN</h3>
-        </div>
-        <div class="slider-item" data-id="5">
-          <div class="slider-item__image">
-            <img src="img/services/1.png">
-            <a href="family-credit.html" class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></a>
-          </div>
+        </a>
 
+        <a href="family-credit.html" class="slider-item" data-id="5" title="СЕМЕЙНАЯ ИПОТЕКА">
+          <div class="slider-item__image">
+            <img src="img/services/1.png" alt="КВАРТИРА В TRADE‑IN">
+            <div class="btn btn-rond btn-rond-xl btn-orange"><span>Узнать подробнее</span></div>
+          </div>
           <h3 class="slider-item__text mt-40">СЕМЕЙНАЯ ИПОТЕКА</h3>
-        </div>
+        </a>
 
       </div>
+      <!--  Slider #SERVICES# - END -->
+
     </div>
   </div>
 

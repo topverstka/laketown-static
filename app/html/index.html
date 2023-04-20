@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lake Town</title>
   <link rel="stylesheet" href="css/app.min.css">
-  <link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightslider.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
 </head>
 <body>
 
@@ -39,7 +42,46 @@
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="text/javascript">
+
+
+  const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 40,
+    breakpointBase: 'container',
+    height: 700,
+    oneWayMovement: false,
+    loop: true,
+    navigation: {
+      nextEl: '.services-btn-next',
+      prevEl: '.services-btn-prev',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      576: {
+        height: 500,
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      768: {
+        height: 500,
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1200: {
+        height: 600,
+        slidesPerView: 3.2,
+        spaceBetween: 40
+      },
+      1400: {
+        height: 700,
+        slidesPerView: 3.2,
+        spaceBetween: 40
+      }
+    }
+  });
+
   // filter appt
   filterShow.onclick = function() {
     apptFilter.classList.add('active');

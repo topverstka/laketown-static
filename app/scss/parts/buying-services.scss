@@ -49,6 +49,71 @@ section#buyingServices {
     width: 100%;
     overflow: hidden;
     margin-bottom: -1px;
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+      @include paddingSlider(padding, left);
+      @include transition(all, .5s);
+
+      .slider-item {
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-decoration: none !important;
+        color: $mainDark;
+
+        &__image {
+          position: relative;
+          overflow: hidden;
+          @include borderRadius(60px);
+          img {
+            @include transition(all, .5s);
+            height: 100%;
+            width: auto;
+          }
+        }
+        &__text {
+          font-family: var(--font-alimini);
+          text-decoration: none !important;
+          color: $mainDark;
+        }
+        .btn {
+          opacity: 0;
+          z-index: -1;
+          @include transition(all, .5s);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-decoration: none;
+          span {
+            max-width: 60%;
+            text-align: center;
+            text-decoration: none !important;
+            color: $mainDark;
+
+          }
+
+        }
+        &:hover {
+          img {
+            @include transform(scale, 1.2);
+          }
+          .btn {
+            opacity: 1;
+            z-index: 5;
+
+          }
+
+        }
+
+      }
+    }
     #sliderServices {
       display: flex;
       flex-direction: row;
@@ -73,7 +138,7 @@ section#buyingServices {
         &__text {
           font-family: var(--font-alimini);
         }
-        a {
+        .btn {
           opacity: 0;
           z-index: -1;
           @include transition(all, .5s);
@@ -97,7 +162,7 @@ section#buyingServices {
           img {
             @include transform(scale, 1.2);
           }
-          a {
+          .btn {
             opacity: 1;
             z-index: 5;
 
