@@ -3,6 +3,13 @@ section#news {
   padding-bottom: 200px;
   background: $colorBgr;
 
+  .section-title {
+    &__btn {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
   &.pageSection {
     padding-top: 100px;
     padding-bottom: 0;
@@ -28,29 +35,19 @@ section#news {
     position: relative;
 
     &__item {
-      height: 600px;
-      width: calc(33.3% - 20px);
       margin-left: 20px;
       margin-right: 20px;
 
       .pill {
         border: 1px solid transparent;
         position: relative;
-        -webkit-border-radius: 60px;
-        -moz-border-radius: 60px;
-        -ms-border-radius: 60px;
-        -o-border-radius: 60px;
-        border-radius: 60px;
         height: inherit;
         overflow: hidden;
         cursor: pointer;
+        background: $colorBgr;
 
 
 
-        img {
-          height: 100%;
-          width: auto;
-        }
         &-content {
           position: absolute;
           top: 0;
@@ -66,7 +63,6 @@ section#news {
             background: $orangeMain;
           }
           &__title, &__date {
-            padding: 80px 30px;
             font-family: var(--font-alimini);
             font-size: 48px;
             color: white;
@@ -99,23 +95,126 @@ section#news {
   }
 }
 
+@media (min-width: $desktop-l) {
+  section#news {
+    .section-pills {
+      &__item {
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $tablet-l) {
+  section#news {
+    .all-btn {
+      display: none;
+    }
+
+    .section-pills {
+      &__item {
+
+        width: calc(33.3% - 40px);
+        height: 600px;
+
+        .pill {
+          @include borderRadius(60px);
+          &-content {
+            &__title, &__date {
+              padding: 80px 30px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
 
 
+@media (max-width: $tablet-l - 1) {
+  #news {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+    .all-btn {
+      display: none;
+    }
 
-@media (max-width: $desktop-s) {
+    .section-pills {
+      &__item {
+        width: calc(50% - 40px);
+        height: 500px;
+        .pill {
+          @include borderRadius(60px);
+          &-content {
+            &__title, &__date {
+              padding: 40px 20px;
+            }
+          }
+
+        }
+
+        &:last-child {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-m - 1) {
   #news {
     padding-top: 150px !important;
     padding-bottom: 150px !important;
     .section-pills {
       &__item {
-        -webkit-flex: 1 1 50% !important;
-        -moz-flex: 1 1 50% !important;
-        -ms-flex: 1 1 50% !important;
-        flex: 1 1 50% !important;
-        width: 50% !important;
-        height: 500px !important;
+        width: calc(50% - 40px);
+        height: 500px;
+        .pill {
+          &-content {
+            &__title, &__date {
+              padding: 40px 20px;
+            }
+          }
+        }
         &:last-child {
           display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-s) {
+  #news {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+    .all-btn {
+      display: block;
+    }
+    .section-title {
+      &__btn {
+        display: none;
+      }
+    }
+    .section-pills {
+      flex-direction: column !important;
+      margin:0 !important;
+      &__item {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+        .pill {
+          img {
+            height: auto;
+            min-width: 100%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+          }
         }
       }
     }

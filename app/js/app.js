@@ -65,6 +65,10 @@ $(document).ready(function() {
     sliderMarginWork = parseInt($(document).find('#buildingStage .slider-item').css('padding-right')),
     sliderWidthWork = (sliderBlockWidthWork - borderWidthWork+sliderMarginWork) * 0.7;
 
+  if (window.innerWidth < 768) {
+    sliderWidthWork = window.innerWidth;
+  }
+
   $(document).find('#buildingStage #sliderStages').css({'padding-left': borderWidthWork});
   $(document).find('#buildingStage .slider-item').css({'width': sliderWidthWork});
   $(document).find('#buildingStage .slider-btns').css({'width': sliderWidthWork, 'margin-left': borderWidthWork});

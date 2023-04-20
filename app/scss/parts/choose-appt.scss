@@ -89,7 +89,15 @@ section#chooseAppt {
 
 }
 
-
+@media (min-width: $tablet-l + 1) {
+  #chooseAppt {
+    .section-content {
+      .filter-show, .filter-hide, #filterResult {
+        display: none;
+      }
+    }
+  }
+}
 
 @media (max-width: $tablet-l) {
   #chooseAppt {

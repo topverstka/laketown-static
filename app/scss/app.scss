@@ -20,6 +20,7 @@
 @import "parts/parking";
 @import "parts/news";
 @import "parts/buying-services";
+@import "parts/building-stage";
 
 
 // PAGES
@@ -92,52 +93,6 @@ body {
 
 
 
-  #buildingStage {
-    padding-top: 150px !important;
-    .section-title {
-      flex-wrap: wrap;
-      &-filter {
-        order: 3;
-        -webkit-flex: 1 1 100% !important;
-        -moz-flex: 1 1 100% !important;
-        -ms-flex: 1 1 100% !important;
-        flex: 1 1 100% !important;
-        margin-left: 0 !important;
-        margin-top: 80px;
-        &__item {
-          width: 100%;
-          .btn-filter {
-            flex-grow: 1;
-          }
-        }
-      }
-    }
-    .section-content {
-      .slider-nav {
-        margin-top: 16px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .slider-point {
-          @include borderRadius(50%);
-          width: 8px;
-          height: 8px;
-          background: $orangeLight;
-          border: 1px solid transparent;
-          @include transition(all, .5s);
-          cursor: pointer;
-          margin-right: 8px;
-          &:last-child {
-            margin-right: 8px;
-          }
-          &.active {
-            background: $orangeDark;
-          }
-        }
-      }
-    }
-  }
 
 
 }
@@ -190,135 +145,6 @@ body {
 
 
 
-section#buildingStage {
-  background: $colorBgr;
-  padding-top: 200px;
-
-  .section-title-filter {
-
-    .btn-select {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-
-  @media screen and (max-width: 1600px) {
-    .section-title-filter {
-      .btn-filter {
-        margin-right: 16px;
-      }
-      .btn-select {
-        flex-grow: 1;
-        margin-left: 24px;
-      }
-    }
-  }
-
-  .callendar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    &-item {
-      border-bottom: 1px solid $mainDark;
-      padding-bottom: 20px;
-      flex: 1 1 auto;
-      text-align: center;
-      @include transition(all, .5s);
-      cursor: pointer;
-      &.active, &:hover {
-        color: $orangeMain;
-        border-bottom: 1px solid $orangeMain;
-        padding-bottom: 20px;
-
-      }
-    }
-  }
-
-
-  .section-content {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 60px;
-    .slider-btns {
-      position: absolute;
-      z-index: 5;
-      width: 70%;
-      height: fit-content;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      top: 50%;
-      transform: translateY(-50%);
-      .prevBtn {
-        left: -61px;
-        position: relative;
-      }
-      .navBtn {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        svg path {
-          fill:none;
-          stroke: $colorBgr;
-        }
-        &:hover {
-          svg path {
-            fill:none;
-            stroke: $colorBgr;
-          }
-
-        }
-        &.disabled {
-          border-color: $borderGray;
-          background: $borderGray;
-          svg path {
-            fill:none;
-            stroke: $colorBgr;
-          }
-
-        }
-      }
-      .nextBtn {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
-        position: relative;
-        right: -61px;
-      }
-
-    }
-    #sliderStages {
-      display: flex;
-      flex-direction: row;
-      @include paddingSlider(padding, left);
-      @include transition(all, .5s);
-
-      .slider-item {
-        width: 70%;
-        padding-right: 40px;
-        display: flex;
-        flex-direction: column;
-        &__image {
-          position: relative;
-          overflow: hidden;
-          @include borderRadius(60px);
-          img {
-            height: 100%;
-            width: auto;
-          }
-        }
-      }
-    }
-  }
-
-}
 
 section#formCallback {
   position: relative;
