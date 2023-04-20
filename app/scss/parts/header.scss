@@ -162,6 +162,7 @@ header {
         }
         .btn {
           margin-right: 40px;
+          text-decoration: none;
           @media screen and (max-width: $tablet-s - 1) {
             margin-right: 0 !important;
             width: 100%;

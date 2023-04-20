@@ -1,0 +1,8 @@
+File from: [app/img/Render.png]
+
+File to: [dist/img/Render.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/decode/projects/LakeTownHTML/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o dist/img/Render.png app/img/Render.png
+  error: failed writing image to dist/img/Render.png (16)

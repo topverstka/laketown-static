@@ -31,8 +31,6 @@ $(document).ready(function() {
   }($('header #slogans').children()));
 
 
-//  $('.parallax-window').parallax({imageSrc: 'img/Comp_1_5.gif'});
-  // parralax
 
 
 

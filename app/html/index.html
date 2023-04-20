@@ -84,5 +84,40 @@
     });
   }
 
+
+  advSlider.onmousedown = function(event) {
+    console.log(event.pageX);
+
+
+
+
+    moveAt(event.pageX, event.pageY);
+
+    // передвинуть мяч под координаты курсора
+    // и сдвинуть на половину ширины/высоты для центрирования
+    function moveAt(pageX, pageY) {
+      var imageSlider = advSlider.querySelector('.slider-item.current');
+//      console.log(imageSlider);
+//      ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
+//      ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
+    }
+
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+
+    // (3) перемещать по экрану
+    document.addEventListener('mousemove', onMouseMove);
+
+    // (4) положить мяч, удалить более ненужные обработчики событий
+    ball.onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      advSlider.onmouseup = null;
+    };
+
+
+  };
+
+
 </script>
 </html>
