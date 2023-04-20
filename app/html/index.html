@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lake Town</title>
   <link rel="stylesheet" href="css/app.min.css">
-  <link
+<!--   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
   />
+ -->  
 </head>
 <body>
 
@@ -42,11 +43,12 @@
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 <script type="text/javascript">
 
 
-  const swiper = new Swiper('.swiper', {
+  const buyingServicesCarousel = new Swiper('#buyingServices .swiper', {
     speed: 400,
     spaceBetween: 40,
     breakpointBase: 'container',
@@ -54,8 +56,8 @@
     oneWayMovement: false,
     loop: true,
     navigation: {
-      nextEl: '.services-btn-next',
-      prevEl: '.services-btn-prev',
+      nextEl: '#buyingServices .services-btn-next',
+      prevEl: '#buyingServices .services-btn-prev',
     },
     breakpoints: {
       // when window width is >= 320px
@@ -107,6 +109,10 @@
     filterShow.classList.remove('d-none');
     filterHide.classList.add('d-none');
   }
+
+
+
+
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(init);
@@ -150,11 +156,45 @@
     document.addEventListener('mousemove', onMouseMove);
 
     // (4) положить мяч, удалить более ненужные обработчики событий
-    ball.onmouseup = function() {
-      document.removeEventListener('mousemove', onMouseMove);
-      advSlider.onmouseup = null;
-    };
+    // ball.onmouseup = function() {
+    //   document.removeEventListener('mousemove', onMouseMove);
+    //   advSlider.onmouseup = null;
+    // };
 
+
+
+    let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
+      autoheight: true,
+      pagination: {
+        el: ".advantages-desc-carousel-pagination",
+        clickable: true,
+      },
+      // effect: 'fade',
+      //   fadeEffect: {
+      //   crossFade: true
+      // },
+      navigation: {
+        nextEl: ".advantages-desc-carousel-button-next",
+        prevEl: ".advantages-desc-carousel-button-prev",
+      },
+    });
+
+    let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
+      spaceBetween: 40,
+      slidesPerView: 1.25,
+      pagination: {
+        el: ".advantages-gallery-carousel-pagination",
+        clickable: true,
+      },
+      // effect: 'fade',
+      //   fadeEffect: {
+      //   crossFade: true
+      // },
+      navigation: {
+        nextEl: ".advantages-gallery-carousel-button-next",
+        prevEl: ".advantages-gallery-carousel-button-prev",
+      },
+    });
 
   };
 
