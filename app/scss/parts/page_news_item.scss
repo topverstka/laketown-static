@@ -89,15 +89,20 @@
             line-height: 40px;
             position: relative;
             &:before {
+              align-items: center;
               content: counter(list-item);
               color: #fff;
-              background: url(/app/img/marker.svg);
-              width: 36px;
-              height: 36px;
+              background: #d69153;
+              border: 1px solid #d69153;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
               position: absolute;
-              display: block;
+              display: flex;
               left: -26px;
+              top: 3px;
               text-align: center;
+              justify-content: center;
             }
             &::marker {
               content: none;
