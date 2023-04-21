@@ -31,6 +31,18 @@ section#advantages {
     justify-content: space-between;
     h2 {
       margin: 0;
+      line-height: 1.1;
+
+      @media (min-width: $desktop-s + 1) {
+        text-transform: initial;
+        margin-top: 0.2em;
+      }
+    }
+    @media (min-width: $desktop-s + 1) {
+      padding-bottom: 95px;
+    }
+    @media (min-width: $tablet-l + 1) {
+      padding-bottom: 100px;
     }
   }
   .section-content {
@@ -93,13 +105,6 @@ section#advantages {
           flex-direction: column;
           justify-content: space-between;
         }
-      }
-      h3 {
-        margin-top: 0;
-      }
-      .item-text {
-        font-size: 18px;
-        margin-bottom: 40px;
       }
     }
     .slider-images {
@@ -304,8 +309,9 @@ section#advantages {
 
 .advantages-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: 550px;
+  grid-template-columns: 0.9fr 0.87fr;
+  position: relative;
+  z-index: 3;
 }
 
 #advSlider {
@@ -336,14 +342,25 @@ section#advantages {
 }
 
 #advSlider .advantages-desc-carousel {
-  max-width: 65%;
+  max-width: 73%;
   width: 100%;
   margin-left: 0;
 }
 
-.advantages-desc-carousel .item-title {
+.advantages-desc-carousel h3 {
   margin-top: 0;
 }
+
+.advantages-desc-carousel .item-text {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.advantages-desc-carousel .item-text p {
+  font-size: inherit;
+}
+
+
 .advantages-desc-slide {
   background: #f6f5f1;
 }
@@ -359,7 +376,7 @@ section#advantages {
 .advantages-gallery-slide__media {
   padding-left: 20px;
   padding-right: 20px;
-  height: 100%;
+  height: 800px;
 }
 .advantages-gallery-slide:last-child .advantages-gallery-slide__media {
   padding-right: 70px;
@@ -373,6 +390,10 @@ section#advantages {
   // max-width: 30%;
   width: 120%;
   margin-right: 0;
+
+  @media (min-width: $tablet-l + 1) {
+    width: 123%;
+  }
 }
 
 
@@ -386,8 +407,9 @@ section#advantages {
   position: relative;
   z-index: 5;
   display: grid;
-  transform: translateY(-140px);
-  grid-template-columns: 1fr 1fr 3fr;
+  transform: translateY(-165px);
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: -70px;
 
   .navBtn {
     svg path {
@@ -428,6 +450,7 @@ section#advantages {
     font-size: 48px;
     color: $borderGray;
     pointer-events: none;
+    position: static;
   }
 
   .advantages-desc-pagination span {
@@ -439,4 +462,20 @@ section#advantages {
   .advantages-desc-pagination .swiper-pagination-current {
     color: $orangeMain;
   }
+}
+
+.advantages-desc-buttons .btn-rond-m {
+  @media (min-width: $tablet-l + 1) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+
+.advantages-gallery-buttons {
+  display: none;
+}
+
+.advantages-gallery-pagination {
+  display: none;
 }

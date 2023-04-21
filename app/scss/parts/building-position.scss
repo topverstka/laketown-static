@@ -12,6 +12,10 @@ section#buildingPosition {
         bottom: 0;
         position: absolute;
       }
+
+      @media (max-width: $desktop-s) {
+        overflow: visible;
+      }
     }
   }
   padding-top: 200px;
@@ -24,6 +28,7 @@ section#buildingPosition {
     &__text {
       max-width: 50%;
       margin-top: 0;
+      text-transform: initial;
     }
     &__ext {
       width: 30%;

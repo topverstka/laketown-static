@@ -56,7 +56,7 @@ section#buyingServices {
       @include transition(all, .5s);
 
       .slider-item {
-        padding-right: 40px;
+        // padding-right: 40px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -70,7 +70,7 @@ section#buyingServices {
           img {
             @include transition(all, .5s);
             height: 100%;
-            width: auto;
+            width: 100%;
           }
         }
         &__text {
@@ -125,6 +125,7 @@ section#buyingServices {
         display: flex;
         flex-direction: column;
         position: relative;
+        text-decoration: none;
         &__image {
           position: relative;
           overflow: hidden;
@@ -137,6 +138,8 @@ section#buyingServices {
         }
         &__text {
           font-family: var(--font-alimini);
+          text-decoration: none!important;
+          color: #383838;
         }
         .btn {
           opacity: 0;
@@ -190,6 +193,13 @@ section#buyingServices {
     }
   }
 }
+
+@media (max-width: $desktop-s) {
+  section#buyingServices .section-content .swiper-wrapper .slider-item__image {
+    height: 600px;
+  }
+}
+
 @media (max-width: $desktop-s - 1) {
   #buyingServices {
     padding-top: 150px !important;
@@ -206,8 +216,9 @@ section#buyingServices {
       }
     }
   }
+}
 
-}@media (max-width: $tablet-m - 1) {
+@media (max-width: $tablet-m - 1) {
   #buyingServices {
     padding-top: 150px !important;
     .section-content {

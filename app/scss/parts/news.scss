@@ -133,6 +133,16 @@ section#news {
   }
 }
 
+@media (max-width: $desktop-s) {
+  section#news .section-pills__item {
+    height: 490px;
+  }
+  section#news .section-pills__item .pill-content__date,
+  section#news .section-pills__item .pill-content__title {
+    padding: 30px 40px 110px;
+    text-transform: uppercase;
+  }
+}
 
 @media (max-width: $tablet-l - 1) {
   #news {

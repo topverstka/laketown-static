@@ -83,6 +83,12 @@ footer {
   }
 }
 
+@media (min-width: $desktop-s + 1) {
+  footer .recall {
+    margin-right: -20px;
+  }
+}
+
 @media (min-width: $tablet-s) {
   .footer-menu {
     flex-direction: row;

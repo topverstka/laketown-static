@@ -1,8 +1,15 @@
 section#parking {
   padding-top: 200px;
+
+  .container {
+    @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+      overflow: hidden;
+    }
+  }
+
   .section-title {
     align-items: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 13px;
     &-wrapper {
       -webkit-flex: 0 0 60%;
       -moz-flex: 0 0 60%;
@@ -14,7 +21,13 @@ section#parking {
         position: absolute;
         top: 86px;
         right: 0;
-        left: 0;
+        // left: 0;
+        left: 290px;
+
+        @media (max-width: $desktop-s) {
+          top: -4px;
+          left: -83px;
+        }
       }
       .btns {
         display: flex;
@@ -42,6 +55,7 @@ section#parking {
           display: flex;
           flex-direction: row;
           align-items: center;
+          margin-bottom: 20px;
           span {
             font-family: var(--font-alimini);
             font-size: 24px;
@@ -49,6 +63,19 @@ section#parking {
             text-transform: uppercase;
           }
         }
+
+        @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+          margin-top: -50px;
+        }
+      }
+
+      @media (min-width: $tablet-l + 1) {
+        margin-left: 70px;
+        margin-top: 30px;
+      }
+      @media (min-width: $desktop-s + 1) {
+        margin-left: 150px;
+        margin-top: 30px;
       }
     }
     &__text {
@@ -78,17 +105,15 @@ section#parking {
 
 
 @media (max-width: $desktop-s) {
-  #parking {
+  section#parking {
     .section-title {
+      margin-bottom: 0;
       &-wrapper {
         -webkit-flex: 0 0 50% !important;
         -moz-flex: 0 0 50% !important;
         -ms-flex: 0 0 50% !important;
         flex: 0 0 50% !important;
 
-      }
-      &__text {
-        width: 100% !important;
       }
       &__desc {
         .desc-title {
@@ -97,6 +122,15 @@ section#parking {
           }
         }
       }
+    }
+    .section-title__text {
+      margin-bottom: 15px;
+    }
+    .section-content {
+      height: 1000px;
+    }
+    .section-content img {
+      height: 100%;
     }
   }
 }

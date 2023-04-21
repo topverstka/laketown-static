@@ -73,12 +73,12 @@
       },
       1200: {
         height: 600,
-        slidesPerView: 3.2,
+        slidesPerView: 2.6,
         spaceBetween: 40
       },
-      1400: {
+      1441: {
         height: 700,
-        slidesPerView: 3.2,
+        slidesPerView: 3.4,
         spaceBetween: 40
       }
     }
@@ -190,7 +190,7 @@
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1.25,
+      slidesPerView: 1.15,
       pagination: {
         el: ".advantages-gallery-pagination",
         clickable: true,
@@ -210,6 +210,12 @@
         nextEl: ".advantages-gallery-button-next",
         prevEl: ".advantages-gallery-button-prev",
       },
+      breakpoints: {
+        769: {
+          navigation: false,
+          pagination: false,
+        },
+      }
     });
 
     advantagesCarouselDesc.on('slideChange', (e) => {

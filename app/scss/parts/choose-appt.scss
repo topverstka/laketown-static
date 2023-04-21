@@ -19,10 +19,15 @@ section#chooseAppt {
     align-items: flex-start;
     justify-content: space-between;
     .appt-list {
-      -webkit-flex: 0 0 50%;
-      -moz-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
+      -webkit-flex: 0 0 58%;
+      -moz-flex: 0 0 58%;
+      -ms-flex: 0 0 58%;
+      flex: 0 0 58%;
+      
+      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+        flex: 0 0 52%;
+      }
+
       &-item {
         display: flex;
         flex-direction: row;
@@ -42,8 +47,8 @@ section#chooseAppt {
           background: $orangeLight;
         }
         .item-image {
-          width: 150px;
-          height: 110px;
+          width: 170px;
+          height: 125px;
           position: relative;
           overflow: hidden;
           margin-right: 40px;
@@ -56,6 +61,11 @@ section#chooseAppt {
             top: 50%;
 
           }
+
+          @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+            width: 140px;
+            height: 105px;
+          }
         }
         .item-text {
           display: flex;
@@ -67,6 +77,10 @@ section#chooseAppt {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 24px;
+
+            @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+              margin-top: 18px;
+            }
           }
         }
       }
@@ -81,9 +95,12 @@ section#chooseAppt {
       -moz-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
-      margin-left: 110px;
+      margin-left: 145px;
       order: 1;
 
+      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+        margin-left: 115px;
+      }
     }
   }
 

@@ -95,6 +95,20 @@ body.modal-open {
 
 }
 
+
+@media (min-width: $desktop-s + 1) {
+  header .phone {
+    margin-right: 34px;
+  }
+  header .phone a {
+    font-size: 33px;
+    font-family: var(--font-alimini);
+  }
+  header .recall {
+    margin-right: -20px;
+  }
+}
+
 header {
   background: $colorBgr;
   .header-wrap {
@@ -200,16 +214,35 @@ header {
   }
 }
 
-@media (min-width: $tablet-l + 1) {
+header {
+  .slogan {
+    width: 72%;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+}
+@media (min-width: $desktop-s + 1) {
   header {
     .nadpis, .btn-map {
       display: flex;
     }
 
-    .slogan {
-      width: 66%;
+    .h-1 {
+      margin-top: 0.8em;
+      margin-bottom: 0.3em;
     }
 
+  }
+}
+@media (max-width: $desktop-s) {
+  header {
+    .h-1 {
+      margin-top: 1.3em;
+      margin-bottom: 0.5em;
+    }
+  }
+  .header-block .btn-block {
+    padding-bottom: 80px;
   }
 }
 @media (max-width: $tablet-l) {

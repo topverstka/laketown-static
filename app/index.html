@@ -180,7 +180,7 @@
       <h2>Lounge-квартал Lake Town – там,<br>
         где каждый день для вас отдых и расслабление.</h2>
       <div class="btn btn-rond btn-rond-xl btn-orange-border-black">
-        <span>Получить буклет</span>
+        <span>Получить <br> буклет</span>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@
             <div class="swiper-slide advantages-desc-slide">
               <h3 class="item-title">НАБЕРЕЖНАЯ С ПАРКАМИ</h3>
               <div class="item-text">
-                <p>Вместе с городом мы создаём тщательно продуманную новую точку притяжения для всех жителей –
+                <p>Вместе с городом мы создаём тщательно <br> продуманную новую точку притяжения для всех жителей –
                   благоустроенную набережную из экоматериалов и
                   природным пейзажем с чистым прудом в окружении
                   зелени.</p>
@@ -432,7 +432,7 @@
 
   <div class="container">
     <div class="section-title">
-      <h2 class="section-title__text">5 домов Lounge-квартала на улице 65-летия победы</h2>
+      <h2 class="section-title__text">5 домов Lounge-квартала на&nbsp;улице 65-летия победы</h2>
       <div class="section-title__ext t-2">
         <p>Квартал расположен в новой части
           Арбеково, в 9 км от центра Пензы.</p>
@@ -676,7 +676,7 @@
     <div class="section-title">
       <div class="section-title-wrapper">
         <h2 class="section-title__text">
-          <span>ЛЕГКО В БЕЗОПАСНОМ ПАРКИНГЕ</span>
+          <span>ЛЕГКО В&nbsp;БЕЗОПАСНОМ ПАРКИНГЕ</span>
         </h2>
         <div class="arrow-title d-none-t d-none-m">
           <svg width="812" height="116" viewBox="0 0 812 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -818,7 +818,7 @@
 
 
       <!--  Slider #SERVICES# - START -->
-
+<!-- 
       <div id="sliderServices" data-items="3">
 
         <a href="family-credit.html" class="slider-item active" data-id="1" title="СЕМЕЙНАЯ ИПОТЕКА">
@@ -862,7 +862,7 @@
         </a>
 
       </div>
-      <!--  Slider #SERVICES# - END -->
+ -->      <!--  Slider #SERVICES# - END -->
 
     </div>
   </div>
@@ -1029,19 +1029,19 @@
     <div class="section-content">
       <div class="input-text">
         <label>Ваше имя</label>
-        <input type="text" name="callback_name">
+        <input type="text" name="callback_name" placeholder="Вячеслав">
       </div>
       <div class="input-text">
         <label>E-mail</label>
-        <input type="email" name="callback_email">
+        <input type="email" name="callback_email" placeholder="Vyacheslav@jara.ge">
       </div>
       <div class="input-text">
         <label>Телефон</label>
-        <input type="text" name="callback_phone">
+        <input type="text" name="callback_phone" placeholder="+7 (952) 721-16-21">
       </div>
       <div class="input-textarea">
         <label>Комментарий к заявке</label>
-        <textarea name="callback_comment"></textarea>
+        <textarea name="callback_comment" placeholder="Добрый день!" rows="1"></textarea>
       </div>
       <div class="input-checkbox">
         <input type="checkbox" name="callback_success" id="callbackSuccess">
@@ -1167,12 +1167,12 @@
       },
       1200: {
         height: 600,
-        slidesPerView: 3.2,
+        slidesPerView: 2.6,
         spaceBetween: 40
       },
-      1400: {
+      1441: {
         height: 700,
-        slidesPerView: 3.2,
+        slidesPerView: 3.4,
         spaceBetween: 40
       }
     }
@@ -1284,7 +1284,7 @@
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1.25,
+      slidesPerView: 1.15,
       pagination: {
         el: ".advantages-gallery-pagination",
         clickable: true,
@@ -1304,6 +1304,12 @@
         nextEl: ".advantages-gallery-button-next",
         prevEl: ".advantages-gallery-button-prev",
       },
+      breakpoints: {
+        769: {
+          navigation: false,
+          pagination: false,
+        },
+      }
     });
 
     advantagesCarouselDesc.on('slideChange', (e) => {

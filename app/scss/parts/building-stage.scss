@@ -132,14 +132,15 @@ section#buildingStage {
     padding-top: 150px !important;
     .section-title {
       flex-wrap: wrap;
+      padding-bottom: 60px;
       &-filter {
-        order: 3;
-        -webkit-flex: 1 1 100% !important;
-        -moz-flex: 1 1 100% !important;
-        -ms-flex: 1 1 100% !important;
-        flex: 1 1 100% !important;
-        margin-left: 0 !important;
-        margin-top: 80px;
+        // order: 3;
+        // -webkit-flex: 1 1 100% !important;
+        // -moz-flex: 1 1 100% !important;
+        // -ms-flex: 1 1 100% !important;
+        // flex: 1 1 100% !important;
+        // margin-left: 0 !important;
+        // margin-top: 80px;
         &__item {
           width: 100%;
           .btn-filter {
