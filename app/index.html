@@ -361,24 +361,17 @@
           </div>
 
           <div class="swiper-buttons advantages-desc-buttons">
-            <div class="advantages-desc-button-prev navBtn nextBtn btn btn-rond btn-rond-m btn-orange-border-black">
+            <div class="advantages-desc-button-prev navBtn prevBtn btn btn-rond btn-rond-m btn-orange-border-black">
               <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
               </svg>
             </div>
             <div class="advantages-desc-button-next navBtn nextBtn btn btn-rond btn-rond-m btn-orange-border-black">
               <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
               </svg>
             </div>
-            <div class="advantages-desc__page-counter">
-              <span class="advantages-desc__page-counter-current">
-                1
-              </span>
-              <span class="advantages-desc__page-counter-total">
-                5
-              </span>
-            </div>
+            <div class="swiper-pagination advantages-desc-pagination"></div>
           </div>
         </div>
 
@@ -411,7 +404,7 @@
             </div>
           </div>
           <div class="swiper-buttons advantages-gallery-buttons">
-            <div class="advantages-gallery-button-prev navBtn nextBtn btn btn-rond btn-rond-m btn-orange-border-black">
+            <div class="advantages-gallery-button-prev navBtn prevBtn btn btn-rond btn-rond-m btn-orange-border-black">
               <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
               </svg>
@@ -1262,18 +1255,15 @@
     //   advSlider.onmouseup = null;
     // };
 
+  };
 
 
     let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
       autoheight: true,
       pagination: {
-        el: ".advantages-desc-carousel-pagination",
-        clickable: true,
+        el: ".advantages-desc-pagination",
+        type: "fraction",
       },
-      // effect: 'fade',
-      //   fadeEffect: {
-      //   crossFade: true
-      // },
       grabCursor: true,
       effect: "creative",
        creativeEffect: {
@@ -1287,8 +1277,8 @@
         },
       },
       navigation: {
-        nextEl: ".advantages-desc-carousel-button-next",
-        prevEl: ".advantages-desc-carousel-button-prev",
+        nextEl: ".advantages-desc-button-next",
+        prevEl: ".advantages-desc-button-prev",
       },
     });
 
@@ -1296,7 +1286,7 @@
       spaceBetween: 40,
       slidesPerView: 1.25,
       pagination: {
-        el: ".advantages-gallery-carousel-pagination",
+        el: ".advantages-gallery-pagination",
         clickable: true,
       },
       grabCursor: true,
@@ -1311,12 +1301,18 @@
         },
       },
       navigation: {
-        nextEl: ".advantages-gallery-carousel-button-next",
-        prevEl: ".advantages-gallery-carousel-button-prev",
+        nextEl: ".advantages-gallery-button-next",
+        prevEl: ".advantages-gallery-button-prev",
       },
     });
 
-  };
+    advantagesCarouselDesc.on('slideChange', (e) => {
+      advantagesCarouselGallery.slideTo(e.activeIndex)
+    })
+    advantagesCarouselGallery.on('slideChange', (e) => {
+      advantagesCarouselDesc.slideTo(e.activeIndex)
+    })
+
 
 
 </script>

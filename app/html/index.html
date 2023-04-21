@@ -161,18 +161,15 @@
     //   advSlider.onmouseup = null;
     // };
 
+  };
 
 
     let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
       autoheight: true,
       pagination: {
-        el: ".advantages-desc-carousel-pagination",
-        clickable: true,
+        el: ".advantages-desc-pagination",
+        type: "fraction",
       },
-      // effect: 'fade',
-      //   fadeEffect: {
-      //   crossFade: true
-      // },
       grabCursor: true,
       effect: "creative",
        creativeEffect: {
@@ -186,8 +183,8 @@
         },
       },
       navigation: {
-        nextEl: ".advantages-desc-carousel-button-next",
-        prevEl: ".advantages-desc-carousel-button-prev",
+        nextEl: ".advantages-desc-button-next",
+        prevEl: ".advantages-desc-button-prev",
       },
     });
 
@@ -195,7 +192,7 @@
       spaceBetween: 40,
       slidesPerView: 1.25,
       pagination: {
-        el: ".advantages-gallery-carousel-pagination",
+        el: ".advantages-gallery-pagination",
         clickable: true,
       },
       grabCursor: true,
@@ -210,12 +207,18 @@
         },
       },
       navigation: {
-        nextEl: ".advantages-gallery-carousel-button-next",
-        prevEl: ".advantages-gallery-carousel-button-prev",
+        nextEl: ".advantages-gallery-button-next",
+        prevEl: ".advantages-gallery-button-prev",
       },
     });
 
-  };
+    advantagesCarouselDesc.on('slideChange', (e) => {
+      advantagesCarouselGallery.slideTo(e.activeIndex)
+    })
+    advantagesCarouselGallery.on('slideChange', (e) => {
+      advantagesCarouselDesc.slideTo(e.activeIndex)
+    })
+
 
 
 </script>

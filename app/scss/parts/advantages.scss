@@ -45,55 +45,6 @@ section#advantages {
       max-width: fit-content;
       position: absolute;
       bottom: 0;
-      .adv-slider-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        position: relative;
-        z-index: 5;
-        .navBtn {
-          svg path {
-            fill:none;
-            stroke: $mainDark;
-          }
-          &:hover {
-            svg path {
-              fill:none;
-              stroke: $colorBgr;
-            }
-
-          }
-          &.disabled {
-            border-color: $borderGray;
-            background: $borderGray;
-            svg path {
-              fill:none;
-              stroke: $colorBgr;
-            }
-
-          }
-        }
-        .nextBtn {
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg);
-          @extend .ml-15;
-        }
-        .sliderQty {
-          @extend .ml-20;
-
-          span {
-            font-family: var(--font-alimini);
-            font-size: 48px;
-            color: $borderGray;
-            &.curSlider {
-              color: $orangeMain;
-            }
-          }
-        }
-      }
     }
 
 
@@ -426,9 +377,66 @@ section#advantages {
 
 
 .advantages-desc-buttons {
+}
+
+.advantages-desc-carousel .advantages-desc-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: relative;
+  z-index: 5;
   display: grid;
   transform: translateY(-140px);
-  position: relative;
   grid-template-columns: 1fr 1fr 3fr;
-  z-index: 3;
+
+  .navBtn {
+    svg path {
+      pointer-events: none;
+      fill:none;
+      stroke: $mainDark;
+    }
+    &:hover {
+      svg path {
+        fill:none;
+        stroke: $colorBgr;
+      }
+
+    }
+    &.swiper-button-disabled {
+      border-color: $borderGray;
+      background: $borderGray;
+      svg path {
+        fill:none;
+        stroke: $colorBgr;
+      }
+
+    }
+  }
+  .nextBtn {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    @extend .ml-15;
+  }
+
+  .advantages-desc-pagination {
+    @extend .ml-20;
+
+    font-family: var(--font-alimini);
+    font-size: 48px;
+    color: $borderGray;
+    pointer-events: none;
+  }
+
+  .advantages-desc-pagination span {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .advantages-desc-pagination .swiper-pagination-current {
+    color: $orangeMain;
+  }
 }
