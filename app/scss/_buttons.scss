@@ -3,6 +3,10 @@
   height: 80px;
   border: 1px solid;
   @include transition(all, .5s);
+  
+  @media (max-width: $phone) {
+    height: 60px;
+  }
 
   span {
     font-size: 18px !important;
@@ -250,11 +254,5 @@
       }
     }
 
-  }
-}
-
-.btn {
-  @media (max-width: $phone) {
-    height: 60px;
   }
 }

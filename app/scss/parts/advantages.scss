@@ -1,44 +1,6 @@
 section#advantages {
   position: relative;
-
-  .companyName {
-    position: relative;
-    top: -200px;
-    background: transparent;
-    z-index: 2;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-
-      span {
-        color: #ffffffb5;
-        margin-bottom: 18px;
-
-        @media (max-width: $tablet-s) and (min-width: $phone + 1) {
-          margin-bottom: 28px;
-        }
-      }
-
-      img {
-        width: 216px;
-        height: auto;
-
-        @media (max-width: $tablet-s) {
-          width: 256px;
-        }
-      }
-    }
-
-    @media (max-width: $tablet-s) {
-      top: -255px;
-      margin-bottom: -60px;
-    }
-    @media (max-width: $phone) {
-      margin-bottom: -90px;
-    }
-
-  }
+  padding-top: 180px;
 
   .mainBlock {
     background: $colorBgr;
@@ -58,11 +20,11 @@ section#advantages {
         margin-top: 0.2em;
       }
     }
-    @media (min-width: $desktop-s + 1) {
-      padding-bottom: 95px;
-    }
     @media (min-width: $tablet-l + 1) {
       padding-bottom: 100px;
+    }
+    @media (min-width: $desktop-s + 1) {
+      padding-bottom: 93px;
     }
   }
   .section-content {
@@ -192,6 +154,18 @@ section#advantages {
   }
 }
 
+section#advantages {
+  @media (max-width: $desktop-s) {
+    padding-top: 200px;
+  }
+  @media (max-width: $tablet-s) {
+    padding-top: 160px;
+  }
+  @media (max-width: $phone) {
+    padding-top: 100px;
+  }
+}
+
 
 @media (min-width: $tablet-l) {
   #advantages {
@@ -276,9 +250,6 @@ section#advantages {
     display: none;
   }
 
-  #advantages .section-title .btn {
-    height: 80px;
-  }
 }
 
 @media (max-width: $phone) {
@@ -299,6 +270,10 @@ section#advantages {
         }
       }
     }
+  }
+  #advantages .section-title .btn {
+    height: 60px;
+    margin-top: 20px;
   }
 }
 
@@ -535,13 +510,22 @@ section#advantages {
 }
 
 
-.advantages-desc-buttons .btn-rond-m {
+.advantages-content .btn-rond {
   width: 160px;
   height: 160px;
 
   @media (max-width: $tablet-s) {
+    min-width: 80px;
     width: 80px;
     height: 80px;
+  }
+
+  @media (max-width: $phone) {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    box-sizing: border-box;
   }
 }
 
@@ -566,6 +550,11 @@ section#advantages {
 
   @media (min-width: $tablet-s + 1) {
     display: none;
+  }
+  @media (max-width: $phone) {
+    bottom: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .advantages-gallery-buttons .btn {

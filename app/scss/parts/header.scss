@@ -111,6 +111,7 @@ body.modal-open {
 
 header {
   background: $colorBgr;
+  overflow: hidden;
   .header-wrap {
     position: relative;
     .header-line {
@@ -234,25 +235,34 @@ header {
 
   }
 }
-@media (max-width: $desktop-s) {
-  header {
-    .h-1 {
-      margin-top: 1.3em;
-      margin-bottom: 0.5em;
-    }
+
+header .h-1 {
+  @media (max-width: $desktop-s) {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
   }
-  .header-block .btn-block {
+
+  @media (max-width: $tablet-s) {
+    margin-top: 1.1em;
+  }
+  
+  @media (max-width: $phone) {
+    line-height: 1.15;
+  }
+}
+
+.header-block .btn-block {
+  @media (max-width: $desktop-s) {
     padding-bottom: 80px;
   }
 }
+
 @media (max-width: $tablet-l) {
-  header {
-    .nadpis, .phone, .btn-map {
-      display: none;
-    }
-    .slogan {
-      width: 100%;
-    }
+  header .nadpis, .phone, .btn-map {
+    display: none;
+  }
+  header .slogan {
+    width: 100%;
   }
 
   header .header-wrap .header-block .btn-block .add-text span {
@@ -266,14 +276,6 @@ header {
   }
 }
 
-@media (min-width: $tablet-s + 1) {
-  .header-block {
-    .btn-block {
-      padding-bottom: 100px;
-    }
-  }
-
-}
 @media (max-width: $tablet-s) {
   .header-line .recall {
     min-width: 203px;
@@ -284,9 +286,6 @@ header {
     padding-bottom: 100px;
   }
 
-  header .h-1 {
-    margin-top: 1.1em;
-  }
 }
 
 

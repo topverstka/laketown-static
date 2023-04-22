@@ -4,19 +4,8 @@
   width: 100%;
   background: transparent;
 
-  @media (min-width: $tablet-l) {
-    height: 1000px;
-  }
-
-  @media (max-width: $tablet-l - 1) {
-    height: 900px;
-  }
   @media (max-width: $tablet-l) {
     height: 900px;
-  }
-
-  @media (max-width: $tablet-s) {
-    height: 800px;
   }
 
   @media (max-width: $phone) {
@@ -25,29 +14,54 @@
 }
 
 .banner-wrapper {
-  left: 0;
-  top: 0;
-  position: fixed;
+  position: static;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-attachment: fixed;
+  background-image: url("../img/Comp_1_5.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #724853;
 } 
 
-.banner-wrapper img {
-  background: url("/app/img/Render.png");
+.banner .companyName {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
 
-  @media (min-width: $tablet-l) {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  @media (max-width: $tablet-l - 1) {
-    height: 100%;
-    width: auto;
+  @media (max-width: $tablet-s) {
+    padding-bottom: 40px;
   }
 }
 
+.banner .companyName span {
+  color: rgba(255,255,255,.7098039216);
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet-s) {
+    margin-bottom: 18px;
+  }
+  @media (max-width: $phone) {
+    font-size: 18px;
+    color: rgba(255,255,255,.9);
+  }
+}
+
+.banner .companyName img {
+  width: 256px;
+  height: auto;
+
+  @media (max-width: $tablet-s) {
+    width: 256px;
+  }
+
+  @media (max-width: $phone) {
+    width: 186px;
+  }
+}
 
