@@ -3,67 +3,51 @@
   height: 1000px;
   width: 100%;
   background: transparent;
-  &-wrapper {
-    left: 0;
-    top: 0;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1;
-    img {
-      background: url("/app/img/Render.png");
 
-    }
-  }
-
-}
-
-@media (min-width: $tablet-l) {
-  .banner {
+  @media (min-width: $tablet-l) {
     height: 1000px;
-    &-wrapper {
-      img {
-        height: auto;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-      }
-
-    }
   }
 
-}
-@media (max-width: $tablet-l - 1) {
-  .banner {
+  @media (max-width: $tablet-l - 1) {
     height: 900px;
-    &-wrapper {
-      img {
-        height: 100%;
-        width: auto;
-      }
-
-    }
+  }
+  @media (max-width: $tablet-l) {
+    height: 900px;
   }
 
-}
-
-@media (max-width: $tablet-s) {
-  .banner {
+  @media (max-width: $tablet-s) {
     height: 800px;
   }
-}
 
-@media (max-width: $tablet-l) {
-  .banner {
-    height: 900px;
-  }
-
-}
-
-@media (max-width: $phone) {
-  .banner {
+  @media (max-width: $phone) {
     height: 600px;
   }
 }
+
+.banner-wrapper {
+  left: 0;
+  top: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+} 
+
+.banner-wrapper img {
+  background: url("/app/img/Render.png");
+
+  @media (min-width: $tablet-l) {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  @media (max-width: $tablet-l - 1) {
+    height: 100%;
+    width: auto;
+  }
+}
+
 
