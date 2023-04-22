@@ -13,16 +13,14 @@ section#mapBlock #map {
   }
 }
 
-section#mapBlock .filter-btn #filterBtn {
-  position: absolute;
-  @include transition(bottom, .5s);
-}
-
 section#mapBlock .filter-btn #filterBtn svg {
   margin-right: 20px;
 }
 
 #filterBtn {
+  position: absolute;
+  @include transition(bottom, .5s);
+
   @media (min-width: $tablet-s) {
     right: 80px;
     bottom: 40px;
@@ -33,9 +31,9 @@ section#mapBlock .filter-btn #filterBtn svg {
     width: calc(100% - 40px);
   }
 
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     left: 50%;
-    bottom: -100px;
+    bottom: 60px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -49,6 +47,11 @@ section#mapBlock .filter-btn #filterBtn svg {
 #filterBtn.show {
   @media (min-width: $tablet-s) {
     bottom: 200px;
+  }
+  @media (max-width: $phone) {
+    position: fixed;
+    z-index: 11;
+    bottom: 10px;
   }
 }
 
@@ -109,6 +112,13 @@ section#mapBlock .filter-btn #filterBtn svg {
     background: $orangeMain;
     @include transition(all, .8s);
   }
+  @media (max-width: $phone) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 130px;
+    z-index: 5;
+  }
 }
 
 .map-filter.active {
@@ -129,6 +139,9 @@ section#mapBlock .filter-btn #filterBtn svg {
     background: $colorBgr;
     z-index: 10;
     @include transition(all, .8s);
+  }
+  @media (max-width: $phone) {
+    background: #fff;
   }
 }
 
@@ -199,15 +212,10 @@ section#mapBlock .filter-btn #filterBtn svg {
 
 .map-filter__item:hover {
   @media (any-hover:hover) {
-    @media (min-width: $tablet-s) {
-        background: $orangeDark;
-      }
-    }
-    @media (max-width: $phone - 1) {
-      background: $orangeDark;
-    }
+    background: $orangeDark;
   }
 }
+
 
 .map-filter__item.active {
   @media (min-width: $tablet-s) {
@@ -215,7 +223,21 @@ section#mapBlock .filter-btn #filterBtn svg {
   }
 }
 
-.map-filter__item:hover,
+.map-filter__item:hover {
+  @media (any-hover:hover) {
+    @media (max-width: $phone - 1) {
+      svg path, span {
+        fill: none;
+        stroke: $colorBgr;
+        color: $colorBgr;
+      }
+      svg.fill path {
+        fill: $colorBgr;
+      }
+    }
+  }
+}
+
 .map-filter__item.active {
   @media (max-width: $phone - 1) {
     svg path, span {
