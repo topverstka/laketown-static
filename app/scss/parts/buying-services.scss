@@ -1,238 +1,252 @@
 section#buyingServices {
   padding-top: 200px;
 
-  .section-title {
-    &__btns {
-      display: flex;
-      .navBtn {
-        svg path {
-          fill:none;
-          stroke: $mainDark;
-        }
-        &:hover {
-          svg path {
-            fill:none;
-            stroke: $colorBgr;
-          }
-
-        }
-        &.disabled {
-          border-color: $borderGray;
-          background: $borderGray;
-          svg path {
-            fill:none;
-            stroke: $colorBgr;
-          }
-
-        }
-      }
-      .nextBtn {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
-        @extend .ml-15;
-      }
-      .btn {
-
-        &:last-child {
-          margin-left: 20px;
-
-        }
-      }
-    }
+  @media (max-width: $desktop-s - 1) {
+    padding-top: 150px !important;
   }
 
-  .section-content {
-    position: relative;
+  @media (max-width: $tablet-m) {
+    padding-top: 150px !important;
+  }
+
+  @media (max-width: $phone) {
+    padding-top: 110px !important;
+  }
+}
+
+section#buyingServices .section-title {
+  @media (max-width: $phone) {
+    padding-bottom: 50px;
+  }
+}
+
+
+section#buyingServices .section-title__btns {
+  display: flex;
+
+  @media (max-width: $phone) {
+    display: none;
+  }
+}
+
+section#buyingServices .section-title__btns .navBtn svg path {
+  fill:none;
+  stroke: $mainDark;
+}
+
+section#buyingServices .section-title__btns .navBtn:hover svg path {
+  fill:none;
+  stroke: $colorBgr;
+}
+
+section#buyingServices .section-title__btns .navBtn.disabled {
+  border-color: $borderGray;
+  background: $borderGray;
+}
+
+section#buyingServices .section-title__btns .navBtn.disabled svg path {
+  fill:none;
+  stroke: $colorBgr;
+}
+
+section#buyingServices .section-title__btns .nextBtn {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  @extend .ml-15;
+}
+
+section#buyingServices .section-title__btns .btn:last-child {
+  margin-left: 20px;
+}
+
+section#buyingServices .section-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+section#buyingServices .section-content .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  @include paddingSlider(padding, left);
+  @include transition(all, .5s);
+
+  @media (max-width: $phone) {
+    padding-right: 15px;
+    box-sizing: border-box;
     width: 100%;
-    overflow: hidden;
-    margin-bottom: -1px;
-    .swiper-wrapper {
-      display: flex;
-      flex-direction: row;
-      @include paddingSlider(padding, left);
-      @include transition(all, .5s);
-
-      .slider-item {
-        // padding-right: 40px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        text-decoration: none !important;
-        color: $mainDark;
-
-        &__image {
-          position: relative;
-          overflow: hidden;
-          @include borderRadius(60px);
-          img {
-            @include transition(all, .5s);
-            height: 100%;
-            width: 100%;
-          }
-        }
-        &__text {
-          font-family: var(--font-alimini);
-          text-decoration: none !important;
-          color: $mainDark;
-        }
-        .btn {
-          opacity: 0;
-          z-index: -1;
-          @include transition(all, .5s);
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-decoration: none;
-          span {
-            max-width: 60%;
-            text-align: center;
-            text-decoration: none !important;
-            color: $mainDark;
-
-          }
-
-        }
-        &:hover {
-          img {
-            @include transform(scale, 1.2);
-          }
-          .btn {
-            opacity: 1;
-            z-index: 5;
-
-          }
-
-        }
-
-      }
-    }
-    #sliderServices {
-      display: flex;
-      flex-direction: row;
-      @include paddingSlider(padding, left);
-      @include transition(all, .5s);
-
-      .slider-item {
-        padding-right: 40px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        text-decoration: none;
-        &__image {
-          position: relative;
-          overflow: hidden;
-          @include borderRadius(60px);
-          img {
-            @include transition(all, .5s);
-            height: 100%;
-            width: auto;
-          }
-        }
-        &__text {
-          font-family: var(--font-alimini);
-          text-decoration: none!important;
-          color: #383838;
-        }
-        .btn {
-          opacity: 0;
-          z-index: -1;
-          @include transition(all, .5s);
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-decoration: none;
-          span {
-            max-width: 60%;
-            text-align: center;
-            text-decoration: none;
-          }
-
-        }
-        &:hover {
-          img {
-            @include transform(scale, 1.2);
-          }
-          .btn {
-            opacity: 1;
-            z-index: 5;
-
-          }
-
-        }
-
-      }
-    }
   }
 }
 
-
-@media (min-width: $desktop-s) {
-  #buyingServices {
-    .section-content {
-      #sliderServices {
-        .slider-item {
-          width: 30%;
-          &__image {
-            height: 700px;
-          }
-        }
-      }
-    }
-  }
+section#buyingServices .section-content .swiper-wrapper .slider-item {
+  // padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none !important;
+  color: $mainDark;
 }
 
-@media (max-width: $desktop-s) {
-  section#buyingServices .section-content .swiper-wrapper .slider-item__image {
+section#buyingServices .section-content .swiper-wrapper .slider-item__image {
+  position: relative;
+  overflow: hidden;
+  @include borderRadius(60px);
+
+  @media (max-width: $desktop-s) {
     height: 600px;
   }
-}
 
-@media (max-width: $desktop-s - 1) {
-  #buyingServices {
-    padding-top: 150px !important;
-    .section-content {
-      #sliderServices {
-        padding-left: 20px !important;
-        .slider-item {
-          width: 45%;
-          &__image {
-            height: 600px;
-          }
-        }
-
-      }
-    }
+  @media (max-width: $phone) {
+    height: 200px;
   }
 }
 
-@media (max-width: $tablet-m - 1) {
-  #buyingServices {
-    padding-top: 150px !important;
-    .section-content {
-      #sliderServices {
-        padding-left: 20px !important;
-        .slider-item {
-          width: 44%;
-          &__image {
-            height: 400px;
-          }
-        }
-
-      }
-    }
-  }
-
+section#buyingServices .section-content .swiper-wrapper .slider-item__image img {
+  @include transition(all, .5s);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
+
+section#buyingServices .section-content .swiper-wrapper .slider-item__text {
+  font-family: var(--font-alimini);
+  text-decoration: none !important;
+  color: $mainDark;
+}
+
+section#buyingServices .section-content .swiper-wrapper .slider-item .btn {
+  opacity: 0;
+  z-index: -1;
+  @include transition(all, .5s);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+
+section#buyingServices .section-content .swiper-wrapper .slider-item .btn span {
+  max-width: 60%;
+  text-align: center;
+  text-decoration: none !important;
+  color: $mainDark;
+}
+
+section#buyingServices .section-content .swiper-wrapper .slider-item:hover img {
+  @include transform(scale, 1.2);
+}
+
+section#buyingServices .section-content .swiper-wrapper .slider-item:hover .btn {
+  opacity: 1;
+  z-index: 5;
+}
+
+
+// section#buyingServices .section-content #sliderServices {
+//   display: flex;
+//   flex-direction: row;
+//   @include paddingSlider(padding, left);
+//   @include transition(all, .5s);
+
+//   @media (max-width: $desktop-s - 1) {
+//     padding-left: 20px !important;
+//   }
+
+//   @media (max-width: $tablet-m) {
+//     padding-left: 20px !important;
+//   }
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item {
+//   padding-right: 40px;
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+//   text-decoration: none;
+
+//   @media (min-width: $desktop-s) {
+//     width: 30%;
+//   }
+
+//   @media (max-width: $desktop-s - 1) {
+//     width: 45%;
+//   }
+
+//   @media (max-width: $tablet-m) {
+//     width: 44%;
+//   }
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item__image {
+//   position: relative;
+//   overflow: hidden;
+//   @include borderRadius(60px);
+
+//   @media (min-width: $desktop-s) {
+//     height: 700px;
+//   }
+
+//   @media (max-width: $desktop-s - 1) {
+//     height: 600px;
+//   }
+
+//   @media (max-width: $tablet-m) {
+//     height: 400px;
+//   }
+
+//   @media (max-width: $phone) {
+//     height: 200px;
+//   }
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item__image img {
+//   @include transition(all, .5s);
+//   height: 100%;
+//   width: auto;
+//   object-fit: cover;
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item__text {
+//   font-family: var(--font-alimini);
+//   text-decoration: none!important;
+//   color: #383838;
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item .btn {
+//   opacity: 0;
+//   z-index: -1;
+//   @include transition(all, .5s);
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   -moz-transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   -o-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+//   text-decoration: none;
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item .btn span {
+//   max-width: 60%;
+//   text-align: center;
+//   text-decoration: none;
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item:hover img {
+//   @include transform(scale, 1.2);
+// }
+
+// section#buyingServices .section-content #sliderServices .slider-item:hover .btn {
+//   opacity: 1;
+//   z-index: 5;
+// }
+
