@@ -817,7 +817,7 @@
 
         </div>
         <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-pagination"></div>
 
         <!-- If we need scrollbar -->
         <!-- <div class="swiper-scrollbar"></div> -->
@@ -1152,7 +1152,8 @@
 
   const buyingServicesCarousel = new Swiper('#buyingServices .swiper', {
     speed: 400,
-    spaceBetween: 40,
+    slidesPerView: 2,
+    spaceBetween: 20,
     breakpointBase: 'container',
     height: 700,
     oneWayMovement: false,
@@ -1161,17 +1162,18 @@
       nextEl: '#buyingServices .services-btn-next',
       prevEl: '#buyingServices .services-btn-prev',
     },
+    pagination: {
+      el: "#buyingServices .swiper-pagination",
+      clickable: true,
+    },
     breakpoints: {
       // when window width is >= 320px
-      576: {
+      577: {
         height: 500,
-        slidesPerView: 1,
-        spaceBetween: 40
+        slidesPerView: 2.5,
       },
-      768: {
-        height: 500,
-        slidesPerView: 2,
-        spaceBetween: 40
+      769: {
+        pagination: false,
       },
       1200: {
         height: 600,

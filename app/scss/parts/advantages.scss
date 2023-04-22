@@ -573,16 +573,13 @@ section#advantages {
     display: none;
   }
 }
-
 .advantages-gallery-pagination.swiper-horizontal>.swiper-pagination-bullets,
 .advantages-gallery-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
 .advantages-gallery-pagination.swiper-pagination-custom,
 .advantages-gallery-pagination.swiper-pagination-fraction {
   position: static;
   margin: 0;
-  // margin-top: 16px;
 }
-
 .advantages-gallery-pagination .swiper-pagination-bullet {
   display: block;
   width: 8px;
@@ -594,12 +591,12 @@ section#advantages {
   margin-right: 8px;
   opacity: 1;
 }  
-
 .advantages-gallery-pagination .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
-
 .advantages-gallery-pagination .swiper-pagination-bullet:hover,
 .advantages-gallery-pagination .swiper-pagination-bullet-active {
+  @media (any-hover:hover) {
     background: $orangeDark;
+  }
 }

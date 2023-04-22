@@ -218,8 +218,16 @@ section#parking {
 }
 
 @media (max-width: $phone) {
+  section#parking .section-content {
+    height: 600px;
+  }
+
   section#parking .section-title-desc {
     order: 2;
     margin-top: 40px;
+  }
+
+  section#parking .section-title-desc .desc-text .item {
+    max-width: 70%;
   }
 }
