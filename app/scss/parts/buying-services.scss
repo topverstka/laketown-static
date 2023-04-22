@@ -283,9 +283,13 @@ section#buyingServices .section-content .swiper-wrapper .slider-item:hover .btn 
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: static;
 
   @media (min-width: $tablet-s + 1) {
     display: none;
+  }
+  @media (max-width: $phone) {
+    margin-top: 0;
   }
 }
 #buyingServices .swiper-pagination.swiper-horizontal>.swiper-pagination-bullets, .advantages-gallery-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
