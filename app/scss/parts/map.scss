@@ -2,60 +2,85 @@ section#mapBlock {
   width: 100%;
   position: relative;
   z-index: 2;
-  #map {
-    width: 100%;
-    height:600px;
-    
-    @media (min-width: $desktop-s + 1) {
-      height: 886px;
-    }
-  }
-  .filter-btn {
-    #filterBtn {
-      position: absolute;
-      @include transition(bottom, .5s);
-      svg {
-        margin-right: 20px;
-      }
-
-    }
-
-  }
-
 }
 
-@media (min-width: $tablet-s) {
-  #filterBtn {
+section#mapBlock #map {
+  width: 100%;
+  height:600px;
+  
+  @media (min-width: $desktop-s + 1) {
+    height: 886px;
+  }
+}
+
+section#mapBlock .filter-btn #filterBtn {
+  position: absolute;
+  @include transition(bottom, .5s);
+}
+
+section#mapBlock .filter-btn #filterBtn svg {
+  margin-right: 20px;
+}
+
+#filterBtn {
+  @media (min-width: $tablet-s) {
     right: 80px;
     bottom: 40px;
-    &.show {
-      bottom: 200px;
-      .hide-filter {
-        display: block;
-      }
-      .show-filter {
-        display: none;
-      }
-
-    }
-
-    .hide-filter {
-      display: none;
-    }
-
+    right: 20px;
   }
-  .map-filter {
-    &.active {
-      opacity: 1;
-      height: 120px;
 
-      z-index: 10;
-      @include transition(all, .8s);
+  @media (max-width: $tablet-s - 1) {
+    width: calc(100% - 40px);
+  }
 
-      .map-filter__item {
-        height: 120px;
-      }
-    }
+  @media (max-width: $phone - 1) {
+    left: 50%;
+    bottom: -100px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50%;
+  }
+}
+
+#filterBtn.show {
+  @media (min-width: $tablet-s) {
+    bottom: 200px;
+  }
+}
+
+#filterBtn.show .hide-filter {
+  @media (min-width: $tablet-s) {
+    display: block;
+  }
+  @media (max-width: $phone - 1) {
+    display: block;
+  }
+}
+
+#filterBtn.show .show-filter {
+  @media (min-width: $tablet-s) {
+    display: none;
+  }
+  @media (max-width: $phone - 1) {
+    display: none;
+  }
+}
+
+#filterBtn .hide-filter {
+  @media (min-width: $tablet-s) {
+    display: none;
+  }
+  @media (max-width: $phone - 1) {
+    display: none;
+  }
+}
+
+.map-filter {
+  @media (min-width: $tablet-s) {
     position: absolute;
     opacity: 0;
     height: 0;
@@ -68,74 +93,9 @@ section#mapBlock {
     justify-content: space-between;
     background: $orangeMain;
     @include transition(all, .8s);
-    &__item {
-      height: 0;
-      -webkit-flex: 1 1 auto;
-      -moz-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      @include transition(all, .5s);
-      svg path, span {
-        fill: none;
-        stroke: $colorBgr;
-        color: $colorBgr;
-      }
-      svg.fill path {
-        fill: $colorBgr;
-      }
-      &:hover, &.active {
-        background: $orangeDark;
-      }
-    }
   }
 
-}
-@media (max-width: $phone - 1) {
-  #filterBtn {
-    left: 50%;
-    bottom: -100px;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 50%;
-    &.show {
-      .hide-filter {
-        display: block;
-      }
-      .show-filter {
-        display: none;
-      }
-
-    }
-
-    .hide-filter {
-      display: none;
-    }
-
-  }
-  .map-filter {
-    &.active {
-      padding-top: 30px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      opacity: 1;
-      height: fit-content;
-      background: $colorBgr;
-      z-index: 10;
-      @include transition(all, .8s);
-
-      .map-filter__item {
-        height: 80px;
-      }
-    }
+  @media (max-width: $phone - 1) {
     position: absolute;
     opacity: 0;
     height: 0;
@@ -148,53 +108,124 @@ section#mapBlock {
     justify-content: center;
     background: $orangeMain;
     @include transition(all, .8s);
-    &__item {
-      height: 0;
-      width: 100%;
-      -webkit-flex: 1 1 auto;
-      -moz-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      @include transition(all, .5s);
-      svg path, span {
-        fill: none;
-        stroke: $mainDark;
-        color: $mainDark;
-      }
-      svg.fill path {
-        fill: $mainDark;
-      }
-      &:hover, &.active {
-        background: $orangeDark;
-        svg path, span {
-          fill: none;
-          stroke: $colorBgr;
-          color: $colorBgr;
-        }
-        svg.fill path {
-          fill: $colorBgr;
-        }
+  }
+}
 
+.map-filter.active {
+  @media (min-width: $tablet-s) {
+    opacity: 1;
+    height: 120px;
+
+    z-index: 10;
+    @include transition(all, .8s);
+  }
+
+  @media (max-width: $phone - 1) {
+    padding-top: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    opacity: 1;
+    height: fit-content;
+    background: $colorBgr;
+    z-index: 10;
+    @include transition(all, .8s);
+  }
+}
+
+.map-filter.active .map-filter__item {
+  @media (min-width: $tablet-s) {
+    height: 120px;
+  }
+
+  @media (max-width: $phone - 1) {
+    height: 80px;
+  }
+}
+
+.map-filter__item {
+  @media (min-width: $tablet-s) {
+    height: 0;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transition(all, .5s);
+  }
+
+  @media (max-width: $phone - 1) {
+    height: 0;
+    width: 100%;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transition(all, .5s);
+  }
+}
+
+.map-filter__item svg path,
+.map-filter__item span {
+  @media (min-width: $tablet-s) {
+    fill: none;
+    stroke: $colorBgr;
+    color: $colorBgr;
+  }
+  @media (max-width: $phone - 1) {
+    fill: none;
+    stroke: $mainDark;
+    color: $mainDark;
+  }
+}
+
+.map-filter__item svg.fill path {
+  @media (min-width: $tablet-s) {
+    fill: $colorBgr;
+  }
+
+  @media (max-width: $phone - 1) {
+    fill: $mainDark;
+  }
+}
+
+.map-filter__item:hover {
+  @media (any-hover:hover) {
+    @media (min-width: $tablet-s) {
+        background: $orangeDark;
       }
     }
-  }
-
-}
-
-@media (max-width: $tablet-s) {
-  #filterBtn {
-    right: 20px;
-  }
-  
-}
-
-@media (max-width: $tablet-s - 1) {
-  #filterBtn {
-    width: calc(100% - 40px);
+    @media (max-width: $phone - 1) {
+      background: $orangeDark;
+    }
   }
 }
+
+.map-filter__item.active {
+  @media (min-width: $tablet-s) {
+    background: $orangeDark;
+  }
+}
+
+.map-filter__item:hover,
+.map-filter__item.active {
+  @media (max-width: $phone - 1) {
+    svg path, span {
+      fill: none;
+      stroke: $colorBgr;
+      color: $colorBgr;
+    }
+    svg.fill path {
+      fill: $colorBgr;
+    }
+  }
+}
+
