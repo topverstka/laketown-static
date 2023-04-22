@@ -252,8 +252,18 @@ header .h-1 {
 }
 
 .header-block .btn-block {
+  padding-bottom: 100px;
+  
   @media (max-width: $desktop-s) {
     padding-bottom: 80px;
+  }
+
+  @media (max-width: $tablet-s) {
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $phone) {
+    padding-bottom: 50px;
   }
 }
 

@@ -489,7 +489,7 @@ section#advantages {
   @extend .ml-15;
 }
 
-.advantages-desc-pagination {
+.advantages-content .advantages-desc-pagination {
   @extend .ml-20;
 
   font-family: var(--font-alimini);
@@ -497,6 +497,7 @@ section#advantages {
   color: $borderGray;
   pointer-events: none;
   position: static;
+  width: 100%;
 }
 
 .advantages-desc-pagination span {
@@ -594,9 +595,11 @@ section#advantages {
 .advantages-gallery-pagination .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
-.advantages-gallery-pagination .swiper-pagination-bullet:hover,
-.advantages-gallery-pagination .swiper-pagination-bullet-active {
+.advantages-gallery-pagination .swiper-pagination-bullet:hover {
   @media (any-hover:hover) {
     background: $orangeDark;
   }
+}
+.advantages-gallery-pagination .swiper-pagination-bullet-active {
+  background: $orangeDark;
 }
