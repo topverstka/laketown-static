@@ -24,7 +24,7 @@ section#mapBlock {
 
 }
 
-@media (min-width: $tablet-m) {
+@media (min-width: $tablet-s) {
   #filterBtn {
     right: 80px;
     bottom: 40px;
@@ -95,7 +95,7 @@ section#mapBlock {
   }
 
 }
-@media (max-width: $tablet-m - 1) {
+@media (max-width: $phone - 1) {
   #filterBtn {
     left: 50%;
     bottom: -100px;
@@ -185,6 +185,14 @@ section#mapBlock {
   }
 
 }
+
+@media (max-width: $tablet-s) {
+  #filterBtn {
+    right: 20px;
+  }
+  
+}
+
 @media (max-width: $tablet-s - 1) {
   #filterBtn {
     width: calc(100% - 40px);

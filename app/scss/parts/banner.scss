@@ -47,15 +47,23 @@
   }
 
 }
+
+@media (max-width: $tablet-s) {
+  .banner {
+    height: 800px;
+  }
+}
+
 @media (max-width: $tablet-l) {
   .banner {
     height: 900px;
   }
 
 }
-@media (max-width: $tablet-s) {
-  .banner {
-    height: 800px;
-  }
 
+@media (max-width: $phone) {
+  .banner {
+    height: 600px;
+  }
 }
+

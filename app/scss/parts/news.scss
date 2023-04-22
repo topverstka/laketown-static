@@ -230,3 +230,9 @@ section#news {
     }
   }
 }
+
+@media (max-width: $phone) {
+  section#news .section-pills__item {
+    height: initial;
+  }
+}

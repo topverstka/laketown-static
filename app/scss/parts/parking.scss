@@ -24,6 +24,9 @@ section#parking {
         // left: 0;
         left: 290px;
 
+        @media (max-width: $desktop-m) {
+          left: 170px;
+        }
         @media (max-width: $desktop-s) {
           top: -4px;
           left: -83px;
@@ -86,21 +89,24 @@ section#parking {
       margin-bottom: 40px;
       span {
         font-family: var(--font-alimini);
-        font-size: 80px;
         display: inline;
         background-color: $colorBgr;
         box-shadow: -10px 0 0 $colorBgr, 10px 0 0 $colorBgr;
         padding-right: 20px;
+
+        @media (min-width: $desktop-m + 1) {
+          font-size: 80px;
+        }
       }
     }
-
   }
   .section-content {
     img {
       width: 100%;
       height: auto;
+      object-fit: cover;
     }
-  }
+  }  
 }
 
 
@@ -152,8 +158,6 @@ section#parking {
         order: 1;
       }
       &-desc {
-        order: 2;
-        margin-top: 40px;
         .desc-title {
           h3 {
             margin-bottom: 40px !important;
@@ -181,4 +185,41 @@ section#parking {
     }
   }
 
+}
+
+@media (max-width: $tablet-s) {
+  section#parking {
+    padding-top: 100px;
+  }
+  section#parking .section-title-wrapper {
+    flex: 0 0 100%!important;
+  }
+
+  section#parking .section-title .btns {
+    margin-bottom: 40px;
+    justify-content: space-between;
+  }
+
+  section#parking .section-title .btns .btn {
+    flex: 0 0 48%!important;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  #parking .section-title .btns .btn:last-child {
+    margin-top: 0;
+  }
+  section#parking .section-title__text span {
+    line-height: 1.1;
+  }
+  section#parking .section-title__text span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+@media (max-width: $phone) {
+  section#parking .section-title-desc {
+    order: 2;
+    margin-top: 40px;
+  }
 }

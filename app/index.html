@@ -406,12 +406,12 @@
           <div class="swiper-buttons advantages-gallery-buttons">
             <div class="advantages-gallery-button-prev navBtn prevBtn btn btn-rond btn-rond-m btn-orange-border-black">
               <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
               </svg>
             </div>
             <div class="advantages-gallery-button-next navBtn nextBtn btn btn-rond btn-rond-m btn-orange-border-black">
               <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
               </svg>
             </div>
           </div>
@@ -1259,7 +1259,7 @@
 
 
     let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
-      autoheight: true,
+      autoHeight: true,
       pagination: {
         el: ".advantages-desc-pagination",
         type: "fraction",
@@ -1280,11 +1280,16 @@
         nextEl: ".advantages-desc-button-next",
         prevEl: ".advantages-desc-button-prev",
       },
+      breakpoints: {
+        769: {
+          autoHeight: false,
+        }
+      },
     });
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1.15,
+      slidesPerView: 1,
       pagination: {
         el: ".advantages-gallery-pagination",
         clickable: true,
@@ -1308,6 +1313,7 @@
         769: {
           navigation: false,
           pagination: false,
+          slidesPerView: 1.15,
         },
       }
     });

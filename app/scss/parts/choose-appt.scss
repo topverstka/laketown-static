@@ -11,6 +11,10 @@ section#chooseAppt {
         color: $lightGrayText;
       }
     }
+
+    @media (max-width: $tablet-s) {
+      padding-bottom: 15px;
+    }
   }
 
   .section-content {
@@ -27,70 +31,88 @@ section#chooseAppt {
       @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
         flex: 0 0 52%;
       }
+    }
 
-      &-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 30px 0;
-        border-bottom: 1px solid $lightGrayText;
-        cursor: pointer;
-        color: $mainDark;
-        text-decoration: none;
-        @include transition(all, .5s);
-        &:first-child {
-          border-top: 1px solid $lightGrayText;
+    .appt-list-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px 0;
+      border-bottom: 1px solid $lightGrayText;
+      cursor: pointer;
+      color: $mainDark;
+      text-decoration: none;
+      @include transition(all, .5s);
+    }
+    .appt-list-item:first-child {
+      border-top: 1px solid $lightGrayText;
 
-        }
-        &:hover {
-          background: $orangeLight;
-        }
-        .item-image {
-          width: 170px;
-          height: 125px;
-          position: relative;
-          overflow: hidden;
-          margin-right: 40px;
-          margin-left: 40px;
-          img {
-            position: relative;
-            width: 100%;
-            height: auto;
-            @include transform(translateY, -50%);
-            top: 50%;
+    }
+    .appt-list-item:hover {
+      background: $orangeLight;
+    }
 
-          }
+    .appt-list-item .item-image {
+      width: 170px;
+      height: 125px;
+      position: relative;
+      overflow: hidden;
+      margin-right: 40px;
+      margin-left: 40px;
 
-          @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
-            width: 140px;
-            height: 105px;
-          }
-        }
-        .item-text {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: space-around;
-          &__caption {
-            font-family: var(--font-main);
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 24px;
-
-            @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
-              margin-top: 18px;
-            }
-          }
-        }
+      @media (min-width: $phone + 1) and (max-width: $desktop-s) {
+        width: 140px;
+        height: 110px;
       }
-      .btn {
-        margin-top: 60px;
+      @media (max-width: $tablet-s) {
+        margin-left: 0;
+      }
+      @media (max-width: $phone) {
+        width: 110px;
+        height: 78px;
+        margin-right: 18px;
       }
     }
+
+    .appt-list-item .item-image img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      @include transform(translateY, -50%);
+      top: 50%;
+    }
+
+    .appt-list-item .item-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+    .appt-list-item .item-text__caption {
+      font-family: var(--font-main);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+
+      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+        margin-top: 18px;
+      }
+
+      @media (max-width: $phone) {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+    }
+    .appt-list .btn {
+      margin-top: 60px;
+
+      @media (max-width: $tablet-s) {
+        margin-top: 35px;
+      }
+    }
+
     .appt-filter {
-
-
       -webkit-flex: 1 0 auto;
       -moz-flex: 1 0 auto;
       -ms-flex: 1 0 auto;

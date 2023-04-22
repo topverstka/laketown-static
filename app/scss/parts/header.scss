@@ -253,15 +253,20 @@ header {
     .slogan {
       width: 100%;
     }
+  }
 
+  header .header-wrap .header-block .btn-block .add-text span {
+      width: 100%;
   }
 }
-@media (min-width: $tablet-s + 1) {
-  .recall {
-    .icon {
-      display: none;
-    }
+
+@media (min-width: $phone + 1) {
+  .recall .icon {
+    display: none;
   }
+}
+
+@media (min-width: $tablet-s + 1) {
   .header-block {
     .btn-block {
       padding-bottom: 100px;
@@ -270,46 +275,48 @@ header {
 
 }
 @media (max-width: $tablet-s) {
-  .header-line {
-    padding-top: 20px;
-    .btn {
-      border: 0;
-      width: fit-content;
-      min-width: unset;
-      height: fit-content;
-    }
-    .recall {
-      span {
-        display: none;
-      }
-      .icon {
-        display: block !important;
-      }
-    }
-    .logo {
-      width: 40px;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
+  .header-line .recall {
+    min-width: 203px;
+    width: 203px;
   }
-  .header-block {
-    .btn-block {
-      padding-bottom: 70px;
-    }
+
+  .header-block .btn-block {
+    padding-bottom: 100px;
+  }
+
+  header .h-1 {
+    margin-top: 1.1em;
+  }
+}
+
+
+
+@media (min-width: $phone + 1) and (max-width: $tablet-s) {
+  header .header-wrap .header-line .logo {
+    transform: translateX(-85%);
   }
 }
 
 @media (max-width: $phone) {
-  header h1 {
-    font-size: 40px;
+  .header-line {
+    padding-top: 20px;
   }
+
+  .header-line .logo {
+    width: 40px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .header-block {
+    padding-bottom: 64px;
     .btn {
       height: 60px;
     }
     .btn-block {
+      padding-bottom: 0;
       .btn {
         max-width: 100%;
         padding: unset;
@@ -318,6 +325,29 @@ header {
         width: 100%;
       }
     }
+  }
+
+  .header-line .btn {
+    border: 0;
+    width: fit-content;
+    min-width: unset;
+    height: fit-content;
+  }
+
+  .header-line .recall span {
+    display: none;
+  }
+  .header-line .recall .icon {
+    display: block !important;
+  }
+  header .h-1 {
+    margin-top: 1.3em;
+  }
+}
+
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 40px;
   }
 }
 

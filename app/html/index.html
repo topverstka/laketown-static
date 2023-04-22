@@ -165,7 +165,7 @@
 
 
     let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
-      autoheight: true,
+      autoHeight: true,
       pagination: {
         el: ".advantages-desc-pagination",
         type: "fraction",
@@ -186,11 +186,16 @@
         nextEl: ".advantages-desc-button-next",
         prevEl: ".advantages-desc-button-prev",
       },
+      breakpoints: {
+        769: {
+          autoHeight: false,
+        }
+      },
     });
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1.15,
+      slidesPerView: 1,
       pagination: {
         el: ".advantages-gallery-pagination",
         clickable: true,
@@ -214,6 +219,7 @@
         769: {
           navigation: false,
           pagination: false,
+          slidesPerView: 1.15,
         },
       }
     });

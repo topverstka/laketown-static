@@ -21,4 +21,8 @@
   position: relative;
   width: 840px;
   margin: 0 auto;
+
+  @media (max-width: 840px) {
+    width: 90%;
+  }
 }
