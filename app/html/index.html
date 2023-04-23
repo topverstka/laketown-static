@@ -238,6 +238,33 @@
     })
 
 
+    const buildingStageCarousel = new Swiper('.slider-stages-carousel', {
+      speed: 400,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpointBase: 'container',
+      oneWayMovement: false,
+      loop: true,
+      navigation: {
+        prevEl: '.slider-stages-button-prev',
+        nextEl: '.slider-stages-button-next',
+      },
+      pagination: {
+        el: ".slider-stages-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        769: {
+          pagination: false,
+          slidesPerView: 1.2,
+        },
+        1441: {
+          slidesPerView: 1.58,
+          spaceBetween: 40
+        }
+      }
+    });
 
 </script>
 </html>
