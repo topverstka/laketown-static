@@ -10,6 +10,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+
+    @media (max-width: $tablet-m) {
+      flex-direction: column;
+    }
+  }
+  .section-content {
     .plan {
       -webkit-flex: 0 0 50%;
       -moz-flex: 0 0 50%;
@@ -19,20 +25,33 @@
       .image-wrapper {
         max-width: 80%;
         position: relative;
-        img {
-          width: 100%;
+
+        @media (max-width: $tablet-m) {
+          max-width: 100%;
         }
       }
-
+      .image-wrapper img {
+        width: 100%;
+      }
+      @media (max-width: $tablet-m) {
+        margin-bottom: 40px;
+      }
     }
     .appt-desc {
       min-width: 38%;
       position: relative;
       margin-right: auto;
       max-width: 50%;
-      h3 {
-        margin-top: 0;
+
+      @media (max-width: $tablet-m) {
+        max-width: 100%;
+        width: 100%;
       }
+    }
+    .appt-desc h3 {
+      margin-top: 0;
+    }
+    .appt-desc {
       &__props {
         display: flex;
         flex-direction: column;
@@ -44,32 +63,94 @@
           justify-content: space-between;
           margin-bottom: 40px;
           color: $mainDark;
+
+          @media (max-width: $tablet-m) {
+            margin-bottom: 30px;
+          }
+        }
+        .prop:last-child {
+          @media (max-width: $tablet-m) {
+            margin-bottom: 0;
+          }
         }
       }
       .btns {
         margin-top: 70px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @media (max-width: $tablet-m) {
+          margin-top: 50px;
+          justify-content: space-between;
+        }
+      }
+      .btns .btn {
+        margin-right: 40px;
+        @media (max-width: $tablet-m) {
+          margin-right: 20px;
+          flex-basis: 50%;
+        }
+        @media (max-width: $phone) {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+      }
+      .btns .btn:last-child {
+        margin-right: 0;
+      }
+      .btns .btn:not(:last-child) {
+        @media (max-width: $phone) {
+          margin-bottom: 30px;
+        }
       }
     }
   }
 
-  .section-pos {
-    h2 {
-      margin-top: 200px;
-      margin-bottom: 80px;
-    }
-    .img-wrapper {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      @include borderRadius(60px);
-      img {
-        height: 100%;
-        width: auto;
+  .section-pos h2 {
+    margin-top: 200px;
+    margin-bottom: 80px;
 
-      }
+    @media (max-width: $tablet-m) {
+      margin-top: 100px;
+      margin-bottom: 50px;
     }
+  }
+  .section-pos .img-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 900px;
+    @include borderRadius(60px);
+
+    @media (max-width: $desktop-s) {
+      height: 800px;
+    }
+    @media (max-width: $tablet-m) {
+      height: 600px;
+    }
+    @media (max-width: $phone) {
+      height: 400px;
+    }
+  }
+  .section-pos .img-wrapper img {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-m) {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+  @media (max-width: $phone) {
+    padding-top: 50px;
+  }
+}
+
+#pageAppt .section-title {
+  padding-bottom: 50px;
+
+  @media (max-width: $phone) {
+    padding-bottom: 40px;
   }
 }

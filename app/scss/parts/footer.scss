@@ -142,10 +142,12 @@ footer {
   }
 }
 
-@media (max-width: $phone) {
+@media (max-width: $tablet-m) {
   footer {
     padding-top: 100px;
   }
+}
+@media (max-width: $phone) {
   .socials .btn {
     max-width: 60px;
     max-height: 60px;
