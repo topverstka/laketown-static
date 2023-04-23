@@ -160,6 +160,9 @@
       background-position: center center;
       background-size: 50% 50%;
     }
+    @media (max-width: $phone) {
+      align-items: flex-start;
+    }
   }
   input {
     position: absolute;

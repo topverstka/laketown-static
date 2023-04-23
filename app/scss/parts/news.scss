@@ -167,7 +167,7 @@ section#news {
         }
 
         &:last-child {
-          display: none !important;
+          // display: none !important;
         }
       }
     }
@@ -233,6 +233,14 @@ section#news {
 
 @media (max-width: $phone) {
   section#news .section-pills__item {
-    height: initial;
+    height: 300px;
+  }
+  section#news .section-pills__item .pill-content__date,
+  section#news .section-pills__item .pill-content__title {
+    font-size: 24px;
+    padding: 20px;
+  }
+  section#news .section-pills__item .pill {
+    @include borderRadius(30px);
   }
 }

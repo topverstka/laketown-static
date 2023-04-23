@@ -2,6 +2,7 @@
   @include centerAll;
   height: 80px;
   border: 1px solid;
+  text-decoration: none;
   @include transition(all, .5s);
   
   @media (max-width: $phone) {

@@ -221,7 +221,9 @@ section#parking {
   section#parking .section-content {
     height: 600px;
   }
-
+  section#parking .section-title__text {
+    margin-bottom: 40px;
+  }
   section#parking .section-title-desc {
     order: 2;
     margin-top: 40px;
@@ -229,5 +231,14 @@ section#parking {
 
   section#parking .section-title-desc .desc-text .item {
     max-width: 70%;
+  }
+  section#parking .section-title .btns {
+    width: 100%;
+  }
+  section#parking .section-title .btns .btn {
+    flex-basis: 100% !important;
+  }
+  section#parking .section-title .btns .btn:not(:last-child) {
+    margin-bottom: 24px;
   }
 }

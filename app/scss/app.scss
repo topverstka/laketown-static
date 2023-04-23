@@ -153,20 +153,29 @@ section#formCallback {
     position: absolute;
     left: 0;
     bottom: -10%;
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
   .nadpisFormRight {
     position: absolute;
     right: 0;
     top: 15%;
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
   .section-title {
     justify-content: center;
+    @media (max-width: $phone) {
+      padding-bottom: 50px;
+      justify-content: flex-start;
+    }
   }
   .section-content {
     position: relative;
   }
 }
-
 
 section#pageBuyingServices {
   padding-top: 100px;
