@@ -68,6 +68,7 @@ $(document).ready(function() {
   $('#mapBlock #filterBtn').on('click', function() {
     $(this).toggleClass('show');
     $('#mapBlock').find('.map-filter').toggleClass('active');
+    bodyLock();
   });
 
 

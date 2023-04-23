@@ -23,8 +23,12 @@ section#buildingStage .section-title-filter .btn-filter {
     max-width: 167px;
     width: 100%;
   }
+  @media (max-width: $phone) {
+    width: auto;
+  }
 }
-section#buildingStage .section-title-filter .btn-filter:last-child {
+
+section#buildingStage .section-title-filter .btn-filter:nth-last-child(2) {
   @media (max-width: $tablet-s) {
     margin-right: 0;
   }
@@ -286,7 +290,7 @@ section#buildingStage .section-content .slider-nav .slider-point {
 }
 
 #buildingStage .section-title-filter {
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-l) {
     margin-left: 0;
     order: 2;
     width: 100%;
