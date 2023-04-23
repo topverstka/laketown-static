@@ -142,6 +142,10 @@ section#news {
     padding: 30px 40px 110px;
     text-transform: uppercase;
   }
+
+  section#news .section-pills__item {
+    height: 500px;
+  }
 }
 
 @media (max-width: $tablet-l - 1) {

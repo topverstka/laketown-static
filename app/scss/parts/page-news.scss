@@ -51,7 +51,7 @@
 
         img {
           height: 100%;
-          width: auto;
+          width: 100%;
         }
         &-content {
           position: absolute;
@@ -112,7 +112,7 @@
    }
   }
 }
-@media (max-width: $desktop-s - 1) {
+@media (max-width: $desktop-s) {
   #pageNews {
    .section-pills {
      &__item {
@@ -130,12 +130,14 @@
   #pageNews {
    .section-pills {
      &__item {
-       height: 500px;
-       width: calc(50% - 40px);
-       .pill-content__title, .pill-content__date {
-         padding: 40px 20px;
-       }
-
+      height: 500px;
+      width: calc(50% - 40px);
+      .pill-content__title, .pill-content__date {
+        padding: 40px 20px;
+      }
+      .image {
+        height: 100%;
+      }
      }
    }
   }
@@ -152,5 +154,9 @@
 
      }
    }
+  }
+
+  #pageNews .btn-square-3 {
+    width: 100%;
   }
 }
