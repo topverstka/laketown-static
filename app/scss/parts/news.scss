@@ -178,10 +178,8 @@ section#news {
   }
 }
 
-@media (max-width: $tablet-m - 1) {
-  #news {
-    padding-top: 150px !important;
-    padding-bottom: 150px !important;
+@media (max-width: $tablet-m) {
+  section#news {
     .section-pills {
       &__item {
         width: calc(50% - 40px);
@@ -214,7 +212,6 @@ section#news {
       }
     }
     .section-pills {
-      flex-direction: column !important;
       margin:0 !important;
       &__item {
         width: 100%;
@@ -236,6 +233,9 @@ section#news {
 }
 
 @media (max-width: $phone) {
+  section#news .section-pills {
+    flex-direction: column !important;
+  }
   section#news .section-pills__item {
     height: 300px;
   }

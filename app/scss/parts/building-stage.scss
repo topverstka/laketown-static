@@ -19,6 +19,10 @@ section#buildingStage .section-title-filter .btn-filter {
   @media (max-width: $desktop-s) {
     flex-grow: 1;
   }
+  @media (max-width: $tablet-s) {
+    max-width: 167px;
+    width: 100%;
+  }
 }
 section#buildingStage .section-title-filter .btn-filter:last-child {
   @media (max-width: $tablet-s) {
@@ -37,13 +41,13 @@ section#buildingStage .section-title-filter .btn-select {
 
   @media (max-width: $tablet-s) {
     flex-grow: 1;
-    margin: 40px 0 0 0;
-    min-width: 100%;
+    margin: 0;
     padding: 0 !important;
   }
 
   @media (max-width: $phone) {
     margin-top: 20px;
+    min-width: 100%;
   }
 }
 
@@ -122,7 +126,7 @@ section#buildingStage .section-content {
 section#buildingStage .section-content .slider-btns {
   position: absolute;
   z-index: 5;
-  width: 60%;
+  width: 61.5%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -132,7 +136,7 @@ section#buildingStage .section-content .slider-btns {
   transform: translateY(-50%);
 
   @media (max-width: $desktop-s) {
-    width: 77%;
+    width: 78.8%;
   }
 }
 

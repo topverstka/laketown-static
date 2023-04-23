@@ -156,7 +156,7 @@ section#formCallback {
   .nadpisFormLeft {
     position: absolute;
     left: 0;
-    bottom: -10%;
+    bottom: 0;
     @media (max-width: $phone) {
       display: none;
     }

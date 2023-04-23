@@ -103,6 +103,7 @@
   @include transition(all, .5s);
   cursor: pointer;
   font-size: 16px;
+  color: $mainDark;
 
   // @media (max-width: $desktop-s) {
   //   min-width: 120px;
