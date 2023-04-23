@@ -159,6 +159,21 @@
     </div>
   </div>
 </div>
+<script>
+  // let lastScrollTop = 0;
+  function updateScrollTop() {
+    let scrollTop = window.scrollY;
+    // let move = (scrollTop - lastScrollTop) / 2; // adjust the speed here
+    // background.css('transform', 'translate3d(0, ' + move + 'px, 0)');
+    banner.style.cssText = `--scroll-top: ${scrollTop}px`
+    // lastScrollTop = scrollTop;
+    requestAnimationFrame(updateScrollTop);
+  }
+  const banner = document.querySelector('.banner');
+  window.addEventListener('scroll', () => {
+    updateScrollTop();
+  })
+</script>
 <!--
 <div
   class="parallax-window banner"
