@@ -287,7 +287,11 @@ section#pageBuyingServices {
 
 }
 
-
+#pageNewsItem .article-section-content {
+  @media (max-width: $tablet-m) {
+    max-width: 100%!important;
+  }
+}
 
 
 

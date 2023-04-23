@@ -53,18 +53,18 @@
 
     }
 
-    if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
-      if (block_show == null || block_show == false) {
-        $(document).find('.side-wrapper').removeClass('fixed');
-      }
-      block_show = true;
-    } else {
-      if (block_show == null || block_show == true) {
-        $(document).find('.side-wrapper').addClass('fixed');
+    // if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+    //   if (block_show == null || block_show == false) {
+    //     $(document).find('.side-wrapper').removeClass('fixed');
+    //   }
+    //   block_show = true;
+    // } else {
+    //   if (block_show == null || block_show == true) {
+    //     $(document).find('.side-wrapper').addClass('fixed');
 
-      }
-      block_show = false;
-    }
+    //   }
+    //   block_show = false;
+    // }
   }
 
   $(window).scroll(function(){
