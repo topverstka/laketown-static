@@ -45,6 +45,9 @@ body.modal-open {
     @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
       width: 100%;
     }
+    @media (max-width: $phone) {
+      width: 100%;
+    }
     .menu-items {
       display: flex;
       flex-direction: column;
@@ -68,12 +71,27 @@ body.modal-open {
           padding-left: 30px;
           color: $orangeMain !important;
           text-decoration: none !important;
+        }
 
-
+        @media (max-width: $phone) {
+          margin-bottom: 24px;
         }
 
       }
     }
+    .btn {
+      @media (max-width: $phone) {
+        height: 50px;
+        width: 40px;
+        border: none;
+        min-width: initial;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-m) {
+    position: fixed;
   }
 }
 

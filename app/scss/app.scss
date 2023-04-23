@@ -52,7 +52,10 @@ body {
   @include transition(all, .5s);
 }
 
-
+body._lock {
+  overflow: hidden;
+  touch-action: none;
+}
 
 
 
@@ -218,6 +221,9 @@ section#pageBuyingServices {
         }
       }
 
+      @media (max-width: $desktop-s) {
+        padding-right: 0;
+      }
     }
     .section-content {
       -webkit-flex: 1 1 50%;
@@ -248,10 +254,18 @@ section#pageBuyingServices {
         align-items: center;
         justify-content: center;
 
-        img {
-          height: 100%;
-          width: auto;
+        @media (max-width: $desktop-s) {
+          max-width: 510px;
         }
+        @media (max-width: $phone) {
+          height: 233px;
+        }
+      }
+
+      .image-wrapper img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
       }
     }
   }
@@ -369,6 +383,11 @@ section#pageBuyingServices {
   }
 }
 
+@media (max-width: $phone) {
+  section#pageBuyingServices .container-page .section-content .image-wrapper img {
+    height: 100%;
+  }
+}
 
 @media screen and (max-width: 1439px) and (min-width: 768px) {
   .top-menu {

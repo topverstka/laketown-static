@@ -1,11 +1,40 @@
 $(document).ready(function() {
-
+  function lockBody() {
+    const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
+    document.body.classList.add("_lock");
+    document.body.style.paddingRight = `${DEFAULT_SCROLLBAR_WIDTH}px`;
+  }
+  function unlockBody() {
+    const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
+    document.body.classList.remove("_lock");
+    document.body.style.paddingRight = '';
+  }
+  function getScrollbarWidth() {
+    return window.innerWidth - document.body.offsetWidth;
+  }
+  function bodyLock(con) {
+    if (con === true) {
+      lockBody();
+    } else if (con === false) {
+      unlockBody();
+    } else if (con === undefined) {
+      if (!document.body.classList.contains("_lock")) {
+        lockBody();
+      } else {
+        unlockBody();
+      }
+    } else {
+      console.error("Неопределенный аргумент у функции bodyLock()");
+    }
+  }
 
   $('#menuOpen').on('click', function(){
     $('.top-menu').addClass('active');
+    bodyLock(true);
   });
   $('#closeMenu').on('click', function(){
     $('.top-menu').removeClass('active');
+    bodyLock(false);
   });
 
   // menu click anchor
@@ -277,5 +306,4 @@ $(document).ready(function() {
 
     block.toggleClass('active');
   });
-
 });
