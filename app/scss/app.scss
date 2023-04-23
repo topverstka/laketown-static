@@ -171,7 +171,7 @@ section#formCallback {
   }
   .section-title {
     justify-content: center;
-    @media (max-width: $phone) {
+    @media (max-width: $tablet-m) {
       padding-bottom: 50px;
       justify-content: flex-start;
     }

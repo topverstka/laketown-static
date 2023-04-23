@@ -2,13 +2,13 @@
 
 section#buildingStage {
   background: $colorBgr;
-  padding-top: 200px;
+  padding-top: 150px;
 
-  @media (max-width: $desktop-s) {
-    padding-top: 150px;
+  @media (max-width: $tablet-m) {
+    padding-top: 60px;
   }
   @media (max-width: $phone) {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 }
 
@@ -16,20 +16,23 @@ section#buildingStage .section-title-filter .btn-filter {
   @media screen and (max-width: 1600px) {
     margin-right: 16px;
   }
+
   @media (max-width: $desktop-s) {
     flex-grow: 1;
   }
+
   @media (max-width: $tablet-s) {
     max-width: 167px;
     width: 100%;
   }
+
   @media (max-width: $phone) {
     width: auto;
   }
 }
 
 section#buildingStage .section-title-filter .btn-filter:nth-last-child(2) {
-  @media (max-width: $tablet-s) {
+  @media (max-width: $phone) {
     margin-right: 0;
   }
 }
@@ -52,20 +55,24 @@ section#buildingStage .section-title-filter .btn-select {
   @media (max-width: $phone) {
     margin-top: 20px;
     min-width: 100%;
+    justify-content: space-around;
   }
 }
 
 section#buildingStage .section-title {
+
   @media (max-width: $desktop-s) {
     flex-wrap: wrap;
     padding-bottom: 60px;
   }
+
   @media (max-width: $phone) {
     padding-bottom: 40px;
   }
 }
 
 section#buildingStage .section-title__text {
+
   @media (max-width: $phone) {
     order: -2;
     margin-bottom: 16px;
@@ -73,6 +80,7 @@ section#buildingStage .section-title__text {
 }
 
 section#buildingStage .section-title__btn {
+
   @media (max-width: $phone) {
     order: -1;
     text-transform: initial;
@@ -95,33 +103,15 @@ section#buildingStage .callendar {
   }
 }
 
-// section#buildingStage .callendar-item {
-//   border-bottom: 1px solid $mainDark;
-//   padding-bottom: 20px;
-//   flex: 1 1 auto;
-//   text-align: center;
-//   @include transition(all, .5s);
-//   cursor: pointer;
-
-//   @media (max-width: $desktop-s) {
-//     min-width: 120px;
-//   }
-// }
-
-// section#buildingStage .callendar-item.active,
-// section#buildingStage .callendar-item:hover {
-//   color: $orangeMain;
-//   border-bottom: 1px solid $orangeMain;
-//   padding-bottom: 20px;
-// }
-
-
 section#buildingStage .section-content {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 55px;
 
+  @media (max-width: $tablet-m) {
+    padding-top: 42px;
+  }
   @media (max-width: $phone) {
     padding-top: 40px;
   }
@@ -130,17 +120,17 @@ section#buildingStage .section-content {
 section#buildingStage .section-content .slider-btns {
   position: absolute;
   z-index: 5;
-  width: 61.5%;
+  width: 59.5%;
   height: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  top: 50%;
+  top: 54%;
   transform: translateY(-50%);
 
   @media (max-width: $desktop-s) {
-    width: 78.8%;
+    width: 66.8%;
   }
 }
 
@@ -150,10 +140,6 @@ section#buildingStage .section-content .slider-btns .prevBtn {
 }
 
 section#buildingStage .section-content .slider-btns .navBtn {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -178,10 +164,6 @@ section#buildingStage .section-content .slider-btns .navBtn.disabled svg path {
 }
 
 section#buildingStage .section-content .slider-btns .nextBtn {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
   position: relative;
   right: -61px;
@@ -224,6 +206,7 @@ section#buildingStage .section-content #sliderStages .slider-item__image {
   position: relative;
   overflow: hidden;
   @include borderRadius(60px);
+  height: 700px;
 
   @media (max-width: $tablet-s) {
     @include borderRadius(0);
@@ -238,6 +221,7 @@ section#buildingStage .section-content #sliderStages .slider-item__image img {
   height: 100%;
   width: auto;
 }
+
 section#buildingStage .slider-stages-slide .slider-item__image img {
   height: 100%;
   width: 100%;
@@ -245,9 +229,11 @@ section#buildingStage .slider-stages-slide .slider-item__image img {
 }
 
 section#buildingStage .section-title-filter__item {
+
   @media (max-width: $desktop-s) {
     width: 100%;
   }
+
   @media (max-width: $tablet-s - 1) {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -255,6 +241,7 @@ section#buildingStage .section-title-filter__item {
 }
 
 section#buildingStage .section-content .slider-nav {
+
   @media (max-width: $desktop-s) {
     margin-top: 16px;
     display: flex;
@@ -265,6 +252,7 @@ section#buildingStage .section-content .slider-nav {
 }
 
 section#buildingStage .section-content .slider-nav .slider-point {
+
   @media (max-width: $desktop-s) {
     @include borderRadius(50%);
     width: 8px;
@@ -278,32 +266,48 @@ section#buildingStage .section-content .slider-nav .slider-point {
 }
 
 #buildingStage .section-content .slider-nav .slider-point:last-child {
+
   @media (max-width: $desktop-s) {
     margin-right: 8px;
   }
 }
 
 #buildingStage .section-content .slider-nav .slider-point.active {
+
   @media (max-width: $desktop-s) {
     background: $orangeDark;
   }
 }
 
 #buildingStage .section-title-filter {
+
   @media (max-width: $tablet-l) {
     margin-left: 0;
     order: 2;
     width: 100%;
     margin-top: 80px;
   }
+
+  @media (max-width: $phone) {
+    margin-top: 54px;
+  }
 }
 
 #buildingStage .section-title-filter__item .btn {
-  @media (max-width: $tablet-s - 1) {
+  width: 100%;
+  min-width: 150px;
+
+  @media (max-width: $desktop-s) {
     margin: 0;
-    max-width: 30%;
+    // max-width: 30%;
+    max-width: 80px;
     min-width: 80px;
   }
+}
+
+#buildingStage .section-title-filter__item .btn-select {
+  max-width: 188px;
+  // min-width: 188px;
 }
 
 #buildingStage .section-title-filter__item .btn:not(.btn-select) {

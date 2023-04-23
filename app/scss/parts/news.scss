@@ -4,12 +4,17 @@ section#news {
   background: $colorBgr;
   
   @media (max-width: $tablet-l - 1) {
-    padding-top: 150px !important;
-    padding-bottom: 150px !important;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
   @media (max-width: $tablet-s) {
-    padding-top: 150px !important;
-    padding-bottom: 150px !important;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: $phone) {
+    padding-top: 95px;  
+    padding-bottom: 95px;
   }
 }
 

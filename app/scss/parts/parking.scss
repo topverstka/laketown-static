@@ -12,26 +12,14 @@ section#parking .container {
   }
 }
 
-section#parking .section-title {
-  align-items: flex-start;
-  margin-bottom: 13px;
-}
-
 section#parking .section-title-wrapper {
-  flex: 0 0 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
   position: relative;
-  margin-right: 50px;
 
-  @media (max-width: $desktop-s) {
-    flex: 0 0 50% !important;
-  }
   @media (max-width: $tablet-m) {
-    flex: 0 0 100% !important;
-    display: flex;
     flex-direction: column;
-  }
-  @media (max-width: $tablet-s) {
-    flex: 0 0 100%!important;
   }
 }
 
@@ -54,50 +42,69 @@ section#parking .section-title-wrapper .arrow-title {
 section#parking .section-title-wrapper .btns {
   display: flex;
   flex-direction: row;
+  flex-basis: 100%;
+  margin-top: -98px;
+
+  @media (max-width: $desktop-s) {
+    margin-top: 20px;
+  }
 
   @media (max-width: $tablet-m) {
     order: 3;
     flex-wrap: wrap;
-  }
-
-  @media (max-width: $tablet-s) {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     justify-content: space-between;
   }
 
   @media (max-width: $phone) {
     width: 100%;
+    margin-top: 27px;
+    margin-bottom: 50px;
   }
 }
 
 section#parking .section-title-desc {
-  @media (min-width: $tablet-l + 1) {
-    margin-left: 70px;
-    margin-top: 30px;
+  flex-basis: 31%;//43%;
+  margin-left: auto;
+  margin-right: -50px;
+  margin-top: 30px;
+
+  @media (max-width: $desktop-s) {
+    flex-basis: 41%;//43%;
+    margin-right: -25px;
+    margin-top: 10px;
   }
 
-  @media (min-width: $desktop-s + 1) {
-    margin-left: 150px;
-    margin-top: 30px;
+  @media (max-width: $tablet-m) {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @media (max-width: $phone) {
     order: 2;
-    margin-top: 40px;
+  }
+}
+
+section#parking .section-title-desc .desc-title {
+  margin-bottom: 70px;
+
+  @media (max-width: $desktop-s) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $tablet-m) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $phone) {
+    margin-bottom: 20px;
   }
 }
 
 section#parking .section-title-desc .desc-title h3 {
   margin-top: 0;
-  margin-bottom: 80px;
-
-  @media (max-width: $desktop-s) {
-    margin-bottom: 40px !important;
-  }
-  
-  @media (max-width: $tablet-m) {
-    margin-bottom: 40px !important;
-  }
+  margin-bottom: 0;
 }
 
 section#parking .section-title-desc .desc-text {
@@ -111,19 +118,23 @@ section#parking .section-title-desc .desc-text {
     margin-top: -50px;
   }
   @media (max-width: $tablet-m) {
-    margin-bottom: 40px !important;
+    margin-bottom: 0;
+    max-width: 520px;
   }
 }
 
 section#parking .section-title-desc .desc-text .item {
-  flex: 1 1 50%;
+  flex-basis: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
 
   @media (max-width: $phone) {
-    max-width: 70%;
+    flex-basis: 100%;
+    margin-bottom: 25px;
+    max-width: 78%;
+    width: 100%;
   }
 }
 
@@ -154,45 +165,52 @@ section#parking .section-title__text span {
 }
 
 
+section#parking .section-content {
+  height: 1000px;
+
+  @media (max-width: $tablet-s) {
+    height: 900px;
+  }
+  @media (max-width: $phone) {
+    height: 600px;
+  }
+}  
 
 section#parking .section-content img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
-section#parking .section-title .section-content img {
-  @media (max-width: $desktop-s) {
-    height: 100%;
-  }
-}
-
-
-
-section#parking .section-title {
-  @media (max-width: $desktop-s) {
-    margin-bottom: 0;
-  }
-}
-
-
 
 
 section#parking .section-title .section-title__text {
   @media (max-width: $desktop-s) {
     margin-bottom: 15px;
   }
+
+  @media (max-width: $tablet-m) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $phone) {
+    margin-bottom: 35px;
+  }
 }
 
 section#parking .section-title__text {
   margin-top: 0;
-  width: 70%;
   position: relative;
+  flex-basis: 40%;
   z-index: 2;
   margin-bottom: 40px;
 
+  @media (max-width: $desktop-s) {
+    flex-basis: 30%;
+  }
+
   @media (max-width: $tablet-m) {
     width: 100% !important;
-    order: 1;
+    // order: 1;
   }
 
   @media (max-width: $phone) {
@@ -201,22 +219,19 @@ section#parking .section-title__text {
   }
 }
 
-section#parking .section-title .section-content {
-  @media (max-width: $desktop-s) {
-    height: 1000px;
-  }
-
-  @media (max-width: $phone) {
-    height: 600px;
-  }
-}  
-
 section#parking .section-title {
+  align-items: flex-start;
+  margin-bottom: 0;
+
   @media (max-width: $tablet-m) {
     flex-wrap: wrap;
     padding-bottom: 0 !important;
   }
 }
+
+
+
+
 
 section#parking .section-title .btns .btn {
   @media (max-width: $tablet-s) {
