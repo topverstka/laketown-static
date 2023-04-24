@@ -297,6 +297,9 @@ section#buildingStage .section-content .slider-nav .slider-point {
   width: 100%;
   min-width: 150px;
 
+  @media (max-width: $desktop-m) {
+    min-width: 110px;
+  }
   @media (max-width: $desktop-s) {
     margin: 0;
     // max-width: 30%;
@@ -308,6 +311,11 @@ section#buildingStage .section-content .slider-nav .slider-point {
 #buildingStage .section-title-filter__item .btn-select {
   max-width: 188px;
   // min-width: 188px;
+
+  
+  @media (min-width: $tablet-s + 1) and (max-width: $desktop-m) {
+    min-width: 150px;
+  }
 }
 
 #buildingStage .section-title-filter__item .btn:not(.btn-select) {

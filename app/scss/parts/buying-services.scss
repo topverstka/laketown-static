@@ -135,9 +135,9 @@ section#buyingServices .section-content .swiper-wrapper .slider-item__text {
   font-family: var(--font-alimini);
   text-decoration: none !important;
   color: $mainDark;
+  margin-top: 20px;
 
   @media (max-width: $phone) {
-    margin-top: 20px;
     font-size: 18px;
   }
 }

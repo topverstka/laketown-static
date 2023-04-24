@@ -1,4 +1,5 @@
 section#advantages {
+  overflow: hidden;
   position: relative;
   padding-top: 180px;
 
@@ -350,7 +351,7 @@ section#advantages {
   width: 100%;
   margin-left: 0;
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-m) {
     max-width: 100%;
   }
 }
@@ -447,6 +448,9 @@ section#advantages {
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: -70px;
 
+  @media (max-width: $tablet-m) {
+    transform: translateY(-185px);
+  }
   @media (max-width: $tablet-s) {
     display: none;
   }
@@ -515,6 +519,11 @@ section#advantages {
   width: 160px;
   height: 160px;
 
+  @media (max-width: $tablet-m) {
+    width: 120px;
+    height: 120px;
+  }
+  
   @media (max-width: $tablet-s) {
     min-width: 80px;
     width: 80px;

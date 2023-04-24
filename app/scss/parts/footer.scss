@@ -40,17 +40,20 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     .footer-info__block {
-      -webkit-flex: 0 0 50%;
-      -moz-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
+      flex: 0 0 52%;
       font-family: var(--font-main);
       font-size: 18px;
-      &:last-child {
-        -webkit-flex: 0 0 40%;
-        -moz-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-        flex: 0 0 40%;
+
+      @media (max-width: $desktop-s) {
+        font-size: 16px;
+        flex: 0 0 50%;
+      }
+    }
+    .footer-info__block:last-child {
+      flex: 0 0 36%;
+
+      @media (max-width: $desktop-s) {
+        flex: 0 0 41.5%;
       }
     }
 

@@ -127,6 +127,13 @@ body.modal-open {
   }
 }
 
+@media (max-width: $tablet-m) {
+  header .phone a {
+    font-size: 18px;
+    font-family: var(--font-alimini);
+  }
+}
+
 header {
   background: $colorBgr;
   overflow: hidden;
@@ -244,6 +251,9 @@ header {
   header {
     .nadpis, .btn-map {
       display: flex;
+    }
+    .btn-map {
+      transform: translate(20px,35px);
     }
 
     .h-1 {

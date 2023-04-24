@@ -4,7 +4,7 @@
 	z-index: 10;
 	margin-top: -1px;
 
-	@media (max-width: $tablet-s) {
+	@media (max-width: $tablet-m) {
 		padding-bottom: 3px;
 	}
 	@media (max-width: $phone) {
@@ -14,7 +14,7 @@
 }
 
 .nav-scroller__container {
-	@media (max-width: $tablet-s) {
+	@media (max-width: $tablet-m) {
 		overflow: hidden;
 		// margin-bottom: -20px;
 		padding-left: 0;
@@ -50,12 +50,12 @@
   position: relative;
   z-index: 2;
 
-  @media (min-width: $tablet-s + 1) {
+  @media (min-width: $tablet-m + 1) {
 		margin-left: -18px;
 		margin-right: -18px;
   }
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-m) {
   	flex-wrap: nowrap;
   	--mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 9px, rgb(0, 0, 0) 19px, rgb(0, 0, 0) calc(100% - 118px), rgba(0, 0, 0, 0.25) calc(100% - 18px), rgba(0, 0, 0, 0));
 		padding-right: 18px;
@@ -101,7 +101,7 @@
 .nav-scroller__link:last-child {
 	margin-right: 0;
 
-	@media (max-width: $tablet-s) {
+	@media (max-width: $tablet-m) {
 		padding-right: 5rem;
 	}
 }
