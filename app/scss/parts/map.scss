@@ -122,7 +122,7 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter.active {
-  @media (min-width: $tablet-m) {
+  @media (min-width: $tablet-l) {
     opacity: 1;
     height: 120px;
 
@@ -143,6 +143,7 @@ section#mapBlock .filter-btn #filterBtn svg {
   }
 
   @media (max-width: $tablet-m) {
+    flex: initial;
     height: 80px;
     min-height: 80px;
   }

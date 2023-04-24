@@ -68,7 +68,7 @@ $(document).ready(function() {
     $(this).toggleClass('show');
     $('#mapBlock').find('.map-filter').toggleClass('active');
 
-    if (window.innerWidth > 601) return;
+    if (window.innerWidth > 992) return;
     bodyLock();
   });
 

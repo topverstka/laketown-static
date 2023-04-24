@@ -525,6 +525,10 @@ section#advantages {
   text-align: left;
   margin-left: 50px;
   letter-spacing: -0.06em;
+
+  @media (max-width: $tablet-l) {
+    margin-left: 20px;
+  }
 }
 
 .advantages-desc-pagination span {
