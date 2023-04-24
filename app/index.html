@@ -1251,8 +1251,9 @@
 
     var myMap = new ymaps.Map("map", {
       center: [55.76, 37.64],
-      zoom: 15
+      zoom: 14
     });
+    window.myMap = myMap;
 
     var myCircle = new ymaps.Circle([
         // Координаты центра круга.
@@ -1279,7 +1280,7 @@
         // Прозрачность обводки.
         strokeOpacity: 0.8,
         // Ширина обводки в пикселях.
-        strokeWidth: 2
+        strokeWidth: 1
     });
 
     var myCircle2 = new ymaps.Circle([
@@ -1307,7 +1308,7 @@
         // Прозрачность обводки.
         strokeOpacity: 0.8,
         // Ширина обводки в пикселях.
-        strokeWidth: 2
+        strokeWidth: 1
     });
 
     var myCircle3 = new ymaps.Circle([
@@ -1336,10 +1337,10 @@
         // Прозрачность обводки.
         strokeOpacity: 0.8,
         // Ширина обводки в пикселях.
-        strokeWidth: 2
+        strokeWidth: 1
     });
 
-    let company = new ymaps.Placemark([55.778574, 37.624856], {
+    let company = new ymaps.Placemark([55.76, 37.60], {
       hintContent: '',
       balloonContent: '',
       iconContent: ''
@@ -1359,6 +1360,7 @@
       // Макет содержимого.
       iconContentLayout: MyIconContentLayout
     });
+    window.company = company;
 
     let p1 = new ymaps.Placemark([55.761574, 37.573856], {
       hintContent: '',
