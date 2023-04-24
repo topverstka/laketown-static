@@ -107,7 +107,8 @@ section#mapBlock .filter-btn #filterBtn svg {
 
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    height: 97vh;
+    max-height: 97vh;
+    height: max-content;
     box-sizing: border-box;
     background: $colorBgr;
     z-index: 10;
