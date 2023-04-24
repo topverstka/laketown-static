@@ -46,15 +46,17 @@ section#buildingStage .section-title-filter .btn-select {
     margin-left: 24px;
   }
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-m) {
     flex-grow: 1;
     margin: 0;
     padding: 0 !important;
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-s) {
     margin-top: 20px;
     min-width: 100%;
+  }
+  @media (max-width: $phone) {
     justify-content: space-around;
   }
 }
@@ -341,7 +343,7 @@ section#buildingStage .section-content .slider-nav .slider-point {
   justify-content: center;
   position: static;
 
-  @media (min-width: $tablet-s + 1) {
+  @media (min-width: $tablet-l + 1) {
     display: none;
   }
   @media (max-width: $phone) {

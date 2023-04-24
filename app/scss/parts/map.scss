@@ -60,7 +60,7 @@ section#mapBlock .filter-btn #filterBtn svg {
   @media (min-width: $tablet-s) {
     display: block;
   }
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     display: block;
   }
 }
@@ -69,7 +69,7 @@ section#mapBlock .filter-btn #filterBtn svg {
   @media (min-width: $tablet-s) {
     display: none;
   }
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     display: none;
   }
 }
@@ -78,7 +78,7 @@ section#mapBlock .filter-btn #filterBtn svg {
   @media (min-width: $tablet-s) {
     display: none;
   }
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     display: none;
   }
 }
@@ -99,7 +99,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .8s);
   }
 
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     position: absolute;
     opacity: 0;
     height: 0;
@@ -178,7 +178,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .5s);
   }
 
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     height: 0;
     width: 100%;
     -webkit-flex: 1 1 auto;
@@ -201,7 +201,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     stroke: $colorBgr;
     color: $colorBgr;
   }
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     fill: none;
     stroke: $mainDark;
     color: $mainDark;
@@ -213,7 +213,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     fill: $colorBgr;
   }
 
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     fill: $mainDark;
   }
 }
@@ -233,7 +233,7 @@ section#mapBlock .filter-btn #filterBtn svg {
 
 .map-filter__item:hover {
   @media (any-hover:hover) {
-    @media (max-width: $phone - 1) {
+    @media (max-width: $phone) {
       svg path, span {
         fill: none;
         stroke: $colorBgr;
@@ -247,7 +247,7 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter__item.active {
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     svg path, span {
       fill: none;
       stroke: $colorBgr;
