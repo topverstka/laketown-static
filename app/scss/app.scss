@@ -313,7 +313,7 @@ section#pageBuyingServices {
 
 
 
-@media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+@media screen and (min-width: $tablet-s) and (max-width: $tablet-l) {
   section#pageBuyingServices {
     .container-page {
       flex-wrap: wrap;
@@ -346,6 +346,12 @@ section#pageBuyingServices {
         }
       }
     }
+  }
+}
+
+@media (max-width: $tablet-l) {
+  section#pageBuyingServices {
+    overflow: hidden;
   }
 }
 

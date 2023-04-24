@@ -428,6 +428,9 @@ section#advantages {
   @media (min-width: $tablet-l + 1) {
     width: 123%;
   }
+  @media (max-width: $desktop-s) {
+    width: 110%;
+  }
   @media (max-width: $tablet-s) {
     width: #{'calc(100% + 40px)'};
     margin-left: -20px;
