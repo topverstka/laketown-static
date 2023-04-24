@@ -302,12 +302,8 @@ section#advantages {
   // flex-direction: row;
   // flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 250px));
+  grid-template-columns: repeat(2,minmax(200px,350px));
   gap: 20px;
-
-  @media (max-width: $desktop-m) {
-    grid-template-columns: repeat(2,minmax(200px,350px));
-  }
 }
 
 #advSlider .item-icons-item {
@@ -418,7 +414,7 @@ section#advantages {
 .advantages-gallery-slide__media {
   padding-left: 20px;
   padding-right: 20px;
-  height: 800px;
+  height: 890px;
 
   @media (max-width: $tablet-s) {
     padding-left: 0;
