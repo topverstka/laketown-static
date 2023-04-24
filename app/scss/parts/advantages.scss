@@ -304,6 +304,10 @@ section#advantages {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 250px));
   gap: 20px;
+
+  @media (max-width: $desktop-m) {
+    grid-template-columns: repeat(2,minmax(200px,350px));
+  }
 }
 
 #advSlider .item-icons-item {

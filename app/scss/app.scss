@@ -45,12 +45,18 @@
 
 body {
   background: $colorBgr;
+  color: $mainDark;
   position: relative;
   top: 0;
   left: 0;
   padding: 0;
   margin: 0;
   @include transition(all, .5s);
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body._lock {
@@ -159,7 +165,7 @@ section#formCallback {
     position: absolute;
     left: 0;
     bottom: 0;
-    @media (max-width: $phone) {
+    @media (max-width: $tablet-m) {
       display: none;
     }
   }
@@ -167,7 +173,7 @@ section#formCallback {
     position: absolute;
     right: 0;
     top: 15%;
-    @media (max-width: $phone) {
+    @media (max-width: $tablet-m) {
       display: none;
     }
   }
