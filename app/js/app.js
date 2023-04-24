@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  let aos = AOS.init();
+  window.aos = aos;
+
   function lockBody() {
     const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
     document.body.classList.add("_lock");
