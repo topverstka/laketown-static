@@ -58,7 +58,7 @@ $(document).ready(function() {
         i = 0;
       };
       elements.eq(i).addClass(className);
-      setTimeout(step, 1200);
+      setTimeout(step, 5000);
     }
     step();
   }($('header #slogans').children()));

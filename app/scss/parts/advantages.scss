@@ -357,6 +357,11 @@ section#advantages {
   @media (max-width: $tablet-m) {
     max-width: 100%;
   }
+
+  
+  @media (min-width: $tablet-m + 1) and (max-width: $tablet-l) {
+    max-width: 79%;
+  }
 }
 
 .advantages-desc-carousel h3 {
