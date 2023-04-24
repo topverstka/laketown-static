@@ -52,7 +52,7 @@ section#mapBlock .filter-btn #filterBtn svg {
   @media (max-width: $phone) {
     position: fixed;
     z-index: 11;
-    bottom: 50px;
+    bottom: 30px;
   }
 }
 
@@ -115,10 +115,24 @@ section#mapBlock .filter-btn #filterBtn svg {
   }
   @media (max-width: $phone) {
     position: fixed;
-    bottom: 0;
+    bottom: -200vh;
     left: 0;
     padding-bottom: 130px;
     z-index: 5;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 85vh;
+    box-sizing: border-box;
+    background: $colorBgr;
+    z-index: 10;
+    @include transition(all, .8s);
+
+    background: #fff;
+    overflow: auto;
+    padding-top: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 
@@ -131,18 +145,10 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .8s);
   }
 
-  @media (max-width: $phone - 1) {
-    padding-top: 30px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    opacity: 1;
-    height: fit-content;
-    background: $colorBgr;
-    z-index: 10;
-    @include transition(all, .8s);
-  }
   @media (max-width: $phone) {
-    background: #fff;
+    // padding-top: 30px;
+    opacity: 1;
+    bottom: 0;
   }
 }
 
@@ -151,8 +157,9 @@ section#mapBlock .filter-btn #filterBtn svg {
     height: 120px;
   }
 
-  @media (max-width: $phone - 1) {
+  @media (max-width: $phone) {
     height: 80px;
+    min-height: 80px;
   }
 }
 

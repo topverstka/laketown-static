@@ -31,13 +31,9 @@
   display: block;
   height: 200%;
   width: 100%;
-  // background-image: url("../img/Comp_1_5.gif");
   transform: translateY(#{'calc(-50vh + var(--scroll-top) / 20)'});
+  object-fit: cover;
   
-  // @media (min-width: $phone + 1) {
-  //   // background-attachment: fixed;
-  //   // background-size: cover;
-  // }
   @media (max-width: $phone) {
     transform: translateY(#{'calc(-50vh + var(--scroll-top) / 4)'});
     // background-position: center #{'calc(-50vh + var(--scroll-top) / 4)'};
