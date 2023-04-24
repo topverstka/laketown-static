@@ -74,7 +74,7 @@
 
         @media (max-width: $phone) {
           height: 200px;
-
+          @include borderRadius(30px);
         }
       }
       &:hover {
@@ -94,6 +94,11 @@
       }
       @media (max-width: $tablet-m) {
         width: calc(50% - 40px);
+      }
+      @media (max-width: $phone) {
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
 
