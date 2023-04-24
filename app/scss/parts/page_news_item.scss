@@ -79,18 +79,18 @@
         blockquote {
           margin: 80px 0 80px 100px;
           height: 210px;
-          background: no-repeat left center url("../img/quote.png");
+          background: no-repeat left center url("../img/quote.png") !important;
           padding-left: 115px;
           display: flex;
           align-items: center;
 
           @media (max-width: $tablet-s) {
-            background-size: 91px;
-            background-position: top left;
+            background-size: 91px !important;
+            background-position: top left !important;
             padding-left: 50px;
           }
           @media (max-width: $phone) {
-            background-size: 71px;
+            background-size: 71px !important;
             margin-left: 0;
           }
         }
