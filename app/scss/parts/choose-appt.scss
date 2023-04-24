@@ -185,10 +185,18 @@ section#chooseAppt {
           opacity: 1;
           height: fit-content;
           z-index: 100;
-
+          padding-bottom: 40px;
         }
       }
     }
   }
 
+}
+
+.choose-apps__button-manager {
+  font-size: 14px
+}
+
+.choose-apps__button-manager span {
+  font-size: inherit !important;
 }
