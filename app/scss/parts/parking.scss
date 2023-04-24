@@ -47,6 +47,7 @@ section#parking .section-title-wrapper .btns {
   flex-direction: row;
   flex-basis: 100%;
   margin-top: -98px;
+  z-index: 2;
 
   @media (max-width: $desktop-s) {
     margin-top: 20px;

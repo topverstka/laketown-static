@@ -138,8 +138,8 @@
         </a>
 
         <div class="add-text" id="slogans">
-          <span class="active">Предложение месяца - ипотека от 4%</span>
-          <span>Следите за ходом строительства в Телеграм-канале</span>
+          <a class="active">Предложение месяца - ипотека от 4%</a>
+          <a>Следите за ходом строительства в Телеграм-канале</a>
         </div>
       </div>
     </div>
@@ -211,8 +211,11 @@
                   благоустроенную набережную из экоматериалов и
                   природным пейзажем с чистым прудом в окружении
                   зелени.</p>
-                <p>Для жителей Lake Town всё будет в шаговой доступности. Каждый день легко строить новые планы, как
-                  провести вечер.</p>
+                <p>
+                  Для жителей Lake Town всё будет в шаговой <br>
+                  доступности. Каждый день легко строить новые <br> 
+                  планы, как провести вечер.
+                </p>
               </div>
               <div class="item-icons">
                 <div class="item-icons-item">
@@ -449,19 +452,13 @@
       <h2 class="section-title__text" data-aos="fade-up">5 домов Lounge-квартала на&nbsp;улице 65-летия победы</h2>
       <div class="section-title__ext t-2" data-aos="fade-up">
         <p>
-          Квартал расположен в новой части Арбеково, 
-          в 9 км от центра Пензы. Вблизи ледовый дворец, парки, 
-          прогулочные аллеи, смотровые площадки, стрит-ритейл, 
-          школы, детский сад нового поколения, медицинские центры.
-          Рядом удобная транспортная развязка и быстрый выезд 
-          на трассу М5, а значит возможность легко добраться
-          в любой конец города.
+          Квартал расположен в новой части <br>
+          Арбеково, в 9 км от центра Пензы.
         </p>
         <p>
-          Это обособленная экосистема жизни  и отдыха рядом 
-          с водой, обеспеченная парками, набережной, продуманным
-          благоустройством и высокой безопасностью, по соседству
-          с образовательными и торгово-развлекательными центрами.
+          Это обособленная экосистема жизни <br>
+          и отдыха рядом с водой, обеспеченная <br>
+          парками, набережной и высокой безопасностью.
         </p>
       </div>
     </div>
@@ -529,7 +526,7 @@
 <section id="chooseAppt">
   <div class="nadpis3 d-none-t d-none-m">
     <div class="container">
-      <img src="img/svg/nadpis3.svg">
+      <img src="img/svg/nadpis3.svg" data-aos="fade-in">
     </div>
   </div>
 
@@ -557,7 +554,7 @@
           <span>Закрыть фильтр</span>
         </div>
       </div>
-      <div id="apptFilter"  class="appt-filter">
+      <div id="apptFilter"  class="appt-filter" data-aos="fade-up">
         <div class="appt-filter__wrapper"></div>
         <div class="input-select mb-30" data-name="building">
           <div class="input-select__input">
@@ -1045,11 +1042,11 @@
 
 
 <section id="formCallback">
-  <div class="nadpisFormLeft d-desktop-only">
+  <div class="nadpisFormLeft d-desktop-only" data-aos="fade-right">
     <img src="img/svg/formBgrLeft.svg">
   </div>
 
-  <div class="nadpisFormRight d-desktop-only">
+  <div class="nadpisFormRight d-desktop-only" data-aos="fade-left">
     <img src="img/svg/formBgrRight.svg">
   </div>
 
@@ -1303,17 +1300,17 @@
         type: "fraction",
       },
       grabCursor: true,
-      effect: "creative",
-       creativeEffect: {
-        prev: {
-          shadow: false,
-          translate: ["-20%", 0, -1],
-          opacity: 0.3,
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
+      effect: "fade",
+      //  creativeEffect: {
+      //   prev: {
+      //     shadow: false,
+      //     translate: ["-20%", 0, -1],
+      //     opacity: 0.3,
+      //   },
+      //   next: {
+      //     translate: ["100%", 0, 0],
+      //   },
+      // },
       navigation: {
         nextEl: ".advantages-desc-button-next",
         prevEl: ".advantages-desc-button-prev",

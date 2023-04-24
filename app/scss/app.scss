@@ -154,6 +154,7 @@ body._lock {
 
 section#formCallback {
   position: relative;
+  overflow: hidden;
   .nadpisFormLeft {
     position: absolute;
     left: 0;
@@ -199,11 +200,13 @@ section#pageBuyingServices {
       -ms-flex: 1 1 50%;
       flex: 1 1 50%;
       padding-left: 40px;
+      text-transform: initial;
       &__text {
         text-transform: uppercase;
       }
       &__desc {
         padding-bottom: 40px;
+        font-family: var(--ff-main);
       }
       &__tiezers {
         display: flex;

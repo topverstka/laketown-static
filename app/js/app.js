@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   let aos = AOS.init();
-  window.aos = aos;
 
   function lockBody() {
     const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
@@ -72,6 +71,8 @@ $(document).ready(function() {
   $('#mapBlock #filterBtn').on('click', function() {
     $(this).toggleClass('show');
     $('#mapBlock').find('.map-filter').toggleClass('active');
+
+    if (window.innerWidth > 601) return;
     bodyLock();
   });
 
@@ -311,4 +312,8 @@ $(document).ready(function() {
 
     block.toggleClass('active');
   });
+
+  setTimeout(() => {
+    AOS.refresh()
+  }, 5000)
 });

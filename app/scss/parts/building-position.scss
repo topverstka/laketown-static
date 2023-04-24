@@ -37,6 +37,7 @@ section#buildingPosition .nadpis2 .container {
 section#buildingPosition .nadpis2 .container img {
   bottom: 0;
   position: absolute;
+  opacity: 0.5;
 
   @media (min-width: $desktop-l) {
     left: 30%;
@@ -94,6 +95,11 @@ section#buildingPosition .section-title__text {
 section#buildingPosition .section-title__ext {
   width: 30%;
   text-transform: initial;
+  font-size: 18px;
+
+  @media (max-width: $desktop-s) {
+    font-size: 16px;
+  }
 
   @media (max-width: $tablet-l) {
     max-width: 80% !important;
@@ -111,4 +117,9 @@ section#buildingPosition .section-title__ext {
   }
 }
 
+section#buildingPosition .section-title__ext br {
+  @media (max-width: $tablet-m) {
+    display: none;
+  }
+}
 

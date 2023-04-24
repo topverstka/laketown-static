@@ -3,7 +3,9 @@
   height: 80px;
   border: 1px solid;
   text-decoration: none;
-  @include transition(all, .5s);
+  background-color: transparent;
+  // @include transition(all, .5s);
+  transition: all 0.5s ease !important;
   
   @media (max-width: $phone) {
     height: 60px;
@@ -54,14 +56,14 @@
     @include btnColors($orangeMain, $orangeMain, $colorBgr, $orangeDark, $orangeDark, $colorBgr);
   }
   &-black-border {
-    @include btnColors($mainDark, transparent, $mainDark, $orangeDark, $orangeDark, $colorBgr);
+    @include btnColors($mainDark, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
   }
   &-orange-border {
-    @include btnColors($orangeMain, transparent, $orangeMain, $orangeDark, $orangeDark, $colorBgr);
+    @include btnColors($orangeMain, rgba(255,255,255,0), $orangeMain, $orangeDark, $orangeDark, $colorBgr);
   }
 
   &-orange-border-black {
-    @include btnColors($orangeMain, transparent, $mainDark, $orangeDark, $orangeDark, $colorBgr);
+    @include btnColors($orangeMain, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
   }
 
   // link btns

@@ -298,9 +298,12 @@ section#advantages {
 }
 
 #advSlider .item-icons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 250px));
+  gap: 20px;
 }
 
 #advSlider .item-icons-item {
@@ -358,6 +361,7 @@ section#advantages {
 
 .advantages-desc-carousel h3 {
   margin-top: 0;
+  margin-bottom: 40px;
 
   @media (max-width: $tablet-s) {
     margin-bottom: 20px;
@@ -366,8 +370,14 @@ section#advantages {
 
 .advantages-desc-carousel .item-text {
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
+  @media (min-width: $desktop-s + 1) {
+    max-width: 80%;
+  }
+  @media (max-width: $dekstop-s) {
+    margin-bottom: 40px;
+  }
   @media (max-width: $tablet-s) {
     margin-bottom: 30px;
   }
@@ -375,6 +385,7 @@ section#advantages {
 
 .advantages-desc-carousel .item-text p {
   font-size: inherit;
+  margin-bottom: 1.2em;
 }
 
 .advantages-desc-carousel .item-text p br {
@@ -448,7 +459,7 @@ section#advantages {
   z-index: 5;
   display: grid;
   transform: translateY(-165px);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1.6fr;
   margin-bottom: -70px;
 
   @media (max-width: $tablet-m) {
@@ -505,6 +516,9 @@ section#advantages {
   pointer-events: none;
   position: static;
   width: 100%;
+  text-align: left;
+  margin-left: 50px;
+  letter-spacing: -0.06em;
 }
 
 .advantages-desc-pagination span {

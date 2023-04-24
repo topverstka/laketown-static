@@ -1,5 +1,4 @@
 section#chooseAppt {
-  overflow: hidden;
   position: relative;
   padding-top: 200px;
 
@@ -120,12 +119,11 @@ section#chooseAppt {
     }
 
     .appt-filter {
-      -webkit-flex: 1 0 auto;
-      -moz-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
       flex: 1 0 auto;
       margin-left: 145px;
       order: 1;
+      position: sticky;
+      top: 30px;
 
       @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
         margin-left: 115px;
@@ -133,6 +131,12 @@ section#chooseAppt {
     }
   }
 
+}
+
+section#chooseAppt {
+  @media (max-width: $tablet-l) {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: $tablet-l + 1) {

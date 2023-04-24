@@ -45,6 +45,7 @@
         border: 1px solid transparent;
         position: relative;
         @include borderRadius(60px);
+        @include transition(all, .5s);
         img {
           height: 100%;
           width: 100%;
@@ -79,6 +80,7 @@
       }
       &:hover {
         @media (any-hover:hover) {
+          color: $orangeMain;
           .services-item__image {
             img {
               @include transform(scale, 1.2);
@@ -128,6 +130,7 @@
 }
 
 
-#pageServices .section-pills .services-item .services-item__image {
-
+#pageServices .section-pills .services-item {
+  color: $mainDark;
+  text-decoration: none;
 }

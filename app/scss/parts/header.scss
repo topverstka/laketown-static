@@ -220,6 +220,7 @@ header {
             margin-top: 28px;
           }
 
+          a, {
           span {
             opacity: 0;
             position: absolute;
@@ -309,8 +310,9 @@ header .h-1 {
     width: 100%;
   }
 
+  header .header-wrap .header-block .btn-block .add-text a,
   header .header-wrap .header-block .btn-block .add-text span {
-      width: 100%;
+    width: 100%;
   }
 }
 
