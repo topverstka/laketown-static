@@ -28,7 +28,7 @@
   .section-pills {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     margin-left: -20px;
     margin-right: -20px;
@@ -47,7 +47,8 @@
         @include borderRadius(60px);
         img {
           height: 100%;
-          width: auto;
+          width: 100%;
+          object-fit: cover;
           @include transition(all, .5s);
 
         }
@@ -70,10 +71,6 @@
           height: 500px;
 
         }
-        @media (max-width: $tablet-m) {
-          height: 400px;
-
-        }
 
         @media (max-width: $phone) {
           height: 200px;
@@ -91,6 +88,19 @@
           }
         }
       }
+
+      @media (max-width: $desktop-s) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: $tablet-m) {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media (max-width: $tablet-m) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
