@@ -244,6 +244,7 @@ header .header-wrap .header-block .btn-block .add-text span {
   @include addText;
   font-family: var(--font-main);
   text-decoration: underline;
+  color: $mainDark;
   @include transition(all, 1s);
 
   &.active {

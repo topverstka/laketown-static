@@ -159,4 +159,8 @@ $(document).ready(function() {
       }
   }
   scrollToAnchor();
+
+  setTimeout(() => {
+
+  }, 3000)
 });
