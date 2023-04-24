@@ -11,7 +11,7 @@
     justify-content: flex-start;
     position: relative;
 
-    @media (max-width: $tablet-m) {
+    @media (max-width: $tablet-l) {
       flex-direction: column;
     }
   }
@@ -26,14 +26,14 @@
         max-width: 80%;
         position: relative;
 
-        @media (max-width: $tablet-m) {
+        @media (max-width: $tablet-l) {
           max-width: 100%;
         }
       }
       .image-wrapper img {
         width: 100%;
       }
-      @media (max-width: $tablet-m) {
+      @media (max-width: $tablet-l) {
         margin-bottom: 40px;
       }
     }
@@ -43,7 +43,7 @@
       margin-right: auto;
       max-width: 50%;
 
-      @media (max-width: $tablet-m) {
+      @media (max-width: $tablet-l) {
         max-width: 100%;
         width: 100%;
       }
@@ -64,12 +64,12 @@
           margin-bottom: 40px;
           color: $mainDark;
 
-          @media (max-width: $tablet-m) {
+          @media (max-width: $tablet-l) {
             margin-bottom: 30px;
           }
         }
         .prop:last-child {
-          @media (max-width: $tablet-m) {
+          @media (max-width: $tablet-l) {
             margin-bottom: 0;
           }
         }
@@ -80,16 +80,16 @@
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
-        @media (max-width: $tablet-m) {
+        @media (max-width: $tablet-l) {
           margin-top: 50px;
           justify-content: space-between;
         }
       }
       .btns .btn {
         margin-right: 40px;
-        @media (max-width: $tablet-m) {
+        @media (max-width: $tablet-l) {
           margin-right: 20px;
-          flex-basis: 50%;
+          flex-basis: 48%;
         }
         @media (max-width: $phone) {
           flex-basis: 100%;
@@ -111,7 +111,7 @@
     margin-top: 200px;
     margin-bottom: 80px;
 
-    @media (max-width: $tablet-m) {
+    @media (max-width: $tablet-l) {
       margin-top: 100px;
       margin-bottom: 50px;
     }
@@ -126,7 +126,7 @@
     @media (max-width: $desktop-s) {
       height: 800px;
     }
-    @media (max-width: $tablet-m) {
+    @media (max-width: $tablet-l) {
       height: 600px;
     }
     @media (max-width: $phone) {
@@ -138,7 +138,7 @@
     width: 100%;
   }
 
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
     padding-top: 70px;
     padding-bottom: 0;
   }

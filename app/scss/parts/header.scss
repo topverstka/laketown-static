@@ -118,12 +118,15 @@ body.modal-open {
   header .phone {
     margin-right: 34px;
   }
+  header .recall {
+    margin-right: -20px;
+  }
+}
+
+@media (min-width: $tablet-l + 1) {
   header .phone a {
     font-size: 33px;
     font-family: var(--font-alimini);
-  }
-  header .recall {
-    margin-right: -20px;
   }
 }
 
@@ -237,6 +240,9 @@ header {
         }
       }
     }
+  }
+  @media (max-width: $phone) {
+    overflow: visible;
   }
 }
 

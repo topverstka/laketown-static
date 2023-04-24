@@ -2,6 +2,7 @@ section#buildingPosition {
   padding-top: 200px;
   position: relative;
   padding-bottom: 120px;
+  overflow: hidden;
 
   @media (max-width: $tablet-s) {
     padding-top: 125px;

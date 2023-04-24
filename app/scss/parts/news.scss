@@ -2,6 +2,7 @@ section#news {
   padding-top: 200px;
   padding-bottom: 190px;
   background: $colorBgr;
+  overflow: hidden;
   
   @media (max-width: $tablet-l - 1) {
     padding-top: 150px;
@@ -84,6 +85,8 @@ section#news .section-pills__item {
   @media (max-width: $phone) {
     width: 100%;
     height: 300px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -101,14 +104,7 @@ section#news .section-pills__item .pill {
   overflow: hidden;
   cursor: pointer;
   background: $colorBgr;
-
-  @media (min-width: $tablet-l) {
-    @include borderRadius(60px);
-  }
-
-  @media (max-width: $tablet-l - 1) {
-    @include borderRadius(60px);
-  }
+  @include borderRadius(60px);
 
   @media (max-width: $phone) {
     @include borderRadius(30px);

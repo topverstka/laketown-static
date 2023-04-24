@@ -78,13 +78,15 @@
         }
       }
       &:hover {
-        .services-item__image {
-          img {
-            @include transform(scale, 1.2);
-          }
-          a {
-            z-index: 100;
-            opacity: 1;
+        @media (any-hover:hover) {
+          .services-item__image {
+            img {
+              @include transform(scale, 1.2);
+            }
+            a {
+              z-index: 100;
+              opacity: 1;
+            }
           }
         }
       }
@@ -123,4 +125,9 @@
   @media (max-width: $phone) {
     padding-bottom: 40px;
   }
+}
+
+
+#pageServices .section-pills .services-item .services-item__image {
+
 }
