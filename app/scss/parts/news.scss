@@ -212,6 +212,11 @@ section#news .all-btn {
 
 
 
+section#news .section-title {
+  @media (max-width: $phone) {
+    padding-bottom: 40px;
+  }
+}
 section#news .section-title__btn {
   @media (max-width: $tablet-s) {
     display: none;
