@@ -116,5 +116,11 @@
 #pageServices .services-item__text {
   @media (max-width: $phone) {
     font-size: 20px;
+    margin-top: 20px;
+  }
+}
+#pageServices .section-title {
+  @media (max-width: $phone) {
+    padding-bottom: 40px;
   }
 }
