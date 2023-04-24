@@ -22,17 +22,17 @@ section#mapBlock .filter-btn #filterBtn svg {
   position: absolute;
   @include transition(bottom, .5s);
 
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m) {
     right: 80px;
     bottom: 40px;
     right: 20px;
   }
 
-  @media (max-width: $tablet-s - 1) {
+  @media (max-width: $tablet-m - 1) {
     width: calc(100% - 40px);
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     left: 50%;
     bottom: 60px;
     -webkit-transform: translateX(-50%);
@@ -46,10 +46,10 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 #filterBtn.show {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     bottom: 200px;
   }
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     position: fixed;
     z-index: 11;
     bottom: 30px;
@@ -57,34 +57,19 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 #filterBtn.show .hide-filter {
-  @media (min-width: $tablet-s) {
-    display: block;
-  }
-  @media (max-width: $phone) {
-    display: block;
-  }
+  display: block;
 }
 
 #filterBtn.show .show-filter {
-  @media (min-width: $tablet-s) {
-    display: none;
-  }
-  @media (max-width: $phone) {
-    display: none;
-  }
+  display: none;
 }
 
 #filterBtn .hide-filter {
-  @media (min-width: $tablet-s) {
-    display: none;
-  }
-  @media (max-width: $phone) {
-    display: none;
-  }
+  display: none;
 }
 
 .map-filter {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     position: absolute;
     opacity: 0;
     height: 0;
@@ -99,7 +84,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .8s);
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     position: absolute;
     opacity: 0;
     height: 0;
@@ -113,7 +98,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     background: $orangeMain;
     @include transition(all, .8s);
   }
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     position: fixed;
     bottom: -200vh;
     left: 0;
@@ -137,7 +122,7 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter.active {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m) {
     opacity: 1;
     height: 120px;
 
@@ -145,7 +130,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .8s);
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     // padding-top: 30px;
     opacity: 1;
     bottom: 0;
@@ -153,18 +138,18 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter.active .map-filter__item {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     height: 120px;
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     height: 80px;
     min-height: 80px;
   }
 }
 
 .map-filter__item {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     height: 0;
     -webkit-flex: 1 1 auto;
     -moz-flex: 1 1 auto;
@@ -178,7 +163,7 @@ section#mapBlock .filter-btn #filterBtn svg {
     @include transition(all, .5s);
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     height: 0;
     width: 100%;
     -webkit-flex: 1 1 auto;
@@ -196,12 +181,12 @@ section#mapBlock .filter-btn #filterBtn svg {
 
 .map-filter__item svg path,
 .map-filter__item span {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     fill: none;
     stroke: $colorBgr;
     color: $colorBgr;
   }
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     fill: none;
     stroke: $mainDark;
     color: $mainDark;
@@ -209,11 +194,11 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter__item svg.fill path {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     fill: $colorBgr;
   }
 
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     fill: $mainDark;
   }
 }
@@ -226,14 +211,14 @@ section#mapBlock .filter-btn #filterBtn svg {
 
 
 .map-filter__item.active {
-  @media (min-width: $tablet-s) {
+  @media (min-width: $tablet-m + 1) {
     background: $orangeDark;
   }
 }
 
 .map-filter__item:hover {
   @media (any-hover:hover) {
-    @media (max-width: $phone) {
+    @media (max-width: $tablet-m) {
       svg path, span {
         fill: none;
         stroke: $colorBgr;
@@ -247,7 +232,7 @@ section#mapBlock .filter-btn #filterBtn svg {
 }
 
 .map-filter__item.active {
-  @media (max-width: $phone) {
+  @media (max-width: $tablet-m) {
     svg path, span {
       fill: none;
       stroke: $colorBgr;
