@@ -96,6 +96,7 @@
           text-decoration: none;
           color: $orangeMain;
           @include transition(all, .5s);
+          border-bottom: 1px solid;
           &:hover {
             color: $orangeDark;
 

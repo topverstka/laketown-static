@@ -373,7 +373,7 @@ section#advantages {
   margin-bottom: 60px;
 
   @media (min-width: $desktop-s + 1) {
-    max-width: 80%;
+    max-width: 90%;
   }
   @media (max-width: $desktop-s) {
     margin-bottom: 40px;
@@ -384,6 +384,7 @@ section#advantages {
 }
 
 .advantages-desc-carousel .item-text p {
+  line-height: 1.45;
   font-size: inherit;
   margin-bottom: 1.2em;
 }
