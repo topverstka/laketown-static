@@ -107,3 +107,9 @@
 
 
 }
+
+#pageServices .services-item__text {
+  @media (max-width: $phone) {
+    font-size: 20px;
+  }
+}
