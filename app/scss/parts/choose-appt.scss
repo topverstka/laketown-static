@@ -205,7 +205,11 @@ section#chooseAppt {
 }
 
 .choose-apps__button-manager {
-  font-size: 14px
+  font-size: 18px;
+  
+  @media (max-width: $phone) {
+    font-size: 14px;
+  }
 }
 
 .choose-apps__button-manager span {

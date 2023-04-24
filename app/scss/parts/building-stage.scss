@@ -130,6 +130,7 @@ section#buildingStage .section-content .slider-btns {
   justify-content: space-between;
   top: 54%;
   transform: translateY(-50%);
+  left: 90px;
 
   @media (max-width: $desktop-s) {
     width: 66.8%;
@@ -155,12 +156,12 @@ section#buildingStage .section-content .slider-btns .navBtn:hover svg path {
   stroke: $colorBgr;
 }
 
-section#buildingStage .section-content .slider-btns .navBtn.disabled {
+section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabled {
   border-color: $borderGray;
   background: $borderGray;
 }
 
-section#buildingStage .section-content .slider-btns .navBtn.disabled svg path {
+section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabled svg path {
   fill:none;
   stroke: $colorBgr;
 }
@@ -377,4 +378,10 @@ section#buildingStage .section-content .slider-nav .slider-point {
 }
 #buildingStage .swiper-pagination .swiper-pagination-bullet-active {
   background: $orangeDark;
+}
+
+.slider-stages-buttons {
+  @media (max-width: $tablet-l) {
+    display: none;
+  }
 }

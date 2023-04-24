@@ -31,7 +31,7 @@
   display: block;
   height: 200%;
   width: 100%;
-  transform: translateY(#{'calc(0vh - var(--scroll-top) / 3)'});
+  transform: translateY(#{'calc(-0.1vh - var(--scroll-top) / 3)'});
   object-fit: cover;
   
   @media (max-width: $phone) {

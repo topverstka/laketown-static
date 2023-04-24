@@ -342,7 +342,7 @@ section#advantages {
   text-transform: uppercase;
   color: $mainBlue;
   margin-right: 20px;
-  white-space: nowrap;
+  white-space: wrap;
 
   @media (max-width: $tablet-s) {
     font-size: 18px;
@@ -461,7 +461,8 @@ section#advantages {
   display: grid;
   transform: translateY(-165px);
   grid-template-columns: 1fr 1fr 1.6fr;
-  margin-bottom: -70px;
+  // margin-bottom: -70px;
+  margin-bottom: 30px;
 
   @media (max-width: $tablet-m) {
     transform: translateY(-185px);

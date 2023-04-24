@@ -42,12 +42,12 @@ section#buyingServices .section-title__btns .navBtn:hover svg path {
   stroke: $colorBgr;
 }
 
-section#buyingServices .section-title__btns .navBtn.disabled {
+section#buyingServices .section-title__btns .navBtn.swiper-button-disabled {
   border-color: $borderGray;
   background: $borderGray;
 }
 
-section#buyingServices .section-title__btns .navBtn.disabled svg path {
+section#buyingServices .section-title__btns .navBtn.swiper-button-disabled svg path {
   fill:none;
   stroke: $colorBgr;
 }

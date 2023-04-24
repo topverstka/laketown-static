@@ -2,11 +2,11 @@ section#buildingPosition {
   padding-top: 200px;
   position: relative;
   padding-bottom: 120px;
-  overflow: hidden;
 
   @media (max-width: $tablet-s) {
     padding-top: 125px;
     padding-bottom: 80px;
+    overflow: hidden;
   }
   @media (max-width: $phone) {
     padding-top: 100px;
@@ -26,7 +26,6 @@ section#buildingPosition .nadpis2 {
 }
 
 section#buildingPosition .nadpis2 .container {
-  overflow: hidden;
   height: inherit;
 
   @media (max-width: $desktop-s) {
