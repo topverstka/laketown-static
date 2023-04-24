@@ -124,17 +124,155 @@
     console.warn('Can not load ymaps')
   }
   function init(){
-    // Создание карты.
+
+    const companyLogo = `${window.location.href}img/laketown.svg`
+    const pharmacyLogo = `${window.location.href}img/pharmacy.svg`
+
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    );
+
     var myMap = new ymaps.Map("map", {
-      // Координаты центра карты.
-      // Порядок по умолчанию: «широта, долгота».
-      // Чтобы не определять координаты центра карты вручную,
-      // воспользуйтесь инструментом Определение координат.
       center: [55.76, 37.64],
-      // Уровень масштабирования. Допустимые значения:
-      // от 0 (весь мир) до 19.
       zoom: 7
     });
+
+    var myCircle = new ymaps.Circle([
+        // Координаты центра круга.
+        [55.76, 37.60],
+        // Радиус круга в метрах.
+        3000
+    ], {
+        // Описываем свойства круга.
+        // Содержимое балуна.
+        balloonContent: "3 км",
+        // Содержимое хинта.
+        hintContent: "30 минут"
+    }, {
+        // Задаем опции круга.
+        // Включаем возможность перетаскивания круга.
+        draggable: false,
+        // Цвет заливки.
+        // Последний байт (77) определяет прозрачность.
+        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+        
+        fillColor: "#d6915340",
+        // Цвет обводки.
+        strokeColor: "#D69153",
+        // Прозрачность обводки.
+        strokeOpacity: 0.8,
+        // Ширина обводки в пикселях.
+        strokeWidth: 2
+    });
+
+    var myCircle2 = new ymaps.Circle([
+        // Координаты центра круга.
+        [55.76, 37.60],
+        // Радиус круга в метрах.
+        1500
+    ], {
+        // Описываем свойства круга.
+        // Содержимое балуна.
+        balloonContent: "1.5 км",
+        // Содержимое хинта.
+        hintContent: "15 минут"
+    }, {
+        // Задаем опции круга.
+        // Включаем возможность перетаскивания круга.
+        draggable: false,
+        // Цвет заливки.
+        // Последний байт (77) определяет прозрачность.
+        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+        
+        fillColor: "#d6915340",
+        // Цвет обводки.
+        strokeColor: "#D69153",
+        // Прозрачность обводки.
+        strokeOpacity: 0.8,
+        // Ширина обводки в пикселях.
+        strokeWidth: 2
+    });
+
+    var myCircle3 = new ymaps.Circle([
+        // Координаты центра круга.
+        [55.76, 37.60],
+        // Радиус круга в метрах.
+        500
+    ], {
+        // Описываем свойства круга.
+        // Содержимое балуна.
+        balloonContent: "500 м",
+        // Содержимое хинта.
+        hintContent: "5 минут"
+    }, {
+        // Задаем опции круга.
+        // Включаем возможность перетаскивания круга.
+        draggable: false,
+        // Цвет заливки.
+        // Последний байт (77) определяет прозрачность.
+        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+        
+        fillColor: "#d6915340",
+        // Цвет обводки.
+        strokeColor: "#D69153",
+        // strokeColor: "#D69153",
+        // Прозрачность обводки.
+        strokeOpacity: 0.8,
+        // Ширина обводки в пикселях.
+        strokeWidth: 2
+    });
+
+    let company = new ymaps.Placemark([55.761574, 37.593856], {
+      hintContent: '',
+      balloonContent: '',
+      iconContent: ''
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: companyLogo,
+      // Размеры метки.
+      iconImageSize: [48, 48],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: MyIconContentLayout
+    });
+
+    let p1 = new ymaps.Placemark([55.761574, 37.573856], {
+      hintContent: '',
+      balloonContent: '',
+      iconContent: ''
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: pharmacyLogo,
+      // Размеры метки.
+      iconImageSize: [48, 48],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: MyIconContentLayout
+    });
+
+    myMap.geoObjects.add(myCircle);
+    myMap.geoObjects.add(myCircle2);
+    myMap.geoObjects.add(myCircle3);
+    myMap.geoObjects.add(company);
+    myMap.geoObjects.add(p1);
+
+    console.log(companyLogo)
+    console.log(pharmacyLogo)
   }
 
 
