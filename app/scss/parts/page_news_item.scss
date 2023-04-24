@@ -77,21 +77,49 @@
         }
 
         blockquote {
+          position: relative;
+          z-index: 1;
           margin: 80px 0 80px 100px;
           height: 210px;
-          background: no-repeat left center url("../img/quote.png") !important;
           padding-left: 115px;
           display: flex;
           align-items: center;
 
           @media (max-width: $tablet-s) {
-            background-size: 91px !important;
-            background-position: top left !important;
             padding-left: 50px;
           }
           @media (max-width: $phone) {
-            background-size: 71px !important;
             margin-left: 0;
+          }
+        }
+        blockquote:before {
+          content: "";
+          display: block;
+          position: absolute;
+          --size: 287px;
+          max-width: var(--size);
+          min-width: var(--size);
+          width: var(--size);
+          height: var(--size);
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          z-index: -1;
+          background: no-repeat left center url("../img/quote.png");
+          background-size: contain;
+          @media (max-width: $tablet-l) {
+            --size: 205px
+          }
+          @media (max-width: $tablet-m) {
+            --size: 143px
+          }
+          @media (max-width: $phone) {
+            top: 35px;
+            transform: none;
+            --size: 71px
+          }
+          @media (max-width: 360px) {
+            top: 20px;
           }
         }
 

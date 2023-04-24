@@ -284,34 +284,34 @@ section#pageBuyingServices {
 
 
 
-@media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
-  #pageNewsItem {
-    .article-section-content {
-      max-width: 75% !important;
-      blockquote {
-        height: 157px !important;
-        background: no-repeat left center/25% url("/img/quote.png") !important;
-        padding-left: 80px;
-      }
+// @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
+//   #pageNewsItem {
+//     .article-section-content {
+//       max-width: 75% !important;
+//       blockquote {
+//         height: 157px !important;
+//         background: no-repeat left center/25% url("/img/quote.png") !important;
+//         padding-left: 80px;
+//       }
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
-@media (max-width: $tablet-s - 1px) {
-  #pageNewsItem {
-    .article-section-content {
-      max-width: 75% !important;
-      blockquote {
-        height: 140px !important;
-        background: no-repeat left/25% center url("/img/quote.png") !important;
-        padding-left: 80px;
-      }
+// @media (max-width: $tablet-s - 1px) {
+//   #pageNewsItem {
+//     .article-section-content {
+//       max-width: 75% !important;
+//       blockquote {
+//         height: 140px !important;
+//         background: no-repeat left/25% center url("/img/quote.png") !important;
+//         padding-left: 80px;
+//       }
 
-    }
-  }
+//     }
+//   }
 
-}
+// }
 
 #pageNewsItem .article-section-content {
   @media (max-width: $tablet-m) {
