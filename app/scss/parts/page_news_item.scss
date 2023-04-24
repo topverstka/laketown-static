@@ -84,11 +84,14 @@
           display: flex;
           align-items: center;
 
-          @media (max-width: $phone) {
-            padding-left: 50px;
-            margin-left: 0;
-            background-size: 71px;
+          @media (max-width: $tablet-s) {
+            background-size: 91px;
             background-position: top left;
+            padding-left: 50px;
+          }
+          @media (max-width: $phone) {
+            background-size: 71px;
+            margin-left: 0;
           }
         }
 
