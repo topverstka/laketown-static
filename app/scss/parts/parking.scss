@@ -1,5 +1,12 @@
 section#parking {
+  background: none;
+  padding-top: 0;
+
+}
+
+.parking__inner {
   padding-top: 210px;
+  background: #f6f5f1;
 
   @media (max-width: $tablet-s) {
     padding-top: 145px;
@@ -202,8 +209,15 @@ section#parking .section-content {
 
 section#parking .section-content img {
   width: 100%;
-  height: 100%;
+  height: inherit;
   object-fit: cover;
+  position: fixed;
+  top: 0;
+  z-index: -3;
+  transition: all 0.3s ease;
+}
+section#parking.active .section-content img {
+  z-index: -1;
 }
 
 

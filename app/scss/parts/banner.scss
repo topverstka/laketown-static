@@ -25,28 +25,28 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  // background-attachment: fixed;
-  // transform-style: preserve-3d;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 } 
+
 .banner__img,
 .banner__video {
   content: "";
   position: absolute;
   top: 0;
   display: block;
-  height: 200%;
+  height: inherit;
   width: 100%;
-  // transform: translateY(#{'calc(-0.1vh - var(--scroll-top) / 3)'});
-  // transform: translateY(#{'calc(-14vh + var(--scroll-top)/ 20)'});
-  transform: translateY(#{'calc(-7vh + var(--scroll-top)/ 15)'});
+  // transform: translateY(#{'calc(-7vh + var(--scroll-top)/ 15)'});
   object-position: top;
   object-fit: cover;
   
-  @media (max-width: $phone) {
-    height: 200%;
-    transform: translateY(#{'calc(-50vh + var(--scroll-top) / 4)'});
+  // @media (max-width: $phone) {
+    // height: 100%;
+    // transform: translateY(#{'calc(-50vh + var(--scroll-top) / 4)'});
     // background-position: center #{'calc(-50vh + var(--scroll-top) / 4)'};
-  }
+  // }
 }
 
 .banner .companyName {

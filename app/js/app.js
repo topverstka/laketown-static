@@ -163,4 +163,38 @@ $(document).ready(function() {
   setTimeout(() => {
 
   }, 3000)
+
+
+  const parallaxed = [...document.querySelectorAll('.has-parallax')];
+  // window.addEventListener('scroll', (e) => {
+  //   const parallaxedBound = parallaxed.map(elem => {
+  //     const bound = elem.parentElement.getBoundingClientRect();
+  //     const {top, bottom} = bound;
+  //     return {
+  //       top,
+  //       bottom,
+  //       elem
+  //     }
+  //   })
+  //   console.log(parallaxedBound)
+
+  //   if (parallaxedBound[0].bottom < 0) {
+  //     parallaxedBound.
+  //   }
+  // })
+
+
+  const box = document.querySelector('#parking .section-content');
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(box, {
+    scrollTrigger: {
+        trigger: box.parentElement,
+        start: 'top center',
+        end: 'bottom + 100%',
+        toggleClass: 'active',
+        markers: false // only for debugging purposes
+    }
+  });
+
 });
