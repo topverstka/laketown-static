@@ -503,6 +503,9 @@ section#advantages .slider-images {
   @media (max-width: $desktop-s) {
     width: 127%;
   }
+  @media (max-width: $tablet-l) {
+    width: 100%;
+  }
   @media (max-width: $tablet-m) {
     padding-right: 20px;
     margin-right: -20px;
@@ -525,6 +528,7 @@ section#advantages .slider-images {
   z-index: 5;
   display: grid;
   grid-template-columns: 1fr 1fr 1.6fr;
+  margin-bottom: 2px;
 
   @media (max-width: $desktop-s) {
     column-gap: 20px;
