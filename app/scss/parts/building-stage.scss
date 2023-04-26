@@ -206,6 +206,7 @@ section#buildingStage .slider-stages-carousel {
   margin-right: -100px;
   width: #{'calc(100% + 200px)'};
   padding-left: 100px;
+  padding-right: 100px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-m) {
@@ -226,6 +227,10 @@ section#buildingStage .section-content #sliderStages .slider-item__image {
 
   @media (max-width: $desktop-s) {
     height: 500px;
+  }
+
+  @media (max-width: $desktop-xs) {
+    height: 450px;
   }
 
   @media (max-width: $tablet-l) {

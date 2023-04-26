@@ -12,6 +12,7 @@
 
 // PARTS
 @import "parts/header";
+@import "parts/burger";
 @import "parts/footer";
 @import "parts/banner";
 @import "parts/advantages";
@@ -70,7 +71,7 @@ body._lock {
 .nadpis3 {
   position: absolute;
   top: -10px;
-  right: -30px;
+  right: 10px;
 }
 
 .d-none-t {

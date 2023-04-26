@@ -299,7 +299,7 @@ section#advantages .slider-images {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 24px;
+  padding-bottom: 34px;
 }
 
 #advSlider .item-icons-item {
@@ -393,6 +393,10 @@ section#advantages .slider-images {
   margin-top: 0;
   margin-bottom: 40px;
 
+
+  @media (max-width: $desktop-xs) {
+    margin-bottom: 20px;
+  }
   @media (max-width: $tablet-m) {
    transform: translateY(-570px);
    position: absolute;
@@ -416,6 +420,9 @@ section#advantages .slider-images {
   }
   @media (max-width: $desktop-s) {
     margin-bottom: 40px;
+  }
+  @media (max-width: $desktop-xs) {
+    margin-bottom: 20px;
   }
   @media (max-width: $tablet-s) {
     margin-bottom: 30px;

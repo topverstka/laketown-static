@@ -22,6 +22,9 @@ section#buyingServices .section-title__text {
 
 section#buyingServices .section-title {
 
+  @media (max-width: $desktop-xs) {
+    padding-bottom: 50px;
+  }
   @media (max-width: $tablet-m) {
     padding-bottom: 60px;
   }
@@ -94,6 +97,10 @@ section#buyingServices .section-content .swiper-wrapper .slider-item__image {
     height: 500px;
   }
 
+  @media (max-width: $desktop-xs) {
+    height: 370px;
+  }
+
   @media (max-width: $tablet-s) {
     height: 400px;
   }
@@ -115,6 +122,11 @@ section#buyingServices .section-content .swiper-wrapper .slider-item__text {
   font-family: var(--font-alimini);
   text-decoration: none !important;
   color: $mainDark;
+
+  @media (max-width: $desktop-xs) and (min-width: $tablet-l + 1) {
+    margin-top: 20px;
+    font-size: 36px;
+  }
 
   @media (max-width: $phone) {
     font-size: 24px;

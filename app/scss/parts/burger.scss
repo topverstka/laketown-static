@@ -1,0 +1,53 @@
+.burger {
+  --c-burger-line: #fff;
+  --line-width: 61.5%;
+  --line-height: 2px;
+  position: relative;
+  width: var(--burger-width, 40px);
+  height: var(--burger-height, 40px);
+  transition: var(--tr, all 0.3s ease);
+
+  // @media (min-width: $tablet + 1) {
+  //   display: none;
+  // }
+}
+
+.burger .burger__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-width, 40%);
+  height: var(--line-height, 0.2rem);
+  background: var(--c-burger-line, var(--c-text-regular));
+  transition: var(--tr, all 0.3s ease);
+  border-radius: 2rem;
+}
+
+.burger .burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 8px));
+}
+
+.burger .burger__line:nth-child(2) {
+  transform: translate(-50%, -50%);
+}
+
+.burger .burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 8px));
+}
+
+.show .burger__line:nth-child(1),
+.burger.is-active .burger__line:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.show .burger__line:nth-child(2),
+.burger.is-active .burger__line:nth-child(2) {
+  transform: translate(-50%, -50%) scaleX(0);
+}
+
+.show .burger__line:nth-child(3),
+.burger.is-active .burger__line:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: unset;
+}

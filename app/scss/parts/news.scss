@@ -7,6 +7,9 @@ section#news {
   @media (max-width: $desktop-s) {
     padding-bottom: 165px;
   }
+  @media (max-width: $desktop-xs) {
+    padding-bottom: 135px;
+  }
   
   @media (max-width: $tablet-l - 1) {
     padding-top: 150px;
@@ -157,16 +160,23 @@ section#news.pageSection .btnBlock {
   @media (min-width: $tablet-l) {
     padding: 80px 30px;
   }
+
   @media (max-width: $desktop-s) {
     padding: 30px 40px 110px;
     text-transform: uppercase;
   }
+  @media (max-width: $desktop-xs) {
+    padding: 30px 40px 70px;
+  }
+
   @media (max-width: $tablet-l - 1) {
     padding: 40px 20px;
   }
+
   @media (max-width: $tablet-m) {
     padding: 40px 20px;
   }
+  
   @media (max-width: $phone) {
     font-size: 24px;
     padding: 20px;
