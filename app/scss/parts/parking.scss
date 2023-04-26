@@ -47,6 +47,10 @@ section#parking .section-title-wrapper .arrow-title {
     top: -4px;
     left: -83px;
   }
+  @media (max-width: $desktop-xs) {
+    left: -143px;
+  }
+
   @media (max-width: $tablet-l) {
     display: none;
   }
@@ -93,10 +97,12 @@ section#parking .section-title-desc {
     margin-right: -25px;
     margin-top: 10px;
   }
+  @media (max-width: $desktop-xs) {
+    margin-right: 0;
+  }
 
   @media (max-width: $tablet-l) {
     flex-basis: 63%;
-    margin-right: 0;
   }
 
   @media (max-width: $tablet-m) {
@@ -209,17 +215,11 @@ section#parking .section-content {
 section#parking .section-content img {
   width: 100%;
   object-fit: cover;
-  height: inherit;
+  height: 100vh;
   position: fixed;
   top: 0;
   z-index: -3;
   transition: all 0.3s ease;
-
-
-  
-  @media (min-width: $phone + 1) and (max-width: $tablet-l) {
-    height: 100%;
-  }
 }
 section#parking.active .section-content img {
   z-index: -1;

@@ -1,8 +1,9 @@
 section#buyingServices {
-  padding-top: 200px;
+  padding-top: 100px;
 
   @media (max-width: $desktop-s - 1) {
-    padding-top: 150px;
+    padding-top: 100px;
+    // padding-top: 150px;
   }
 
   @media (max-width: $tablet-m) {

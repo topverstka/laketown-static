@@ -1,10 +1,13 @@
 section#advantages {
   overflow: hidden;
   position: relative;
-  padding-top: 200px;
+  padding-top: 100px;
 
   @media (max-width: $desktop-m) {
-    padding-top: 200px;
+    padding-top: 100px;
+  }
+  @media (max-width: $tablet-l) {
+    padding-top: 80px;
   }
   @media (max-width: $tablet-s) {
     padding-top: 150px;
@@ -404,6 +407,9 @@ section#advantages .slider-images {
     margin-bottom: 20px;
   }
   @media (max-width: $phone) {
+   transform: translateY(-430px);
+  }
+  @media (max-width: $phone-m) {
    transform: translateY(-280px);
   }
 }
@@ -483,9 +489,12 @@ section#advantages .slider-images {
   }
 
   @media (max-width: $phone) {
-    height: 200px;
+    height: 350px;
     padding-left: 5px;
     padding-right: 5px;
+  }
+  @media (max-width: $phone-m) {
+    height: 350px;
   }
 }
 
@@ -534,11 +543,15 @@ section#advantages .slider-images {
     column-gap: 20px;
   }
 
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
     transform: translateY(-605px);
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  @media (max-width: $phone) {
+    transform: translateY(-445px);
   }
   @media (max-width: $phone) {
     transform: translateY(-300px);

@@ -97,6 +97,7 @@ section#news.pageSection .btnBlock {
   border: 1px solid transparent;
   position: relative;
   height: 100%;
+  min-height: inherit;
   overflow: hidden;
   cursor: pointer;
   background: $colorBgr;
@@ -112,6 +113,7 @@ section#news.pageSection .btnBlock {
   z-index: 2;
   width: inherit;
   height: 100%;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

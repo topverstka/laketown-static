@@ -542,7 +542,7 @@
           <span>Закрыть фильтр</span>
         </div>
       </div>
-      <div id="apptFilter"  class="appt-filter" data-aos="fade-up" data-aos-delay="300">
+      <div id="apptFilter"  class="appt-filter">
         <div class="appt-filter__wrapper"></div>
         <div class="input-select mb-30" data-name="building">
           <div class="input-select__input">
@@ -1197,7 +1197,6 @@
     slidesPerView: 1.1,
     spaceBetween: 20,
     breakpointBase: 'container',
-    height: 700,
     oneWayMovement: false,
     navigation: {
       nextEl: '.news-btn-next',
@@ -1209,19 +1208,16 @@
     },
     breakpoints: {
       577: {
-        height: 500,
         slidesPerView: 1.25,
       },
       769: {
         pagination: false,
+        slidesPerView: 2.5,
       },
       1200: {
-        height: 600,
-        slidesPerView: 2.5,
         spaceBetween: 40
       },
       1441: {
-        height: 700,
         slidesPerView: 3.3,
         spaceBetween: 40
       }
@@ -1229,21 +1225,25 @@
   });
 
   // filter appt
+  let filterResults = document.querySelector('#filterResult');
   filterShow.onclick = function() {
     apptFilter.classList.add('active');
     filterShow.classList.add('d-none');
+    filterResults.classList.add('d-none');
     filterHide.classList.remove('d-none');
   }
 
   filterHide.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
+    filterResults.classList.remove('d-none');
     filterHide.classList.add('d-none');
   }
 
   filterApply.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
+    filterResults.classList.remove('d-none');
     filterHide.classList.add('d-none');
   }
 
@@ -1251,6 +1251,7 @@
   filterClear.onclick = function() {
     apptFilter.classList.remove('active');
     filterShow.classList.remove('d-none');
+    filterResults.classList.remove('d-none');
     filterHide.classList.add('d-none');
   }
 
@@ -1277,6 +1278,7 @@
     var myMap = new ymaps.Map("map", {
       center: [55.76, 37.60],
       zoom: 14,
+      controls: [],
     });
     myMap.behaviors.disable('scrollZoom');
     window.myMap = myMap;
@@ -1434,7 +1436,7 @@
           spaceBetween: 40
         },
         1441: {
-          slidesPerView: 1.58,
+          slidesPerView: 1.68,
           spaceBetween: 40
         }
       }

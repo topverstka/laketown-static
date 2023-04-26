@@ -7,6 +7,9 @@ section#buildingPosition {
     padding-bottom: 55px;
   }
 
+  @media (max-width: $tablet-l) {
+    padding-top: 80px;
+  }
   @media (max-width: $tablet-s) {
     padding-top: 115px;
     padding-bottom: 80px;
@@ -74,18 +77,12 @@ section#buildingPosition .section-title__text {
   line-height: 1.1;
 
   @media (max-width: $tablet-l) {
-    max-width: 80% !important;
-    -webkit-flex: 0 0 80% !important;
-    -moz-flex: 0 0 80% !important;
-    -ms-flex: 0 0 80% !important;
-    flex: 0 0 80% !important;
+    max-width: 60% !important;
+    flex: 0 0 60% !important;
     padding-bottom: 40px;
   }
-  @media (max-width: $tablet-l) {
+  @media (max-width: $tablet-s) {
     max-width: 100% !important;
-    -webkit-flex: 0 0 100% !important;
-    -moz-flex: 0 0 100% !important;
-    -ms-flex: 0 0 100% !important;
     flex: 0 0 100% !important;
   }
   @media (max-width: $tablet-s) {
@@ -109,11 +106,11 @@ section#buildingPosition .section-title__ext {
 
   @media (max-width: $tablet-l) {
     max-width: 80% !important;
-    flex: 0 0 80% !important;
+    flex: 0 0 30% !important;
     font-size: 16px;
   }
 
-  @media (max-width: $tablet-l) {
+  @media (max-width: $tablet-s) {
     max-width: 100% !important;
     flex: 0 0 100% !important;
   }

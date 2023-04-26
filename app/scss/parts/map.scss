@@ -123,16 +123,14 @@ section#mapBlock #map {
 }
 
 .map-filter.active {
-  @media (min-width: $tablet-l) {
-    opacity: 1;
-    height: 120px;
+  opacity: 1;
+  height: 120px;
 
-    z-index: 10;
-    @include transition(all, .8s);
-  }
+  z-index: 10;
+  @include transition(all, .8s);
 
   @media (max-width: $tablet-m) {
-    // padding-top: 30px;
+    height: auto;
     opacity: 1;
     bottom: 0;
   }
