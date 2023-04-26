@@ -470,3 +470,82 @@ section#pageBuyingServices {
     }
   }
 }
+
+.section-title__btns {
+  display: flex;
+  @media (max-width: $phone) {
+    display: none;
+  }
+}
+.section-title__btns .navBtn svg path {
+  fill:none;
+  stroke: $mainDark;
+}
+.section-title__btns .navBtn:hover svg path {
+  fill:none;
+  stroke: $colorBgr;
+}
+
+.section-title__btns .navBtn.swiper-button-disabled {
+  border-color: $borderGray;
+  background: $borderGray;
+}
+
+.section-title__btns .navBtn.swiper-button-disabled svg path {
+  fill:none;
+  stroke: $colorBgr;
+}
+
+.section-title__btns .nextBtn {
+  transform: rotate(180deg);
+  @extend .ml-15;
+}
+section#buyingServices .section-title__btns .btn:last-child {
+  margin-left: 20px;
+}
+
+.swiper-pagination {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: static;
+
+  @media (min-width: $tablet-s + 1) {
+    display: none;
+  }
+  @media (max-width: $phone) {
+    margin-top: 0;
+  }
+}
+.swiper-pagination.swiper-horizontal>.swiper-pagination-bullets, .advantages-gallery-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination.swiper-pagination-custom,
+.swiper-pagination.swiper-pagination-fraction {
+  position: static;
+  margin: 0;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid transparent;
+  @include borderRadius(50%);
+  background: $orangeLight;
+  @include transition(all, .5s);
+  margin-right: 8px;
+  opacity: 1;
+  box-sizing: border-box;
+}  
+.swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.swiper-pagination .swiper-pagination-bullet:hover {
+  @media (any-hover:hover) {
+    background: $orangeDark;
+  }
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: $orangeDark;
+}

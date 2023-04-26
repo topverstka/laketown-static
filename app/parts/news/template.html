@@ -3,41 +3,91 @@
 
     <div class="section-title">
       <h2 class="section-title__text" data-aos="fade-up">НОВОСТИ</h2>
-      <div class="section-title__btn">
-        <a href="news.html" class="btn btn-square btn-square-s btn-black-border" data-aos="fade-up">Все новости</a>
+      <div class="section-title__btns">
+        <div class="section-title__btn">
+          <a href="news.html" class="btn btn-square btn-square-s btn-black-border" data-aos="fade-up">Все новости</a>
+        </div>
+        <div class="news-buttons section-title__btns">
+          <div class="navBtn news-btn-prev prevBtn btn btn-rond btn-rond-s btn-orange-border-black disabled">
+            <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="navBtn news-btn-next nextBtn btn btn-rond btn-rond-s btn-orange-border-black">
+            <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="section-pills">
-      <a href="news-item.html" class="section-pills__item">
-        <div class="pill" data-aos="fade-up">
-          <div class="image">
-            <img src="img/news_image.png">
-          </div>
-          <div class="pill-content">
-            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
-            <div class="pill-content__date">01 июня 2023</div>
-          </div>
+    <div class="swiper news-carousel carousel-regular">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide news-slide">
+          <a href="news-item.html" class="news-card" data-aos="fade-up">
+            <div class="news-card__inner">
+              <div class="news-card__thumb">
+                <img class="news-card__img" src="img/news_image.png">
+              </div>
+              <div class="news-card__content">
+                <h4 class="news-card__content-title">В центре Пензы строится дом с двухъярусным двором</h4>
+                <div class="news-card__content-date">01 июня 2023</div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="news-item.html" class="section-pills__item w-image" data-aos="fade-up">
-        <div class="pill">
-          <div class="pill-content">
-            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
-            <div class="pill-content__date">01 июня 2023</div>
-          </div>
+        <div class="swiper-slide news-slide">
+          <a href="news-item.html" class="news-card w-image" data-aos="fade-up">
+            <div class="news-card__inner">
+              <div class="news-card__content">
+                <h4 class="news-card__content-title">В центре Пензы строится дом с двухъярусным двором</h4>
+                <div class="news-card__content-date">01 июня 2023</div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="news-item.html" class="section-pills__item" data-aos="fade-up">
-        <div class="pill">
-          <img src="img/news_image.png">
-          <div class="pill-content">
-            <h4 class="pill-content__title">В центре Пензы строится дом с двухъярусным двором</h4>
-            <div class="pill-content__date">01 июня 2023</div>
-          </div>
+        <div class="swiper-slide news-slide">
+          <a href="news-item.html" class="news-card" data-aos="fade-up">
+            <div class="news-card__inner">
+              <div class="news-card__thumb">
+                <img class="news-card__img" src="img/news_image.png">
+              </div>
+              <div class="news-card__content">
+                <h4 class="news-card__content-title">В центре Пензы строится дом с двухъярусным двором</h4>
+                <div class="news-card__content-date">01 июня 2023</div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
+        <div class="swiper-slide news-slide">
+          <a href="news-item.html" class="news-card w-image" data-aos="fade-up">
+            <div class="news-card__inner">
+              <div class="news-card__content">
+                <h4 class="news-card__content-title">В центре Пензы строится дом с двухъярусным двором</h4>
+                <div class="news-card__content-date">01 июня 2023</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide news-slide">
+          <a href="news-item.html" class="news-card" data-aos="fade-up">
+            <div class="news-card__inner">
+              <div class="news-card__thumb">
+                <img class="news-card__img" src="img/news_image.png">
+              </div>
+              <div class="news-card__content">
+                <h4 class="news-card__content-title">В центре Пензы строится дом с двухъярусным двором</h4>
+                <div class="news-card__content-date">01 июня 2023</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    
+      <div class="swiper-pagination news-pagination"></div>
     </div>
+
     <div class="all-btn" data-aos="fade-left">
       <a href="news.html" class="btn btn-square btn-square-100 btn-orange">Все новости</a>
     </div>

@@ -56,7 +56,6 @@
     breakpointBase: 'container',
     height: 700,
     oneWayMovement: false,
-    // loop: true,
     navigation: {
       nextEl: '#buyingServices .services-btn-next',
       prevEl: '#buyingServices .services-btn-prev',
@@ -66,7 +65,42 @@
       clickable: true,
     },
     breakpoints: {
-      // when window width is >= 320px
+      577: {
+        height: 500,
+        slidesPerView: 2.5,
+      },
+      769: {
+        pagination: false,
+      },
+      1200: {
+        height: 600,
+        slidesPerView: 2.5,
+        spaceBetween: 40
+      },
+      1441: {
+        height: 700,
+        slidesPerView: 3.3,
+        spaceBetween: 40
+      }
+    }
+  });
+
+  const newsCarousel = new Swiper('.news-carousel', {
+    speed: 400,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    breakpointBase: 'container',
+    height: 700,
+    oneWayMovement: false,
+    navigation: {
+      nextEl: '.news-btn-next',
+      prevEl: '.news-btn-prev',
+    },
+    pagination: {
+      el: ".news-pagination",
+      clickable: true,
+    },
+    breakpoints: {
       577: {
         height: 500,
         slidesPerView: 2.5,

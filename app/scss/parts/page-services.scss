@@ -7,12 +7,12 @@
   &.pageSection {
     padding-top: 100px;
     padding-bottom: 0;
-    .section-pills {
+    .news-gallery {
       flex-wrap: wrap;
       &__item {
         margin-bottom: 40px;
         &:nth-child(3) {
-          .pill {
+          .news-card__inner {
             margin-right: 0;
           }
         }
@@ -25,7 +25,7 @@
     }
   }
 
-  .section-pills {
+  .news-gallery {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -130,7 +130,7 @@
 }
 
 
-#pageServices .section-pills .services-item {
+#pageServices .news-gallery .services-item {
   color: $mainDark;
   text-decoration: none;
 }

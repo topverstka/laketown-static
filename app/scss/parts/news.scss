@@ -8,6 +8,7 @@ section#news {
     padding-top: 150px;
     padding-bottom: 150px;
   }
+
   @media (max-width: $tablet-s) {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -20,6 +21,7 @@ section#news {
 }
 
 section#news .section-title__btn a {
+  margin-right: 30px;
   text-decoration: none;
 }
 
@@ -28,20 +30,17 @@ section#news.pageSection {
   padding-bottom: 0;
 }
 
-section#news .section-pills {
-  flex-wrap: wrap;
-}
-
 section#news.pageSection .btnBlock {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-section#news .section-pills {
+.news-gallery {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-left: -20px;
   margin-right: -20px;
@@ -56,48 +55,27 @@ section#news .section-pills {
   }
 }
 
+.swiper.news-carousel {
+  margin-right: -100px;
+  margin-left: -100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
-section#news .section-pills__item {
+.news-card {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 40px;
-
-  @media (min-width: 1280px) {
-    width: calc(33.3% - 40px);
-    height: 600px;
-  }
-  @media (max-width: $desktop-s) {
-    height: 500px;
-  }
-  @media (max-width: $tablet-l - 1) {
-    width: calc(50% - 40px);
-    height: 500px;
-  }
-  @media (max-width: $tablet-m) {
-    width: calc(50% - 40px);
-    height: 500px;
-  }
-  @media (max-width: $tablet-s) {
-    width: 100%;
-    height: 500px;
-    margin-bottom: 40px;
-  }
-  @media (max-width: $phone) {
-    width: 100%;
-    height: 300px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  text-decoration: none;
 }
 
-section#news .section-pills__item:last-child {
+.news-card:last-child {
   @media (max-width: $tablet-m) {
     display: none !important;
   }
 }
 
-
-section#news .section-pills__item .pill {
+.news-card__inner {
   border: 1px solid transparent;
   position: relative;
   height: inherit;
@@ -111,10 +89,9 @@ section#news .section-pills__item .pill {
   }
 }
 
-section#news .section-pills__item .pill-content {
-  position: absolute;
-  top: 0;
-  left: 0;
+.news-card__content {
+  position: relative;
+  z-index: 2;
   width: inherit;
   height: 100%;
   display: flex;
@@ -124,15 +101,41 @@ section#news .section-pills__item .pill-content {
   @include transition(all, .8s);
 }
 
-section#news .section-pills__item .pill-content:hover {
+.news-card__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news-card__thumb:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 33, 33, 0.3);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.news-card__img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.news-card__content:hover {
   background: $orangeMain;
 }
 
-section#news .section-pills__item .pill-content__title,
-section#news .section-pills__item .pill-content__date {
+.news-card__content-title,
+.news-card__content-date {
   font-family: var(--font-alimini);
   font-size: 48px;
-  color: white;
+  color: #fff;
+
   @include transition(all, .8s);
 
   @media (min-width: $tablet-l) {
@@ -154,37 +157,23 @@ section#news .section-pills__item .pill-content__date {
   }
 }
 
-section#news .section-pills__item.w-image .pill {
+.news-card.w-image .news-card__inner {
   border: 1px solid $orangeMain;
 }
 
-section#news .section-pills__item.w-image .pill-content__title,
-section#news .section-pills__item.w-image .pill-content__date {
+.news-card.w-image .news-card__content-title,
+.news-card.w-image .news-card__content-date {
   color: $mainDark;
   @include transition(all, .5s);
 }
 
-section#news .section-pills__item.w-image .pill-content:hover .pill-content__title,
-section#news .section-pills__item.w-image .pill-content:hover .pill-content__date {
+.news-card.w-image:hover .news-card__content-title,
+.news-card.w-image:hover .news-card__content-date {
   color: white !important;
 }
 
-section#news .section-pills__item img {
-  @media (min-width: $desktop-l) {
-    height: auto;
-    width: 100%;
-  }
-}
-
-section#news .section-pills__item .pill img {
-  @media (max-width: $tablet-s) {
-    height: auto;
-    min-width: 100%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
+.news-btn-next {
+  transform: scaleX(-1);
 }
 
 
@@ -199,12 +188,6 @@ section#news .all-btn {
     display: block;
   }
 }
-
-
-
-
-
-
 
 section#news .section-title {
   @media (max-width: $phone) {

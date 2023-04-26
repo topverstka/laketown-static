@@ -5,6 +5,10 @@
   background: transparent;
   overflow: hidden;
 
+  @media (max-width: $desktop-m) {
+    height: 700px;
+  }
+  
   @media (max-width: $tablet-l) {
     height: 900px;
   }
