@@ -189,8 +189,10 @@
 <section id="advantages">
   <div class="container mainBlock">
     <div class="section-title">
-      <h2 data-aos="fade-up">Lounge-квартал Lake Town – там,<br>
-        где каждый день для вас отдых и расслабление.</h2>
+      <h2 data-aos="fade-up">
+        Там, где каждый день для <br>
+        вас отдых и расслабление.
+      </h2>
       <div class="btn btn-rond btn-rond-xl btn-orange-border-black" data-aos="fade-left">
         <span>Получить <br> буклет</span>
       </div>
@@ -908,9 +910,11 @@
               </svg>
             </span>
             <div class="dropdown">
-              <div class="dropdown-item">Строение 2</div>
-              <div class="dropdown-item">Строение 3</div>
-              <div class="dropdown-item">Строение 4</div>
+              <div class="dropdown__list">
+                <div class="dropdown-item">Строение 2</div>
+                <div class="dropdown-item">Строение 3</div>
+                <div class="dropdown-item">Строение 4</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1251,8 +1255,9 @@
 
     var myMap = new ymaps.Map("map", {
       center: [55.76, 37.60],
-      zoom: 14
+      zoom: 14,
     });
+    myMap.behaviors.disable('scrollZoom');
     window.myMap = myMap;
 
     var myCircle = new ymaps.Circle([
@@ -1284,59 +1289,30 @@
     });
 
     var myCircle2 = new ymaps.Circle([
-        // Координаты центра круга.
         [55.76, 37.60],
-        // Радиус круга в метрах.
         1500
     ], {
-        // Описываем свойства круга.
-        // Содержимое балуна.
         balloonContent: "1.5 км",
-        // Содержимое хинта.
         hintContent: "15 минут"
     }, {
-        // Задаем опции круга.
-        // Включаем возможность перетаскивания круга.
         draggable: false,
-        // Цвет заливки.
-        // Последний байт (77) определяет прозрачность.
-        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
-        
         fillColor: "#d6915340",
-        // Цвет обводки.
         strokeColor: "#D69153",
-        // Прозрачность обводки.
         strokeOpacity: 0.8,
-        // Ширина обводки в пикселях.
         strokeWidth: 1
     });
 
     var myCircle3 = new ymaps.Circle([
-        // Координаты центра круга.
         [55.76, 37.60],
-        // Радиус круга в метрах.
         500
     ], {
-        // Описываем свойства круга.
-        // Содержимое балуна.
         balloonContent: "500 м",
-        // Содержимое хинта.
         hintContent: "5 минут"
     }, {
-        // Задаем опции круга.
-        // Включаем возможность перетаскивания круга.
         draggable: false,
-        // Цвет заливки.
-        // Последний байт (77) определяет прозрачность.
-        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
-        
         fillColor: "#d6915340",
-        // Цвет обводки.
         strokeColor: "#D69153",
-        // strokeColor: "#D69153",
-        // Прозрачность обводки.
         strokeOpacity: 0.8,
-        // Ширина обводки в пикселях.
         strokeWidth: 1
     });
 
@@ -1351,7 +1327,7 @@
       // Своё изображение иконки метки.
       iconImageHref: companyLogo,
       // Размеры метки.
-      iconImageSize: [48, 48],
+      iconImageSize: [92, 92],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
       iconImageOffset: [-24, -24],
@@ -1360,26 +1336,18 @@
       // Макет содержимого.
       iconContentLayout: MyIconContentLayout
     });
-    window.company = company;
+    window.company = company; // Чтобы можно было добраться из консол
 
     let p1 = new ymaps.Placemark([55.761574, 37.573856], {
       hintContent: '',
       balloonContent: '',
       iconContent: ''
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
       iconImageHref: pharmacyLogo,
-      // Размеры метки.
-      iconImageSize: [48, 48],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
+      iconImageSize: [60, 60],
       iconImageOffset: [-24, -24],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
       iconContentOffset: [15, 15],
-      // Макет содержимого.
       iconContentLayout: MyIconContentLayout
     });
 
@@ -1387,44 +1355,8 @@
     myMap.geoObjects.add(myCircle2);
     myMap.geoObjects.add(myCircle3);
     myMap.geoObjects.add(company);
-    myMap.geoObjects.add(p1);
-
-    console.log(companyLogo)
-    console.log(pharmacyLogo)
+    // myMap.geoObjects.add(p1);
   }
-
-
-  advSlider.onmousedown = function(event) {
-    console.log(event.pageX);
-
-
-
-
-    moveAt(event.pageX, event.pageY);
-
-    // передвинуть мяч под координаты курсора
-    // и сдвинуть на половину ширины/высоты для центрирования
-    function moveAt(pageX, pageY) {
-      var imageSlider = advSlider.querySelector('.slider-item.current');
-//      console.log(imageSlider);
-//      ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
-//      ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
-    }
-
-    function onMouseMove(event) {
-      moveAt(event.pageX, event.pageY);
-    }
-
-    // (3) перемещать по экрану
-    document.addEventListener('mousemove', onMouseMove);
-
-    // (4) положить мяч, удалить более ненужные обработчики событий
-    // ball.onmouseup = function() {
-    //   document.removeEventListener('mousemove', onMouseMove);
-    //   advSlider.onmouseup = null;
-    // };
-
-  };
 
 
     let advantagesCarouselDesc = new Swiper(".advantages-desc-carousel", {
@@ -1435,24 +1367,9 @@
       },
       grabCursor: true,
       effect: "fade",
-      //  creativeEffect: {
-      //   prev: {
-      //     shadow: false,
-      //     translate: ["-20%", 0, -1],
-      //     opacity: 0.3,
-      //   },
-      //   next: {
-      //     translate: ["100%", 0, 0],
-      //   },
-      // },
       navigation: {
         nextEl: ".advantages-desc-button-next",
         prevEl: ".advantages-desc-button-prev",
-      },
-      breakpoints: {
-        769: {
-          autoHeight: false,
-        }
       },
     });
 
@@ -1501,7 +1418,6 @@
       spaceBetween: 20,
       breakpointBase: 'container',
       oneWayMovement: false,
-      // loop: true,
       navigation: {
         prevEl: '.slider-stages-button-prev',
         nextEl: '.slider-stages-button-next',
@@ -1511,7 +1427,6 @@
         clickable: true,
       },
       breakpoints: {
-        // when window width is >= 320px
         769: {
           pagination: false,
           slidesPerView: 1.45,

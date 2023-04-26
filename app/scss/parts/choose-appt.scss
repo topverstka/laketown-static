@@ -1,207 +1,208 @@
 section#chooseAppt {
   position: relative;
-  padding-top: 200px;
+  padding-top: 190px;
 
-  .section-title {
-    padding-bottom: 80px;
-    h2 {
-      margin-top: 0;
-      margin-bottom: 0;
-      span {
-        color: $lightGrayText;
-      }
-      @media (max-width: $phone) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: $tablet-s) {
-      padding-bottom: 15px;
-    }
-  }
-
-  .section-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    .appt-list {
-      -webkit-flex: 0 0 58%;
-      -moz-flex: 0 0 58%;
-      -ms-flex: 0 0 58%;
-      flex: 0 0 58%;
-      
-      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
-        flex: 0 0 52%;
-      }
-    }
-
-    .appt-list-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 30px 0;
-      border-bottom: 1px solid $lightGrayText;
-      cursor: pointer;
-      color: $mainDark;
-      text-decoration: none;
-      @include transition(all, .5s);
-    }
-    .appt-list-item:first-child {
-      border-top: 1px solid $lightGrayText;
-
-    }
-    .appt-list-item:hover {
-      background: $orangeLight;
-    }
-
-    .appt-list-item .item-image {
-      width: 170px;
-      height: 125px;
-      position: relative;
-      overflow: hidden;
-      margin-right: 40px;
-      margin-left: 40px;
-
-      @media (min-width: $phone + 1) and (max-width: $desktop-s) {
-        width: 140px;
-        height: 110px;
-      }
-      @media (max-width: $tablet-s) {
-        margin-left: 0;
-      }
-      @media (max-width: $phone) {
-        width: 110px;
-        height: 78px;
-        margin-right: 18px;
-      }
-    }
-
-    .appt-list-item .item-image img {
-      position: relative;
-      width: 100%;
-      height: auto;
-      @include transform(translateY, -50%);
-      top: 50%;
-    }
-
-    .appt-list-item .item-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-around;
-    }
-    .appt-list-item .item-text__caption {
-      font-family: var(--font-main);
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 24px;
-
-      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
-        margin-top: 18px;
-      }
-
-      @media (max-width: $phone) {
-        font-size: 18px;
-        margin-bottom: 16px;
-      }
-    }
-    .appt-list .btn {
-      margin-top: 60px;
-
-      @media (max-width: $tablet-s) {
-        margin-top: 35px;
-      }
-    }
-
-    .appt-filter {
-      flex: 1 0 auto;
-      margin-left: 145px;
-      order: 1;
-      position: sticky;
-      top: 30px;
-
-      @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
-        margin-left: 115px;
-      }
-    }
-  }
-
-}
-
-section#chooseAppt {
   @media (max-width: $tablet-l) {
     overflow: hidden;
   }
 }
 
+section#chooseAppt .section-title {
+  padding-bottom: 80px;
+}
+
+section#chooseAppt .section-title h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: $tablet-s) {
+    padding-bottom: 15px;
+  }
+}
+
+section#chooseAppt .section-title h2 span {
+  color: $lightGrayText;
+
+  @media (max-width: $phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+section#chooseAppt .section-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section#chooseAppt .section-content .appt-list {
+  -webkit-flex: 0 0 58%;
+  -moz-flex: 0 0 58%;
+  -ms-flex: 0 0 58%;
+  flex: 0 0 58%;
+  
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    flex: 0 0 52%;
+  }
+}
+
+section#chooseAppt .section-content .appt-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 0;
+  border-bottom: 1px solid $lightGrayText;
+  cursor: pointer;
+  color: $mainDark;
+  text-decoration: none;
+  @include transition(all, .5s);
+}
+
+section#chooseAppt .section-content .appt-list-item:first-child {
+  border-top: 1px solid $lightGrayText;
+}
+
+section#chooseAppt .section-content .appt-list-item:hover {
+  background: $orangeLight;
+}
+
+section#chooseAppt .section-content .appt-list-item .item-image {
+  width: 180px;
+  height: 125px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 30px;
+  margin-left: 30px;
+
+  @media (min-width: $phone + 1) and (max-width: $desktop-s) {
+    width: 140px;
+    height: 110px;
+  }
+
+  @media (max-width: $tablet-s) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $phone) {
+    width: 110px;
+    height: 78px;
+    margin-right: 18px;
+  }
+}
+
+section#chooseAppt .section-content .appt-list-item .item-image img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  @include transform(translateY, -50%);
+  top: 50%;
+}
+
+section#chooseAppt .section-content .appt-list-item .item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+section#chooseAppt .section-content .appt-list-item .item-text__caption {
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    margin-top: 18px;
+  }
+
+  @media (max-width: $phone) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+section#chooseAppt .section-content .appt-list .btn {
+  margin-top: 60px;
+
+  @media (max-width: $tablet-s) {
+    margin-top: 35px;
+  }
+}
+
+section#chooseAppt .section-content .appt-filter {
+  flex: 1 0 auto;
+  margin-left: 145px;
+  order: 1;
+  position: sticky;
+  top: 30px;
+
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    margin-left: 115px;
+  }
+}
+
+
 @media (min-width: $tablet-l + 1) {
-  #chooseAppt {
-    .section-content {
-      .filter-show, .filter-hide, #filterResult {
-        display: none;
-      }
-    }
+  #chooseAppt .section-content .filter-show,
+  #chooseAppt .section-content .filter-hide,
+  #chooseAppt .section-content #filterResult {
+    display: none;
   }
 }
 
 @media (max-width: $tablet-l) {
   #chooseAppt {
     padding-top: 128px !important;
-    .section-content {
-      flex-wrap: wrap !important;
-      position: relative;
-      .filter-show, .filter-hide {
-        -webkit-flex: 1 1 100%;
-        -moz-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-        flex: 1 1 100%;
-        margin-bottom: 40px;
-        .btn {
-          height: 60px !important;
-        }
-      }
-      #filterResult {
-        span {
-          color: #000;
-        }
-      }
-      .appt-list {
-        order: 1 !important;
-        -webkit-flex: 0 0 100% !important;
-        -moz-flex: 0 0 100% !important;
-        -ms-flex: 0 0 100% !important;
-        flex: 0 0 100% !important;
-      }
-      .appt-filter {
-        position: absolute;
-        top: 100px;
-        z-index: -1;
-
-        width: 100%;
-        background: $colorBgr;
-        -webkit-flex: 0 0 100% !important;
-        -moz-flex: 0 0 100% !important;
-        -ms-flex: 0 0 100% !important;
-        flex: 0 0 100% !important;
-        margin-left: 0 !important;
-        opacity: 0;
-        height: 0;
-        @include transition(all, .5s);
-        &.active {
-          opacity: 1;
-          height: fit-content;
-          z-index: 100;
-          padding-bottom: 40px;
-        }
-      }
-    }
   }
 
+  #chooseAppt .section-content {
+    flex-wrap: wrap !important;
+    position: relative;
+  }
+
+  #chooseAppt .section-content .filter-show,
+  #chooseAppt .section-content .filter-hide {
+    flex: 1 1 100%;
+    margin-bottom: 40px;
+  }
+
+  #chooseAppt .section-content .filter-show .btn,
+  #chooseAppt .section-content .filter-hide .btn {
+    height: 60px !important;
+  }
+
+  #chooseAppt .section-content #filterResult span {
+    color: #000;
+  }
+
+  #chooseAppt .section-content .appt-list {
+    order: 1 !important;
+    flex: 0 0 100% !important;
+  }
+
+  #chooseAppt .section-content .appt-filter {
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+    width: 100%;
+    background: $colorBgr;
+    flex: 0 0 100% !important;
+    margin-left: 0 !important;
+    opacity: 0;
+    height: 0;
+    @include transition(all, .5s);
+  }
+
+  #chooseAppt .section-content .appt-filter.active {
+    opacity: 1;
+    height: fit-content;
+    z-index: 100;
+    padding-bottom: 40px;
+  }
 }
 
 .choose-apps__button-manager {

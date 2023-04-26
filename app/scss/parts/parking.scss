@@ -1,5 +1,5 @@
 section#parking {
-  padding-top: 200px;
+  padding-top: 210px;
 
   @media (max-width: $tablet-s) {
     padding-top: 100px;
@@ -235,6 +235,7 @@ section#parking .section-title__text {
 section#parking .section-title {
   align-items: flex-start;
   margin-bottom: 0;
+  line-height: 1.1;
 
   @media (max-width: $tablet-m) {
     flex-wrap: wrap;

@@ -1,26 +1,18 @@
 section#advantages {
   overflow: hidden;
   position: relative;
-  padding-top: 180px;
+  padding-top: 200px;
 
   .mainBlock {
     background: $colorBgr;
   }
-  .section-title {
 
+  .section-title {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    h2 {
-      margin: 0;
-      line-height: 1.1;
 
-      @media (min-width: $desktop-s + 1) {
-        text-transform: initial;
-        margin-top: 0.2em;
-      }
-    }
     @media (min-width: $tablet-l + 1) {
       padding-bottom: 100px;
     }
@@ -28,6 +20,16 @@ section#advantages {
       padding-bottom: 93px;
     }
   }
+
+  .section-title h2 {
+    margin: 0;
+    line-height: 1.1;
+
+    @media (min-width: $desktop-s + 1) {
+      margin-top: 0.2em;
+    }
+  }
+
   .section-content {
     display: flex;
     flex-direction: row;
@@ -46,34 +48,31 @@ section#advantages {
     .adv-slider-text {
       width: 50%;
       position: relative;
-      -webkit-flex: 1 1 40%;
-      -moz-flex: 1 1 40%;
-      -ms-flex: 1 1 40%;
       flex: 0 0 40%;
       height: 800px;
+
       .slider {
         position: relative;
         display: block;
         height: 100%;
+      }
 
-        &-item {
-          opacity: 0;
-          z-index: -1;
-          height: 0;
-          position: absolute;
-          top: 0;
-          @include transition(all, 1s);
-          &.current {
-            left: 0;
-            opacity: 1;
-            z-index: 2;
-            height: fit-content;
-            position: relative;
-            margin-bottom: auto;
+      .slider-item {
+        opacity: 0;
+        z-index: -1;
+        height: 0;
+        position: absolute;
+        top: 0;
+        @include transition(all, 1s);
+      }
 
-
-          }
-        }
+      .slider-item.current {
+        left: 0;
+        opacity: 1;
+        z-index: 2;
+        height: fit-content;
+        position: relative;
+        margin-bottom: auto;
       }
 
       .container {
@@ -82,25 +81,27 @@ section#advantages {
         justify-content: space-between;
         height: 100%;
       }
-      #advText {
-        li {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
+
+      #advText li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
+
     .slider-images {
       position: relative;
       overflow: hidden;
       width: 50%;
       height: 800px;
+
       .slider-wrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         position: absolute;
         height: 100%;
+
         .slider-item {
           margin-right: 40px;
           opacity: 0;
@@ -109,46 +110,44 @@ section#advantages {
           left: 100%;
           height: 100%;
           @include transform(translateX, calc(200% - 80px));
-          img {
-            width: auto;
-            height: 100%;
-          }
-          &.current, &.active {
-            left: 0;
-            opacity: 1;
-            //width: calc(100% - 80px);
-            @include borderRadius(60px);
-            position: relative;
-            overflow: hidden;
+        }
 
-          }
-          &.current {
-            z-index: 2;
-            @include transition(all, 1s);
-            @include transform(translateX, 0);
+        .slider-item img {
+          width: auto;
+          height: 100%;
+        }
 
-          }
-          &.active {
-            z-index: 3;
-            position: absolute;
-            @include transform(translateX, calc(100% + 40px));
-            @include transition(all, 1s);
-            //left: calc(100% - 40px);
+        .slider-item.current,
+        .slider-item.active {
+          left: 0;
+          opacity: 1;
+          @include borderRadius(60px);
+          position: relative;
+          overflow: hidden;
+        }
+        .slider-item.current {
+          z-index: 2;
+          @include transition(all, 1s);
+          @include transform(translateX, 0);
+        }
 
-          }
-          &.prev {
-            opacity: 1;
-            z-index: -1;
-            position: absolute;
-            left: 0;
-            @include transform(translateX, 0);
-            //width: calc(100% - 80px);
-            overflow: hidden;
-            @include borderRadius(60px);
-            @include transition(all, 1s);
+        .slider-item.active {
+          z-index: 3;
+          position: absolute;
+          @include transform(translateX, calc(100% + 40px));
+          @include transition(all, 1s);
+        }
 
-
-          }
+        .slider-item.prev {
+          opacity: 1;
+          z-index: -1;
+          position: absolute;
+          left: 0;
+          @include transform(translateX, 0);
+          //width: calc(100% - 80px);
+          overflow: hidden;
+          @include borderRadius(60px);
+          @include transition(all, 1s);
         }
       }
     }
@@ -280,7 +279,7 @@ section#advantages {
 
 .advantages-content {
   display: grid;
-  grid-template-columns: 0.9fr 0.87fr;
+  grid-template-columns: 0.9fr 1fr;
   position: relative;
   z-index: 3;
 
@@ -298,12 +297,10 @@ section#advantages {
 }
 
 #advSlider .item-icons {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: repeat(2,minmax(200px,350px));
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
 }
 
 #advSlider .item-icons-item {
@@ -311,6 +308,9 @@ section#advantages {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  min-width: 236px;
+  flex-basis: 34%;
+  margin-bottom: 20px;
 
   @media (max-width: $tablet-s) {
     margin-right: 10px;
@@ -350,7 +350,9 @@ section#advantages {
 }
 
 #advSlider .advantages-desc-carousel {
-  max-width: 73%;
+  display: flex;
+  flex-direction: column;
+  max-width: 77%;
   width: 100%;
   margin-left: 0;
 
@@ -375,7 +377,7 @@ section#advantages {
 
 .advantages-desc-carousel .item-text {
   font-size: 18px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   @media (min-width: $desktop-s + 1) {
     max-width: 90%;
@@ -404,6 +406,10 @@ section#advantages {
   background: #f6f5f1;
 }
 
+.advantages-desc-slide.swiper-slide-active {
+  opacity: 1;
+}
+
 #advSlider .advantages-gallery-slide img {
   border-radius: 60px;
   width: 100%;
@@ -419,7 +425,15 @@ section#advantages {
 .advantages-gallery-slide__media {
   padding-left: 20px;
   padding-right: 20px;
-  height: 890px;
+  height: 700px;
+
+  @media (max-width: $desktop-s) {
+    height: 650px;
+  }
+
+  @media (max-width: $tablet-m) {
+    height: 450px;
+  }
 
   @media (max-width: $tablet-s) {
     padding-left: 0;
@@ -428,7 +442,12 @@ section#advantages {
   }
 
   @media (max-width: $phone) {
-    height: 300px;
+    height: 200px;
+  }
+}
+.advantages-gallery-slide:first-child .advantages-gallery-slide__media {
+  @media (min-width: $tablet-s + 1) {
+    // padding-left: 0;
   }
 }
 
@@ -441,6 +460,7 @@ section#advantages {
 #advSlider .advantages-gallery-carousel {
   width: 120%;
   margin-right: 0;
+  margin-left: -20px;
 
   @media (min-width: $tablet-l + 1) {
     width: 123%;
@@ -458,16 +478,14 @@ section#advantages {
 
 
 .advantages-desc-buttons {
+  background: #f6f5f1;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   position: relative;
   z-index: 5;
   display: grid;
-  transform: translateY(-165px);
   grid-template-columns: 1fr 1fr 1.6fr;
-  // margin-bottom: -70px;
-  margin-bottom: 30px;
 
   @media (max-width: $tablet-m) {
     transform: translateY(-185px);

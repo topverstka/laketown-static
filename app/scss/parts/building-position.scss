@@ -64,7 +64,7 @@ section#buildingPosition .section-title {
 section#buildingPosition .section-title__text {
   max-width: 50%;
   margin-top: 0;
-  text-transform: initial;
+  line-height: 1.1;
 
   @media (max-width: $tablet-l) {
     max-width: 80% !important;
@@ -92,7 +92,7 @@ section#buildingPosition .section-title__text {
 }
 
 section#buildingPosition .section-title__ext {
-  width: 30%;
+  width: 31%;
   text-transform: initial;
   font-size: 18px;
 
@@ -102,18 +102,18 @@ section#buildingPosition .section-title__ext {
 
   @media (max-width: $tablet-l) {
     max-width: 80% !important;
-    -webkit-flex: 0 0 80% !important;
-    -moz-flex: 0 0 80% !important;
-    -ms-flex: 0 0 80% !important;
     flex: 0 0 80% !important;
   }
   @media (max-width: $tablet-l) {
     max-width: 100% !important;
-    -webkit-flex: 0 0 100% !important;
-    -moz-flex: 0 0 100% !important;
-    -ms-flex: 0 0 100% !important;
     flex: 0 0 100% !important;
   }
+}
+
+section#buildingPosition .section-title__ext p {
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 1.4em;
 }
 
 section#buildingPosition .section-title__ext br {

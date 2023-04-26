@@ -6,80 +6,81 @@
   background-color: transparent;
   // @include transition(all, .5s);
   transition: all 0.5s ease !important;
+  cursor: pointer;
   
   @media (max-width: $phone) {
     height: 60px;
   }
+}
 
-  span {
-    font-size: 18px !important;
-    font-family: var(--font-main);
-  }
-  cursor: pointer;
+.btn span {
+  font-size: 18px !important;
+  font-family: var(--font-main);
+}
 
-  &-filter {
-    @include borderRadius(40px);
-    min-width: 80px;
-  }
+.btn-filter {
+  @include borderRadius(40px);
+  min-width: 80px;
+}
 
   //btn forms
-  &-square {
-    @include borderRadius(60px);
-    @each $name, $size in (xs: 107px, s: 253px, m: 295px, 100: 100%, 3: 36%) {
-      &-#{$name} {
-        min-width: $size;
-        width: $size;
-      }
+.btn-square {
+  @include borderRadius(60px);
+  @each $name, $size in (xs: 107px, s: 253px, m: 295px, 100: 100%, 3: 36%) {
+    &-#{$name} {
+      min-width: $size;
+      width: $size;
     }
-    @each $name, $size in (fm: 54px, fl: 24px) {
-      &-#{$name} {
-        min-width: $size;
-      }
+  }
+  @each $name, $size in (fm: 54px, fl: 24px) {
+    &-#{$name} {
+      min-width: $size;
     }
-
   }
 
-  &-rond {
-    @include borderRadius(50%);
-    @each $name, $size in (s: 80px, m: 100px, ml: 120px, l: 160px, xl: 200px) {
-      &-#{$name} {
-        height: $size;
-        min-width: $size;
-      }
+}
+
+.btn-rond {
+  @include borderRadius(50%);
+  @each $name, $size in (s: 80px, m: 100px, ml: 120px, l: 160px, xl: 200px) {
+    &-#{$name} {
+      height: $size;
+      min-width: $size;
     }
-    text-transform: initial;
-    text-align: center;
   }
+  text-transform: initial;
+  text-align: center;
+}
 
   //colors
-  &-orange {
-    @include btnColors($orangeMain, $orangeMain, $colorBgr, $orangeDark, $orangeDark, $colorBgr);
-  }
-  &-black-border {
-    @include btnColors($mainDark, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
-  }
-  &-orange-border {
-    @include btnColors($orangeMain, rgba(255,255,255,0), $orangeMain, $orangeDark, $orangeDark, $colorBgr);
-  }
+.btn-orange {
+  @include btnColors($orangeMain, $orangeMain, $colorBgr, $orangeDark, $orangeDark, $colorBgr);
+}
+.btn-black-border {
+  @include btnColors($mainDark, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
+}
+.btn-orange-border {
+  @include btnColors($orangeMain, rgba(255,255,255,0), $orangeMain, $orangeDark, $orangeDark, $colorBgr);
+}
 
-  &-orange-border-black {
-    @include btnColors($orangeMain, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
-  }
+.btn-orange-border-black {
+  @include btnColors($orangeMain, rgba(255,255,255,0), $mainDark, $orangeDark, $orangeDark, $colorBgr);
+}
 
   // link btns
 
-  &-link {
-    height: fit-content;
-    color: $mainDark;
-    padding: 0;
-    border: 0;
-    text-decoration: underline;
-    &:hover {
-      @media (any-hover:hover) {
-        color: $orangeMain;
-      }
+.btn-link {
+  height: fit-content;
+  color: $mainDark;
+  padding: 0;
+  border: 0;
+  text-decoration: underline;
+  &:hover {
+    @media (any-hover:hover) {
+      color: $orangeMain;
     }
   }
+}
 
 
 
@@ -88,176 +89,182 @@
 
   // old code
 
-  &.btn-icon {
-    width: 107px;
-  }
-  &.btn-main {
-    border-color: $mainDark;
-    color: $mainDark;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-    border-radius: 40px;
-    .icon {
-      svg {
-        path {
-          @include transition(all, .5s);
-          fill: $mainDark;
-        }
-      }
-    }
-    &:hover {
-      @media (any-hover:hover) {
-        border-color: $orangeMain;
-        background: $orangeMain;
-        color: white;
-        .icon {
-          svg {
-            path {
-              fill: white;
-            }
-          }
-        }
-      }
-    }
-    &.btn-active {
-      border-color: $orangeMain;
-      background: $orangeMain;
-      color: white;
-      .icon {
-        svg {
-          path {
-            fill: white;
-          }
-        }
-      }
-    }
-  }
-  &.btn-text {
-    padding-left: 48px;
-    padding-right: 48px;
-    max-width: fit-content;
-  }
+.btn.btn-icon {
+  width: 107px;
+}
 
-  &.btn-select {
-    padding-left: 48px;
-    padding-right: 48px;
-    max-width: fit-content;
-    position: relative;
-    .select-arrow-icon {
-      margin-left: 20px;
-      display: flex;
-      align-items: center;
-      @include transition(all, .5s);
-      svg {
-        path {
-          fill: $mainDark;
-        }
-      }
-    }
-    &:hover {
-      @media (any-hover:hover) {
-        color: white;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        svg {
-          path {
-            fill: white;
-          }
-        }
-        .dropdown {
-          opacity: 1;
-          height: fit-content;
-          z-index: 50;
-          top: 100%;
-          background: white;
-          width: 100%;
-          border: 1px solid gray;
-          border-bottom-left-radius: 40px;
-          border-bottom-right-radius: 40px;
-          &-item {
-            padding: 10px 20px;
-            color: $mainDark;
-            &:hover {
-              color: $orangeMain;
+.btn.btn-main {
+  border-color: $mainDark;
+  color: $mainDark;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+}
 
-            }
-          }
-        }
-      }
-    }
-    .dropdown {
-      height: 0;
-      z-index: -1;
-      position: absolute;
-      opacity: 0;
-    }
-  }
+.btn.btn-main .icon svg path {
+  @include transition(all, .5s);
+  fill: $mainDark;
+}
 
-  &.btn-round-big {
-    width: 200px;
-    height: 200px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    padding: 0 !important;
+.btn.btn-main:hover {
+  @media (any-hover:hover) {
     border-color: $orangeMain;
-    color: $mainDark;
-    max-width: unset;
-    &:hover {
-      @media (any-hover:hover) {
-        background: $orangeMain;
-        color: white;
-      }
+    background: $orangeMain;
+    color: white;
+  }
+}
+
+.btn.btn-main:hover {
+  @media (any-hover:hover) {
+    .icon svg path {
+      fill: white;
     }
   }
-  &.btn-round-small {
-    width: 160px;
-    height: 160px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+}
+
+.btn.btn-main.btn-active {
+  border-color: $orangeMain;
+  background: $orangeMain;
+  color: white;
+}
+
+.btn.btn-main.btn-active .icon svg path {
+  fill: white;
+}
+
+.btn.btn-text {
+  padding-left: 48px;
+  padding-right: 48px;
+  max-width: fit-content;
+}
+
+.btn.btn-select {
+  padding-left: 48px;
+  padding-right: 48px;
+  max-width: fit-content;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-select:hover {
+  color: white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn.btn-select:hover svg path {
+  fill: white;
+}
+
+
+.btn.btn-select .select-arrow-icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  @include transition(all, .5s);
+}
+
+.btn.btn-select .select-arrow-icon svg path {
+  fill: $mainDark;
+}
+
+.btn.btn-select .dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  // z-index: -1;
+  position: absolute;
+  // height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: 100%;
+  pointer-events: none;
+  width: 100%;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.btn.btn-select .dropdown__list {
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid gray;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  min-height: 0;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-select:hover .dropdown {
+  pointer-events: all;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  // height: fit-content;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: $mainDark;
+}
+
+.dropdown-item:hover {
+  color: $orangeMain;
+}
+
+.btn.btn-round-big {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 0 !important;
+  border-color: $orangeMain;
+  color: $mainDark;
+  max-width: unset;
+}
+
+.btn.btn-round-big:hover {
+  @media (any-hover:hover) {
+    background: $orangeMain;
+    color: white;
   }
-  &.btn-social {
-    width: 78px;
-    height: 78px;
-    border: 1px solid $mainDark;
-    position: relative;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    padding: 0;
-    @include transition(all, .5s);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    .icon {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+}
+
+.btn.btn-round-small {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.btn.btn-social {
+  width: 78px;
+  height: 78px;
+  border: 1px solid $mainDark;
+  position: relative;
+  border-radius: 50%;
+  padding: 0;
+  @include transition(all, .5s);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-social .icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-social:hover {
+  @media (any-hover:hover) {
+    border-color: $orangeMain;
+    background: $orangeMain;
+
+    svg path {
+      fill: white;
     }
-    &:hover {
-      @media (any-hover:hover) {
-        border-color: $orangeMain;
-        background: $orangeMain;
-        svg {
-          path {
-            fill: white;
-            &.transparent {
-              fill: transparent;
-            }
-          }
-        }
-      }
+    svg path.transparent {
+      fill: transparent;
     }
   }
 }
