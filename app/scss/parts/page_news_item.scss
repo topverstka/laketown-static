@@ -34,7 +34,7 @@
         }
         &__image {
           width: 100%;
-          overflow-x: hidden;
+          overflow: hidden;
           position: relative;
           @include borderRadius(60px);
 
@@ -47,6 +47,8 @@
           }
           @media (max-width: $phone) {
             height: 500px;
+            margin-left: -16px;
+            margin-right: -16px;
           }
         }
         &__image img {

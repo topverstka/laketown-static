@@ -555,3 +555,18 @@ section#buyingServices .section-title__btns .btn:last-child {
 .swiper-pagination .swiper-pagination-bullet-active {
   background: $orangeDark;
 }
+
+.regular-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: $tablet-l) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: $phone) {
+    grid-template-columns: 100%;
+    row-gap: 25px;
+  }
+}

@@ -78,7 +78,7 @@ section#buyingServices .section-content .swiper-wrapper {
   }
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item {
+.buying-service-card {
   // padding-right: 40px;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ section#buyingServices .section-content .swiper-wrapper .slider-item {
   color: $mainDark;
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item__image {
+.buying-service-card__image {
   position: relative;
   overflow: hidden;
   height: 700px;
@@ -111,14 +111,14 @@ section#buyingServices .section-content .swiper-wrapper .slider-item__image {
   }
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item__image img {
+.buying-service-card__image img {
   @include transition(all, .5s);
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item__text {
+.buying-service-card__text {
   font-family: var(--font-alimini);
   text-decoration: none !important;
   color: $mainDark;
@@ -134,7 +134,7 @@ section#buyingServices .section-content .swiper-wrapper .slider-item__text {
   }
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item .btn {
+.buying-service-card .btn {
   opacity: 0;
   z-index: -1;
   @include transition(all, .5s);
@@ -149,7 +149,7 @@ section#buyingServices .section-content .swiper-wrapper .slider-item .btn {
   text-decoration: none;
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item .btn span {
+.buying-service-card .btn span {
   max-width: 60%;
   text-align: center;
   text-decoration: none !important;
@@ -157,13 +157,13 @@ section#buyingServices .section-content .swiper-wrapper .slider-item .btn span {
   color: #fff;
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item:hover img {
+.buying-service-card:hover img {
   @media (any-hover:hover) {
     @include transform(scale, 1.2);
   }
 }
 
-section#buyingServices .section-content .swiper-wrapper .slider-item:hover .btn {
+.buying-service-card:hover .btn {
   @media (any-hover:hover) {
     opacity: 1;
     z-index: 5;
