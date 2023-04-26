@@ -51,43 +51,34 @@
 
   const buyingServicesCarousel = new Swiper('#buyingServices .swiper', {
     speed: 400,
-    slidesPerView: 2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     breakpointBase: 'container',
-    height: 700,
     oneWayMovement: false,
     navigation: {
       nextEl: '#buyingServices .services-btn-next',
       prevEl: '#buyingServices .services-btn-prev',
     },
-    pagination: {
-      el: "#buyingServices .swiper-pagination",
-      clickable: true,
-    },
     breakpoints: {
       577: {
-        height: 500,
-        slidesPerView: 2.5,
+        slidesPerView: 1.15,
       },
       769: {
         pagination: false,
       },
       1200: {
-        height: 600,
         slidesPerView: 2.5,
         spaceBetween: 40
       },
       1441: {
-        height: 700,
         slidesPerView: 3.3,
-        spaceBetween: 40
       }
     }
   });
 
   const newsCarousel = new Swiper('.news-carousel', {
     speed: 400,
-    slidesPerView: 2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     breakpointBase: 'container',
     height: 700,
@@ -103,7 +94,7 @@
     breakpoints: {
       577: {
         height: 500,
-        slidesPerView: 2.5,
+        slidesPerView: 1.25,
       },
       769: {
         pagination: false,
@@ -289,11 +280,7 @@
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1,
-      pagination: {
-        el: ".advantages-gallery-pagination",
-        clickable: true,
-      },
+      slidesPerView: 1.15,
       grabCursor: true,
       effect: "creative",
       creativeEffect: {
@@ -305,17 +292,6 @@
           translate: ["100%", 0, 0],
         },
       },
-      navigation: {
-        nextEl: ".advantages-gallery-button-next",
-        prevEl: ".advantages-gallery-button-prev",
-      },
-      breakpoints: {
-        769: {
-          navigation: false,
-          pagination: false,
-          slidesPerView: 1.15,
-        },
-      }
     });
 
     advantagesCarouselDesc.on('slideChange', (e) => {
@@ -328,7 +304,7 @@
 
     const buildingStageCarousel = new Swiper('.slider-stages-carousel', {
       speed: 400,
-      slidesPerView: 1,
+      slidesPerView: 1.15,
       spaceBetween: 20,
       breakpointBase: 'container',
       oneWayMovement: false,
@@ -336,14 +312,10 @@
         prevEl: '.slider-stages-button-prev',
         nextEl: '.slider-stages-button-next',
       },
-      pagination: {
-        el: ".slider-stages-pagination",
-        clickable: true,
-      },
       breakpoints: {
         769: {
-          pagination: false,
-          slidesPerView: 1.45,
+          slidesPerView: 1.3,
+          spaceBetween: 40
         },
         1441: {
           slidesPerView: 1.58,

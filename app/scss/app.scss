@@ -185,6 +185,11 @@ section#formCallback {
       justify-content: flex-start;
     }
   }
+  .section-title__text {
+    @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+      font-size: 80px;
+    }
+  }
   .section-content {
     position: relative;
   }

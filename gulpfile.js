@@ -140,7 +140,8 @@ function startwatch() {
   // Мониторим файлы препроцессора на изменения
   watch('app/**/' + preprocessor + '/**/*', styles);
   // Мониторим файлы HTML на изменения
-  watch('app/parts/*.html').on('change', joinHtml);
+  watch('app/html/**/*.html').on('change', joinHtml);
+  watch('app/parts/**/*.html').on('change', joinHtml);
   watch('app/**/*.html').on('change', browserSync.reload);
   // Мониторим папку-источник изображений и выполняем images(), если есть изменения
   watch('app/img/**/*', images);

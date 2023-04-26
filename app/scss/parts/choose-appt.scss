@@ -4,16 +4,28 @@ section#chooseAppt {
 
   @media (max-width: $tablet-l) {
     overflow: hidden;
+    padding-top: 128px;
+  }
+  @media (max-width: $phone) {
+    padding-top: 45px;
   }
 }
 
 section#chooseAppt .section-title {
   padding-bottom: 80px;
+
+  @media (max-width: $tablet-l) {
+    padding-bottom: 0;
+  }
 }
 
 section#chooseAppt .section-title h2 {
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    font-size: 80px;
+  }
 
   @media (max-width: $tablet-s) {
     padding-bottom: 15px;
@@ -22,6 +34,8 @@ section#chooseAppt .section-title h2 {
 
 section#chooseAppt .section-title h2 span {
   color: $lightGrayText;
+  text-transform: initial;
+  margin-left: 10px;
 
   @media (max-width: $phone) {
     display: flex;
@@ -81,6 +95,10 @@ section#chooseAppt .section-content .appt-list-item .item-image {
   @media (min-width: $phone + 1) and (max-width: $desktop-s) {
     width: 140px;
     height: 110px;
+  }
+  
+  @media (max-width: $desktop-s) {
+    margin-right: 50px;
   }
 
   @media (max-width: $tablet-s) {
@@ -155,9 +173,6 @@ section#chooseAppt .section-content .appt-filter {
 }
 
 @media (max-width: $tablet-l) {
-  #chooseAppt {
-    padding-top: 128px !important;
-  }
 
   #chooseAppt .section-content {
     flex-wrap: wrap !important;

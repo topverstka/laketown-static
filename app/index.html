@@ -191,7 +191,7 @@
     <div class="section-title">
       <h2 data-aos="fade-up">
         Там, где каждый день для <br>
-        вас отдых и расслабление.
+        вас отдых и&nbsp;расслабление.
       </h2>
       <div class="btn btn-rond btn-rond-xl btn-orange-border-black" data-aos="fade-left">
         <span>Получить <br> буклет</span>
@@ -208,9 +208,8 @@
               <h3 class="item-title">НАБЕРЕЖНАЯ С ПАРКАМИ</h3>
               <div class="item-text">
                 <p>Вместе с городом мы создаём тщательно <br> продуманную новую точку притяжения для всех жителей –
-                  благоустроенную набережную из экоматериалов и
-                  природным пейзажем с чистым прудом в окружении
-                  зелени.</p>
+                  благоустроенную набережную из&nbsp;экоматериалов
+                  и&nbsp;природным пейзажем с чистым прудом в&nbsp;окружении зелени.</p>
                 <p>
                   Для жителей Lake Town всё будет в шаговой <br>
                   доступности. Каждый день легко строить новые <br> 
@@ -420,19 +419,6 @@
               </div>
             </div>
           </div>
-          <div class="swiper-buttons advantages-gallery-buttons">
-            <div class="advantages-gallery-button-prev navBtn prevBtn btn btn-rond btn-rond-m btn-orange-border-black">
-              <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
-              </svg>
-            </div>
-            <div class="advantages-gallery-button-next navBtn nextBtn btn btn-rond btn-rond-m btn-orange-border-black">
-              <svg width="60" height="22" viewBox="0 0 60 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 10.9802H0M0 10.9802C7.607 10.9802 10.7507 7.57117 10.7507 0M0 10.9802C7.72343 10.9802 10.7895 14.3099 10.7895 22" stroke="#383838" stroke-width="1.5"></path>
-              </svg>
-            </div>
-          </div>
-          <div class="swiper-pagination advantages-gallery-pagination"></div>
         </div>
       </div>
     </div>
@@ -830,7 +816,7 @@
 
           </div>
           <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
 
           <!-- If we need scrollbar -->
           <!-- <div class="swiper-scrollbar"></div> -->
@@ -937,7 +923,7 @@
           </div>
         </div>
       
-        <div class="swiper-pagination slider-stages-pagination"></div>
+        <!-- <div class="swiper-pagination slider-stages-pagination"></div> -->
       </div>
     </div>
 
@@ -1032,7 +1018,7 @@
         </div>
       </div>
     
-      <div class="swiper-pagination news-pagination"></div>
+      <!-- <div class="swiper-pagination news-pagination"></div> -->
     </div>
 
     <div class="all-btn" data-aos="fade-left">
@@ -1175,43 +1161,34 @@
 
   const buyingServicesCarousel = new Swiper('#buyingServices .swiper', {
     speed: 400,
-    slidesPerView: 2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     breakpointBase: 'container',
-    height: 700,
     oneWayMovement: false,
     navigation: {
       nextEl: '#buyingServices .services-btn-next',
       prevEl: '#buyingServices .services-btn-prev',
     },
-    pagination: {
-      el: "#buyingServices .swiper-pagination",
-      clickable: true,
-    },
     breakpoints: {
       577: {
-        height: 500,
-        slidesPerView: 2.5,
+        slidesPerView: 1.15,
       },
       769: {
         pagination: false,
       },
       1200: {
-        height: 600,
         slidesPerView: 2.5,
         spaceBetween: 40
       },
       1441: {
-        height: 700,
         slidesPerView: 3.3,
-        spaceBetween: 40
       }
     }
   });
 
   const newsCarousel = new Swiper('.news-carousel', {
     speed: 400,
-    slidesPerView: 2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     breakpointBase: 'container',
     height: 700,
@@ -1227,7 +1204,7 @@
     breakpoints: {
       577: {
         height: 500,
-        slidesPerView: 2.5,
+        slidesPerView: 1.25,
       },
       769: {
         pagination: false,
@@ -1413,11 +1390,7 @@
 
     let advantagesCarouselGallery = new Swiper(".advantages-gallery-carousel", {
       spaceBetween: 40,
-      slidesPerView: 1,
-      pagination: {
-        el: ".advantages-gallery-pagination",
-        clickable: true,
-      },
+      slidesPerView: 1.15,
       grabCursor: true,
       effect: "creative",
       creativeEffect: {
@@ -1429,17 +1402,6 @@
           translate: ["100%", 0, 0],
         },
       },
-      navigation: {
-        nextEl: ".advantages-gallery-button-next",
-        prevEl: ".advantages-gallery-button-prev",
-      },
-      breakpoints: {
-        769: {
-          navigation: false,
-          pagination: false,
-          slidesPerView: 1.15,
-        },
-      }
     });
 
     advantagesCarouselDesc.on('slideChange', (e) => {
@@ -1452,7 +1414,7 @@
 
     const buildingStageCarousel = new Swiper('.slider-stages-carousel', {
       speed: 400,
-      slidesPerView: 1,
+      slidesPerView: 1.15,
       spaceBetween: 20,
       breakpointBase: 'container',
       oneWayMovement: false,
@@ -1460,14 +1422,10 @@
         prevEl: '.slider-stages-button-prev',
         nextEl: '.slider-stages-button-next',
       },
-      pagination: {
-        el: ".slider-stages-pagination",
-        clickable: true,
-      },
       breakpoints: {
         769: {
-          pagination: false,
-          slidesPerView: 1.45,
+          slidesPerView: 1.3,
+          spaceBetween: 40
         },
         1441: {
           slidesPerView: 1.58,

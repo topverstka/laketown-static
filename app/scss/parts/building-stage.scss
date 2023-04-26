@@ -5,10 +5,10 @@ section#buildingStage {
   padding-top: 150px;
 
   @media (max-width: $tablet-m) {
-    padding-top: 60px;
+    padding-top: 90px;
   }
   @media (max-width: $phone) {
-    padding-top: 40px;
+    padding-top: 75px;
   }
 }
 
@@ -52,12 +52,10 @@ section#buildingStage .section-title-filter .btn-select {
     padding: 0 !important;
   }
 
-  @media (max-width: $tablet-s) {
-    margin-top: 20px;
-    min-width: 100%;
-  }
   @media (max-width: $phone) {
     justify-content: space-around;
+    margin-top: 15px;
+    min-width: 100%;
   }
 }
 
@@ -67,6 +65,10 @@ section#buildingStage .section-title {
 
   @media (max-width: $desktop-s) {
     flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $tablet-m) {
     padding-bottom: 60px;
   }
 
@@ -76,6 +78,10 @@ section#buildingStage .section-title {
 }
 
 section#buildingStage .section-title__text {
+
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    font-size: 80px;
+  }
 
   @media (max-width: $phone) {
     order: -2;
@@ -136,6 +142,10 @@ section#buildingStage .section-content .slider-btns {
 
   @media (max-width: $desktop-s) {
     width: 66.8%;
+  }
+
+  @media (max-width: $tablet-l) {
+    display: none;
   }
 }
 
@@ -198,9 +208,10 @@ section#buildingStage .slider-stages-carousel {
   padding-left: 100px;
   box-sizing: border-box;
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-m) {
     width: #{'calc(100% + 40px)'};
-    padding-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: -20px;
     margin-right: -20px;
   }
@@ -213,10 +224,15 @@ section#buildingStage .section-content #sliderStages .slider-item__image {
   @include borderRadius(60px);
   height: 700px;
 
-  @media (max-width: $tablet-s) {
-    @include borderRadius(0);
-    height: 550px;
+  @media (max-width: $desktop-s) {
+    height: 500px;
   }
+
+  @media (max-width: $tablet-l) {
+    height: 550px;
+    @include borderRadius(30px);
+  }
+
   @media (max-width: $phone) {
     height: 300px;
   }
@@ -382,8 +398,3 @@ section#buildingStage .section-content .slider-nav .slider-point {
   background: $orangeDark;
 }
 
-.slider-stages-buttons {
-  @media (max-width: $tablet-l) {
-    display: none;
-  }
-}

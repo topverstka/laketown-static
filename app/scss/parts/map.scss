@@ -28,20 +28,20 @@ section#mapBlock .filter-btn #filterBtn svg {
     right: 20px;
   }
 
-  @media (max-width: $tablet-m - 1) {
-    width: calc(100% - 40px);
+  @media (min-width: $tablet-m + 1) and (max-width: $desktop-s) {
+    right: 60px;
   }
 
   @media (max-width: $tablet-m) {
-    left: 50%;
     bottom: 60px;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+    right: 20px;
     z-index: 2;
+  }
+
+  @media (max-width: $phone) {
     width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

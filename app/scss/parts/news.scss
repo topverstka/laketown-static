@@ -4,6 +4,10 @@ section#news {
   background: $colorBgr;
   overflow: hidden;
   
+  @media (max-width: $desktop-s) {
+    padding-bottom: 165px;
+  }
+  
   @media (max-width: $tablet-l - 1) {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -11,12 +15,24 @@ section#news {
 
   @media (max-width: $tablet-s) {
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 185px;
   }
 
   @media (max-width: $phone) {
     padding-top: 95px;  
     padding-bottom: 95px;
+  }
+}
+
+section#news .section-title {
+  @media (max-width: $desktop-s) {
+    padding-bottom: 50px;
+  }
+}
+
+section#news .section-title__text {
+  @media (min-width: $tablet-l + 1) and (max-width: $desktop-s) {
+    font-size: 80px;
   }
 }
 
@@ -67,11 +83,11 @@ section#news.pageSection .btnBlock {
   margin-right: 20px;
   margin-bottom: 40px;
   text-decoration: none;
-}
 
-.news-card:last-child {
-  @media (max-width: $tablet-m) {
-    display: none !important;
+  @media (max-width: $phone) {
+    min-height: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 

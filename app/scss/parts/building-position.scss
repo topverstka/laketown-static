@@ -3,13 +3,18 @@ section#buildingPosition {
   position: relative;
   padding-bottom: 120px;
 
+  @media (max-width: $desktop-s) {
+    padding-bottom: 55px;
+  }
+
   @media (max-width: $tablet-s) {
-    padding-top: 125px;
+    padding-top: 115px;
     padding-bottom: 80px;
     overflow: hidden;
   }
+
   @media (max-width: $phone) {
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 50px;
   }
 }
@@ -42,7 +47,8 @@ section#buildingPosition .nadpis2 .container img {
     left: 30%;
   }
   @media (max-width: $desktop-l - 1) {
-    left: 22%;
+    left: 20%;
+    transform: rotate(-16deg);
   }
   @media (max-width: $desktop-s - 1) {
     left: 18%;
@@ -97,13 +103,15 @@ section#buildingPosition .section-title__ext {
   font-size: 18px;
 
   @media (max-width: $desktop-s) {
-    font-size: 16px;
+    width: 30%;
   }
 
   @media (max-width: $tablet-l) {
     max-width: 80% !important;
     flex: 0 0 80% !important;
+    font-size: 16px;
   }
+
   @media (max-width: $tablet-l) {
     max-width: 100% !important;
     flex: 0 0 100% !important;
