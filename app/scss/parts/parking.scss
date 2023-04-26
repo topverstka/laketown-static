@@ -13,7 +13,6 @@ section#parking {
   }
   @media (max-width: $phone) {
     padding-top: 100px;
-    
   }
 }
 
@@ -209,12 +208,18 @@ section#parking .section-content {
 
 section#parking .section-content img {
   width: 100%;
-  height: inherit;
   object-fit: cover;
+  height: inherit;
   position: fixed;
   top: 0;
   z-index: -3;
   transition: all 0.3s ease;
+
+
+  
+  @media (min-width: $phone + 1) and (max-width: $tablet-l) {
+    height: 100%;
+  }
 }
 section#parking.active .section-content img {
   z-index: -1;

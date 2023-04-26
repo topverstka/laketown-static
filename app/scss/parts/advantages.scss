@@ -280,7 +280,7 @@ section#advantages .slider-images {
   @media (max-width: $desktop-m) {
     grid-template-columns: 0.9fr 0.82fr;
   }
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-l) {
     grid-template-columns: 100%;
     row-gap: 15px;
     padding-top: 137px;
@@ -311,12 +311,9 @@ section#advantages .slider-images {
   flex-basis: 34%;
   margin-bottom: 20px;
 
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
     flex-basis: initial;
     min-width: initial;
-  }
-
-  @media (max-width: $tablet-s) {
     margin-right: 10px;
   }
 
@@ -326,7 +323,7 @@ section#advantages .slider-images {
   }
 }
 #advSlider .item-icons-item:last-child {
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-l) {
     margin-right: 0;
   }
 }
@@ -334,7 +331,7 @@ section#advantages .slider-images {
 #advSlider .item-icons-item__icon {
   margin-right: 10px;
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-l) {
     width: 32px;
     height: 32px;
     margin-right: 8px;
@@ -353,7 +350,7 @@ section#advantages .slider-images {
   margin-right: 20px;
   white-space: wrap;
 
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-l) {
     font-size: 18px;
   }
 }
@@ -384,7 +381,7 @@ section#advantages .slider-images {
 }
 
 #advSlider .advantages-desc-carousel .swiper-wrapper {
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
     overflow: visible;
   }
 }
@@ -397,7 +394,7 @@ section#advantages .slider-images {
   @media (max-width: $desktop-xs) {
     margin-bottom: 20px;
   }
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
    transform: translateY(-570px);
    position: absolute;
     background: #f6f5f1;
@@ -481,7 +478,7 @@ section#advantages .slider-images {
     height: 650px;
   }
 
-  @media (max-width: $tablet-m) {
+  @media (max-width: $tablet-l) {
     height: 450px;
   }
 
@@ -506,7 +503,7 @@ section#advantages .slider-images {
   @media (max-width: $desktop-s) {
     width: 127%;
   }
-  @media (max-width: $tablet-s) {
+  @media (max-width: $tablet-m) {
     padding-right: 20px;
     margin-right: -20px;
     width: #{'calc(100% + 20px)'};

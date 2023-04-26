@@ -160,16 +160,21 @@ $(document).ready(function() {
   }
   scrollToAnchor();
 
-  const box = document.querySelector('#parking .section-content');
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.to(box, {
-    scrollTrigger: {
-        trigger: box.parentElement,
-        start: 'top center',
-        end: 'bottom + 100%',
-        toggleClass: 'active',
-        markers: false // only for debugging purposes
-    }
-  });
+  try {
+
+    const parkingParallax = document.querySelector('#parking .section-content');
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(parkingParallax, {
+      scrollTrigger: {
+          trigger: parkingParallax.parentElement,
+          start: 'top center',
+          end: 'bottom + 100%',
+          toggleClass: 'active',
+          markers: false // only for debugging purposes
+      }
+    });
+  } catch {
+
+  }
 
 });
