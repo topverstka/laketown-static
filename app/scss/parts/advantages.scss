@@ -504,6 +504,17 @@ section#advantages .slider-images {
   }
 }
 
+.advantages-gallery-slide.swiper-slide-active:last-child {
+  @media (max-width: $phone) {
+    overflow: visible;
+  }
+}
+.advantages-gallery-slide.swiper-slide-active:last-child .advantages-gallery-slide__media {
+  @media (max-width: $phone) {
+    margin-left: -50px;
+    margin-right: 50px;
+  }
+}
 #advSlider .advantages-gallery-carousel {
   margin-right: 0;
   margin-left: -20px;
@@ -522,8 +533,11 @@ section#advantages .slider-images {
     padding-bottom: 12px;
   }
   @media (max-width: $phone) {
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
