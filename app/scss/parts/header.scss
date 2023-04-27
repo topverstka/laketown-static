@@ -30,6 +30,8 @@ body.modal-open {
   opacity: 0;
   width: 0;
   background: #000000a8;
+  display: flex;
+  overscroll-behavior: none;
   @include  transition(all, .4s);
 }
 
@@ -44,6 +46,9 @@ body.modal-open {
   display: block;
   background: white;
   padding-top: 35px;
+  height: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
 
   @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
     width: 100%;
