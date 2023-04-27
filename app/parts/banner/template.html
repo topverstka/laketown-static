@@ -1,7 +1,7 @@
 <div class="banner">
   <div class="banner-wrapper">
     <img class="banner__img" src="img/parallax-image.jpg" alt="">
-    <!-- <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video> -->
+    <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
   </div>
 </div>
 <script>
@@ -26,6 +26,19 @@
   } else {
     // Автовоспроизведение не поддерживается
   }
+
+  function updateScrollTop() {
+    let scrollTop = window.scrollY;
+    // let move = (scrollTop - lastScrollTop) / 2; // adjust the speed here
+    // background.css('transform', 'translate3d(0, ' + move + 'px, 0)');
+    document.body.style.cssText = `--scroll-top: ${scrollTop}px`
+    // lastScrollTop = scrollTop;
+    requestAnimationFrame(updateScrollTop);
+  }
+  window.addEventListener('scroll', () => {
+    updateScrollTop();
+  })
+
 </script>
 <!--
 <div

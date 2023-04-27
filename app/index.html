@@ -151,7 +151,7 @@
 <div class="banner">
   <div class="banner-wrapper">
     <img class="banner__img" src="img/parallax-image.jpg" alt="">
-    <!-- <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video> -->
+    <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
   </div>
 </div>
 <script>
@@ -176,6 +176,19 @@
   } else {
     // Автовоспроизведение не поддерживается
   }
+
+  function updateScrollTop() {
+    let scrollTop = window.scrollY;
+    // let move = (scrollTop - lastScrollTop) / 2; // adjust the speed here
+    // background.css('transform', 'translate3d(0, ' + move + 'px, 0)');
+    document.body.style.cssText = `--scroll-top: ${scrollTop}px`
+    // lastScrollTop = scrollTop;
+    requestAnimationFrame(updateScrollTop);
+  }
+  window.addEventListener('scroll', () => {
+    updateScrollTop();
+  })
+
 </script>
 <!--
 <div
@@ -1167,8 +1180,8 @@
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
 <script src="js/aos.js"></script>
 <script src="js/inputmask.js"></script>
-<script src="js/ScrollTrigger.min.js"></script>
-<script src="js/gsap.min.js"></script>
+<!-- <script src="js/ScrollTrigger.min.js"></script> -->
+<!-- <script src="js/gsap.min.js"></script> -->
 <script src="js/app.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
