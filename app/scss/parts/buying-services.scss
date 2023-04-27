@@ -124,7 +124,7 @@ section#buyingServices .section-content .swiper-wrapper {
   text-decoration: none !important;
   color: $mainDark;
 
-  @media (max-width: $desktop-xs) and (min-width: $tablet-l + 1) {
+  @media (max-width: $desktop-xs) and (min-width: $tablet-s + 1) {
     margin-top: 20px;
     font-size: 36px;
   }
