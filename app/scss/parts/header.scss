@@ -30,7 +30,6 @@ body.modal-open {
   opacity: 0;
   width: 0;
   background: #000000a8;
-  display: flex;
   overscroll-behavior: none;
   @include  transition(all, .4s);
 }
@@ -47,7 +46,6 @@ body.modal-open {
   background: white;
   padding-top: 35px;
   height: auto;
-  min-height: 100vh;
   box-sizing: border-box;
 
   @media screen and (min-width: $tablet-s) and (max-width: $desktop-s - 1) {
@@ -56,6 +54,9 @@ body.modal-open {
   @media (max-width: $phone) {
     width: 100%;
   }
+}
+.top-menu .modal-wrapper > .container {
+  min-height: #{'calc(100vh - 35px)'};
 }
 .top-menu .modal-wrapper .menu-items {
   display: flex;
