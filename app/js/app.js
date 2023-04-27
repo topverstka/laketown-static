@@ -161,22 +161,6 @@ $(document).ready(function() {
   scrollToAnchor();
 
   try {
-    const medals = document.querySelector('.banner');
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(medals.querySelector('.companyName'), {
-      yPercent: -100,
-      opacity: 0,
-      duration: 2,
-      scrollTrigger: {
-          trigger: medals,
-          start: 'top center-=100',
-          end: 'bottom center',
-          toggleClass: 'active',
-          scrub: true,
-          markers: true, // only for debugging purposes
-      },
-    });
-
     const parkingParallax = document.querySelector('#parking .section-content');
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(parkingParallax, {
