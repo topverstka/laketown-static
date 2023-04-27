@@ -180,7 +180,7 @@ $(document).ready(function() {
   telInputs.forEach(tel => {
     const maskOptions = {
       mask: '+7(999) 999-99-99',
-      inputmode: 'numeric',
+      inputmode: 'tel',
     };
     new Inputmask(maskOptions).mask(tel);
   })
