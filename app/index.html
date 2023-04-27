@@ -151,11 +151,12 @@
 <div class="banner">
   <div class="banner-wrapper">
     <img class="banner__img" src="img/parallax-image.jpg" alt="">
-    <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
+    <!-- <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video> -->
   </div>
 </div>
 <script>
   const bannerVideo = document.querySelector('.banner__video');
+  const bannerImg = document.querySelector('.banner__img');
 
   const video = document.createElement('video');
   const autoplaySupported = ('autoplay' in video) && (typeof document.createElement('video').play === 'function');
@@ -167,6 +168,7 @@
       playPromise.then(() => {
         // Автовоспроизведение работает
         bannerVideo.classList.remove('d-none');
+        bannerImg.classList.add('d-none');
       }).catch(() => {
         // Автовоспроизведение заблокировано
       });

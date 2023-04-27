@@ -167,13 +167,15 @@ $(document).ready(function() {
     gsap.to(bannerParallax, {
       yPercent: 80,
       duration: 10,
+      ease: "easeInOut",
+      force3D: true,
       scrollTrigger: {
         trigger: bannerParallax.parentElement,
         start: 'top bottom+=100',
         end: 'bottom + 100%',
         scrub: true,
         toggleClass: 'active',
-        // markers: true // only for debugging purposes
+        markers: true // only for debugging purposes
       }
     });
 
