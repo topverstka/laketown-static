@@ -207,7 +207,9 @@ header .header-wrap .header-block .btn .arrow path {
 }
 
 header .header-wrap .header-block .btn:hover .arrow path {
-  fill: $orangeDark
+  @media (any-hover:hover) {
+    fill: $orangeSaturate
+  }
 }
 
 header .header-wrap .header-block .btn-block {
@@ -267,6 +269,19 @@ header {
     line-height: 1.1;
   }
 }
+
+header .btn-map:hover {
+  @media (any-hover:hover) {
+    border-color: $orangeSaturate;
+    background: $orangeSaturate;
+  }
+}
+header .btn-map .icon svg path {
+  @include transition(all, .5s);
+  fill: $orangeSaturate;
+}
+
+
 @media (min-width: $desktop-s + 1) {
   header .nadpis, .btn-map {
     display: flex;
