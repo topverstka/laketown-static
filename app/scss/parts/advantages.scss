@@ -409,9 +409,9 @@ section#advantages .slider-images {
   @media (max-width: $phone) {
    transform: translateY(-420px);
   }
-  // @media (max-width: $phone-m) {
-   // transform: translateY(-280px);
-  // }
+  @media (max-width: $phone-m) {
+    transform: translateY(-280px);
+  }
 }
 
 .advantages-desc-carousel .item-text {
@@ -494,7 +494,7 @@ section#advantages .slider-images {
     padding-right: 5px;
   }
   @media (max-width: $phone-m) {
-    height: 350px;
+    height: 200px;
   }
 }
 
@@ -511,8 +511,12 @@ section#advantages .slider-images {
 }
 .advantages-gallery-slide.swiper-slide-active:last-child .advantages-gallery-slide__media {
   @media (max-width: $phone) {
-    margin-left: -50px;
-    margin-right: 50px;
+    margin-left: -60px;
+    margin-right: 30px;
+    padding-left: 10px;
+  }
+  @media (max-width: $phone-m) {
+    padding-left: 15px;
   }
 }
 #advSlider .advantages-gallery-carousel {
@@ -567,9 +571,10 @@ section#advantages .slider-images {
   @media (max-width: $phone) {
     transform: translateY(-440px);
   }
-  // // @media (max-width: $phone) {
-  //   // transform: translateY(-300px);
-  // }
+
+  @media (max-width: $phone-m) {
+    transform: translateY(-300px);
+  }
 }
 
 .advantages-content .navBtn {
