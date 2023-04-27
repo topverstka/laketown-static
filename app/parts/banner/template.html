@@ -1,9 +1,30 @@
 <div class="banner">
   <div class="banner-wrapper">
     <img class="banner__img" src="img/parallax-image.jpg" alt="">
-    <video class="banner__video" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
+    <video class="banner__video d-none" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
   </div>
 </div>
+<script>
+  const bannerVideo = document.querySelector('.banner__video');
+
+  const video = document.createElement('video');
+  const autoplaySupported = ('autoplay' in video) && (typeof document.createElement('video').play === 'function');
+
+  if (autoplaySupported) {
+    // Событие play для запуска воспроизведения
+    const playPromise = bannerVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // Автовоспроизведение работает
+        bannerVideo.classList.remove('d-none');
+      }).catch(() => {
+        // Автовоспроизведение заблокировано
+      });
+    }
+  } else {
+    // Автовоспроизведение не поддерживается
+  }
+</script>
 <!--
 <div
   class="parallax-window banner"
