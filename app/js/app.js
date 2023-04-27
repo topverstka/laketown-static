@@ -175,7 +175,7 @@ $(document).ready(function() {
         end: 'bottom + 100%',
         scrub: true,
         toggleClass: 'active',
-        markers: true // only for debugging purposes
+        // markers: true // only for debugging purposes
       }
     });
 
