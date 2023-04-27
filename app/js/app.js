@@ -185,7 +185,7 @@ $(document).ready(function() {
       duration: 10,
       scrollTrigger: {
           trigger: parkingParallax.parentElement,
-          start: 'top bottom',
+          start: 'top bottom+=100',
           end: 'bottom + 100%',
           scrub: true,
           toggleClass: 'active',
