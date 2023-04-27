@@ -152,27 +152,8 @@
   <div class="banner-wrapper">
     <img class="banner__img" src="img/parallax-image.jpg" alt="">
     <video class="banner__video" src="img/parallax-video.mp4" playsinline="" preload="" muted="" loop="" autoplay></video>
-    <div class="container">
-      <div class="companyName">
-        <span>Строительная группа “Рисан”</span>
-        <span>Надежный застройщик России с 2018 по 2022 год</span>
-        <img src="img/svg/Awards.svg">
-      </div>
-    </div>
   </div>
 </div>
-<script>
-  // let lastScrollTop = 0;
-  function updateScrollTop() {
-    let scrollTop = window.scrollY;
-    document.body.style.cssText = `--scroll-top: ${scrollTop}px`
-    requestAnimationFrame(updateScrollTop);
-  }
-  // const banner = document.querySelector('.banner');
-  window.addEventListener('scroll', () => {
-    // updateScrollTop();
-  })
-</script>
 <!--
 <div
   class="parallax-window banner"
@@ -188,6 +169,11 @@
 
 <section id="advantages">
   <div class="container mainBlock">
+    <div class="companyName">
+      <span>Строительная группа “Рисан”</span>
+      <span>Надежный застройщик России с 2018 по 2022 год</span>
+      <img src="img/svg/Awards.svg">
+    </div>
     <div class="section-title">
       <h2 data-aos="fade-up">
         Там, где каждый день для <br>

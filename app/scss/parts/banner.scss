@@ -42,39 +42,3 @@
   object-fit: cover;
 }
 
-.banner .companyName {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 50px;
-
-  @media (max-width: $tablet-s) {
-    padding-bottom: 40px;
-  }
-}
-
-.banner .companyName span {
-  color: rgba(255,255,255,.7098039216);
-  margin-bottom: 28px;
-
-  @media (max-width: $tablet-s) {
-    margin-bottom: 18px;
-  }
-  @media (max-width: $phone) {
-    font-size: 18px;
-    color: rgba(255,255,255,.9);
-  }
-}
-
-.banner .companyName img {
-  width: 256px;
-  height: auto;
-
-  @media (max-width: $tablet-s) {
-    width: 256px;
-  }
-
-  @media (max-width: $phone) {
-    width: 186px;
-  }
-}
-

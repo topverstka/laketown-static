@@ -1,5 +1,5 @@
 section#advantages {
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   padding-top: 100px;
 
@@ -744,3 +744,47 @@ section#advantages .slider-images {
 .advantages-gallery-pagination .swiper-pagination-bullet-active {
   background: $orangeDark;
 }
+
+
+
+.companyName {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  position: absolute;
+  top: -360px;
+
+  @media (max-width: $tablet-s) {
+    padding-bottom: 40px;
+  }
+  @media (max-width: $phone) {
+    top: -320px;
+  }
+}
+
+.companyName span {
+  color: rgba(255,255,255,.7098039216);
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet-s) {
+    margin-bottom: 18px;
+  }
+  @media (max-width: $phone) {
+    font-size: 18px;
+    color: rgba(255,255,255,.9);
+  }
+}
+
+.companyName img {
+  width: 256px;
+  height: auto;
+
+  @media (max-width: $tablet-s) {
+    width: 256px;
+  }
+
+  @media (max-width: $phone) {
+    width: 186px;
+  }
+}
+
