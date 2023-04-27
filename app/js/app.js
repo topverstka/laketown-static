@@ -161,15 +161,35 @@ $(document).ready(function() {
   scrollToAnchor();
 
   try {
-    const parkingParallax = document.querySelector('#parking .section-content');
     gsap.registerPlugin(ScrollTrigger);
+
+    const bannerParallax = document.querySelector('.banner-wrapper');
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(bannerParallax, {
+      yPercent: 100,
+      duration: 10,
+      scrollTrigger: {
+        trigger: bannerParallax.parentElement,
+        start: 'top center',
+        end: 'bottom + 100%',
+        scrub: true,
+        toggleClass: 'active',
+        // markers: true // only for debugging purposes
+      }
+    });
+
+
+    const parkingParallax = document.querySelector('#parking .section-content img');
     gsap.to(parkingParallax, {
+      yPercent: 30,
+      duration: 10,
       scrollTrigger: {
           trigger: parkingParallax.parentElement,
-          start: 'top center',
+          start: 'top bottom',
           end: 'bottom + 100%',
+          scrub: true,
           toggleClass: 'active',
-          markers: false // only for debugging purposes
+          // markers: true // only for debugging purposes
       }
     });
   } catch {

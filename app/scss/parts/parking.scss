@@ -199,6 +199,7 @@ section#parking .section-title__text span {
 section#parking .section-content {
   position: relative;
   height: 1000px;
+  overflow: hidden;
 
   @media (max-width: $desktop-s) {
     height: 700px;
@@ -214,17 +215,16 @@ section#parking .section-content {
 }  
 
 section#parking .section-content img {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -50%;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: -3;
+  z-index: 1;
   width: 100%;
   display: block;
   object-fit: cover;
   height: 100vh;
-  transition: all 0.3s ease;
 }
 
 section#parking.active .section-content img {
