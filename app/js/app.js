@@ -164,13 +164,12 @@ $(document).ready(function() {
     gsap.registerPlugin(ScrollTrigger);
 
     const bannerParallax = document.querySelector('.banner-wrapper');
-    gsap.registerPlugin(ScrollTrigger);
     gsap.to(bannerParallax, {
-      yPercent: 100,
+      yPercent: 80,
       duration: 10,
       scrollTrigger: {
         trigger: bannerParallax.parentElement,
-        start: 'top center',
+        start: 'top bottom+=100',
         end: 'bottom + 100%',
         scrub: true,
         toggleClass: 'active',
