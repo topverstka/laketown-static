@@ -163,36 +163,36 @@ $(document).ready(function() {
   try {
     gsap.registerPlugin(ScrollTrigger);
 
-    // const bannerParallax = document.querySelector('.banner-wrapper');
-    // gsap.to(bannerParallax, {
-    //   yPercent: 80,
-    //   duration: 10,
-    //   ease: "easeInOut",
-    //   force3D: true,
-    //   scrollTrigger: {
-    //     trigger: bannerParallax.parentElement,
-    //     start: 'top bottom+=100',
-    //     end: 'bottom + 100%',
-    //     scrub: true,
-    //     toggleClass: 'active',
-    //     // markers: true // only for debugging purposes
-    //   }
-    // });
+    const bannerParallax = document.querySelector('.banner-wrapper');
+    gsap.to(bannerParallax, {
+      yPercent: 80,
+      duration: 10,
+      ease: "easeInOut",
+      force3D: true,
+      scrollTrigger: {
+        trigger: bannerParallax.parentElement,
+        start: 'top bottom+=100',
+        end: 'bottom + 100%',
+        scrub: true,
+        toggleClass: 'active',
+        // markers: true // only for debugging purposes
+      }
+    });
 
 
-    // const parkingParallax = document.querySelector('#parking .section-content img');
-    // gsap.to(parkingParallax, {
-    //   yPercent: 30,
-    //   duration: 10,
-    //   scrollTrigger: {
-    //       trigger: parkingParallax.parentElement,
-    //       start: 'top bottom+=100',
-    //       end: 'bottom + 100%',
-    //       scrub: true,
-    //       toggleClass: 'active',
-    //       // markers: true // only for debugging purposes
-    //   }
-    // });
+    const parkingParallax = document.querySelector('#parking .section-content img');
+    gsap.to(parkingParallax, {
+      yPercent: 80,
+      duration: 10,
+      scrollTrigger: {
+          trigger: parkingParallax.parentElement,
+          start: 'top bottom+=100',
+          end: 'bottom top',
+          scrub: true,
+          toggleClass: 'active',
+          // markers: true // only for debugging purposes
+      }
+    });
   } catch {
 
   }

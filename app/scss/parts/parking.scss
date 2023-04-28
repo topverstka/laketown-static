@@ -216,7 +216,7 @@ section#parking .section-content {
 
 section#parking .section-content img {
   position: absolute;
-  top: -10%;
+  top: -90%;
   bottom: 0;
   right: 0;
   left: 0;
@@ -225,11 +225,12 @@ section#parking .section-content img {
   display: block;
   object-fit: cover;
   height: 120%;
-  transform: translateY(#{'calc(-88vh + var(--scroll-top)/ 8)'});
+  // transform: translateY(#{'calc(-88vh + var(--scroll-top)/ 8)'});
   transition: transform 0.1s;
 
   @media (max-width: $phone) {
-    top: -10%;
+    top: -100%;
+    height: 140%;
   }
 }
 
