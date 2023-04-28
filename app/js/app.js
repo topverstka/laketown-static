@@ -182,12 +182,14 @@ $(document).ready(function() {
 
     const parkingParallax = document.querySelector('#parking .section-content img');
     gsap.to(parkingParallax, {
-      yPercent: 80,
+        y: () => (window.innerHeight * 1.1),
       duration: 10,
+      ease: "easeInOut",
+      force3D: true,
       scrollTrigger: {
           trigger: parkingParallax.parentElement,
           start: 'top bottom+=100',
-          end: 'bottom top',
+          end: 'bottom + 100%',
           scrub: true,
           toggleClass: 'active',
           // markers: true // only for debugging purposes

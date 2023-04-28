@@ -200,6 +200,7 @@ section#parking .section-content {
   position: relative;
   height: 1000px;
   overflow: hidden;
+  will-change: transform;
 
   @media (max-width: $desktop-s) {
     height: 700px;
@@ -215,7 +216,10 @@ section#parking .section-content {
 }  
 
 section#parking .section-content img {
-  position: absolute;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  position: relative;
   top: -90%;
   bottom: 0;
   right: 0;
@@ -226,11 +230,11 @@ section#parking .section-content img {
   object-fit: cover;
   height: 120%;
   // transform: translateY(#{'calc(-88vh + var(--scroll-top)/ 8)'});
-  transition: transform 0.1s;
+  // transition: transform 0.1s;
 
   @media (max-width: $phone) {
-    top: -100%;
-    height: 140%;
+    // top: -100%;
+    // height: 100vh;
   }
 }
 
