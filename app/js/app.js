@@ -182,7 +182,9 @@ $(document).ready(function() {
 
     const parkingParallax = document.querySelector('#parking .section-content img');
     gsap.to(parkingParallax, {
-        y: () => (window.innerHeight * 1.1),
+      y: window.outerHeight * 0.8,
+      // y: 600,
+      // yPercent: 80,
       duration: 10,
       ease: "easeInOut",
       force3D: true,

@@ -220,7 +220,7 @@ section#parking .section-content img {
   transform-style: preserve-3d;
   transform: translateZ(0);
   position: relative;
-  top: -90%;
+  top: -70%;
   bottom: 0;
   right: 0;
   left: 0;
@@ -233,6 +233,7 @@ section#parking .section-content img {
   // transition: transform 0.1s;
 
   @media (max-width: $phone) {
+    top: -90%;
     // top: -100%;
     // height: 100vh;
   }
