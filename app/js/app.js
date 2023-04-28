@@ -180,7 +180,7 @@ $(document).ready(function() {
     });
 
 
-    const parkingParallax = document.querySelector('#parking .section-content img');
+/*    const parkingParallax = document.querySelector('#parking .section-content img');
     gsap.fromTo(parkingParallax, {
       // yPercent: -70,
       y: -(window.outerHeight * 0.9),
@@ -195,16 +195,41 @@ $(document).ready(function() {
           start: 'top bottom',
           end: 'bottom top',
           scrub: true,
-          // toggleClass: 'active',
-          // markers: true // only for debugging purposes
+          toggleClass: 'active',
+          markers: true // only for debugging purposes
       },
-      // willChange: "transform",
-      // transform: "translateZ(0)",
-      // transition: "all 0.1s ease"
+      willChange: "transform",
+      transform: "translateZ(0)",
+      transition: "all 0.1s ease"
     });
-  } catch {
+*/  } catch {
 
   }
+
+  const parkingParallax = document.querySelector('#parking .section-content img');
+  const parkingSection = parkingParallax.parentElement.parentElement;
+
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const sectionRect = parkingSection.getBoundingClientRect();
+
+    const y = (scrollTop + windowHeight - sectionRect.top) * 0.1;
+
+    parkingParallax.style.transform = `translateY(${y}px) translateZ(0)`;
+  }
+
+  let lastScrollTime = 0;
+
+  function throttledHandler() {
+    const now = Date.now();
+    if (now - lastScrollTime >= 16) {
+      handleScroll();
+      lastScrollTime = now;
+    }
+  }
+
+  window.addEventListener('scroll', throttledHandler);
 
   const telInputs = document.querySelectorAll('input[type="tel"]');
   telInputs.forEach(tel => {

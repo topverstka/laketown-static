@@ -218,12 +218,16 @@ section#parking .section-content {
 section#parking .section-content img {
   will-change: transform;
   position: absolute;
-  top: -20%;
+  top: -80%;
   left: 0;
   width: 100%;
   height: 120%;
   display: block;
   object-fit: cover;
+
+  @media (max-width: $phone) {
+    top: -120%;
+  }
 }
 
 section#parking .section-title .section-title__text {
