@@ -158,7 +158,7 @@ $(document).ready(function() {
           })
       }
   }
-  scrollToAnchor();
+  scrollToAnchor(0);
 
   try {
     gsap.registerPlugin(ScrollTrigger);
@@ -181,21 +181,26 @@ $(document).ready(function() {
 
 
     const parkingParallax = document.querySelector('#parking .section-content img');
-    gsap.to(parkingParallax, {
-      y: window.outerHeight * 0.8,
-      // y: 600,
-      // yPercent: 80,
+    gsap.fromTo(parkingParallax, {
+      // yPercent: -70,
+      y: -(window.outerHeight * 0.9),
+    }, {
+      y: window.outerHeight * 0.2,
+      // yPercent: 50,
       duration: 10,
       ease: "easeInOut",
       force3D: true,
       scrollTrigger: {
-          trigger: parkingParallax.parentElement,
-          start: 'top bottom+=100',
-          end: 'bottom + 100%',
+          trigger: parkingParallax.parentElement.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
           scrub: true,
-          toggleClass: 'active',
+          // toggleClass: 'active',
           // markers: true // only for debugging purposes
-      }
+      },
+      // willChange: "transform",
+      // transform: "translateZ(0)",
+      // transition: "all 0.1s ease"
     });
   } catch {
 

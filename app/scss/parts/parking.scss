@@ -197,10 +197,10 @@ section#parking .section-title__text span {
 
 
 section#parking .section-content {
-  position: relative;
   height: 1000px;
   overflow: hidden;
   will-change: transform;
+  position: relative;
 
   @media (max-width: $desktop-s) {
     height: 700px;
@@ -217,32 +217,14 @@ section#parking .section-content {
 
 section#parking .section-content img {
   will-change: transform;
-  transform-style: preserve-3d;
-  transform: translateZ(0);
-  position: relative;
-  top: -70%;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: -20%;
   left: 0;
-  z-index: 1;
   width: 100%;
+  height: 120%;
   display: block;
   object-fit: cover;
-  height: 120%;
-  // transform: translateY(#{'calc(-88vh + var(--scroll-top)/ 8)'});
-  // transition: transform 0.1s;
-
-  @media (max-width: $phone) {
-    top: -90%;
-    // top: -100%;
-    // height: 100vh;
-  }
 }
-
-section#parking.active .section-content img {
-  z-index: -1;
-}
-
 
 section#parking .section-title .section-title__text {
   @media (max-width: $desktop-s) {
