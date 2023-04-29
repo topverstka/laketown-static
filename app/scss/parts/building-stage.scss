@@ -133,7 +133,7 @@ section#buildingStage .section-content {
 section#buildingStage .section-content .slider-btns {
   position: absolute;
   z-index: 5;
-  width: 58%;
+  width: 54%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -144,11 +144,11 @@ section#buildingStage .section-content .slider-btns {
   left: 90px;
 
   @media (max-width: $desktop-m) {
-    width: 59.5%;
+    width: 53.5%;
   }
 
   @media (max-width: $desktop-s) {
-    width: 66.8%;
+    width: 67.8%;
   }
 
   @media (max-width: $tablet-l) {
