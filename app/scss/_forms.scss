@@ -184,3 +184,12 @@
     }
   }
 }
+
+.input--inited.is-invalid input,
+.input--inited.is-invalid input::placeholder,
+.input--inited.is-invalid textarea,
+.input--inited.is-invalid textarea::placeholder,
+.input--inited.is-invalid label {
+  color: $colorError;
+  border-bottom-color: $colorError;
+}

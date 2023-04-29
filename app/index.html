@@ -29,29 +29,31 @@
             <h2 class="section-title__text">ПЕРЕЗВОНИТЕ МНЕ</h2>
           </div>
           <div class="section-content">
-            <div class="input-text">
-              <label>Ваше имя</label>
-              <input type="text" name="callback_name">
-            </div>
-            <div class="input-text">
-              <label>E-mail</label>
-              <input type="email" name="callback_email">
-            </div>
-            <div class="input-text">
-              <label>Телефон</label>
-              <input type="tel" name="callback_phone">
-            </div>
-            <div class="input-textarea">
-              <label>Комментарий к заявке</label>
-              <textarea name="callback_comment"></textarea>
-            </div>
-            <div class="input-checkbox">
-              <input type="checkbox" name="callback_success" id="modalCallbackSuccess">
-              <label for="modalCallbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
-            </div>
-            <div class="btn btn-square btn-square-100 btn-orange">
-              <span>Отправить заявку</span>
-            </div>
+            <form action="" class="js_form">
+              <div class="input-text js_form-control">
+                <label>Ваше имя</label>
+                <input type="text" name="callback_name">
+              </div>
+              <div class="input-text js_form-control">
+                <label>E-mail</label>
+                <input type="email" name="callback_email">
+              </div>
+              <div class="input-text js_form-control">
+                <label>Телефон</label>
+                <input type="tel" name="callback_phone">
+              </div>
+              <div class="input-textarea js_form-control">
+                <label>Комментарий к заявке</label>
+                <textarea name="callback_comment"></textarea>
+              </div>
+              <div class="input-checkbox js_form-control">
+                <input type="checkbox" name="callback_success" id="modalCallbackSuccess" required>
+                <label for="modalCallbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
+              </div>
+              <button class="btn btn-square btn-square-100 btn-orange" type="submit">
+                <span>Отправить заявку</span>
+              </button>
+            </form>
 
           </div>
         </div>
@@ -1068,32 +1070,33 @@
     <div class="section-title">
       <h2 class="section-title__text" data-aos="fade-up">ПЕРЕЗВОНИТЕ МНЕ</h2>
     </div>
-    <div class="section-content">
-      <div class="input-text">
-        <label>Ваше имя</label>
-        <input type="text" name="callback_name" placeholder="Вячеслав">
+    <form class="js_form">
+      <div class="section-content">
+        <div class="input-text js_form-control">
+          <label>Ваше имя</label>
+          <input type="text" name="callback_name" placeholder="Вячеслав" required>
+        </div>
+        <div class="input-text js_form-control">
+          <label>E-mail</label>
+          <input type="email" name="callback_email" placeholder="Vyacheslav@jara.ge" required>
+        </div>
+        <div class="input-text js_form-control">
+          <label>Телефон</label>
+          <input type="tel" name="callback_phone" placeholder="+7 (952) 721-16-21" required>
+        </div>
+        <div class="input-textarea js_form-control">
+          <label>Комментарий к заявке</label>
+          <textarea name="callback_comment" placeholder="Добрый день!" rows="1" required></textarea>
+        </div>
+        <div class="input-checkbox js_form-control">
+          <input type="checkbox" name="callback_success" id="callbackSuccess" required>
+          <label for="callbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
+        </div>
+        <button class="btn btn-square btn-square-100 btn-orange" type="submit">
+          <span>Отправить заявку</span>
+        </button>
       </div>
-      <div class="input-text">
-        <label>E-mail</label>
-        <input type="email" name="callback_email" placeholder="Vyacheslav@jara.ge">
-      </div>
-      <div class="input-text">
-        <label>Телефон</label>
-        <input type="tel" name="callback_phone" placeholder="+7 (952) 721-16-21">
-      </div>
-      <div class="input-textarea">
-        <label>Комментарий к заявке</label>
-        <textarea name="callback_comment" placeholder="Добрый день!" rows="1"></textarea>
-      </div>
-      <div class="input-checkbox">
-        <input type="checkbox" name="callback_success" id="callbackSuccess">
-        <label for="callbackSuccess">Отправляя форму, вы даете согласие на обработку персональных данных</label>
-      </div>
-      <div class="btn btn-square btn-square-100 btn-orange">
-        <span>Отправить заявку</span>
-      </div>
-
-    </div>
+    </form>
   </div>
 
 </section>
@@ -1182,8 +1185,9 @@
 <script src="js/inputmask.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
 <script src="js/gsap.min.js"></script>
-<script src="js/app.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
+<script src="js/forms/form-validator.js"></script>
+<script src="js/app.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 <script type="text/javascript">
 
