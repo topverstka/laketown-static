@@ -53,22 +53,8 @@ function initInputs(inputs) {
 
     const field = input.querySelector("[required]");
 
-    input.addEventListener("click", (e) => {
-      if (!e.target.classList.contains("input__field")) return;
-      if (input.classList.contains(inputsStates.activeDropdown)) {
-        // deactivateInput(input);
-      } else {
-        // activateInput(input);
-      }
-    });
-
     if (!field) return;
 
-    field.addEventListener("focus", () => {
-      // if (field.value != "") {
-      //   validateInput(input);
-      // }
-    });
     field.addEventListener("blur", () => {
       if (field.value != "") {
         validateInput(input);
