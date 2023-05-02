@@ -268,8 +268,46 @@
     myMap.geoObjects.add(myCircle);
     myMap.geoObjects.add(myCircle2);
     myMap.geoObjects.add(myCircle3);
+
     myMap.geoObjects.add(company);
     // myMap.geoObjects.add(p1);
+
+    /*
+      Пример объекта на вход
+      {
+        iconClass: 'pharmacy', // нужен чтобы отфильтровывать какие метки надо убрать
+        mapCoords: [55.761574, 37.573856],
+        markHoverText: 'Наведи на меня',
+        iconUrl: 'https://site.com/icon.svg'
+      }
+    */
+    function setupMapPlacemark(info) {
+      const {mapCoords, markHoverText, iconUrl} = info;
+
+      return new ymaps.Placemark(mapCoords, {
+        hintContent: markHoverText,
+        balloonContent: '',
+        iconContent: ''
+      }, {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: iconUrl,
+        iconImageSize: [60, 60],
+        iconImageOffset: [-24, -24],
+        iconContentOffset: [15, 15],
+        iconContentLayout: MyIconContentLayout
+      });
+    }
+    window.setupMapPlacemark = setupMapPlacemark;
+
+    function addMapIcon(markObject) {
+      myMap.geoObjects.add(markObject);
+    }
+    window.addMapIcon = addMapIcon;
+
+    function removeMapIcon(markObject) {
+      myMap.geoObjects.remove(markObject);
+    }
+    window.removeMapIcon = removeMapIcon;
   }
 
 

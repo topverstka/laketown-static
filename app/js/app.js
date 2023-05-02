@@ -230,20 +230,23 @@ $(document).ready(function() {
   }
 
   const bannerParallax = document.querySelector('.banner-wrapper');
+  let bannerSection;
   if (bannerParallax) {
-    const bannerSection = bannerParallax.parentElement;
+    bannerSection = bannerParallax.parentElement;
   }
 
   const parkingParallax = document.querySelector('#parking .section-content img');
+  let parkingSection
   if (parkingParallax) {
-    const parkingSection = parkingParallax.parentElement.parentElement;
+    parkingSection = parkingParallax.parentElement.parentElement;
   }
 
   window.addEventListener('scroll', () => {
-    if (bannerParallax) {
+    if (bannerParallax && bannerSection) {
       handleScroll(bannerParallax, bannerSection)
     }
-    if (parkingParallax) {
+
+    if (parkingParallax && parkingSection) {
       handleScroll(parkingParallax, parkingSection)
     }
   });
