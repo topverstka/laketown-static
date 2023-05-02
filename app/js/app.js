@@ -86,12 +86,14 @@ $(document).ready(function() {
 
   $(document).on('click', '.recall', function() {
     $(document).find('body').addClass('modal-open');
-    $(document).find('.modal').addClass('active');
+    $(document).find('.modal-callback').addClass('active');
+    bodyLock(true);
   });
 
-  $(document).on('click', '#closeModal', function() {
+  $(document).on('click', '.modal__btn-close', function() {
     $(document).find('body').removeClass('modal-open');
-    $(document).find('.modal').removeClass('active');
+    $(document).find('.modal.active').removeClass('active');
+    bodyLock(false);
   });
 
 
@@ -228,16 +230,22 @@ $(document).ready(function() {
   }
 
   const bannerParallax = document.querySelector('.banner-wrapper');
-  const bannerSection = bannerParallax.parentElement;
+  if (bannerParallax) {
+    const bannerSection = bannerParallax.parentElement;
+  }
 
   const parkingParallax = document.querySelector('#parking .section-content img');
-  const parkingSection = parkingParallax.parentElement.parentElement;
-  console.log(parkingSection)
-
+  if (parkingParallax) {
+    const parkingSection = parkingParallax.parentElement.parentElement;
+  }
 
   window.addEventListener('scroll', () => {
-    handleScroll(bannerParallax, bannerSection)
-    handleScroll(parkingParallax, parkingSection)
+    if (bannerParallax) {
+      handleScroll(bannerParallax, bannerSection)
+    }
+    if (parkingParallax) {
+      handleScroll(parkingParallax, parkingSection)
+    }
   });
 
   const telInputs = document.querySelectorAll('input[type="tel"]');
@@ -246,6 +254,7 @@ $(document).ready(function() {
       mask: '+7(999) 999-99-99',
       inputmode: 'tel',
     };
+
     new Inputmask(maskOptions).mask(tel);
   })
 
