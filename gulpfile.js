@@ -4,6 +4,8 @@ let preprocessor = 'scss'; // Выбор препроцессора в прое�
 // Определяем константы Gulp
 const { src, dest, parallel, series, watch } = require('gulp');
 
+const cssbeautify = require('gulp-cssbeautify');
+
 // Подключаем Browsersync
 const browserSync = require('browser-sync').create();
 
@@ -20,9 +22,10 @@ function styles() {
   return src('app/' + preprocessor + '/app.' + preprocessor + '') // Выбираем источник: "app/sass/main.sass" или
   // "app/less/main.less"
     .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
-    .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
+    .pipe(concat('app.css')) // Конкатенируем в файл app.min.js
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
     .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
+    .pipe(cssbeautify())
     .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lake Town</title>
-  <link rel="stylesheet" href="css/app.min.css">
+  <link rel="stylesheet" href="css/app.css">
 <!--   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -867,10 +867,24 @@
       <h2 class="section-title__text" data-aos="fade-up">Ход строительства</h2>
       <div class="section-title-filter">
         <div class="section-title-filter__item">
-          <div class="btn btn-filter btn-black-border btn-active" data-aos="fade-up">2023</div>
-          <div class="btn btn-filter btn-black-border" data-aos="fade-up" data-aos-delay="100">2022</div>
-          <div class="btn btn-filter btn-black-border" data-aos="fade-up" data-aos-delay="200">2021</div>
-          <div class="btn btn-select btn-filter btn-black-border" data-aos="fade-up" data-aos-delay="300">
+          <div class="btn btn-select btn-filter btn-black-border" data-aos="fade-up">
+            <span class="select-text">2023</span>
+            <span class="select-arrow-icon">
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00072 5.17168L11.9507 0.22168L13.3647 1.63568L7.00072 7.99968L0.636719 1.63568L2.05072 0.22168L7.00072 5.17168Z" fill="#383838"/>
+              </svg>
+            </span>
+            <div class="dropdown">
+              <div class="dropdown__list">
+                <div class="dropdown-item">2023</div>
+                <div class="dropdown-item">2022</div>
+                <div class="dropdown-item">2021</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-title-filter__item">
+          <div class="btn btn-select btn-filter btn-black-border" data-aos="fade-up" data-aos-delay="100">
             <span class="select-text">Строение 1</span>
             <span class="select-arrow-icon">
               <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">

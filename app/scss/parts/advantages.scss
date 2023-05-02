@@ -2,12 +2,14 @@ section#advantages {
   overflow: visible;
   position: relative;
   padding-top: 100px;
+  margin-bottom: -20px;
 
   @media (max-width: $desktop-m) {
     padding-top: 100px;
   }
   @media (max-width: $tablet-l) {
     padding-top: 80px;
+    margin-bottom: 0;
   }
   @media (max-width: $tablet-s) {
     padding-top: 150px;

@@ -50,6 +50,8 @@ section#buildingStage .section-title-filter .btn-select {
     flex-grow: 1;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    width: 100%;
   }
 
   @media (max-width: $phone) {
@@ -180,6 +182,10 @@ section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabl
   background: $borderGray;
 }
 
+section#buildingStage .section-content .slider-btns .nextBtn.swiper-button-disabled {
+  opacity: 0;
+}
+
 section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabled svg path {
   fill:none;
   stroke: $colorBgr;
@@ -268,10 +274,14 @@ section#buildingStage .section-title-filter__item {
   }
 
   @media (max-width: $tablet-l) {
+    flex-basis: 49%;
     justify-content: space-between;
   }
   @media (max-width: $tablet-s - 1) {
     flex-wrap: wrap;
+  }
+  @media (max-width: $phone) {
+    flex-basis: 100%;
   }
 }
 
@@ -315,6 +325,7 @@ section#buildingStage .section-content .slider-nav .slider-point {
 }
 
 #buildingStage .section-title-filter {
+  justify-content: space-between;
 
   @media (max-width: $tablet-l) {
     margin-left: 0;
@@ -324,7 +335,8 @@ section#buildingStage .section-content .slider-nav .slider-point {
   }
 
   @media (max-width: $phone) {
-    margin-top: 54px;
+    flex-wrap: wrap;
+    margin-top: 14px;
   }
 }
 
