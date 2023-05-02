@@ -564,6 +564,7 @@ section#buyingServices .section-title__btns .btn:last-child {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  margin-bottom: 20px;
 
   @media (max-width: $tablet-l) {
     grid-template-columns: repeat(2, 1fr);
@@ -573,4 +574,9 @@ section#buyingServices .section-title__btns .btn:last-child {
     grid-template-columns: 100%;
     row-gap: 25px;
   }
+}
+
+.regular-gallery .news-card {
+  margin-left: 0;
+  margin-right: 0;
 }
