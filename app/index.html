@@ -1483,7 +1483,7 @@
     }
     window.removeMapIcon = removeMapIcon;
 
-    window.mockMapData = {
+    window.mapData = {
       'medecine': [
         setupMapPlacemark({
           mapCoords: [55.761574, 37.573856],
@@ -1548,12 +1548,12 @@
       button.addEventListener('click', (e) => {
         if (button.classList.contains('active')) {
           button.classList.remove('active');
-          window.mockMapData[button.id].forEach(icon => {
+          window.mapData[button.id].forEach(icon => {
             removeMapIcon(icon)
           })
         } else {
           button.classList.add('active');
-          window.mockMapData[button.id].forEach(icon => {
+          window.mapData[button.id].forEach(icon => {
             addMapIcon(icon)
           })
         }
