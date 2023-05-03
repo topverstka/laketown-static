@@ -235,11 +235,13 @@ section#mapBlock #map {
   @media (max-width: $tablet-m) {
     svg path, span {
       fill: none;
-      stroke: $colorBgr;
-      color: $colorBgr;
+      // stroke: $colorBgr;
+      // color: $colorBgr;
+      stroke: $orangeMain;
+      color: $orangeMain;
     }
     svg.fill path {
-      fill: $colorBgr;
+      fill: $orangeMain;
     }
   }
 }

@@ -303,11 +303,88 @@
       myMap.geoObjects.add(markObject);
     }
     window.addMapIcon = addMapIcon;
-
     function removeMapIcon(markObject) {
       myMap.geoObjects.remove(markObject);
     }
     window.removeMapIcon = removeMapIcon;
+
+    window.mapData = {
+      'medecine': [
+        setupMapPlacemark({
+          mapCoords: [55.761574, 37.573856],
+          markHoverText: 'Аптека 1',
+          iconUrl: window.location.origin + '/img/map-icons/medecine.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.761584, 37.573856],
+          markHoverText: 'Аптека 2',
+          iconUrl: window.location.origin + '/img/map-icons/medecine.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.761594, 37.573856],
+          markHoverText: 'Аптека 3',
+          iconUrl: window.location.origin + '/img/map-icons/medecine.svg'
+        }),
+      ],
+      'education': [
+        setupMapPlacemark({
+          mapCoords: [55.761574, 37.574856],
+          markHoverText: 'Школа 1',
+          iconUrl: window.location.origin + '/img/map-icons/education.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.761584, 37.575856],
+          markHoverText: 'Школа 2',
+          iconUrl: window.location.origin + '/img/map-icons/education.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.761594, 37.576856],
+          markHoverText: 'Школа 3',
+          iconUrl: window.location.origin + '/img/map-icons/education.svg'
+        }),
+      ],
+      'park': [
+        setupMapPlacemark({
+          mapCoords: [55.762574, 37.574856],
+          markHoverText: 'Парк 1',
+          iconUrl: window.location.origin + '/img/map-icons/park.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.763584, 37.575856],
+          markHoverText: 'Парк 2',
+          iconUrl: window.location.origin + '/img/map-icons/park.svg'
+        }),
+        setupMapPlacemark({
+          mapCoords: [55.764594, 37.576856],
+          markHoverText: 'Парк 3',
+          iconUrl: window.location.origin + '/img/map-icons/park.svg'
+        }),
+      ],
+      'fitness': [
+      ],
+      'shops': [
+      ],
+      'services': [
+      ],
+    }
+
+    const mapFilterButtons = document.querySelectorAll('.map-filter__item');
+    mapFilterButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        if (button.classList.contains('active')) {
+          button.classList.remove('active');
+          window.mapData[button.id].forEach(icon => {
+            removeMapIcon(icon)
+          })
+        } else {
+          button.classList.add('active');
+          window.mapData[button.id].forEach(icon => {
+            addMapIcon(icon)
+          })
+        }
+
+      })
+    })
   }
 
 
@@ -370,6 +447,7 @@
         }
       }
     });
+    window.buildingStageCarousel = buildingStageCarousel;
 
 </script>
 </html>

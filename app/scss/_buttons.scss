@@ -170,6 +170,9 @@
 .btn.btn-select .select-arrow-icon svg path {
   fill: $mainDark;
 }
+.btn.btn-select:hover .select-arrow-icon svg path {
+  fill: #fff;
+}
 
 .btn.btn-select .dropdown {
   display: grid;
@@ -205,7 +208,7 @@
 }
 
 .dropdown-item {
-  padding: 10px 20px;
+  padding: 10px 26px;
   color: $mainDark;
 }
 
