@@ -449,5 +449,36 @@
     });
     window.buildingStageCarousel = buildingStageCarousel;
 
+    const apptMoreButton = document.querySelector('.appt-more-button');
+    if (apptMoreButton) {
+      apptMoreButton.addEventListener('click', () => {
+        const current = apptMoreButton.dataset.currentShow;
+
+        showMoreApptCards(apptMoreButton);
+        updateApptMoreButtonState(apptMoreButton);
+      })
+      showMoreApptCards(apptMoreButton);
+      updateApptMoreButtonState(apptMoreButton);
+    }
+
+    function showMoreApptCards(button) {
+      const step = +button.dataset.moreStep;
+      const apptCards = [...document.querySelectorAll('.appt-list-item.d-none')];
+
+      for (let i = 0; i < step; i++) {
+        if (apptCards[i] == undefined) continue;
+        apptCards[i].classList.remove('d-none');
+      }
+    }
+
+    function updateApptMoreButtonState(button) {
+      const step = +button.dataset.moreStep;
+      button.dataset.currentShow = +button.dataset.currentShow + step;
+
+      const apptCards = [...document.querySelectorAll('.appt-list-item')];
+      if (button.dataset.currentShow > apptCards.length + 1) {
+        button.classList.add('d-none')
+      }
+    }
 </script>
 </html>
