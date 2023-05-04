@@ -496,6 +496,12 @@ section#pageBuyingServices {
   stroke: $colorBgr;
 }
 
+.navBtn {
+  transition: all 0.3s ease;
+}
+.navBtn.swiper-button-disabled {
+  opacity: 0;
+}
 .section-title__btns .navBtn.swiper-button-disabled {
   border-color: $borderGray;
   background: $borderGray;
