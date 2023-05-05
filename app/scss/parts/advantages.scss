@@ -555,6 +555,7 @@ section#advantages .slider-images {
   display: grid;
   grid-template-columns: 1fr 1fr 1.6fr;
   margin-bottom: 2px;
+  margin-top: -5px;
 
   @media (max-width: $desktop-s) {
     column-gap: 20px;

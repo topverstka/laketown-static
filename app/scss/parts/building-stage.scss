@@ -180,6 +180,7 @@ section#buildingStage .section-content .slider-btns .navBtn:hover svg path {
 section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabled {
   border-color: $borderGray;
   background: $borderGray;
+  opacity: 0;
 }
 
 section#buildingStage .section-content .slider-btns .nextBtn.swiper-button-disabled {

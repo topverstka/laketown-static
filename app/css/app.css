@@ -4845,7 +4845,8 @@ section#advantages .slider-images .slider-wrapper .slider-item.prev {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1.6fr;
     grid-template-columns: 1fr 1fr 1.6fr;
-    margin-bottom: 2px
+    margin-bottom: 2px;
+    margin-top: -5px
 }
 
 @media (max-width:1440px) {
@@ -7365,7 +7366,8 @@ section#buildingStage .section-content .slider-btns .navBtn:hover svg path {
 
 section#buildingStage .section-content .slider-btns .navBtn.swiper-button-disabled {
     border-color: #d9d9d9;
-    background: #d9d9d9
+    background: #d9d9d9;
+    opacity: 0
 }
 
 section#buildingStage .section-content .slider-btns .nextBtn.swiper-button-disabled {
@@ -10294,10 +10296,6 @@ section#pageBuyingServices .container-page .section-content .image-wrapper img {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease
-}
-
-.navBtn.swiper-button-disabled {
-    opacity: 0
 }
 
 .section-title__btns .navBtn.swiper-button-disabled {

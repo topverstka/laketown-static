@@ -162,6 +162,21 @@ $(document).ready(function() {
   }
   scrollToAnchor(0);
 
+  if (window.location.hash != '') {
+    try {
+      const anchor = document.querySelector(`${window.location.hash}`);
+
+      window.scroll({
+        top: anchor.getBoundingClientRect().top + pageYOffset - getTopOffset(5),
+        left: 0,
+        behavior: 'smooth'
+      })
+    } catch {
+
+    }
+  }
+
+
   try {
     // gsap.registerPlugin(ScrollTrigger);
 
