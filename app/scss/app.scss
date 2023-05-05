@@ -198,6 +198,15 @@ section#formCallback {
   .section-content {
     position: relative;
   }
+
+  .container-fixed {
+    @media (min-width: $phone + 1) and (max-width: $tablet-l) {
+      margin-left: 20px;   
+      margin-right: 20px;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }
 
 section#pageBuyingServices {

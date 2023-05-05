@@ -6572,6 +6572,7 @@ section#news.pageSection .btnBlock {
     margin-left: -100px;
     padding-left: 100px;
     padding-right: 100px;
+    margin-bottom: 20px;
     padding-bottom: 20px
 }
 
@@ -6587,6 +6588,15 @@ section#news.pageSection .btnBlock {
         margin-left: 5px;
         margin-right: 5px
     }
+}
+
+.swiper .news-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%
 }
 
 .news-card__inner {
@@ -9917,6 +9927,15 @@ section#formCallback .section-title {
 
 section#formCallback .section-content {
     position: relative
+}
+
+@media (min-width:602px) and (max-width:1200px) {
+    section#formCallback .container-fixed {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 100%;
+        width: 100%
+    }
 }
 
 section#pageBuyingServices {
