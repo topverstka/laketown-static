@@ -1042,15 +1042,34 @@ section {
     transition: all .3s ease
 }
 
-.btn.btn-select:hover {
-    color: #fff;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    z-index: 2
+@media (hover:none) {
+    .btn.btn-select.active {
+        color: #fff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 2
+    }
 }
 
-.btn.btn-select:hover svg path {
-    fill: #fff
+@media (any-hover:hover) {
+    .btn.btn-select:hover {
+        color: #fff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 2
+    }
+}
+
+@media (hover:none) {
+    .btn.btn-select.active svg path {
+        fill: #fff
+    }
+}
+
+@media (any-hover:hover) {
+    .btn.btn-select:hover svg path {
+        fill: #fff
+    }
 }
 
 .btn.btn-select .select-arrow-icon {
@@ -1070,8 +1089,16 @@ section {
     fill: #383838
 }
 
-.btn.btn-select:hover .select-arrow-icon svg path {
-    fill: #fff
+@media (hover:none) {
+    .btn.btn-select.active .select-arrow-icon svg path {
+        fill: #fff
+    }
+}
+
+@media (any-hover:hover) {
+    .btn.btn-select:hover .select-arrow-icon svg path {
+        fill: #fff
+    }
 }
 
 .btn.btn-select .dropdown {
@@ -1104,11 +1131,26 @@ section {
     transition: all .3s ease
 }
 
-.btn.btn-select:hover .dropdown {
-    pointer-events: all;
-    -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
-    opacity: 1
+@media (hover:none) {
+    .btn.btn-select.active .dropdown {
+        pointer-events: all;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        opacity: 1
+    }
+}
+
+@media (any-hover:hover) {
+    .btn.btn-select:hover .dropdown {
+        pointer-events: all;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        opacity: 1
+    }
+}
+
+.select-arrow-icon,.select-text {
+    pointer-events: none
 }
 
 .dropdown-item {
@@ -3420,9 +3462,12 @@ header .header-wrap .header-block .btn-block .add-text a,header .header-wrap .he
     font-family: var(--font-main);
     text-decoration: underline;
     color: #383838;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transition-delay: 1.5s;
+    -o-transition-delay: 1.5s;
+    transition-delay: 1.5s
 }
 
 @media screen and (min-width:1920px) {
@@ -4729,18 +4774,14 @@ section#advantages .slider-images .slider-wrapper .slider-item.prev {
     }
 }
 
-@media (max-width:601px) {
-    .advantages-gallery-slide.swiper-slide-active:last-child {
-        overflow: visible
-    }
+.advantages-gallery-slide.swiper-slide-active:last-child {
+    overflow: visible
 }
 
-@media (max-width:601px) {
-    .advantages-gallery-slide.swiper-slide-active:last-child .advantages-gallery-slide__media {
-        margin-left: -60px;
-        margin-right: 30px;
-        padding-left: 10px
-    }
+.advantages-gallery-slide.swiper-slide-active:last-child .advantages-gallery-slide__media {
+    margin-left: -60px;
+    margin-right: 30px;
+    padding-left: 10px
 }
 
 @media (max-width:420px) {
@@ -6530,7 +6571,8 @@ section#news.pageSection .btnBlock {
     margin-right: -100px;
     margin-left: -100px;
     padding-left: 100px;
-    padding-right: 100px
+    padding-right: 100px;
+    padding-bottom: 20px
 }
 
 .news-card {

@@ -1339,6 +1339,22 @@
       }
     }
   });
+  let newsMaxHeight = 0;
+
+  function changeNewsMaxHeight() {
+    newsCarousel.slides.forEach(slide => {
+      const height = slide.offsetHeight;
+      if (height > newsMaxHeight) {
+        newsMaxHeight = height;
+      }
+    }) 
+    newsCarousel.el.style.height = newsMaxHeight + 'px';
+  }
+  window.addEventListener('resize', () => {
+    changeNewsMaxHeight()
+  })
+  changeNewsMaxHeight()
+
 
 
   // filter appt
@@ -1393,8 +1409,8 @@
     );
 
     var myMap = new ymaps.Map("map", {
-      center: [55.76, 37.60],
-      zoom: 14,
+      center: [53.229971, 44.892655],
+      zoom: 13.4,
       controls: [],
     });
     myMap.behaviors.disable('scrollZoom');
@@ -1402,7 +1418,7 @@
 
     var myCircle = new ymaps.Circle([
         // Координаты центра круга.
-        [55.76, 37.60],
+        [53.229971, 44.892655],
         // Радиус круга в метрах.
         3000
     ], {
@@ -1429,7 +1445,7 @@
     });
 
     var myCircle2 = new ymaps.Circle([
-        [55.76, 37.60],
+        [53.229971, 44.892655],
         1500
     ], {
         balloonContent: "1.5 км",
@@ -1443,7 +1459,7 @@
     });
 
     var myCircle3 = new ymaps.Circle([
-        [55.76, 37.60],
+        [53.229971, 44.892655],
         500
     ], {
         balloonContent: "500 м",
@@ -1456,7 +1472,7 @@
         strokeWidth: 1
     });
 
-    let company = new ymaps.Placemark([55.761, 37.5981], {
+    let company = new ymaps.Placemark([53.229971, 44.892655], {
       hintContent: '',
       balloonContent: '',
       iconContent: ''
@@ -1467,10 +1483,10 @@
       // Своё изображение иконки метки.
       iconImageHref: companyLogo,
       // Размеры метки.
-      iconImageSize: [92, 92],
+      iconImageSize: [60, 60],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
-      iconImageOffset: [-24, -24],
+      iconImageOffset: [-30, -30],
       // Смещение слоя с содержимым относительно слоя с картинкой.
       iconContentOffset: [15, 15],
       // Макет содержимого.
@@ -1486,7 +1502,7 @@
       iconLayout: 'default#imageWithContent',
       iconImageHref: pharmacyLogo,
       iconImageSize: [60, 60],
-      iconImageOffset: [-24, -24],
+      iconImageOffset: [-30, -30],
       iconContentOffset: [15, 15],
       iconContentLayout: MyIconContentLayout
     });
@@ -1706,5 +1722,15 @@
         button.classList.add('d-none')
       }
     }
+
+    document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('btn-select')) {
+        event.target.classList.add('active')
+      } else {
+        document.querySelectorAll('.btn-select').forEach(select => {
+          select.classList.remove('active')
+        })
+      }
+    });
 </script>
 </html>

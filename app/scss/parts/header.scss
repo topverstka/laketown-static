@@ -251,7 +251,8 @@ header .header-wrap .header-block .btn-block .add-text span {
   font-family: var(--font-main);
   text-decoration: underline;
   color: $mainDark;
-  @include transition(all, 1s);
+  transition: all 1s ease;
+  transition-delay: 1.5s;
 
   &.active {
     opacity: 1;
