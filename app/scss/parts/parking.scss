@@ -55,6 +55,11 @@ section#parking .section-title-wrapper .arrow-title {
     display: none;
   }
 }
+section#parking .section-title-wrapper .arrow-title svg {
+  @media (max-width: $desktop-m) and (min-width: $desktop-s + 1) {
+    max-width: 700px;
+  }
+}
 
 section#parking .section-title-wrapper .btns {
   display: flex;

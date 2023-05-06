@@ -85,6 +85,12 @@
 .modal__btn-close {
   margin-left: auto;
 }
+ 
+.modal-message .modal__btn-close {
+  @media (min-width: $tablet-s + 1) {
+    min-height: 82px;
+  }
+}
 
 .modal #modalSccess {
   margin-top: auto;

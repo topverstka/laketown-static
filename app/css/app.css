@@ -1657,6 +1657,12 @@ section {
     margin-left: auto
 }
 
+@media (min-width:769px) {
+    .modal-message .modal__btn-close {
+        min-height: 82px
+    }
+}
+
 .modal #modalSccess {
     margin-top: auto
 }
@@ -6089,6 +6095,12 @@ section#parking .section-title-wrapper .arrow-title {
 @media (max-width:1200px) {
     section#parking .section-title-wrapper .arrow-title {
         display: none
+    }
+}
+
+@media (max-width:1600px) and (min-width:1441px) {
+    section#parking .section-title-wrapper .arrow-title svg {
+        max-width: 700px
     }
 }
 
