@@ -579,7 +579,7 @@ section#buyingServices .section-title__btns .btn:last-child {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 
   @media (max-width: $tablet-l) {
     grid-template-columns: repeat(2, 1fr);
@@ -588,6 +588,7 @@ section#buyingServices .section-title__btns .btn:last-child {
   @media (max-width: $phone) {
     grid-template-columns: 100%;
     row-gap: 25px;
+    margin-bottom: 30px;
   }
 }
 

@@ -10402,7 +10402,7 @@ section#buyingServices .section-title__btns .btn:last-child {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
-    margin-bottom: 20px
+    margin-bottom: 60px
 }
 
 @media (max-width:1200px) {
@@ -10417,7 +10417,8 @@ section#buyingServices .section-title__btns .btn:last-child {
     .regular-gallery {
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-        row-gap: 25px
+        row-gap: 25px;
+        margin-bottom: 30px
     }
 }
 
