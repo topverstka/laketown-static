@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lake Town</title>
-  <link rel="stylesheet" href="css/app.min.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <div class="modal">
@@ -123,9 +123,9 @@
 
     <div class="section-content" data-aos="fade-right">
       <div class="plan">
-        <div class="image-wrapper">
+        <a href="img/appt1.png" data-fancybox class="image-wrapper">
           <img src="img/appt1.png">
-        </div>
+        </a>
       </div>
       <div class="appt-desc" data-aos="fade-up">
         <h3 class="appt-desc__title">Характеристики квартиры</h3>
@@ -240,8 +240,26 @@
 </body>
 <!-- Подключаем скрипты проекта -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=1237ee06-9b81-4c5d-ab46-7f603fba55df&lang=ru_RU" type="text/javascript"></script>
+<script src="js/inputmask.js"></script>
 <script src="js/aos.js"></script>
 <script src="js/app.min.js"></script>
 <script src="js/parallax.min.js"></script>
+<script src="js/fancybox/fancybox.umd.js"></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    Fancybox.bind('[data-fancybox]', {
+      Zoom: {
+        click: false,
+      },
+      Toolbar: {
+        display: [
+          "close",
+        ],
+      },
+    });
+  });
+
+</script>
 
 </html>

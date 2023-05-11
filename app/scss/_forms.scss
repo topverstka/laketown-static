@@ -87,9 +87,15 @@
     .input-select__dropdown {
       border: 1px solid $borderGray;
       max-height: fit-content;
+      height: 310px;
       .dropdown-item {
         height: 60px;
       }
+    }
+    .input-select__dropdown-inner {
+      height: calc(100% - 20px);
+      margin-bottom: 20px;
+      overflow: overlay;
     }
   }
 }

@@ -9,6 +9,8 @@
 @import "_forms";
 @import "_modal";
 @import "libs/aos";
+@import "libs/_fancybox";
+// @import "libs/_fb-like-theme";
 
 // PARTS
 @import "parts/header";
@@ -627,4 +629,15 @@ section#buyingServices .section-title__btns .btn:last-child {
   pointer-events: none;
   top: 0;
   left: 0;
+}
+
+.flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-appt__cta {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
