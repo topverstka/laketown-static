@@ -86,15 +86,17 @@ section#chooseAppt .section-content .appt-list-item:hover {
 
 section#chooseAppt .section-content .appt-list-item .item-image {
   width: 180px;
-  height: 125px;
   position: relative;
   overflow: hidden;
   margin-right: 30px;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $phone + 1) and (max-width: $desktop-s) {
     width: 140px;
-    height: 110px;
+    // height: 110px;
   }
   
   @media (max-width: $desktop-s) {
@@ -107,17 +109,17 @@ section#chooseAppt .section-content .appt-list-item .item-image {
 
   @media (max-width: $phone) {
     width: 110px;
-    height: 78px;
+    // height: 78px;
     margin-right: 18px;
   }
 }
 
 section#chooseAppt .section-content .appt-list-item .item-image img {
-  position: relative;
+  position: static;
   width: 100%;
-  height: auto;
-  @include transform(translateY, -50%);
-  top: 50%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 section#chooseAppt .section-content .appt-list-item .item-text {
