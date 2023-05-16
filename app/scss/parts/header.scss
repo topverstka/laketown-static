@@ -1,8 +1,3 @@
-body.modal-open {
-  overflow: hidden;
-
-}
-
 .topmenu-font {
   @include getSizes(80px, 80px, 1920px, 1920px, false, true);
   @include getSizes(48px, 80px, 1440px, 1920px, false, false);
